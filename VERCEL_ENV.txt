@@ -1,0 +1,31 @@
+# Environment Variables for Vercel Deployment
+
+Copy these to Vercel Dashboard → Settings → Environment Variables
+
+## Database
+DATABASE_URL=postgresql://postgres:ashitya2605@db.cqqdqyvfgipyxdncmrjn.supabase.co:5432/postgres
+
+## NextAuth
+NEXTAUTH_URL=https://ashitya.vercel.app
+NEXTAUTH_SECRET=66a0d58438a05ee8c26efa4d480ef25e
+
+## Google OAuth
+GOOGLE_CLIENT_ID=321460989508-vurfro9vvkbu0vgt370j2blol3ie0gak.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+
+## Email (Resend)
+RESEND_API_KEY=re_Q1opLveE_8PiMoSY8M3MUTxMoe2AEkpQH
+EMAIL_FROM=Ashitya <onboarding@resend.dev>
+CONTACT_EMAIL=kevaleaditya1@gmail.com
+
+## Cloudinary
+CLOUDINARY_CLOUD_NAME=dqxfpk0jj
+CLOUDINARY_API_KEY=273652718356478
+CLOUDINARY_API_SECRET=BNRUoMCg9NCXDSOy4qzFu7EraiQ
+
+## Analytics & Site URL
+NEXT_PUBLIC_GA_ID=G-6DP0B9KC93
+NEXT_PUBLIC_SITE_URL=https://ashitya.vercel.app
+
+## Admin
+ADMIN_PASSWORD=Ashitya@2605
