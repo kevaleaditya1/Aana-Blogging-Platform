@@ -4,6 +4,9 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPostSlugs, getPostData } from "@/lib/posts";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { BookmarkButton } from "@/components/blog/bookmark-button";
+import { CommentSection } from "@/components/blog/comment-section";
+import { ShareButtons } from "@/components/blog/share-buttons";
 import Link from "next/link";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 
@@ -30,14 +33,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
     return {
-        title: `${post.title} - Ashitya`,
+        title: post.title,
         description: post.excerpt,
+        keywords: post.tags,
+        authors: [{ name: post.author.name }],
         openGraph: {
             title: post.title,
             description: post.excerpt,
             type: "article",
-            url: `/blog/${slug}`,
+            url: `${baseUrl}/blog/${slug}`,
+            publishedTime: post.date,
+            authors: [post.author.name],
+            tags: post.tags,
             images: [
                 {
                     url: post.ogImage.url,
@@ -46,6 +56,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                     alt: post.title,
                 },
             ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.excerpt,
+            images: [post.ogImage.url],
         },
     };
 }
@@ -67,11 +83,17 @@ export default async function Post({ params }: Props) {
             </Button>
 
             <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-2">
-                    <Badge>{post.category}</Badge>
-                    <span className="text-sm text-muted-foreground flex items-center gap-1">
-                        <Calendar className="h-3 w-3" /> {post.date}
-                    </span>
+                <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <Badge>{post.category}</Badge>
+                        <span className="text-sm text-muted-foreground flex items-center gap-1">
+                            <Calendar className="h-3 w-3" /> {post.date}
+                        </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <ShareButtons title={post.title} slug={slug} />
+                        <BookmarkButton postSlug={slug} />
+                    </div>
                 </div>
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tighter">
                     {post.title}
@@ -96,6 +118,8 @@ export default async function Post({ params }: Props) {
                     ))}
                 </div>
             </div>
+
+            <CommentSection postSlug={slug} />
         </article>
     );
 }
