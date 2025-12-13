@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,23 +8,38 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, ArrowRight } from "lucide-react";
-import { getSortedPostsData } from "@/lib/posts";
 
-export default function SearchPage() {
+function SearchContent() {
     const searchParams = useSearchParams();
     const initialQuery = searchParams.get("q") || "";
     const [query, setQuery] = useState(initialQuery);
     const [results, setResults] = useState<any[]>([]);
-
-    const allPosts = getSortedPostsData();
+    const [allPosts, setAllPosts] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (query.trim()) {
+        fetchPosts();
+    }, []);
+
+    useEffect(() => {
+        if (query.trim() && allPosts.length > 0) {
             performSearch(query);
         } else {
             setResults([]);
         }
-    }, [query]);
+    }, [query, allPosts]);
+
+    const fetchPosts = async () => {
+        try {
+            const response = await fetch("/api/posts");
+            const data = await response.json();
+            setAllPosts(data.posts || []);
+        } catch (error) {
+            console.error("Failed to fetch posts:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     const performSearch = (searchQuery: string) => {
         const lowercaseQuery = searchQuery.toLowerCase();
@@ -32,8 +47,7 @@ export default function SearchPage() {
             return (
                 post.title.toLowerCase().includes(lowercaseQuery) ||
                 post.excerpt.toLowerCase().includes(lowercaseQuery) ||
-                post.category.toLowerCase().includes(lowercaseQuery) ||
-                post.tags.some((tag) => tag.toLowerCase().includes(lowercaseQuery))
+                post.category.toLowerCase().includes(lowercaseQuery)
             );
         });
         setResults(filtered);
@@ -120,5 +134,13 @@ export default function SearchPage() {
                 )}
             </div>
         </div>
+    );
+}
+
+export default function SearchPage() {
+    return (
+        <Suspense fallback={<div className="container px-4 md:px-6 py-12 md:py-20"><div className="max-w-4xl mx-auto">Loading...</div></div>}>
+            <SearchContent />
+        </Suspense>
     );
 }

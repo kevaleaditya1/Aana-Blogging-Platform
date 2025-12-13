@@ -8,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BookmarkCheck, Trash2, ArrowRight } from "lucide-react";
-import { getSortedPostsData } from "@/lib/posts";
 
 interface Bookmark {
     id: string;
@@ -16,28 +15,42 @@ interface Bookmark {
     createdAt: string;
 }
 
+interface Post {
+    slug: string;
+    title: string;
+    excerpt: string;
+    date: string;
+    category: string;
+}
+
 export default function BookmarksPage() {
     const { data: session, status } = useSession();
     const router = useRouter();
     const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
+    const [posts, setPosts] = useState<Post[]>([]);
     const [loading, setLoading] = useState(true);
-    const allPosts = getSortedPostsData();
 
     useEffect(() => {
         if (status === "unauthenticated") {
             router.push("/login");
         } else if (status === "authenticated") {
-            fetchBookmarks();
+            fetchData();
         }
     }, [status]);
 
-    const fetchBookmarks = async () => {
+    const fetchData = async () => {
         try {
-            const response = await fetch("/api/bookmarks");
-            const data = await response.json();
-            setBookmarks(data.bookmarks || []);
+            // Fetch bookmarks
+            const bookmarksRes = await fetch("/api/bookmarks");
+            const bookmarksData = await bookmarksRes.json();
+            setBookmarks(bookmarksData.bookmarks || []);
+
+            // Fetch all posts
+            const postsRes = await fetch("/api/posts");
+            const postsData = await postsRes.json();
+            setPosts(postsData.posts || []);
         } catch (error) {
-            console.error("Failed to fetch bookmarks:", error);
+            console.error("Failed to fetch data:", error);
         } finally {
             setLoading(false);
         }
@@ -76,7 +89,7 @@ export default function BookmarksPage() {
         );
     }
 
-    const bookmarkedPosts = allPosts.filter((post) =>
+    const bookmarkedPosts = posts.filter((post) =>
         bookmarks.some((b) => b.postSlug === post.slug)
     );
 
