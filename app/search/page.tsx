@@ -43,7 +43,7 @@ function SearchContent() {
 
     const performSearch = (searchQuery: string) => {
         const lowercaseQuery = searchQuery.toLowerCase();
-        const filtered = allPosts.filter((post) => {
+        const filtered = (allPosts || []).filter((post) => {
             return (
                 post.title.toLowerCase().includes(lowercaseQuery) ||
                 post.excerpt.toLowerCase().includes(lowercaseQuery) ||
@@ -98,7 +98,7 @@ function SearchContent() {
                     </Card>
                 ) : (
                     <div className="space-y-4">
-                        {results.map((post) => (
+                        {(results || []).map((post) => (
                             <Card key={post.slug} className="group hover:shadow-lg transition-shadow">
                                 <CardContent className="p-6">
                                     <div className="flex items-center gap-2 mb-2">
@@ -115,13 +115,6 @@ function SearchContent() {
                                     <p className="text-muted-foreground text-sm mb-4">
                                         {post.excerpt}
                                     </p>
-                                    <div className="flex items-center gap-2 flex-wrap mb-3">
-                                        {post.tags.map((tag: string) => (
-                                            <Badge key={tag} variant="secondary" className="text-xs">
-                                                {tag}
-                                            </Badge>
-                                        ))}
-                                    </div>
                                     <Button variant="ghost" size="sm" asChild>
                                         <Link href={`/blog/${post.slug}`} className="gap-2">
                                             Read Article <ArrowRight className="h-4 w-4" />
