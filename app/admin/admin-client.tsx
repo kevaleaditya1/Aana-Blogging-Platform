@@ -22,7 +22,11 @@ interface Post {
     excerpt: string;
 }
 
-export default function AdminDashboard() {
+interface AdminDashboardClientProps {
+    session: any;
+}
+
+export default function AdminDashboardClient({ session }: AdminDashboardClientProps) {
     const [posts, setPosts] = useState<Post[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -62,7 +66,7 @@ export default function AdminDashboard() {
     };
 
     const handleLogout = async () => {
-        await signOut({ callbackUrl: "/" });
+        await signOut({ callbackUrl: "/admin/login" });
     };
 
     return (

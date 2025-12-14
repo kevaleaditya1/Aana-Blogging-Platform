@@ -34,17 +34,19 @@ export default function AdminLoginPage() {
             return;
         }
 
-        const result = await signIn("credentials", {
-            email: formData.email,
-            password: formData.password,
-            redirect: false,
-        });
+        try {
+            console.log("Attempting login with:", formData.email);
 
-        if (result?.error) {
-            setError("Invalid email or password");
+            await signIn("credentials", {
+                email: formData.email,
+                password: formData.password,
+                redirect: true,
+                callbackUrl: "/admin",
+            });
+        } catch (error) {
+            console.error("Login exception:", error);
+            setError("An error occurred. Please try again.");
             setLoading(false);
-        } else {
-            router.push("/admin");
         }
     };
 
