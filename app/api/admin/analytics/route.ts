@@ -12,7 +12,7 @@ export async function GET() {
         }
 
         // Get posts count
-        const posts = getSortedPostsData();
+        const posts = await getSortedPostsData();
         const totalPosts = posts.length;
 
         // Get users count
