@@ -14,6 +14,9 @@ import { Badge } from "@/components/ui/badge";
 import { getSortedPostsData } from "@/lib/posts";
 import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
 
+// Revalidate every 60 seconds to show latest posts
+export const revalidate = 60;
+
 export default async function Home() {
   const allPosts = await getSortedPostsData();
   const featuredPost = allPosts[0];

@@ -59,7 +59,9 @@ export function Footer() {
                                 <span className="sr-only">Twitter</span>
                             </Link>
                             <Link
-                                href="#"
+                                href="https://www.instagram.com/aana.blogs/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-muted-foreground hover:text-primary transition-colors"
                             >
                                 <Instagram className="h-5 w-5" />

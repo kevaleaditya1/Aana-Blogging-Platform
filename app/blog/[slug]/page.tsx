@@ -14,6 +14,9 @@ import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import { CodeBlock } from "@/components/blog/code-block";
 
+// Revalidate every 60 seconds to show latest content
+export const revalidate = 60;
+
 interface Props {
     params: Promise<{
         slug: string;
