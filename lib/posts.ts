@@ -1,61 +1,105 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import prisma from "@/lib/prisma";
 import { Post } from "@/types";
 
-const postsDirectory = path.join(process.cwd(), "content/posts");
-
-export function getSortedPostsData(): Post[] {
-    // Create directory if it doesn't exist
-    if (!fs.existsSync(postsDirectory)) {
-        return [];
-    }
-
-    const fileNames = fs.readdirSync(postsDirectory);
-    const allPostsData = fileNames.map((fileName) => {
-        const slug = fileName.replace(/\.mdx$/, "");
-        const fullPath = path.join(postsDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, "utf8");
-        const { data, content } = matter(fileContents);
-
-        return {
-            slug,
-            content,
-            ...data,
-        } as Post;
-    });
-
-    return allPostsData.sort((a, b) => {
-        if (a.date < b.date) {
-            return 1;
-        } else {
-            return -1;
-        }
-    });
-}
-
-export function getAllPostSlugs() {
-    if (!fs.existsSync(postsDirectory)) {
-        return [];
-    }
-    const fileNames = fs.readdirSync(postsDirectory);
-    return fileNames.map((fileName) => {
-        return {
-            params: {
-                slug: fileName.replace(/\.mdx$/, ""),
+export async function getSortedPostsData(): Promise<Post[]> {
+    try {
+        const posts = await prisma.post.findMany({
+            where: {
+                published: true,
             },
-        };
-    });
+            orderBy: {
+                createdAt: "desc",
+            },
+        });
+
+        return posts.map(post => ({
+            slug: post.slug,
+            title: post.title,
+            date: post.createdAt.toISOString().split('T')[0],
+            excerpt: post.excerpt,
+            content: post.content,
+            coverImage: post.coverImage,
+            category: post.category,
+            tags: post.tags,
+            author: post.author,
+        }));
+    } catch (error) {
+        console.error("Error fetching posts:", error);
+        return [];
+    }
 }
 
-export function getPostData(slug: string): Post {
-    const fullPath = path.join(postsDirectory, `${slug}.mdx`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data, content } = matter(fileContents);
+export async function getAllPostSlugs() {
+    try {
+        const posts = await prisma.post.findMany({
+            where: {
+                published: true,
+            },
+            select: {
+                slug: true,
+            },
+        });
 
-    return {
-        slug,
-        content,
-        ...data,
-    } as Post;
+        return posts.map((post) => ({
+            params: {
+                slug: post.slug,
+            },
+        }));
+    } catch (error) {
+        console.error("Error fetching post slugs:", error);
+        return [];
+    }
+}
+
+export async function getPostData(slug: string): Promise<Post | null> {
+    try {
+        const post = await prisma.post.findUnique({
+            where: {
+                slug,
+                published: true,
+            },
+        });
+
+        if (!post) {
+            return null;
+        }
+
+        return {
+            slug: post.slug,
+            title: post.title,
+            date: post.createdAt.toISOString().split('T')[0],
+            excerpt: post.excerpt,
+            content: post.content,
+            coverImage: post.coverImage,
+            category: post.category,
+            tags: post.tags,
+            author: post.author,
+        };
+    } catch (error) {
+        console.error("Error fetching post:", error);
+        return null;
+    }
+}
+
+// Admin function to get all posts including unpublished
+export async function getAllPostsForAdmin() {
+    try {
+        const posts = await prisma.post.findMany({
+            orderBy: {
+                createdAt: "desc",
+            },
+        });
+
+        return posts.map(post => ({
+            slug: post.slug,
+            title: post.title,
+            date: post.createdAt.toISOString().split('T')[0],
+            excerpt: post.excerpt,
+            category: post.category,
+            published: post.published,
+        }));
+    } catch (error) {
+        console.error("Error fetching posts for admin:", error);
+        return [];
+    }
 }

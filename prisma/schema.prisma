@@ -87,3 +87,24 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Post {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  title         String
+  excerpt       String
+  content       String   @db.Text
+  coverImage    String
+  category      String
+  tags          String[]
+  author        String   @default("Aana")
+  published     Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@index([slug])
+  @@index([category])
+  @@index([published])
+  @@index([createdAt])
+}
+

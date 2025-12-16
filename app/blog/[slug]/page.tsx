@@ -17,7 +17,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-    const paths = getAllPostSlugs();
+    const paths = await getAllPostSlugs();
     return paths.map((path) => ({
         slug: path.params.slug,
     }));
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    const post = getPostData(slug);
+    const post = await getPostData(slug);
 
     if (!post) {
         return {
@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Post({ params }: Props) {
     const { slug } = await params;
-    const post = getPostData(slug);
+    const post = await getPostData(slug);
 
     if (!post) {
         notFound();

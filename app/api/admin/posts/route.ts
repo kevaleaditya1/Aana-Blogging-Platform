@@ -1,35 +1,34 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { auth } from "@/lib/auth";
+import prisma from "@/lib/prisma";
 
-const postsDirectory = path.join(process.cwd(), "content/posts");
-
-// Ensure directory exists
-if (!fs.existsSync(postsDirectory)) {
-    fs.mkdirSync(postsDirectory, { recursive: true });
-}
-
-// GET: List all posts
+// GET: List all posts (admin view - includes unpublished)
 export async function GET() {
     try {
-        const fileNames = fs.readdirSync(postsDirectory);
-        const posts = fileNames
-            .filter((fileName) => fileName.endsWith(".mdx"))
-            .map((fileName) => {
-                const slug = fileName.replace(/\.mdx$/, "");
-                const fullPath = path.join(postsDirectory, fileName);
-                const fileContents = fs.readFileSync(fullPath, "utf8");
-                const { data } = matter(fileContents);
+        const session = await auth();
 
-                return {
-                    slug,
-                    ...data,
-                };
-            });
+        if (!session || session.user.role !== "ADMIN") {
+            return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        }
+
+        const posts = await prisma.post.findMany({
+            orderBy: {
+                createdAt: "desc",
+            },
+            select: {
+                id: true,
+                slug: true,
+                title: true,
+                excerpt: true,
+                category: true,
+                published: true,
+                createdAt: true,
+            },
+        });
 
         return NextResponse.json({ posts });
     } catch (error) {
+        console.error("Error fetching posts:", error);
         return NextResponse.json(
             { error: "Failed to fetch posts" },
             { status: 500 }
@@ -40,33 +39,49 @@ export async function GET() {
 // POST: Create new post
 export async function POST(request: NextRequest) {
     try {
-        const body = await request.json();
-        const { slug, frontmatter, content } = body;
+        const session = await auth();
 
-        if (!slug || !frontmatter || !content) {
+        if (!session || session.user.role !== "ADMIN") {
+            return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        }
+
+        const body = await request.json();
+        const { slug, title, excerpt, content, coverImage, category, tags, published } = body;
+
+        if (!slug || !title || !content) {
             return NextResponse.json(
-                { error: "Missing required fields" },
+                { error: "Missing required fields: slug, title, content" },
                 { status: 400 }
             );
         }
 
-        const filePath = path.join(postsDirectory, `${slug}.mdx`);
+        // Check if post with slug already exists
+        const existing = await prisma.post.findUnique({
+            where: { slug },
+        });
 
-        // Check if file already exists
-        if (fs.existsSync(filePath)) {
+        if (existing) {
             return NextResponse.json(
                 { error: "Post with this slug already exists" },
                 { status: 409 }
             );
         }
 
-        // Create MDX content
-        const mdxContent = matter.stringify(content, frontmatter);
+        // Create post in database
+        const post = await prisma.post.create({
+            data: {
+                slug,
+                title,
+                excerpt: excerpt || "",
+                content,
+                coverImage: coverImage || "/images/default-cover.jpg",
+                category: category || "Uncategorized",
+                tags: tags || [],
+                published: published !== undefined ? published : true,
+            },
+        });
 
-        // Write file
-        fs.writeFileSync(filePath, mdxContent, "utf8");
-
-        return NextResponse.json({ success: true, slug });
+        return NextResponse.json({ success: true, post });
     } catch (error) {
         console.error("Error creating post:", error);
         return NextResponse.json(

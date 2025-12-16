@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-
-const postsDirectory = path.join(process.cwd(), "content/posts");
+import { auth } from "@/lib/auth";
+import prisma from "@/lib/prisma";
 
 interface RouteParams {
     params: Promise<{
@@ -14,18 +11,25 @@ interface RouteParams {
 // GET: Get single post
 export async function GET(request: NextRequest, { params }: RouteParams) {
     try {
-        const { slug } = await params;
-        const filePath = path.join(postsDirectory, `${slug}.mdx`);
+        const session = await auth();
 
-        if (!fs.existsSync(filePath)) {
+        if (!session || session.user.role !== "ADMIN") {
+            return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        }
+
+        const { slug } = await params;
+        
+        const post = await prisma.post.findUnique({
+            where: { slug },
+        });
+
+        if (!post) {
             return NextResponse.json({ error: "Post not found" }, { status: 404 });
         }
 
-        const fileContents = fs.readFileSync(filePath, "utf8");
-        const { data, content } = matter(fileContents);
-
-        return NextResponse.json({ slug, frontmatter: data, content });
+        return NextResponse.json({ post });
     } catch (error) {
+        console.error("Error fetching post:", error);
         return NextResponse.json(
             { error: "Failed to fetch post" },
             { status: 500 }
@@ -36,23 +40,40 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 // PUT: Update post
 export async function PUT(request: NextRequest, { params }: RouteParams) {
     try {
+        const session = await auth();
+
+        if (!session || session.user.role !== "ADMIN") {
+            return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        }
+
         const { slug } = await params;
         const body = await request.json();
-        const { frontmatter, content } = body;
+        const { title, excerpt, content, coverImage, category, tags, published } = body;
 
-        const filePath = path.join(postsDirectory, `${slug}.mdx`);
+        // Check if post exists
+        const existing = await prisma.post.findUnique({
+            where: { slug },
+        });
 
-        if (!fs.existsSync(filePath)) {
+        if (!existing) {
             return NextResponse.json({ error: "Post not found" }, { status: 404 });
         }
 
-        // Create MDX content
-        const mdxContent = matter.stringify(content, frontmatter);
+        // Update post
+        const updatedPost = await prisma.post.update({
+            where: { slug },
+            data: {
+                ...(title && { title }),
+                ...(excerpt !== undefined && { excerpt }),
+                ...(content && { content }),
+                ...(coverImage && { coverImage }),
+                ...(category && { category }),
+                ...(tags && { tags }),
+                ...(published !== undefined && { published }),
+            },
+        });
 
-        // Write file
-        fs.writeFileSync(filePath, mdxContent, "utf8");
-
-        return NextResponse.json({ success: true, slug });
+        return NextResponse.json({ success: true, post: updatedPost });
     } catch (error) {
         console.error("Error updating post:", error);
         return NextResponse.json(
@@ -65,16 +86,29 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 // DELETE: Delete post
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
     try {
-        const { slug } = await params;
-        const filePath = path.join(postsDirectory, `${slug}.mdx`);
+        const session = await auth();
 
-        if (!fs.existsSync(filePath)) {
+        if (!session || session.user.role !== "ADMIN") {
+            return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        }
+
+        const { slug } = await params;
+
+        // Check if post exists
+        const existing = await prisma.post.findUnique({
+            where: { slug },
+        });
+
+        if (!existing) {
             return NextResponse.json({ error: "Post not found" }, { status: 404 });
         }
 
-        fs.unlinkSync(filePath);
+        // Delete post from database
+        await prisma.post.delete({
+            where: { slug },
+        });
 
-        return NextResponse.json({ success: true, slug });
+        return NextResponse.json({ success: true, message: "Post deleted successfully" });
     } catch (error) {
         console.error("Error deleting post:", error);
         return NextResponse.json(

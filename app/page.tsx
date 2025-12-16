@@ -12,9 +12,10 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getSortedPostsData } from "@/lib/posts";
+import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
 
-export default function Home() {
-  const allPosts = getSortedPostsData();
+export default async function Home() {
+  const allPosts = await getSortedPostsData();
   const featuredPost = allPosts[0];
   const latestPosts = allPosts.slice(1);
 
