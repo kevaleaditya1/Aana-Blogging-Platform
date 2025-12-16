@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About Us - Ashitya",
-    description: "Learn more about Ashitya and our mission.",
+    title: "About Us - Aana",
+    description: "Learn more about Aana and our mission.",
 };
 
 export default function AboutPage() {
     return (
         <div className="container px-4 md:px-6 py-12 md:py-20 max-w-3xl mx-auto">
             <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mb-8">
-                About Ashitya
+                About Aanana
             </h1>
-            <div className="prose prose-zinc dark:prose-invert max-w-none">
+            <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground">
                 <p>
-                    Welcome to <strong>Ashitya</strong>, your premier destination for the
+                    Welcome to <strong>Aana</strong>, your premier destination for the
                     latest in technology, gadgets, and digital innovation.
                 </p>
                 <p>
@@ -30,7 +30,7 @@ export default function AboutPage() {
                 </p>
                 <h2>The Team</h2>
                 <p>
-                    Ashitya is run by a team of passionate tech lovers who live and
+                    Aana is run by a team of passionate tech lovers who live and
                     breathe gadgets. We test everything so you don't have to.
                 </p>
             </div>

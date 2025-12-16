@@ -15,26 +15,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ashitya - Tech for the Future",
-    template: "%s | Ashitya",
+    default: "Aana - Tech for the Future",
+    template: "%s | Aana",
   },
   description: "Modern tech blogging: Smartphones, AI, Gadgets, and more. Stay updated with the latest tech news, reviews, and guides.",
   keywords: ["tech blog", "smartphones", "AI", "gadgets", "technology", "reviews", "guides"],
-  authors: [{ name: "Ashitya" }],
-  creator: "Ashitya",
+  authors: [{ name: "Aana" }],
+  creator: "Aana",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-    title: "Ashitya - Tech for the Future",
+    title: "Aana - Tech for the Future",
     description: "Modern tech blogging: Smartphones, AI, Gadgets, and more.",
-    siteName: "Ashitya",
+    siteName: "Aana",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ashitya - Tech for the Future",
+    title: "Aana - Tech for the Future",
     description: "Modern tech blogging: Smartphones, AI, Gadgets, and more.",
-    creator: "@ashitya",
+    creator: "@Aana",
   },
   robots: {
     index: true,

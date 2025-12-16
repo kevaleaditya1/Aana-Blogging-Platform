@@ -16,15 +16,15 @@ export async function POST(request: NextRequest) {
 
         // Send welcome email
         await resend.emails.send({
-            from: "Ashitya <onboarding@resend.dev>", // Use your verified domain
+            from: "Aana <onboarding@resend.dev>", // Use your verified domain
             to: email,
-            subject: "Welcome to Ashitya Newsletter!",
+            subject: "Welcome to Aana Newsletter!",
             html: `
-        <h1>Welcome to Ashitya!</h1>
+        <h1>Welcome to Aana!</h1>
         <p>Thank you for subscribing to our newsletter.</p>
         <p>You'll receive the latest tech news, reviews, and insights directly in your inbox.</p>
         <p>Stay tuned!</p>
-        <p>- The Ashitya Team</p>
+        <p>- The Aana Team</p>
       `,
         });
 

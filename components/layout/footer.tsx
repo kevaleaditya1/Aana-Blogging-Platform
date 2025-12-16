@@ -43,12 +43,12 @@ export function Footer() {
                     <div className="space-y-4">
                         <Link href="/" className="flex items-center gap-2">
                             <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-                                Ashitya
+                                Aana
                             </span>
                         </Link>
                         <p className="text-sm text-muted-foreground">
                             Your daily dose of technology, gadgets, and future tech. Stay ahead
-                            of the curve with Ashitya.
+                            of the curve with Aana.
                         </p>
                         <div className="flex gap-4">
                             <Link
@@ -158,7 +158,7 @@ export function Footer() {
                 </div>
                 <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
                     <p>
-                        &copy; {new Date().getFullYear()} Ashitya. All rights reserved.
+                        &copy; {new Date().getFullYear()} Aana. All rights reserved.
                     </p>
                 </div>
             </div>

@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
 
         // Send email to admin
         await resend.emails.send({
-            from: "Ashitya Contact <onboarding@resend.dev>", // Use your verified domain
+            from: "Aana Contact <onboarding@resend.dev>", // Use your verified domain
             to: process.env.CONTACT_EMAIL!,
             replyTo: email,
             subject: `New Contact Form Submission from ${name}`,
@@ -31,16 +31,16 @@ export async function POST(request: NextRequest) {
 
         // Send confirmation to user
         await resend.emails.send({
-            from: "Ashitya <onboarding@resend.dev>",
+            from: "Aana <onboarding@resend.dev>",
             to: email,
             subject: "We received your message!",
             html: `
-        <h2>Thank you for contacting Ashitya!</h2>
+        <h2>Thank you for contacting Aana!</h2>
         <p>Hi ${name},</p>
         <p>We've received your message and will get back to you as soon as possible.</p>
         <p><strong>Your message:</strong></p>
         <p>${message.replace(/\n/g, "<br>")}</p>
-        <p>Best regards,<br>The Ashitya Team</p>
+        <p>Best regards,<br>The Aana Team</p>
       `,
         });
 

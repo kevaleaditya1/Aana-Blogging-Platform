@@ -4,64 +4,67 @@ import * as React from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useSession, signOut } from "next-auth/react";
-import { Search, Sun, Moon, Menu, X, User, LogOut, BookmarkIcon } from "lucide-react";
+import { Search, Sun, Moon, Menu, X, User, LogOut, BookmarkIcon, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
 
 export function Header() {
     const { setTheme, theme } = useTheme();
     const { data: session, status } = useSession();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isUserMenuOpen, setIsUserMenuOpen] = React.useState(false);
+    const [scrolled, setScrolled] = React.useState(false);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header
+            className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
+                ? "bg-background/95 backdrop-blur-lg shadow-sm"
+                : "bg-background/80 backdrop-blur-md"
+                }`}
+        >
             <div className="container flex h-16 items-center px-4 md:px-6">
-                {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 mr-6">
-                    <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-                        Ashitya
+                {/* Logo - Creative with Icon */}
+                <Link href="/" className="flex items-center gap-2 mr-10 group">
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity" />
+                        <Sparkles className="h-5 w-5 text-primary relative" />
+                    </div>
+                    <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+                        Aana
                     </span>
                 </Link>
 
-                {/* Desktop Navigation - Centered */}
-                <nav className="hidden md:flex items-center gap-6 text-sm font-medium flex-1">
-                    <Link
-                        href="/category/phones"
-                        className="transition-colors hover:text-primary"
-                    >
-                        Phones
-                    </Link>
-                    <Link
-                        href="/category/gadgets"
-                        className="transition-colors hover:text-primary"
-                    >
-                        Gadgets
-                    </Link>
-                    <Link
-                        href="/category/ai-tools"
-                        className="transition-colors hover:text-primary"
-                    >
-                        AI Tools
-                    </Link>
-                    <Link
-                        href="/category/guides"
-                        className="transition-colors hover:text-primary"
-                    >
-                        Guides
-                    </Link>
-                    <Link
-                        href="/category/news"
-                        className="transition-colors hover:text-primary"
-                    >
-                        News
-                    </Link>
+                {/* Desktop Navigation - Elegant with Underline Effect */}
+                <nav className="hidden md:flex items-center gap-1 text-sm flex-1">
+                    {[
+                        { href: "/category/phones", label: "Phones" },
+                        { href: "/category/gadgets", label: "Gadgets" },
+                        { href: "/category/ai-tools", label: "AI Tools" },
+                        { href: "/category/guides", label: "Guides" },
+                        { href: "/category/news", label: "News" },
+                    ].map((item) => (
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className="relative px-3 py-2 text-muted-foreground hover:text-foreground transition-colors group"
+                        >
+                            {item.label}
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                        </Link>
+                    ))}
                 </nav>
 
-                {/* Right Side - Search and Auth Only */}
-                <div className="flex items-center gap-3 ml-auto">
-                    {/* Search Bar */}
+                {/* Right Side - Refined with Glass Effect */}
+                <div className="flex items-center gap-2 ml-auto">
+                    {/* Search Bar - Glass Morphism */}
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
@@ -71,82 +74,111 @@ export function Header() {
                                 window.location.href = `/search?q=${encodeURIComponent(query)}`;
                             }
                         }}
-                        className="hidden md:flex items-center relative"
+                        className="hidden md:flex items-center relative group"
                     >
-                        <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full opacity-0 group-focus-within:opacity-100 transition-opacity blur" />
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none z-10" />
                         <Input
                             type="search"
                             name="search"
-                            placeholder="Search..."
-                            className="w-48 xl:w-64 pl-9 rounded-full bg-secondary/50 focus:bg-background transition-colors"
+                            placeholder="Search articles..."
+                            className="w-64 pl-10 pr-4 h-10 bg-secondary/50 border-0 focus-visible:ring-2 focus-visible:ring-primary/20 rounded-full relative"
                         />
                     </form>
 
-                    {/* Auth Buttons / User Menu */}
+                    {/* Theme Toggle - Smooth Animation */}
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-10 w-10 rounded-full hover:bg-secondary/80"
+                        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                    >
+                        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                        <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                        <span className="sr-only">Toggle theme</span>
+                    </Button>
+
+                    {/* Auth - Premium Look */}
                     {status === "loading" ? (
-                        <div className="h-9 w-9 rounded-full bg-secondary/50 animate-pulse" />
+                        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 animate-pulse" />
                     ) : session?.user ? (
                         <div className="relative hidden md:block">
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className="rounded-full"
+                                className="h-10 w-10 rounded-full hover:bg-secondary/80 relative overflow-hidden group"
                                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
                             >
+                                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 {session.user.image ? (
                                     <img
                                         src={session.user.image}
                                         alt={session.user.name || "User"}
-                                        className="h-8 w-8 rounded-full"
+                                        className="h-9 w-9 rounded-full object-cover ring-2 ring-background"
                                     />
                                 ) : (
-                                    <User className="h-5 w-5" />
+                                    <User className="h-5 w-5 relative z-10" />
                                 )}
                             </Button>
                             {isUserMenuOpen && (
-                                <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-background border">
-                                    <div className="py-1">
-                                        <div className="px-4 py-2 text-sm border-b">
-                                            <p className="font-medium">{session.user.name}</p>
-                                            <p className="text-xs text-muted-foreground truncate">
-                                                {session.user.email}
-                                            </p>
+                                <>
+                                    <div
+                                        className="fixed inset-0 z-40"
+                                        onClick={() => setIsUserMenuOpen(false)}
+                                    />
+                                    <div className="absolute right-0 mt-2 w-64 rounded-xl shadow-xl bg-background/95 backdrop-blur-lg border z-50 overflow-hidden">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5" />
+                                        <div className="relative">
+                                            <div className="px-4 py-3 border-b bg-gradient-to-r from-indigo-500/5 to-purple-500/5">
+                                                <p className="font-semibold text-sm">{session.user.name}</p>
+                                                <p className="text-xs text-muted-foreground truncate mt-0.5">
+                                                    {session.user.email}
+                                                </p>
+                                            </div>
+                                            <div className="py-1">
+                                                <Link
+                                                    href="/bookmarks"
+                                                    className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors"
+                                                    onClick={() => setIsUserMenuOpen(false)}
+                                                >
+                                                    <BookmarkIcon className="h-4 w-4" />
+                                                    <span>My Bookmarks</span>
+                                                </Link>
+                                                {session.user.role === "ADMIN" && (
+                                                    <Link
+                                                        href="/admin"
+                                                        className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors"
+                                                        onClick={() => setIsUserMenuOpen(false)}
+                                                    >
+                                                        <User className="h-4 w-4" />
+                                                        <span>Admin Panel</span>
+                                                    </Link>
+                                                )}
+                                            </div>
+                                            <div className="border-t">
+                                                <button
+                                                    onClick={() => {
+                                                        setIsUserMenuOpen(false);
+                                                        signOut({ callbackUrl: "/" });
+                                                    }}
+                                                    className="flex items-center gap-3 w-full px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors text-left"
+                                                >
+                                                    <LogOut className="h-4 w-4" />
+                                                    <span>Sign Out</span>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <Link
-                                            href="/bookmarks"
-                                            className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-secondary transition-colors"
-                                            onClick={() => setIsUserMenuOpen(false)}
-                                        >
-                                            <BookmarkIcon className="h-4 w-4" />
-                                            My Bookmarks
-                                        </Link>
-                                        {session.user.role === "ADMIN" && (
-                                            <Link
-                                                href="/admin"
-                                                className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-secondary transition-colors"
-                                                onClick={() => setIsUserMenuOpen(false)}
-                                            >
-                                                <User className="h-4 w-4" />
-                                                Admin Panel
-                                            </Link>
-                                        )}
-                                        <button
-                                            onClick={() => {
-                                                setIsUserMenuOpen(false);
-                                                signOut({ callbackUrl: "/" });
-                                            }}
-                                            className="flex items-center gap-2 w-full px-4 py-2 text-sm hover:bg-secondary transition-colors text-left"
-                                        >
-                                            <LogOut className="h-4 w-4" />
-                                            Sign Out
-                                        </button>
                                     </div>
-                                </div>
+                                </>
                             )}
                         </div>
                     ) : (
                         <div className="hidden md:block">
-                            <Button size="sm" asChild>
+                            <Button
+                                size="sm"
+                                asChild
+                                className="h-10 px-6 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg shadow-indigo-500/25"
+                            >
                                 <Link href="/login">Get Started</Link>
                             </Button>
                         </div>
@@ -156,120 +188,114 @@ export function Header() {
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="md:hidden"
+                        className="md:hidden h-10 w-10 rounded-full"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (
-                            <X className="h-6 w-6" />
+                            <X className="h-5 w-5" />
                         ) : (
-                            <Menu className="h-6 w-6" />
+                            <Menu className="h-5 w-5" />
                         )}
                     </Button>
                 </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu - Elegant Slide */}
             {isMenuOpen && (
-                <div className="md:hidden border-t p-4 space-y-4 bg-background">
-                    <div className="relative">
-                        <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                        <Input
-                            type="search"
-                            placeholder="Search..."
-                            className="w-full pl-9 rounded-full bg-secondary/50"
-                        />
-                    </div>
-                    <nav className="flex flex-col gap-4 text-sm font-medium">
-                        <Link
-                            href="/category/phones"
-                            className="transition-colors hover:text-primary"
-                            onClick={() => setIsMenuOpen(false)}
+                <div className="md:hidden bg-background/95 backdrop-blur-lg">
+                    <div className="container px-4 py-4 space-y-4">
+                        {/* Mobile Search */}
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                const formData = new FormData(e.currentTarget);
+                                const query = formData.get("search") as string;
+                                if (query.trim()) {
+                                    window.location.href = `/search?q=${encodeURIComponent(query)}`;
+                                    setIsMenuOpen(false);
+                                }
+                            }}
+                            className="relative"
                         >
-                            Phones
-                        </Link>
-                        <Link
-                            href="/category/gadgets"
-                            className="transition-colors hover:text-primary"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Gadgets
-                        </Link>
-                        <Link
-                            href="/category/ai-tools"
-                            className="transition-colors hover:text-primary"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            AI Tools
-                        </Link>
-                        <Link
-                            href="/category/guides"
-                            className="transition-colors hover:text-primary"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Guides
-                        </Link>
-                        <Link
-                            href="/category/news"
-                            className="transition-colors hover:text-primary"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            News
-                        </Link>
-                    </nav>
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                            <Input
+                                type="search"
+                                name="search"
+                                placeholder="Search articles..."
+                                className="w-full pl-10 bg-secondary/50 border-0 rounded-full"
+                            />
+                        </form>
 
-                    {/* Mobile Auth */}
-                    <div className="border-t pt-4">
-                        {session?.user ? (
-                            <div className="space-y-2">
-                                <div className="px-2 py-2 text-sm border-b">
-                                    <p className="font-medium">{session.user.name}</p>
-                                    <p className="text-xs text-muted-foreground">
-                                        {session.user.email}
-                                    </p>
-                                </div>
+                        {/* Mobile Navigation */}
+                        <nav className="flex flex-col gap-1">
+                            {[
+                                { href: "/category/phones", label: "Phones" },
+                                { href: "/category/gadgets", label: "Gadgets" },
+                                { href: "/category/ai-tools", label: "AI Tools" },
+                                { href: "/category/guides", label: "Guides" },
+                                { href: "/category/news", label: "News" },
+                            ].map((item) => (
                                 <Link
-                                    href="/bookmarks"
-                                    className="flex items-center gap-2 px-2 py-2 text-sm hover:bg-secondary rounded transition-colors"
+                                    key={item.href}
+                                    href={item.href}
+                                    className="px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-lg transition-colors"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
-                                    <BookmarkIcon className="h-4 w-4" />
-                                    My Bookmarks
+                                    {item.label}
                                 </Link>
-                                {session.user.role === "ADMIN" && (
+                            ))}
+                        </nav>
+
+                        {/* Mobile Auth */}
+                        <div className="border-t pt-4">
+                            {session?.user ? (
+                                <div className="space-y-1">
+                                    <div className="px-4 py-3 rounded-lg bg-gradient-to-r from-indigo-500/5 to-purple-500/5 border mb-2">
+                                        <p className="font-semibold text-sm">{session.user.name}</p>
+                                        <p className="text-xs text-muted-foreground">
+                                            {session.user.email}
+                                        </p>
+                                    </div>
                                     <Link
-                                        href="/admin"
-                                        className="flex items-center gap-2 px-2 py-2 text-sm hover:bg-secondary rounded transition-colors"
+                                        href="/bookmarks"
+                                        className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 rounded-lg transition-colors"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
-                                        <User className="h-4 w-4" />
-                                        Admin Panel
+                                        <BookmarkIcon className="h-4 w-4" />
+                                        My Bookmarks
                                     </Link>
-                                )}
-                                <button
-                                    onClick={() => {
-                                        setIsMenuOpen(false);
-                                        signOut({ callbackUrl: "/" });
-                                    }}
-                                    className="flex items-center gap-2 w-full px-2 py-2 text-sm hover:bg-secondary rounded transition-colors text-left"
+                                    {session.user.role === "ADMIN" && (
+                                        <Link
+                                            href="/admin"
+                                            className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 rounded-lg transition-colors"
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            <User className="h-4 w-4" />
+                                            Admin Panel
+                                        </Link>
+                                    )}
+                                    <button
+                                        onClick={() => {
+                                            setIsMenuOpen(false);
+                                            signOut({ callbackUrl: "/" });
+                                        }}
+                                        className="flex items-center gap-3 w-full px-4 py-2.5 text-sm hover:bg-secondary/50 rounded-lg transition-colors text-left"
+                                    >
+                                        <LogOut className="h-4 w-4" />
+                                        Sign Out
+                                    </button>
+                                </div>
+                            ) : (
+                                <Button
+                                    className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700"
+                                    asChild
                                 >
-                                    <LogOut className="h-4 w-4" />
-                                    Sign Out
-                                </button>
-                            </div>
-                        ) : (
-                            <div className="flex flex-col gap-2">
-                                <Button variant="outline" className="w-full" asChild>
                                     <Link href="/login" onClick={() => setIsMenuOpen(false)}>
-                                        Login
+                                        Get Started
                                     </Link>
                                 </Button>
-                                <Button className="w-full" asChild>
-                                    <Link href="/signup" onClick={() => setIsMenuOpen(false)}>
-                                        Sign Up
-                                    </Link>
-                                </Button>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
                 </div>
             )}

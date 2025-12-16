@@ -4,22 +4,22 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-  
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -27,58 +27,60 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
-  
+
   --font-sans: var(--font-inter);
 }
 
 :root {
+  /* Clean, minimal palette */
   --background: #ffffff;
-  --foreground: #09090b; /* Zinc 950 */
+  --foreground: #0a0a0a;
 
-  --primary: #2563eb; /* Blue 600 */
+  /* Subtle indigo accent */
+  --primary: #6366f1;
   --primary-foreground: #ffffff;
 
-  --secondary: #f4f4f5; /* Zinc 100 */
-  --secondary-foreground: #18181b; /* Zinc 900 */
+  --secondary: #f8fafc;
+  --secondary-foreground: #1e293b;
 
-  --accent: #f4f4f5; /* Zinc 100 */
-  --accent-foreground: #18181b; /* Zinc 900 */
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
 
-  --muted: #f4f4f5; /* Zinc 100 */
-  --muted-foreground: #71717a; /* Zinc 500 */
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
 
   --card: #ffffff;
-  --card-foreground: #09090b;
+  --card-foreground: #0f172a;
 
-  --border: #e4e4e7; /* Zinc 200 */
-  --input: #e4e4e7;
-  --ring: #2563eb;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #6366f1;
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 }
 
 .dark {
-  --background: #09090b; /* Zinc 950 */
-  --foreground: #fafafa; /* Zinc 50 */
+  --background: #0a0a0a;
+  --foreground: #fafafa;
 
-  --primary: #3b82f6; /* Blue 500 */
+  --primary: #818cf8;
   --primary-foreground: #ffffff;
 
-  --secondary: #27272a; /* Zinc 800 */
+  --secondary: #1a1a1a;
   --secondary-foreground: #fafafa;
 
-  --accent: #27272a; /* Zinc 800 */
+  --accent: #262626;
   --accent-foreground: #fafafa;
 
-  --muted: #27272a; /* Zinc 800 */
-  --muted-foreground: #a1a1aa; /* Zinc 400 */
+  --muted: #262626;
+  --muted-foreground: #cbd5e1;
 
-  --card: #09090b;
+  --card: #171717;
   --card-foreground: #fafafa;
 
-  --border: #27272a; /* Zinc 800 */
-  --input: #27272a;
-  --ring: #3b82f6;
+  --border: #262626;
+  --input: #262626;
+  --ring: #818cf8;
 }
 
 body {
@@ -87,4 +89,49 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth hover lift - subtle */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .hover-lift:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+/* Clean transitions */
+* {
+  transition-property: color, background-color, border-color, transform, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Subtle glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .glass {
+  background: rgba(23, 23, 23, 0.8);
+}
+
+/* Card cursor pointer */
+.cursor-pointer {
+  cursor: pointer;
 }

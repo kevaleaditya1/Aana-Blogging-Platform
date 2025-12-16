@@ -104,7 +104,7 @@ export default async function Post({ params }: Props) {
                 </div>
             </div>
 
-            <div className="prose prose-zinc dark:prose-invert max-w-none">
+            <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground">
                 <MDXRemote source={post.content} />
             </div>
 

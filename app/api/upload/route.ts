@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
             cloudinary.uploader
                 .upload_stream(
                     {
-                        folder: "ashitya-blog",
+                        folder: "Aana-blog",
                         resource_type: "auto",
                     },
                     (error, result) => {

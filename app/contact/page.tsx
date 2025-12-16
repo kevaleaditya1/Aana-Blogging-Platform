@@ -44,7 +44,7 @@ export default function ContactPage() {
                 Contact Us
             </h1>
             <div className="grid gap-8">
-                <div className="prose prose-zinc dark:prose-invert max-w-none">
+                <div className="prose prose-slate dark:prose-invert max-w-none prose-p:text-foreground prose-a:text-primary">
                     <p>
                         Have a tip, a question, or just want to say hi? We'd love to hear
                         from you. Fill out the form below or email us at{" "}

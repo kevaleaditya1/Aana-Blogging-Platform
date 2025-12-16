@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy - Ashitya Tech Blog",
-    description: "Privacy policy for Ashitya Tech Blog",
+    title: "Privacy Policy - Aana Tech Blog",
+    description: "Privacy policy for Aana Tech Blog",
 };
 
 export default function PrivacyPage() {
     return (
         <div className="container px-4 md:px-6 py-12 md:py-20">
-            <div className="max-w-3xl mx-auto prose prose-gray dark:prose-invert">
+            <div className="max-w-3xl mx-auto prose prose-slate dark:prose-invert prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-a:text-primary">
                 <h1>Privacy Policy</h1>
 
                 <p className="lead">

@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
         await resend.emails.send({
             from: process.env.EMAIL_FROM!,
             to: email,
-            subject: "Reset Your Password - Ashitya",
+            subject: "Reset Your Password - Aana",
             html: `
         <h2>Reset Your Password</h2>
         <p>Click the link below to reset your password:</p>

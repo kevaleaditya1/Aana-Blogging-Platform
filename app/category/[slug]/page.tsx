@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props) {
         .join(" ");
 
     return {
-        title: `${categoryName} - Ashitya`,
+        title: "Browse Categories - Aana",
         description: `Latest articles in ${categoryName}`,
     };
 }
@@ -54,11 +54,6 @@ export default async function CategoryPage({ params }: Props) {
         return postCategorySlug === slug;
     });
 
-    if (categoryPosts.length === 0) {
-        // Optional: Handle empty category or show all posts if "all"
-        // For now, let's just show a message
-    }
-
     return (
         <div className="container px-4 md:px-6 py-12 md:py-20">
             <div className="mb-8">
@@ -72,41 +67,59 @@ export default async function CategoryPage({ params }: Props) {
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {categoryPosts.length > 0 ? (
-                    categoryPosts.map((post) => (
-                        <Card key={post.slug} className="flex flex-col h-full hover:shadow-lg transition-shadow">
-                            <CardHeader className="p-0">
-                                <div className="aspect-[16/9] w-full bg-muted rounded-t-lg overflow-hidden flex items-center justify-center text-muted-foreground">
-                                    {/* Placeholder */}
-                                    <span>{post.title} Image</span>
-                                </div>
-                            </CardHeader>
-                            <CardContent className="flex-1 p-6">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <Badge variant="secondary" className="text-xs">
-                                        {post.category}
-                                    </Badge>
-                                    <span className="text-xs text-muted-foreground">
-                                        {post.date}
-                                    </span>
-                                </div>
-                                <CardTitle className="line-clamp-2 mb-2">
-                                    <Link href={`/blog/${post.slug}`} className="hover:underline">
-                                        {post.title}
-                                    </Link>
-                                </CardTitle>
-                                <CardDescription className="line-clamp-3">
-                                    {post.excerpt}
-                                </CardDescription>
-                            </CardContent>
-                            <CardFooter className="p-6 pt-0">
-                                <Button variant="ghost" size="sm" asChild className="ml-auto gap-1">
-                                    <Link href={`/blog/${post.slug}`}>
-                                        Read More <ArrowRight className="h-3 w-3" />
-                                    </Link>
-                                </Button>
-                            </CardFooter>
-                        </Card>
-                    ))
+                    categoryPosts.map((post, index) => {
+                        // Subtle theme colors for light and dark modes
+                        const themes = [
+                            'from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20',
+                            'from-blue-50/50 to-cyan-50/50 dark:from-blue-950/20 dark:to-cyan-950/20',
+                            'from-violet-50/50 to-pink-50/50 dark:from-violet-950/20 dark:to-pink-950/20',
+                        ];
+
+                        return (
+                            <Link key={post.slug} href={`/blog/${post.slug}`} className="block h-full">
+                                <Card className={`flex flex-col h-full hover-lift cursor-pointer bg-gradient-to-br ${themes[index % 3]} transition-all`}>
+                                    <CardHeader className="p-0">
+                                        <div className="aspect-[16/9] w-full bg-gradient-to-br from-muted/80 to-muted rounded-t-lg overflow-hidden relative">
+                                            {post.coverImage ? (
+                                                <Image
+                                                    src={post.coverImage}
+                                                    alt={post.title}
+                                                    fill
+                                                    className="object-cover"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                                                    <span className="font-medium">{post.title}</span>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent className="flex-1 p-6">
+                                        <div className="flex items-center gap-2 mb-2">
+                                            <Badge variant="secondary" className="text-xs">
+                                                {post.category}
+                                            </Badge>
+                                            <span className="text-xs text-muted-foreground">
+                                                {post.date}
+                                            </span>
+                                        </div>
+                                        <CardTitle className="line-clamp-2 mb-2">
+                                            {post.title}
+                                        </CardTitle>
+                                        <CardDescription className="line-clamp-3">
+                                            {post.excerpt}
+                                        </CardDescription>
+                                    </CardContent>
+                                    <CardFooter className="p-6 pt-0">
+                                        <div className="ml-auto flex items-center gap-1 text-sm text-primary font-medium">
+                                            Read More <ArrowRight className="h-3 w-3" />
+                                        </div>
+                                    </CardFooter>
+                                </Card>
+                            </Link>
+                        );
+                    })
                 ) : (
                     <div className="col-span-full text-center py-20">
                         <p className="text-muted-foreground">No articles found in this category.</p>

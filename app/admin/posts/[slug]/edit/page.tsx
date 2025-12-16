@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Upload, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,6 +23,10 @@ export default function EditPostPage({ params }: Props) {
     const [saving, setSaving] = useState(false);
     const [uploading, setUploading] = useState(false);
     const [coverImage, setCoverImage] = useState("");
+    const [categories, setCategories] = useState<string[]>([]);
+    const [showCustomCategory, setShowCustomCategory] = useState(false);
+    const [tags, setTags] = useState<string[]>([]);
+    const [tagInput, setTagInput] = useState("");
     const [formData, setFormData] = useState({
         title: "",
         excerpt: "",
@@ -37,6 +42,23 @@ export default function EditPostPage({ params }: Props) {
             setSlug(p.slug);
             fetchPost(p.slug);
         });
+
+        // Fetch existing categories
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch("/api/admin/posts");
+                const data = await response.json();
+                if (data.posts) {
+                    const uniqueCategories = Array.from(
+                        new Set(data.posts.map((post: any) => post.category).filter(Boolean))
+                    ) as string[];
+                    setCategories(uniqueCategories.sort());
+                }
+            } catch (error) {
+                console.error("Failed to fetch categories:", error);
+            }
+        };
+        fetchCategories();
     }, [params]);
 
     const fetchPost = async (postSlug: string) => {
@@ -45,15 +67,17 @@ export default function EditPostPage({ params }: Props) {
             const data = await response.json();
 
             if (response.ok) {
+                const existingTags = data.frontmatter.tags || [];
                 setFormData({
                     title: data.frontmatter.title || "",
                     excerpt: data.frontmatter.excerpt || "",
                     date: data.frontmatter.date || "",
                     category: data.frontmatter.category || "",
-                    tags: data.frontmatter.tags?.join(", ") || "",
+                    tags: existingTags.join(", ") || "",
                     authorName: data.frontmatter.author?.name || "Aditya",
                     content: data.content || "",
                 });
+                setTags(existingTags);
                 setCoverImage(data.frontmatter.coverImage || "");
             } else {
                 alert("Failed to load post");
@@ -219,30 +243,103 @@ export default function EditPostPage({ params }: Props) {
                                     <label htmlFor="category" className="text-sm font-medium">
                                         Category *
                                     </label>
-                                    <Input
-                                        id="category"
-                                        value={formData.category}
-                                        onChange={(e) =>
-                                            setFormData({ ...formData, category: e.target.value })
-                                        }
-                                        placeholder="e.g., Phones, AI Tools"
-                                        required
-                                    />
+                                    {!showCustomCategory ? (
+                                        <div className="flex gap-2">
+                                            <select
+                                                id="category"
+                                                value={formData.category}
+                                                onChange={(e) => {
+                                                    if (e.target.value === "__custom__") {
+                                                        setShowCustomCategory(true);
+                                                        setFormData({ ...formData, category: "" });
+                                                    } else {
+                                                        setFormData({ ...formData, category: e.target.value });
+                                                    }
+                                                }}
+                                                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                                required
+                                            >
+                                                <option value="">Select a category...</option>
+                                                {categories.map((cat) => (
+                                                    <option key={cat} value={cat}>
+                                                        {cat}
+                                                    </option>
+                                                ))}
+                                                <option value="__custom__">+ Add New Category</option>
+                                            </select>
+                                        </div>
+                                    ) : (
+                                        <div className="flex gap-2">
+                                            <Input
+                                                id="category"
+                                                value={formData.category}
+                                                onChange={(e) =>
+                                                    setFormData({ ...formData, category: e.target.value })
+                                                }
+                                                placeholder="Enter new category"
+                                                required
+                                            />
+                                            <Button
+                                                type="button"
+                                                variant="outline"
+                                                onClick={() => {
+                                                    setShowCustomCategory(false);
+                                                    setFormData({ ...formData, category: "" });
+                                                }}
+                                            >
+                                                Cancel
+                                            </Button>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
 
                             <div className="space-y-2">
                                 <label htmlFor="tags" className="text-sm font-medium">
-                                    Tags (comma-separated)
+                                    Tags
                                 </label>
-                                <Input
-                                    id="tags"
-                                    value={formData.tags}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, tags: e.target.value })
-                                    }
-                                    placeholder="Android, Review, Google"
-                                />
+                                <div className="space-y-2">
+                                    {/* Display existing tags as badges */}
+                                    {tags.length > 0 && (
+                                        <div className="flex flex-wrap gap-2">
+                                            {tags.map((tag, index) => (
+                                                <Badge key={index} variant="secondary" className="gap-1">
+                                                    {tag}
+                                                    <X
+                                                        className="h-3 w-3 cursor-pointer hover:text-destructive"
+                                                        onClick={() => {
+                                                            const newTags = tags.filter((_, i) => i !== index);
+                                                            setTags(newTags);
+                                                            setFormData({ ...formData, tags: newTags.join(", ") });
+                                                        }}
+                                                    />
+                                                </Badge>
+                                            ))}
+                                        </div>
+                                    )}
+                                    {/* Input for new tags */}
+                                    <Input
+                                        id="tags"
+                                        value={tagInput}
+                                        onChange={(e) => setTagInput(e.target.value)}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "," || e.key === "Enter") {
+                                                e.preventDefault();
+                                                const newTag = tagInput.trim();
+                                                if (newTag && !tags.includes(newTag)) {
+                                                    const newTags = [...tags, newTag];
+                                                    setTags(newTags);
+                                                    setFormData({ ...formData, tags: newTags.join(", ") });
+                                                    setTagInput("");
+                                                }
+                                            }
+                                        }}
+                                        placeholder="Type a tag and press comma or Enter"
+                                    />
+                                    <p className="text-xs text-muted-foreground">
+                                        Press comma or Enter after each tag
+                                    </p>
+                                </div>
                             </div>
 
                             <div className="space-y-2">
