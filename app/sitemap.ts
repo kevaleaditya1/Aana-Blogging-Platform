@@ -1,9 +1,9 @@
 import { MetadataRoute } from "next";
 import { getSortedPostsData } from "@/lib/posts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-    const posts = getSortedPostsData();
+    const posts = await getSortedPostsData();
 
     // Static pages
     const staticPages = [

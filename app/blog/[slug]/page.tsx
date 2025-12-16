@@ -1,14 +1,18 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { getAllPostSlugs, getPostData } from "@/lib/posts";
+import { getPostData, getAllPostSlugs } from "@/lib/posts";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BookmarkButton } from "@/components/blog/bookmark-button";
-import { CommentSection } from "@/components/blog/comment-section";
 import { ShareButtons } from "@/components/blog/share-buttons";
 import Link from "next/link";
 import { ArrowLeft, Calendar, User } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
+import { CodeBlock } from "@/components/blog/code-block";
 
 interface Props {
     params: Promise<{
@@ -95,17 +99,35 @@ export default async function Post({ params }: Props) {
                         <BookmarkButton postSlug={slug} />
                     </div>
                 </div>
-                <h1 className="text-3xl md:text-5xl font-bold tracking-tighter">
-                    {post.title}
-                </h1>
-                <div className="flex items-center gap-2 text-muted-foreground">
+
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">{post.title}</h1>
+                <p className="text-xl text-muted-foreground">{post.excerpt}</p>
+
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <User className="h-4 w-4" />
                     <span>{post.author.name}</span>
                 </div>
             </div>
 
             <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground">
-                <MDXRemote source={post.content} />
+                <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeHighlight]}
+                    components={{
+                        code: ({ node, inline, className, children, ...props }: any) => {
+                            if (inline) {
+                                return <code className={className} {...props}>{children}</code>;
+                            }
+                            return (
+                                <CodeBlock className={className}>
+                                    {String(children).replace(/\n$/, '')}
+                                </CodeBlock>
+                            );
+                        },
+                    }}
+                >
+                    {post.content}
+                </ReactMarkdown>
             </div>
 
             <div className="mt-12 pt-8 border-t">
@@ -118,8 +140,6 @@ export default async function Post({ params }: Props) {
                     ))}
                 </div>
             </div>
-
-            <CommentSection postSlug={slug} />
         </article>
     );
 }

@@ -66,19 +66,20 @@ export default function EditPostPage({ params }: Props) {
             const response = await fetch(`/api/admin/posts/${postSlug}`);
             const data = await response.json();
 
-            if (response.ok) {
-                const existingTags = data.frontmatter.tags || [];
+            if (response.ok && data.post) {
+                const post = data.post;
+                const existingTags = post.tags || [];
                 setFormData({
-                    title: data.frontmatter.title || "",
-                    excerpt: data.frontmatter.excerpt || "",
-                    date: data.frontmatter.date || "",
-                    category: data.frontmatter.category || "",
+                    title: post.title || "",
+                    excerpt: post.excerpt || "",
+                    date: new Date(post.createdAt).toISOString().split('T')[0],
+                    category: post.category || "",
                     tags: existingTags.join(", ") || "",
-                    authorName: data.frontmatter.author?.name || "Aditya",
-                    content: data.content || "",
+                    authorName: post.author || "Aana",
+                    content: post.content || "",
                 });
                 setTags(existingTags);
-                setCoverImage(data.frontmatter.coverImage || "");
+                setCoverImage(post.coverImage || "");
             } else {
                 alert("Failed to load post");
                 router.push("/admin");
@@ -145,8 +146,13 @@ export default function EditPostPage({ params }: Props) {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    frontmatter,
+                    title: formData.title,
+                    excerpt: formData.excerpt,
                     content: formData.content,
+                    coverImage: coverImage || "/images/cover.jpg",
+                    category: formData.category,
+                    tags: formData.tags.split(",").map((tag) => tag.trim()),
+                    published: true,
                 }),
             });
 

@@ -81,11 +81,26 @@ export default function NewPostPage() {
         e.preventDefault();
         setLoading(true);
 
-        // Generate slug from title
-        const slug = formData.title
+        // Generate base slug from title
+        let slug = formData.title
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/(^-|-$)/g, "");
+
+        // Check if slug exists and make it unique
+        let finalSlug = slug;
+        let counter = 1;
+        let slugExists = true;
+
+        while (slugExists) {
+            const checkResponse = await fetch(`/api/admin/posts/${finalSlug}`);
+            if (checkResponse.status === 404) {
+                slugExists = false;
+            } else {
+                finalSlug = `${slug}-${counter}`;
+                counter++;
+            }
+        }
 
         const frontmatter = {
             title: formData.title,
@@ -108,9 +123,14 @@ export default function NewPostPage() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    slug,
-                    frontmatter,
+                    slug: finalSlug,
+                    title: formData.title,
+                    excerpt: formData.excerpt,
                     content: formData.content,
+                    coverImage: coverImage || "/images/cover.jpg",
+                    category: formData.category,
+                    tags: formData.tags.split(",").map((tag) => tag.trim()),
+                    published: true,
                 }),
             });
 

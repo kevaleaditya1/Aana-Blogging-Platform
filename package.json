@@ -31,7 +31,12 @@
     "nodemailer": "^7.0.11",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-pretty-code": "^0.14.1",
+    "remark-gfm": "^4.0.1",
     "resend": "^6.6.0",
+    "shiki": "^3.20.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

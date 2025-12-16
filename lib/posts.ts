@@ -21,7 +21,13 @@ export async function getSortedPostsData(): Promise<Post[]> {
             coverImage: post.coverImage,
             category: post.category,
             tags: post.tags,
-            author: post.author,
+            author: {
+                name: post.author,
+                picture: "/images/avatar.jpg",
+            },
+            ogImage: {
+                url: post.coverImage,
+            },
         }));
     } catch (error) {
         console.error("Error fetching posts:", error);
@@ -73,7 +79,13 @@ export async function getPostData(slug: string): Promise<Post | null> {
             coverImage: post.coverImage,
             category: post.category,
             tags: post.tags,
-            author: post.author,
+            author: {
+                name: post.author,
+                picture: "/images/avatar.jpg",
+            },
+            ogImage: {
+                url: post.coverImage,
+            },
         };
     } catch (error) {
         console.error("Error fetching post:", error);
