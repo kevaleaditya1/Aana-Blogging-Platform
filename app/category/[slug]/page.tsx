@@ -20,7 +20,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-    const posts = getSortedPostsData();
+    const posts = await getSortedPostsData();
     const categories = Array.from(new Set(posts.map((post) => post.category.toLowerCase().replace(/\s+/g, "-"))));
 
     return categories.map((slug) => ({
@@ -48,7 +48,7 @@ export default async function CategoryPage({ params }: Props) {
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
 
-    const allPosts = getSortedPostsData();
+    const allPosts = await getSortedPostsData();
     const categoryPosts = allPosts.filter((post) => {
         const postCategorySlug = post.category.toLowerCase().replace(/\s+/g, "-");
         return postCategorySlug === slug;
