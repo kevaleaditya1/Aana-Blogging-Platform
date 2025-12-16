@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     description: "Explore articles by category - Phones, Gadgets, AI Tools, Guides, and more.",
 };
 
-export default function CategoriesPage() {
-    const allPosts = getSortedPostsData();
+export default async function CategoriesPage() {
+    const allPosts = await getSortedPostsData();
 
     // Get all unique categories with post counts
     const categoryMap = new Map<string, { name: string; count: number; slug: string }>();
