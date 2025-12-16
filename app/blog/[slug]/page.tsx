@@ -13,6 +13,7 @@ import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import { CodeBlock } from "@/components/blog/code-block";
+import { InArticleAd } from "@/components/ads/adsense";
 
 // Revalidate every 60 seconds to show latest content
 export const revalidate = 60;
@@ -132,6 +133,9 @@ export default async function Post({ params }: Props) {
                     {post.content}
                 </ReactMarkdown>
             </div>
+
+            {/* AdSense Ad */}
+            <InArticleAd />
 
             <div className="mt-12 pt-8 border-t">
                 <h3 className="text-lg font-semibold mb-4">Tags</h3>

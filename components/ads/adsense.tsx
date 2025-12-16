@@ -27,7 +27,7 @@ export function AdSense({
             <ins
                 className="adsbygoogle"
                 style={{ display: "block" }}
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" // Replace with your AdSense ID
+                data-ad-client="ca-pub-8999010834139123"
                 data-ad-slot={adSlot}
                 data-ad-format={adFormat}
                 data-full-width-responsive={fullWidthResponsive.toString()}

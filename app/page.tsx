@@ -69,6 +69,11 @@ export default async function Home() {
                   <Link href="/category">Browse Categories</Link>
                 </Button>
               </div>
+
+              {/* Newsletter Signup */}
+              <div className="mt-8 max-w-md">
+                <NewsletterSignup />
+              </div>
             </div>
             <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last border bg-muted/50 shadow-lg hover-lift relative">
               {featuredPost?.coverImage ? (
