@@ -5,7 +5,10 @@ export async function getSortedPostsData(): Promise<Post[]> {
     try {
         const posts = await prisma.post.findMany({
             where: {
-                published: true,
+                OR: [
+                    { published: true },
+                    { status: "published" }
+                ]
             },
             orderBy: {
                 createdAt: "desc",
@@ -39,7 +42,10 @@ export async function getAllPostSlugs() {
     try {
         const posts = await prisma.post.findMany({
             where: {
-                published: true,
+                OR: [
+                    { published: true },
+                    { status: "published" }
+                ]
             },
             select: {
                 slug: true,

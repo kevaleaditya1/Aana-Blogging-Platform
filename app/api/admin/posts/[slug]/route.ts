@@ -18,7 +18,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         }
 
         const { slug } = await params;
-        
+
         const post = await prisma.post.findUnique({
             where: { slug },
         });
@@ -48,7 +48,19 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 
         const { slug } = await params;
         const body = await request.json();
-        const { title, excerpt, content, coverImage, category, tags, published } = body;
+        const {
+            title, excerpt, content, coverImage, category, tags, published,
+            // SEO fields
+            metaTitle, metaDescription, focusKeyword, canonicalUrl, robots, ogTitle, ogDescription,
+            // Content enhancement
+            readingTime, tableOfContents, contentType,
+            // Visibility
+            featuredPost, pinnedPost, trending, homepagePriority, showInCategory, hideFromSearch,
+            // Monetization
+            sponsoredPost, sponsorName, affiliateDisclosure, adsEnabled,
+            // Technical
+            schemaType, commentEnabled, status, publishDate
+        } = body;
 
         // Check if post exists
         const existing = await prisma.post.findUnique({
@@ -59,7 +71,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
             return NextResponse.json({ error: "Post not found" }, { status: 404 });
         }
 
-        // Update post
+        // Update post with all fields
         const updatedPost = await prisma.post.update({
             where: { slug },
             data: {
@@ -70,6 +82,40 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
                 ...(category && { category }),
                 ...(tags && { tags }),
                 ...(published !== undefined && { published }),
+
+                // SEO fields
+                ...(metaTitle !== undefined && { metaTitle }),
+                ...(metaDescription !== undefined && { metaDescription }),
+                ...(focusKeyword !== undefined && { focusKeyword }),
+                ...(canonicalUrl !== undefined && { canonicalUrl }),
+                ...(robots !== undefined && { robots }),
+                ...(ogTitle !== undefined && { ogTitle }),
+                ...(ogDescription !== undefined && { ogDescription }),
+
+                // Content enhancement
+                ...(readingTime !== undefined && { readingTime }),
+                ...(tableOfContents !== undefined && { tableOfContents }),
+                ...(contentType !== undefined && { contentType }),
+
+                // Visibility
+                ...(featuredPost !== undefined && { featuredPost }),
+                ...(pinnedPost !== undefined && { pinnedPost }),
+                ...(trending !== undefined && { trending }),
+                ...(homepagePriority !== undefined && { homepagePriority }),
+                ...(showInCategory !== undefined && { showInCategory }),
+                ...(hideFromSearch !== undefined && { hideFromSearch }),
+
+                // Monetization
+                ...(sponsoredPost !== undefined && { sponsoredPost }),
+                ...(sponsorName !== undefined && { sponsorName }),
+                ...(affiliateDisclosure !== undefined && { affiliateDisclosure }),
+                ...(adsEnabled !== undefined && { adsEnabled }),
+
+                // Technical
+                ...(schemaType !== undefined && { schemaType }),
+                ...(commentEnabled !== undefined && { commentEnabled }),
+                ...(status !== undefined && { status }),
+                ...(publishDate !== undefined && { publishDate: publishDate ? new Date(publishDate) : null }),
             },
         });
 

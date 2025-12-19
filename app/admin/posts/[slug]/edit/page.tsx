@@ -4,61 +4,70 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Upload, X } from "lucide-react";
+import { ArrowLeft, Save } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import { PostTabs } from "@/components/admin/post-tabs";
+import { SEOPanel } from "@/components/admin/seo-panel";
+import { SettingsPanel } from "@/components/admin/settings-panel";
+import { calculateReadingTime, generateSlug, validatePost } from "@/lib/post-helpers";
+import { useToast } from "@/hooks/use-toast";
 
 interface Props {
-    params: Promise<{
-        slug: string;
-    }>;
+    params: Promise<{ slug: string }>;
 }
 
-export default function EditPostPage({ params }: Props) {
+export default function EnhancedEditPostPage({ params }: Props) {
     const router = useRouter();
-    const [slug, setSlug] = useState("");
+    const { toast } = useToast();
+    const [currentSlug, setCurrentSlug] = useState("");
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
-    const [uploading, setUploading] = useState(false);
+
+    // Content fields
+    const [title, setTitle] = useState("");
+    const [slug, setSlug] = useState("");
+    const [excerpt, setExcerpt] = useState("");
+    const [content, setContent] = useState("");
     const [coverImage, setCoverImage] = useState("");
-    const [categories, setCategories] = useState<string[]>([]);
-    const [showCustomCategory, setShowCustomCategory] = useState(false);
+    const [category, setCategory] = useState("");
     const [tags, setTags] = useState<string[]>([]);
     const [tagInput, setTagInput] = useState("");
-    const [formData, setFormData] = useState({
-        title: "",
-        excerpt: "",
-        date: "",
-        category: "",
-        tags: "",
-        authorName: "",
-        content: "",
-    });
+
+    // SEO fields
+    const [metaTitle, setMetaTitle] = useState("");
+    const [metaDescription, setMetaDescription] = useState("");
+    const [focusKeyword, setFocusKeyword] = useState("");
+
+    // Settings - Visibility
+    const [featuredPost, setFeaturedPost] = useState(false);
+    const [pinnedPost, setPinnedPost] = useState(false);
+    const [trending, setTrending] = useState(false);
+    const [showInCategory, setShowInCategory] = useState(true);
+    const [hideFromSearch, setHideFromSearch] = useState(false);
+
+    // Settings - Content
+    const [contentType, setContentType] = useState("guide");
+    const [tableOfContents, setTableOfContents] = useState(true);
+
+    // Settings - Monetization
+    const [sponsoredPost, setSponsoredPost] = useState(false);
+    const [sponsorName, setSponsorName] = useState("");
+    const [affiliateDisclosure, setAffiliateDisclosure] = useState("");
+    const [adsEnabled, setAdsEnabled] = useState(true);
+
+    // Settings - Publishing
+    const [status, setStatus] = useState("published");
+    const [commentEnabled, setCommentEnabled] = useState(true);
 
     useEffect(() => {
         params.then((p) => {
-            setSlug(p.slug);
+            setCurrentSlug(p.slug);
             fetchPost(p.slug);
         });
-
-        // Fetch existing categories
-        const fetchCategories = async () => {
-            try {
-                const response = await fetch("/api/admin/posts");
-                const data = await response.json();
-                if (data.posts) {
-                    const uniqueCategories = Array.from(
-                        new Set(data.posts.map((post: any) => post.category).filter(Boolean))
-                    ) as string[];
-                    setCategories(uniqueCategories.sort());
-                }
-            } catch (error) {
-                console.error("Failed to fetch categories:", error);
-            }
-        };
-        fetchCategories();
     }, [params]);
 
     const fetchPost = async (postSlug: string) => {
@@ -68,103 +77,163 @@ export default function EditPostPage({ params }: Props) {
 
             if (response.ok && data.post) {
                 const post = data.post;
-                const existingTags = post.tags || [];
-                setFormData({
-                    title: post.title || "",
-                    excerpt: post.excerpt || "",
-                    date: new Date(post.createdAt).toISOString().split('T')[0],
-                    category: post.category || "",
-                    tags: existingTags.join(", ") || "",
-                    authorName: post.author || "Aana",
-                    content: post.content || "",
-                });
-                setTags(existingTags);
+
+                // Core fields
+                setTitle(post.title || "");
+                setSlug(post.slug || "");
+                setExcerpt(post.excerpt || "");
+                setContent(post.content || "");
                 setCoverImage(post.coverImage || "");
+                setCategory(post.category || "");
+                setTags(post.tags || []);
+
+                // SEO fields
+                setMetaTitle(post.metaTitle || "");
+                setMetaDescription(post.metaDescription || "");
+                setFocusKeyword(post.focusKeyword || "");
+
+                // Visibility
+                setFeaturedPost(post.featuredPost || false);
+                setPinnedPost(post.pinnedPost || false);
+                setTrending(post.trending || false);
+                setShowInCategory(post.showInCategory !== undefined ? post.showInCategory : true);
+                setHideFromSearch(post.hideFromSearch || false);
+
+                // Content
+                setContentType(post.contentType || "guide");
+                setTableOfContents(post.tableOfContents !== undefined ? post.tableOfContents : true);
+
+                // Monetization
+                setSponsoredPost(post.sponsoredPost || false);
+                setSponsorName(post.sponsorName || "");
+                setAffiliateDisclosure(post.affiliateDisclosure || "");
+                setAdsEnabled(post.adsEnabled !== undefined ? post.adsEnabled : true);
+
+                // Publishing
+                setStatus(post.status || "published");
+                setCommentEnabled(post.commentEnabled !== undefined ? post.commentEnabled : true);
             } else {
-                alert("Failed to load post");
-                router.push("/admin");
+                toast({
+                    title: "Error",
+                    description: "Failed to load post",
+                    variant: "destructive",
+                });
+                router.push("/admin/posts");
             }
         } catch (error) {
-            console.error("Error fetching post:", error);
-            alert("Failed to load post");
-            router.push("/admin");
+            toast({
+                title: "Error",
+                description: "Failed to load post",
+                variant: "destructive",
+            });
+            router.push("/admin/posts");
         } finally {
             setLoading(false);
         }
     };
 
-    const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-
-        setUploading(true);
-        try {
-            const formData = new FormData();
-            formData.append("file", file);
-
-            const response = await fetch("/api/upload", {
-                method: "POST",
-                body: formData,
-            });
-
-            const data = await response.json();
-            if (data.success) {
-                setCoverImage(data.url);
-            } else {
-                alert("Failed to upload image");
-            }
-        } catch (error) {
-            console.error("Upload error:", error);
-            alert("Failed to upload image");
-        } finally {
-            setUploading(false);
+    const handleAddTag = () => {
+        if (tagInput.trim() && !tags.includes(tagInput.trim())) {
+            setTags([...tags, tagInput.trim()]);
+            setTagInput("");
         }
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleRemoveTag = (tagToRemove: string) => {
+        setTags(tags.filter(tag => tag !== tagToRemove));
+    };
+
+    const handleVisibilityChange = (field: string, value: boolean) => {
+        switch (field) {
+            case 'featuredPost': setFeaturedPost(value); break;
+            case 'pinnedPost': setPinnedPost(value); break;
+            case 'trending': setTrending(value); break;
+            case 'showInCategory': setShowInCategory(value); break;
+            case 'hideFromSearch': setHideFromSearch(value); break;
+        }
+    };
+
+    const handleMonetizationChange = (field: string, value: boolean | string) => {
+        switch (field) {
+            case 'sponsoredPost': setSponsoredPost(value as boolean); break;
+            case 'sponsorName': setSponsorName(value as string); break;
+            case 'affiliateDisclosure': setAffiliateDisclosure(value as string); break;
+            case 'adsEnabled': setAdsEnabled(value as boolean); break;
+        }
+    };
+
+    const handleSubmit = async () => {
+        const validation = validatePost({
+            title,
+            excerpt,
+            content,
+            coverImage,
+            category,
+            metaTitle,
+            metaDescription,
+        });
+
+        if (!validation.valid) {
+            toast({
+                title: "Validation Error",
+                description: validation.errors.join(", "),
+                variant: "destructive",
+            });
+            return;
+        }
+
         setSaving(true);
 
-        const frontmatter = {
-            title: formData.title,
-            excerpt: formData.excerpt,
-            date: formData.date,
-            coverImage: coverImage || "/images/cover.jpg",
-            category: formData.category,
-            author: {
-                name: formData.authorName,
-                picture: "/images/authors/aditya.jpg",
-            },
-            ogImage: {
-                url: coverImage || "/images/cover.jpg",
-            },
-            tags: formData.tags.split(",").map((tag) => tag.trim()),
-        };
-
         try {
-            const response = await fetch(`/api/admin/posts/${slug}`, {
+            const readingTime = calculateReadingTime(content);
+
+            const response = await fetch(`/api/admin/posts/${currentSlug}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    title: formData.title,
-                    excerpt: formData.excerpt,
-                    content: formData.content,
-                    coverImage: coverImage || "/images/cover.jpg",
-                    category: formData.category,
-                    tags: formData.tags.split(",").map((tag) => tag.trim()),
-                    published: true,
+                    title,
+                    slug,
+                    excerpt,
+                    content,
+                    coverImage,
+                    category,
+                    tags,
+                    metaTitle: metaTitle || title,
+                    metaDescription,
+                    focusKeyword,
+                    readingTime,
+                    tableOfContents,
+                    contentType,
+                    featuredPost,
+                    pinnedPost,
+                    trending,
+                    showInCategory,
+                    hideFromSearch,
+                    sponsoredPost,
+                    sponsorName,
+                    affiliateDisclosure,
+                    adsEnabled,
+                    status,
+                    commentEnabled,
+                    published: status === "published",
                 }),
             });
 
             if (response.ok) {
-                router.push("/admin");
+                toast({
+                    title: "Success!",
+                    description: "Post updated successfully",
+                });
+                router.push("/admin/posts");
             } else {
-                const data = await response.json();
-                alert(data.error || "Failed to update post");
+                throw new Error("Failed to update post");
             }
         } catch (error) {
-            console.error("Error updating post:", error);
-            alert("Failed to update post");
+            toast({
+                title: "Error",
+                description: "Failed to update post. Please try again.",
+                variant: "destructive",
+            });
         } finally {
             setSaving(false);
         }
@@ -172,255 +241,192 @@ export default function EditPostPage({ params }: Props) {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-background flex items-center justify-center">
-                <p className="text-muted-foreground">Loading post...</p>
+            <div className="container max-w-6xl px-4 py-8">
+                <div className="text-center">Loading...</div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-background">
-            <div className="border-b">
-                <div className="container px-4 md:px-6 py-4">
-                    <Button variant="ghost" size="sm" asChild className="mb-2">
-                        <Link href="/admin">
-                            <ArrowLeft className="h-4 w-4 mr-2" />
-                            Back to Dashboard
-                        </Link>
-                    </Button>
-                    <h1 className="text-2xl font-bold">Edit Post</h1>
+        <div className="container max-w-6xl px-4 py-8">
+            <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center gap-4">
+                    <Link href="/admin/posts">
+                        <Button variant="ghost" size="icon">
+                            <ArrowLeft className="h-4 w-4" />
+                        </Button>
+                    </Link>
+                    <h1 className="text-3xl font-bold">Edit Post</h1>
                 </div>
+                <Button onClick={handleSubmit} disabled={saving}>
+                    <Save className="h-4 w-4 mr-2" />
+                    {saving ? "Saving..." : "Update Post"}
+                </Button>
             </div>
 
-            <div className="container px-4 md:px-6 py-8 max-w-3xl">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Post Details</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="space-y-2">
-                                <label htmlFor="title" className="text-sm font-medium">
-                                    Title *
-                                </label>
-                                <Input
-                                    id="title"
-                                    value={formData.title}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, title: e.target.value })
-                                    }
-                                    placeholder="Enter post title"
-                                    required
-                                />
-                            </div>
+            <PostTabs>
+                {{
+                    content: (
+                        <div className="space-y-6">
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle>Basic Information</CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-4">
+                                    <div className="space-y-2">
+                                        <Label htmlFor="title">Title *</Label>
+                                        <Input
+                                            id="title"
+                                            value={title}
+                                            onChange={(e) => setTitle(e.target.value)}
+                                            maxLength={120}
+                                        />
+                                    </div>
 
-                            <div className="space-y-2">
-                                <label htmlFor="excerpt" className="text-sm font-medium">
-                                    Excerpt *
-                                </label>
-                                <Input
-                                    id="excerpt"
-                                    value={formData.excerpt}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, excerpt: e.target.value })
-                                    }
-                                    placeholder="Short description"
-                                    required
-                                />
-                            </div>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="slug">Slug</Label>
+                                        <Input
+                                            id="slug"
+                                            value={slug}
+                                            onChange={(e) => setSlug(e.target.value)}
+                                        />
+                                    </div>
 
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="space-y-2">
-                                    <label htmlFor="date" className="text-sm font-medium">
-                                        Date *
-                                    </label>
-                                    <Input
-                                        id="date"
-                                        type="date"
-                                        value={formData.date}
-                                        onChange={(e) =>
-                                            setFormData({ ...formData, date: e.target.value })
-                                        }
-                                        required
-                                    />
-                                </div>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="excerpt">Excerpt *</Label>
+                                        <Textarea
+                                            id="excerpt"
+                                            value={excerpt}
+                                            onChange={(e) => setExcerpt(e.target.value)}
+                                            rows={3}
+                                            maxLength={300}
+                                        />
+                                        <p className="text-xs text-muted-foreground">{excerpt.length}/300</p>
+                                    </div>
 
-                                <div className="space-y-2">
-                                    <label htmlFor="category" className="text-sm font-medium">
-                                        Category *
-                                    </label>
-                                    {!showCustomCategory ? (
-                                        <div className="flex gap-2">
-                                            <select
-                                                id="category"
-                                                value={formData.category}
-                                                onChange={(e) => {
-                                                    if (e.target.value === "__custom__") {
-                                                        setShowCustomCategory(true);
-                                                        setFormData({ ...formData, category: "" });
-                                                    } else {
-                                                        setFormData({ ...formData, category: e.target.value });
-                                                    }
-                                                }}
-                                                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                                                required
-                                            >
-                                                <option value="">Select a category...</option>
-                                                {categories.map((cat) => (
-                                                    <option key={cat} value={cat}>
-                                                        {cat}
-                                                    </option>
-                                                ))}
-                                                <option value="__custom__">+ Add New Category</option>
-                                            </select>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="coverImage">Cover Image URL *</Label>
+                                        <Input
+                                            id="coverImage"
+                                            value={coverImage}
+                                            onChange={(e) => setCoverImage(e.target.value)}
+                                        />
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="space-y-2">
+                                            <Label htmlFor="category">Category *</Label>
+                                            <Select value={category} onValueChange={setCategory}>
+                                                <SelectTrigger>
+                                                    <SelectValue />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="phones">Phones</SelectItem>
+                                                    <SelectItem value="gadgets">Gadgets</SelectItem>
+                                                    <SelectItem value="ai-tools">AI Tools</SelectItem>
+                                                    <SelectItem value="guides">Guides</SelectItem>
+                                                    <SelectItem value="news">News</SelectItem>
+                                                </SelectContent>
+                                            </Select>
                                         </div>
-                                    ) : (
-                                        <div className="flex gap-2">
-                                            <Input
-                                                id="category"
-                                                value={formData.category}
-                                                onChange={(e) =>
-                                                    setFormData({ ...formData, category: e.target.value })
-                                                }
-                                                placeholder="Enter new category"
-                                                required
-                                            />
-                                            <Button
-                                                type="button"
-                                                variant="outline"
-                                                onClick={() => {
-                                                    setShowCustomCategory(false);
-                                                    setFormData({ ...formData, category: "" });
-                                                }}
-                                            >
-                                                Cancel
-                                            </Button>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
 
-                            <div className="space-y-2">
-                                <label htmlFor="tags" className="text-sm font-medium">
-                                    Tags
-                                </label>
-                                <div className="space-y-2">
-                                    {/* Display existing tags as badges */}
-                                    {tags.length > 0 && (
-                                        <div className="flex flex-wrap gap-2">
-                                            {tags.map((tag, index) => (
-                                                <Badge key={index} variant="secondary" className="gap-1">
-                                                    {tag}
-                                                    <X
-                                                        className="h-3 w-3 cursor-pointer hover:text-destructive"
-                                                        onClick={() => {
-                                                            const newTags = tags.filter((_, i) => i !== index);
-                                                            setTags(newTags);
-                                                            setFormData({ ...formData, tags: newTags.join(", ") });
-                                                        }}
-                                                    />
-                                                </Badge>
-                                            ))}
-                                        </div>
-                                    )}
-                                    {/* Input for new tags */}
-                                    <Input
-                                        id="tags"
-                                        value={tagInput}
-                                        onChange={(e) => setTagInput(e.target.value)}
-                                        onKeyDown={(e) => {
-                                            if (e.key === "," || e.key === "Enter") {
-                                                e.preventDefault();
-                                                const newTag = tagInput.trim();
-                                                if (newTag && !tags.includes(newTag)) {
-                                                    const newTags = [...tags, newTag];
-                                                    setTags(newTags);
-                                                    setFormData({ ...formData, tags: newTags.join(", ") });
-                                                    setTagInput("");
-                                                }
-                                            }
-                                        }}
-                                        placeholder="Type a tag and press comma or Enter"
-                                    />
-                                    <p className="text-xs text-muted-foreground">
-                                        Press comma or Enter after each tag
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium">
-                                    Cover Image
-                                </label>
-                                <div className="space-y-4">
-                                    {coverImage ? (
-                                        <div className="relative aspect-video w-full rounded-lg overflow-hidden border">
-                                            <Image
-                                                src={coverImage}
-                                                alt="Cover"
-                                                fill
-                                                className="object-cover"
-                                            />
-                                            <button
-                                                type="button"
-                                                onClick={() => setCoverImage("")}
-                                                className="absolute top-2 right-2 p-2 bg-red-500 text-white rounded-full hover:bg-red-600"
-                                            >
-                                                <X className="h-4 w-4" />
-                                            </button>
-                                        </div>
-                                    ) : (
-                                        <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer hover:bg-secondary/50 transition-colors">
-                                            <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                                <Upload className="h-8 w-8 mb-2 text-muted-foreground" />
-                                                <p className="text-sm text-muted-foreground">
-                                                    {uploading ? "Uploading..." : "Click to upload cover image"}
-                                                </p>
+                                        <div className="space-y-2">
+                                            <Label htmlFor="tags">Tags</Label>
+                                            <div className="flex gap-2">
+                                                <Input
+                                                    id="tags"
+                                                    value={tagInput}
+                                                    onChange={(e) => setTagInput(e.target.value)}
+                                                    onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
+                                                />
+                                                <Button type="button" onClick={handleAddTag} variant="outline">
+                                                    Add
+                                                </Button>
                                             </div>
-                                            <input
-                                                type="file"
-                                                className="hidden"
-                                                accept="image/*"
-                                                onChange={handleImageUpload}
-                                                disabled={uploading}
-                                            />
-                                        </label>
-                                    )}
+                                            <div className="flex flex-wrap gap-2 mt-2">
+                                                {tags.map(tag => (
+                                                    <span key={tag} className="bg-secondary px-2 py-1 rounded text-sm flex items-center gap-1">
+                                                        {tag}
+                                                        <button onClick={() => handleRemoveTag(tag)} className="text-muted-foreground hover:text-foreground">×</button>
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle>Content *</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <Textarea
+                                        value={content}
+                                        onChange={(e) => setContent(e.target.value)}
+                                        rows={20}
+                                        className="font-mono"
+                                    />
+                                    <p className="text-xs text-muted-foreground mt-2">
+                                        {content.split(/\s+/).length} words • {calculateReadingTime(content)} min read
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    ),
+
+                    seo: (
+                        <SEOPanel
+                            title={title}
+                            metaTitle={metaTitle}
+                            metaDescription={metaDescription}
+                            focusKeyword={focusKeyword}
+                            content={content}
+                            onMetaTitleChange={setMetaTitle}
+                            onMetaDescriptionChange={setMetaDescription}
+                            onFocusKeywordChange={setFocusKeyword}
+                        />
+                    ),
+
+                    settings: (
+                        <SettingsPanel
+                            featuredPost={featuredPost}
+                            pinnedPost={pinnedPost}
+                            trending={trending}
+                            showInCategory={showInCategory}
+                            hideFromSearch={hideFromSearch}
+                            contentType={contentType}
+                            tableOfContents={tableOfContents}
+                            sponsoredPost={sponsoredPost}
+                            sponsorName={sponsorName}
+                            affiliateDisclosure={affiliateDisclosure}
+                            adsEnabled={adsEnabled}
+                            commentEnabled={commentEnabled}
+                            status={status}
+                            onVisibilityChange={handleVisibilityChange}
+                            onContentTypeChange={setContentType}
+                            onTableOfContentsChange={setTableOfContents}
+                            onMonetizationChange={handleMonetizationChange}
+                            onCommentEnabledChange={setCommentEnabled}
+                            onStatusChange={setStatus}
+                        />
+                    ),
+
+                    preview: (
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>{title || "Your Post Title"}</CardTitle>
+                                <p className="text-sm text-muted-foreground">{excerpt}</p>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="prose max-w-none">
+                                    {content || "Your content will appear here..."}
                                 </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label htmlFor="content" className="text-sm font-medium">
-                                    Content (Markdown) *
-                                </label>
-                                <textarea
-                                    id="content"
-                                    value={formData.content}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, content: e.target.value })
-                                    }
-                                    className="flex min-h-[300px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                    placeholder="Write your post content in Markdown..."
-                                    required
-                                />
-                            </div>
-
-                            <div className="flex gap-2">
-                                <Button type="submit" disabled={saving}>
-                                    {saving ? "Saving..." : "Save Changes"}
-                                </Button>
-                                <Button
-                                    type="button"
-                                    variant="outline"
-                                    onClick={() => router.push("/admin")}
-                                >
-                                    Cancel
-                                </Button>
-                            </div>
-                        </form>
-                    </CardContent>
-                </Card>
-            </div>
+                            </CardContent>
+                        </Card>
+                    ),
+                }}
+            </PostTabs>
         </div>
     );
 }
