@@ -35,20 +35,20 @@ model Session {
 }
 
 model User {
-  id                String     @id @default(cuid())
-  name              String?
-  email             String?    @unique
-  emailVerified     DateTime?
-  image             String?
-  password          String?
-  role              Role       @default(USER)
-  resetToken        String?
-  resetTokenExpiry  DateTime?
-  accounts          Account[]
-  sessions          Session[]
-  comments          Comment[]
-  bookmarks         Bookmark[]
-  createdAt         DateTime   @default(now())
+  id               String     @id @default(cuid())
+  name             String?
+  email            String?    @unique
+  emailVerified    DateTime?
+  image            String?
+  password         String?
+  role             Role       @default(USER)
+  resetToken       String?
+  resetTokenExpiry DateTime?
+  accounts         Account[]
+  sessions         Session[]
+  comments         Comment[]
+  bookmarks        Bookmark[]
+  createdAt        DateTime   @default(now())
 }
 
 enum Role {
@@ -89,22 +89,60 @@ model VerificationToken {
 }
 
 model Post {
-  id            String   @id @default(cuid())
-  slug          String   @unique
-  title         String
-  excerpt       String
-  content       String   @db.Text
-  coverImage    String
-  category      String
-  tags          String[]
-  author        String   @default("Aana")
-  published     Boolean  @default(true)
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-  
+  id         String   @id @default(cuid())
+  slug       String   @unique
+  title      String
+  excerpt    String
+  content    String   @db.Text
+  coverImage String
+  category   String
+  tags       String[]
+  author     String   @default("Aana")
+  published  Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // SEO Fields
+  metaTitle       String?
+  metaDescription String?
+  focusKeyword    String?
+  canonicalUrl    String?
+  robots          String  @default("index")
+  ogTitle         String?
+  ogDescription   String?
+
+  // Content Enhancement
+  readingTime     Int?
+  tableOfContents Boolean @default(true)
+  contentType     String? // review, news, guide, opinion, comparison
+
+  // Visibility
+  featuredPost     Boolean @default(false)
+  pinnedPost       Boolean @default(false)
+  trending         Boolean @default(false)
+  homepagePriority Int?
+  showInCategory   Boolean @default(true)
+  hideFromSearch   Boolean @default(false)
+
+  // Monetization
+  sponsoredPost       Boolean @default(false)
+  sponsorName         String?
+  affiliateDisclosure String?
+  adsEnabled          Boolean @default(true)
+
+  // Technical
+  schemaType     String    @default("BlogPosting")
+  commentEnabled Boolean   @default(true)
+  viewCount      Int       @default(0)
+  likeCount      Int       @default(0)
+  status         String    @default("published") // draft, published, scheduled
+  publishDate    DateTime?
+
   @@index([slug])
   @@index([category])
   @@index([published])
   @@index([createdAt])
+  @@index([status])
+  @@index([featuredPost])
+  @@index([trending])
 }
-

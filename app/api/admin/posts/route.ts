@@ -46,7 +46,19 @@ export async function POST(request: NextRequest) {
         }
 
         const body = await request.json();
-        const { slug, title, excerpt, content, coverImage, category, tags, published } = body;
+        const {
+            slug, title, excerpt, content, coverImage, category, tags, published,
+            // SEO fields
+            metaTitle, metaDescription, focusKeyword, canonicalUrl, robots, ogTitle, ogDescription,
+            // Content enhancement
+            readingTime, tableOfContents, contentType,
+            // Visibility
+            featuredPost, pinnedPost, trending, homepagePriority, showInCategory, hideFromSearch,
+            // Monetization
+            sponsoredPost, sponsorName, affiliateDisclosure, adsEnabled,
+            // Technical
+            schemaType, commentEnabled, status, publishDate
+        } = body;
 
         if (!slug || !title || !content) {
             return NextResponse.json(
@@ -67,7 +79,7 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Create post in database
+        // Create post in database with all fields
         const post = await prisma.post.create({
             data: {
                 slug,
@@ -78,6 +90,40 @@ export async function POST(request: NextRequest) {
                 category: category || "Uncategorized",
                 tags: tags || [],
                 published: published !== undefined ? published : true,
+
+                // SEO fields
+                metaTitle,
+                metaDescription,
+                focusKeyword,
+                canonicalUrl,
+                robots: robots || "index",
+                ogTitle,
+                ogDescription,
+
+                // Content enhancement
+                readingTime,
+                tableOfContents: tableOfContents !== undefined ? tableOfContents : true,
+                contentType,
+
+                // Visibility
+                featuredPost: featuredPost || false,
+                pinnedPost: pinnedPost || false,
+                trending: trending || false,
+                homepagePriority,
+                showInCategory: showInCategory !== undefined ? showInCategory : true,
+                hideFromSearch: hideFromSearch || false,
+
+                // Monetization
+                sponsoredPost: sponsoredPost || false,
+                sponsorName,
+                affiliateDisclosure,
+                adsEnabled: adsEnabled !== undefined ? adsEnabled : true,
+
+                // Technical
+                schemaType: schemaType || "BlogPosting",
+                commentEnabled: commentEnabled !== undefined ? commentEnabled : true,
+                status: status || "published",
+                publishDate: publishDate ? new Date(publishDate) : null,
             },
         });
 

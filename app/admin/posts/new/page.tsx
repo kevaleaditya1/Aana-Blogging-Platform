@@ -1,396 +1,387 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Upload, X } from "lucide-react";
+import { ArrowLeft, Save } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import { PostTabs } from "@/components/admin/post-tabs";
+import { SEOPanel } from "@/components/admin/seo-panel";
+import { SettingsPanel } from "@/components/admin/settings-panel";
+import { calculateReadingTime, generateSlug, validatePost } from "@/lib/post-helpers";
+import { useToast } from "@/hooks/use-toast";
 
-export default function NewPostPage() {
+export default function EnhancedNewPostPage() {
     const router = useRouter();
+    const { toast } = useToast();
     const [loading, setLoading] = useState(false);
-    const [uploading, setUploading] = useState(false);
+
+    // Content fields
+    const [title, setTitle] = useState("");
+    const [slug, setSlug] = useState("");
+    const [excerpt, setExcerpt] = useState("");
+    const [content, setContent] = useState("");
     const [coverImage, setCoverImage] = useState("");
-    const [categories, setCategories] = useState<string[]>([]);
-    const [showCustomCategory, setShowCustomCategory] = useState(false);
+    const [category, setCategory] = useState("");
     const [tags, setTags] = useState<string[]>([]);
     const [tagInput, setTagInput] = useState("");
-    const [formData, setFormData] = useState({
-        title: "",
-        excerpt: "",
-        date: new Date().toISOString().split("T")[0],
-        category: "",
-        tags: "",
-        authorName: "Aditya",
-        content: "",
-    });
 
-    // Fetch existing categories
-    useEffect(() => {
-        const fetchCategories = async () => {
-            try {
-                const response = await fetch("/api/admin/posts");
-                const data = await response.json();
-                if (data.posts) {
-                    // Extract unique categories
-                    const uniqueCategories = Array.from(
-                        new Set(data.posts.map((post: any) => post.category).filter(Boolean))
-                    ) as string[];
-                    setCategories(uniqueCategories.sort());
-                }
-            } catch (error) {
-                console.error("Failed to fetch categories:", error);
-            }
-        };
-        fetchCategories();
-    }, []);
+    // SEO fields
+    const [metaTitle, setMetaTitle] = useState("");
+    const [metaDescription, setMetaDescription] = useState("");
+    const [focusKeyword, setFocusKeyword] = useState("");
 
-    const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
+    // Settings - Visibility
+    const [featuredPost, setFeaturedPost] = useState(false);
+    const [pinnedPost, setPinnedPost] = useState(false);
+    const [trending, setTrending] = useState(false);
+    const [showInCategory, setShowInCategory] = useState(true);
+    const [hideFromSearch, setHideFromSearch] = useState(false);
 
-        setUploading(true);
-        try {
-            const formData = new FormData();
-            formData.append("file", file);
+    // Settings - Content
+    const [contentType, setContentType] = useState("guide");
+    const [tableOfContents, setTableOfContents] = useState(true);
 
-            const response = await fetch("/api/upload", {
-                method: "POST",
-                body: formData,
-            });
+    // Settings - Monetization
+    const [sponsoredPost, setSponsoredPost] = useState(false);
+    const [sponsorName, setSponsorName] = useState("");
+    const [affiliateDisclosure, setAffiliateDisclosure] = useState("");
+    const [adsEnabled, setAdsEnabled] = useState(true);
 
-            const data = await response.json();
-            if (data.success) {
-                setCoverImage(data.url);
-            } else {
-                alert("Failed to upload image");
-            }
-        } catch (error) {
-            console.error("Upload error:", error);
-            alert("Failed to upload image");
-        } finally {
-            setUploading(false);
+    // Settings - Publishing
+    const [status, setStatus] = useState("published");
+    const [commentEnabled, setCommentEnabled] = useState(true);
+
+    // Auto-generate slug from title
+    const handleTitleChange = (value: string) => {
+        setTitle(value);
+        if (!slug) {
+            setSlug(generateSlug(value));
         }
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setLoading(true);
+    // Handle tag input
+    const handleAddTag = () => {
+        if (tagInput.trim() && !tags.includes(tagInput.trim())) {
+            setTags([...tags, tagInput.trim()]);
+            setTagInput("");
+        }
+    };
 
-        // Generate base slug from title
-        let slug = formData.title
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/(^-|-$)/g, "");
+    const handleRemoveTag = (tagToRemove: string) => {
+        setTags(tags.filter(tag => tag !== tagToRemove));
+    };
 
-        // Check if slug exists and make it unique
-        let finalSlug = slug;
-        let counter = 1;
-        let slugExists = true;
+    // Handle visibility changes
+    const handleVisibilityChange = (field: string, value: boolean) => {
+        switch (field) {
+            case 'featuredPost': setFeaturedPost(value); break;
+            case 'pinnedPost': setPinnedPost(value); break;
+            case 'trending': setTrending(value); break;
+            case 'showInCategory': setShowInCategory(value); break;
+            case 'hideFromSearch': setHideFromSearch(value); break;
+        }
+    };
 
-        while (slugExists) {
-            const checkResponse = await fetch(`/api/admin/posts/${finalSlug}`);
-            if (checkResponse.status === 404) {
-                slugExists = false;
-            } else {
-                finalSlug = `${slug}-${counter}`;
-                counter++;
-            }
+    // Handle monetization changes
+    const handleMonetizationChange = (field: string, value: boolean | string) => {
+        switch (field) {
+            case 'sponsoredPost': setSponsoredPost(value as boolean); break;
+            case 'sponsorName': setSponsorName(value as string); break;
+            case 'affiliateDisclosure': setAffiliateDisclosure(value as string); break;
+            case 'adsEnabled': setAdsEnabled(value as boolean); break;
+        }
+    };
+
+    // Submit handler
+    const handleSubmit = async () => {
+        // Validate
+        const validation = validatePost({
+            title,
+            excerpt,
+            content,
+            coverImage,
+            category,
+            metaTitle,
+            metaDescription,
+        });
+
+        if (!validation.valid) {
+            toast({
+                title: "Validation Error",
+                description: validation.errors.join(", "),
+                variant: "destructive",
+            });
+            return;
         }
 
-        const frontmatter = {
-            title: formData.title,
-            excerpt: formData.excerpt,
-            date: formData.date,
-            coverImage: coverImage || "/images/cover.jpg",
-            category: formData.category,
-            author: {
-                name: formData.authorName,
-                picture: "/images/authors/aditya.jpg",
-            },
-            ogImage: {
-                url: coverImage || "/images/cover.jpg",
-            },
-            tags: formData.tags.split(",").map((tag) => tag.trim()),
-        };
+        setLoading(true);
 
         try {
+            const readingTime = calculateReadingTime(content);
+            const finalSlug = slug || generateSlug(title);
+
             const response = await fetch("/api/admin/posts", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
+                    // Core fields
+                    title,
                     slug: finalSlug,
-                    title: formData.title,
-                    excerpt: formData.excerpt,
-                    content: formData.content,
-                    coverImage: coverImage || "/images/cover.jpg",
-                    category: formData.category,
-                    tags: formData.tags.split(",").map((tag) => tag.trim()),
-                    published: true,
+                    excerpt,
+                    content,
+                    coverImage,
+                    category,
+                    tags,
+
+                    // SEO fields
+                    metaTitle: metaTitle || title,
+                    metaDescription,
+                    focusKeyword,
+
+                    // Content enhancement
+                    readingTime,
+                    tableOfContents,
+                    contentType,
+
+                    // Visibility
+                    featuredPost,
+                    pinnedPost,
+                    trending,
+                    showInCategory,
+                    hideFromSearch,
+
+                    // Monetization
+                    sponsoredPost,
+                    sponsorName,
+                    affiliateDisclosure,
+                    adsEnabled,
+
+                    // Technical
+                    status,
+                    commentEnabled,
+                    published: status === "published",
+                    publishDate: status === "published" ? new Date() : null,
                 }),
             });
 
             if (response.ok) {
-                router.push("/admin");
+                toast({
+                    title: "Success!",
+                    description: "Post created successfully",
+                });
+                router.push("/admin/posts");
             } else {
-                const data = await response.json();
-                alert(data.error || "Failed to create post");
+                throw new Error("Failed to create post");
             }
         } catch (error) {
-            console.error("Error creating post:", error);
-            alert("Failed to create post");
+            toast({
+                title: "Error",
+                description: "Failed to create post. Please try again.",
+                variant: "destructive",
+            });
         } finally {
             setLoading(false);
         }
     };
 
     return (
-        <div className="min-h-screen bg-background">
-            <div className="border-b">
-                <div className="container px-4 md:px-6 py-4">
-                    <Button variant="ghost" size="sm" asChild className="mb-2">
-                        <Link href="/admin">
-                            <ArrowLeft className="h-4 w-4 mr-2" />
-                            Back to Dashboard
-                        </Link>
-                    </Button>
-                    <h1 className="text-2xl font-bold">Create New Post</h1>
+        <div className="container max-w-6xl px-4 py-8">
+            {/* Header */}
+            <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center gap-4">
+                    <Link href="/admin/posts">
+                        <Button variant="ghost" size="icon">
+                            <ArrowLeft className="h-4 w-4" />
+                        </Button>
+                    </Link>
+                    <h1 className="text-3xl font-bold">Create New Post</h1>
                 </div>
+                <Button onClick={handleSubmit} disabled={loading}>
+                    <Save className="h-4 w-4 mr-2" />
+                    {loading ? "Saving..." : status === "draft" ? "Save Draft" : "Publish"}
+                </Button>
             </div>
 
-            <div className="container px-4 md:px-6 py-8 max-w-3xl">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Post Details</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="space-y-2">
-                                <label htmlFor="title" className="text-sm font-medium">
-                                    Title *
-                                </label>
-                                <Input
-                                    id="title"
-                                    value={formData.title}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, title: e.target.value })
-                                    }
-                                    placeholder="Enter post title"
-                                    required
-                                />
-                            </div>
+            {/* Tabbed Interface */}
+            <PostTabs>
+                {{
+                    // CONTENT TAB
+                    content: (
+                        <div className="space-y-6">
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle>Basic Information</CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-4">
+                                    <div className="space-y-2">
+                                        <Label htmlFor="title">Title *</Label>
+                                        <Input
+                                            id="title"
+                                            value={title}
+                                            onChange={(e) => handleTitleChange(e.target.value)}
+                                            placeholder="Enter post title..."
+                                            maxLength={120}
+                                        />
+                                    </div>
 
-                            <div className="space-y-2">
-                                <label htmlFor="excerpt" className="text-sm font-medium">
-                                    Excerpt *
-                                </label>
-                                <Input
-                                    id="excerpt"
-                                    value={formData.excerpt}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, excerpt: e.target.value })
-                                    }
-                                    placeholder="Short description"
-                                    required
-                                />
-                            </div>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="slug">Slug</Label>
+                                        <Input
+                                            id="slug"
+                                            value={slug}
+                                            onChange={(e) => setSlug(e.target.value)}
+                                            placeholder="auto-generated-from-title"
+                                        />
+                                    </div>
 
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="space-y-2">
-                                    <label htmlFor="date" className="text-sm font-medium">
-                                        Date *
-                                    </label>
-                                    <Input
-                                        id="date"
-                                        type="date"
-                                        value={formData.date}
-                                        onChange={(e) =>
-                                            setFormData({ ...formData, date: e.target.value })
-                                        }
-                                        required
-                                    />
-                                </div>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="excerpt">Excerpt *</Label>
+                                        <Textarea
+                                            id="excerpt"
+                                            value={excerpt}
+                                            onChange={(e) => setExcerpt(e.target.value)}
+                                            placeholder="Brief description..."
+                                            rows={3}
+                                            maxLength={300}
+                                        />
+                                        <p className="text-xs text-muted-foreground">{excerpt.length}/300</p>
+                                    </div>
 
-                                <div className="space-y-2">
-                                    <label htmlFor="category" className="text-sm font-medium">
-                                        Category *
-                                    </label>
-                                    {!showCustomCategory ? (
-                                        <div className="flex gap-2">
-                                            <select
-                                                id="category"
-                                                value={formData.category}
-                                                onChange={(e) => {
-                                                    if (e.target.value === "__custom__") {
-                                                        setShowCustomCategory(true);
-                                                        setFormData({ ...formData, category: "" });
-                                                    } else {
-                                                        setFormData({ ...formData, category: e.target.value });
-                                                    }
-                                                }}
-                                                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                                                required
-                                            >
-                                                <option value="">Select a category...</option>
-                                                {categories.map((cat) => (
-                                                    <option key={cat} value={cat}>
-                                                        {cat}
-                                                    </option>
-                                                ))}
-                                                <option value="__custom__">+ Add New Category</option>
-                                            </select>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="coverImage">Cover Image URL *</Label>
+                                        <Input
+                                            id="coverImage"
+                                            value={coverImage}
+                                            onChange={(e) => setCoverImage(e.target.value)}
+                                            placeholder="https://..."
+                                        />
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="space-y-2">
+                                            <Label htmlFor="category">Category *</Label>
+                                            <Select value={category} onValueChange={setCategory}>
+                                                <SelectTrigger>
+                                                    <SelectValue placeholder="Select category" />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="phones">Phones</SelectItem>
+                                                    <SelectItem value="gadgets">Gadgets</SelectItem>
+                                                    <SelectItem value="ai-tools">AI Tools</SelectItem>
+                                                    <SelectItem value="guides">Guides</SelectItem>
+                                                    <SelectItem value="news">News</SelectItem>
+                                                </SelectContent>
+                                            </Select>
                                         </div>
-                                    ) : (
-                                        <div className="flex gap-2">
-                                            <Input
-                                                id="category"
-                                                value={formData.category}
-                                                onChange={(e) =>
-                                                    setFormData({ ...formData, category: e.target.value })
-                                                }
-                                                placeholder="Enter new category"
-                                                required
-                                            />
-                                            <Button
-                                                type="button"
-                                                variant="outline"
-                                                onClick={() => {
-                                                    setShowCustomCategory(false);
-                                                    setFormData({ ...formData, category: "" });
-                                                }}
-                                            >
-                                                Cancel
-                                            </Button>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
 
-                            <div className="space-y-2">
-                                <label htmlFor="tags" className="text-sm font-medium">
-                                    Tags
-                                </label>
-                                <div className="space-y-2">
-                                    {/* Display existing tags as badges */}
-                                    {tags.length > 0 && (
-                                        <div className="flex flex-wrap gap-2">
-                                            {tags.map((tag, index) => (
-                                                <Badge key={index} variant="secondary" className="gap-1">
-                                                    {tag}
-                                                    <X
-                                                        className="h-3 w-3 cursor-pointer hover:text-destructive"
-                                                        onClick={() => {
-                                                            const newTags = tags.filter((_, i) => i !== index);
-                                                            setTags(newTags);
-                                                            setFormData({ ...formData, tags: newTags.join(", ") });
-                                                        }}
-                                                    />
-                                                </Badge>
-                                            ))}
-                                        </div>
-                                    )}
-                                    {/* Input for new tags */}
-                                    <Input
-                                        id="tags"
-                                        value={tagInput}
-                                        onChange={(e) => setTagInput(e.target.value)}
-                                        onKeyDown={(e) => {
-                                            if (e.key === "," || e.key === "Enter") {
-                                                e.preventDefault();
-                                                const newTag = tagInput.trim();
-                                                if (newTag && !tags.includes(newTag)) {
-                                                    const newTags = [...tags, newTag];
-                                                    setTags(newTags);
-                                                    setFormData({ ...formData, tags: newTags.join(", ") });
-                                                    setTagInput("");
-                                                }
-                                            }
-                                        }}
-                                        placeholder="Type a tag and press comma or Enter"
-                                    />
-                                    <p className="text-xs text-muted-foreground">
-                                        Press comma or Enter after each tag
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium">
-                                    Cover Image
-                                </label>
-                                <div className="space-y-4">
-                                    {coverImage ? (
-                                        <div className="relative aspect-video w-full rounded-lg overflow-hidden border">
-                                            <Image
-                                                src={coverImage}
-                                                alt="Cover"
-                                                fill
-                                                className="object-cover"
-                                            />
-                                            <button
-                                                type="button"
-                                                onClick={() => setCoverImage("")}
-                                                className="absolute top-2 right-2 p-2 bg-red-500 text-white rounded-full hover:bg-red-600"
-                                            >
-                                                <X className="h-4 w-4" />
-                                            </button>
-                                        </div>
-                                    ) : (
-                                        <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer hover:bg-secondary/50 transition-colors">
-                                            <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                                <Upload className="h-8 w-8 mb-2 text-muted-foreground" />
-                                                <p className="text-sm text-muted-foreground">
-                                                    {uploading ? "Uploading..." : "Click to upload cover image"}
-                                                </p>
+                                        <div className="space-y-2">
+                                            <Label htmlFor="tags">Tags</Label>
+                                            <div className="flex gap-2">
+                                                <Input
+                                                    id="tags"
+                                                    value={tagInput}
+                                                    onChange={(e) => setTagInput(e.target.value)}
+                                                    onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
+                                                    placeholder="Add tag..."
+                                                />
+                                                <Button type="button" onClick={handleAddTag} variant="outline">
+                                                    Add
+                                                </Button>
                                             </div>
-                                            <input
-                                                type="file"
-                                                className="hidden"
-                                                accept="image/*"
-                                                onChange={handleImageUpload}
-                                                disabled={uploading}
-                                            />
-                                        </label>
-                                    )}
+                                            <div className="flex flex-wrap gap-2 mt-2">
+                                                {tags.map(tag => (
+                                                    <span key={tag} className="bg-secondary px-2 py-1 rounded text-sm flex items-center gap-1">
+                                                        {tag}
+                                                        <button onClick={() => handleRemoveTag(tag)} className="text-muted-foreground hover:text-foreground">×</button>
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle>Content *</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <Textarea
+                                        value={content}
+                                        onChange={(e) => setContent(e.target.value)}
+                                        placeholder="Write your post content in Markdown..."
+                                        rows={20}
+                                        className="font-mono"
+                                    />
+                                    <p className="text-xs text-muted-foreground mt-2">
+                                        {content.split(/\s+/).length} words • {calculateReadingTime(content)} min read
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    ),
+
+                    // SEO TAB
+                    seo: (
+                        <SEOPanel
+                            title={title}
+                            metaTitle={metaTitle}
+                            metaDescription={metaDescription}
+                            focusKeyword={focusKeyword}
+                            content={content}
+                            onMetaTitleChange={setMetaTitle}
+                            onMetaDescriptionChange={setMetaDescription}
+                            onFocusKeywordChange={setFocusKeyword}
+                        />
+                    ),
+
+                    // SETTINGS TAB
+                    settings: (
+                        <SettingsPanel
+                            featuredPost={featuredPost}
+                            pinnedPost={pinnedPost}
+                            trending={trending}
+                            showInCategory={showInCategory}
+                            hideFromSearch={hideFromSearch}
+                            contentType={contentType}
+                            tableOfContents={tableOfContents}
+                            sponsoredPost={sponsoredPost}
+                            sponsorName={sponsorName}
+                            affiliateDisclosure={affiliateDisclosure}
+                            adsEnabled={adsEnabled}
+                            commentEnabled={commentEnabled}
+                            status={status}
+                            onVisibilityChange={handleVisibilityChange}
+                            onContentTypeChange={setContentType}
+                            onTableOfContentsChange={setTableOfContents}
+                            onMonetizationChange={handleMonetizationChange}
+                            onCommentEnabledChange={setCommentEnabled}
+                            onStatusChange={setStatus}
+                        />
+                    ),
+
+                    // PREVIEW TAB
+                    preview: (
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>{title || "Your Post Title"}</CardTitle>
+                                <p className="text-sm text-muted-foreground">{excerpt}</p>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="prose max-w-none">
+                                    {content || "Your content will appear here..."}
                                 </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label htmlFor="content" className="text-sm font-medium">
-                                    Content (Markdown) *
-                                </label>
-                                <textarea
-                                    id="content"
-                                    value={formData.content}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, content: e.target.value })
-                                    }
-                                    className="flex min-h-[300px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                    placeholder="Write your post content in Markdown..."
-                                    required
-                                />
-                            </div>
-
-                            <div className="flex gap-2">
-                                <Button type="submit" disabled={loading}>
-                                    {loading ? "Creating..." : "Create Post"}
-                                </Button>
-                                <Button
-                                    type="button"
-                                    variant="outline"
-                                    onClick={() => router.push("/admin")}
-                                >
-                                    Cancel
-                                </Button>
-                            </div>
-                        </form>
-                    </CardContent>
-                </Card>
-            </div>
+                            </CardContent>
+                        </Card>
+                    ),
+                }}
+            </PostTabs>
         </div>
     );
 }
