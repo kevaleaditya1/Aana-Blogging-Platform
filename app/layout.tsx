@@ -7,6 +7,7 @@ import { SessionProvider } from "next-auth/react";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Chatbot } from "@/components/chatbot/chatbot";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -74,6 +75,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <Chatbot />
           </ThemeProvider>
         </SessionProvider>
       </body>

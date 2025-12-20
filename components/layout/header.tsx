@@ -86,15 +86,17 @@ export function Header() {
                         />
                     </form>
 
-                    {/* Theme Toggle - Smooth Animation */}
+                    {/* Theme Toggle - Animated Sun/Moon */}
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="h-10 w-10 rounded-full hover:bg-secondary/80"
+                        className="h-10 w-10 rounded-full hover:bg-secondary/80 relative"
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                     >
-                        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                        <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                        <div className="relative w-[1.2rem] h-[1.2rem]">
+                            <Sun className="absolute inset-0 h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-transform duration-700 ease-in-out dark:rotate-180 dark:scale-0 text-amber-500" />
+                            <Moon className="absolute inset-0 h-[1.2rem] w-[1.2rem] -rotate-180 scale-0 transition-transform duration-700 ease-in-out dark:rotate-0 dark:scale-100 text-indigo-400" />
+                        </div>
                         <span className="sr-only">Toggle theme</span>
                     </Button>
 
