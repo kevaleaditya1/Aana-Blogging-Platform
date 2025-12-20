@@ -95,8 +95,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             }
             return session;
         },
+        async redirect({ url, baseUrl }) {
+            // Redirect to homepage after sign in
+            if (url.startsWith(baseUrl)) return url;
+            return baseUrl;
+        },
     },
     pages: {
-        signIn: "/login",
+        signIn: "/login", // Regular users go to /login, not /admin/login
     },
 });
