@@ -15,6 +15,7 @@ import { SEOPanel } from "@/components/admin/seo-panel";
 import { SettingsPanel } from "@/components/admin/settings-panel";
 import { calculateReadingTime, generateSlug, validatePost } from "@/lib/post-helpers";
 import { useToast } from "@/hooks/use-toast";
+import { MarkdownEditor } from "@/components/admin/markdown-editor";
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -356,22 +357,14 @@ export default function EnhancedEditPostPage({ params }: Props) {
                                 </CardContent>
                             </Card>
 
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle>Content *</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <Textarea
-                                        value={content}
-                                        onChange={(e) => setContent(e.target.value)}
-                                        rows={20}
-                                        className="font-mono"
-                                    />
-                                    <p className="text-xs text-muted-foreground mt-2">
-                                        {content.split(/\s+/).length} words • {calculateReadingTime(content)} min read
-                                    </p>
-                                </CardContent>
-                            </Card>
+                            <MarkdownEditor
+                                value={content}
+                                onChange={setContent}
+                                placeholder="Write your post content in Markdown..."
+                            />
+                            <p className="text-xs text-muted-foreground mt-2">
+                                {content.split(/\s+/).length} words • {calculateReadingTime(content)} min read
+                            </p>
                         </div>
                     ),
 
