@@ -10,7 +10,6 @@ const prisma = new PrismaClient();
 // Admin email whitelist
 const ADMIN_EMAILS = [
     "kevaleaditya1@gmail.com",
-    "adityakevale2904@gmail.com",
 ];
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -64,10 +63,19 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             // For OAuth, set role based on email
             if (account?.provider === "google") {
                 const email = user.email;
-                if (email && ADMIN_EMAILS.includes(email)) {
-                    await prisma.user.update({
+                if (email) {
+                    // Determine role based on whitelist
+                    const role = ADMIN_EMAILS.includes(email) ? "ADMIN" : "USER";
+
+                    // Use upsert to handle both new and existing users
+                    await prisma.user.upsert({
                         where: { email },
-                        data: { role: "ADMIN" },
+                        update: { role },
+                        create: {
+                            email,
+                            name: user.name || "",
+                            role,
+                        },
                     });
                 }
             }
