@@ -88,7 +88,7 @@ export function Header() {
                     {status === "loading" ? (
                         <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 animate-pulse" />
                     ) : session?.user ? (
-                        <div className="relative hidden md:block">
+                        <div className="relative">
                             <Button
                                 variant="ghost"
                                 size="icon"
@@ -123,12 +123,20 @@ export function Header() {
                                             </div>
                                             <div className="py-1">
                                                 <Link
-                                                    href="/bookmarks"
+                                                    href={`/profile/${session.user.id}`}
+                                                    className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors"
+                                                    onClick={() => setIsUserMenuOpen(false)}
+                                                >
+                                                    <User className="h-4 w-4" />
+                                                    <span>My Profile</span>
+                                                </Link>
+                                                <Link
+                                                    href="/saved"
                                                     className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors"
                                                     onClick={() => setIsUserMenuOpen(false)}
                                                 >
                                                     <BookmarkIcon className="h-4 w-4" />
-                                                    <span>My Bookmarks</span>
+                                                    <span>Saved Posts</span>
                                                 </Link>
                                                 {session.user.role === "ADMIN" && (
                                                     <Link
@@ -159,13 +167,13 @@ export function Header() {
                             )}
                         </div>
                     ) : (
-                        <div className="hidden md:block">
+                        <div>
                             <Button
                                 size="sm"
                                 asChild
                                 className="h-10 px-6 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg shadow-indigo-500/25"
                             >
-                                <Link href="/login">Get Started</Link>
+                                <Link href="/login">Sign In</Link>
                             </Button>
                         </div>
                     )}

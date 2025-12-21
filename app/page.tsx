@@ -13,6 +13,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { getSortedPostsData } from "@/lib/posts";
 import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
+import { NewsletterSection } from "@/components/newsletter/newsletter-section";
 
 // Revalidate immediately to show latest posts
 export const revalidate = 0;
@@ -172,6 +173,9 @@ export default async function Home() {
           </div>
         </div>
       </section >
-    </div >
+
+      {/* Newsletter Section */}
+      <NewsletterSection />
+    </div>
   );
 }

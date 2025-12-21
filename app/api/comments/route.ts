@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
 import { auth } from "@/lib/auth";
+import { prisma } from "@/lib/prisma";
 
-const prisma = new PrismaClient();
-
-// GET - List comments for a post
+// GET - Fetch comments for a post
 export async function GET(request: NextRequest) {
     try {
-        const { searchParams } = new URL(request.url);
+        const searchParams = request.nextUrl.searchParams;
         const postSlug = searchParams.get("postSlug");
 
         if (!postSlug) {
@@ -18,22 +16,41 @@ export async function GET(request: NextRequest) {
         }
 
         const comments = await prisma.comment.findMany({
-            where: { postSlug },
+            where: {
+                postSlug,
+                parentId: null, // Only get top-level comments
+            },
             include: {
                 user: {
                     select: {
-                        id: true,
                         name: true,
+                        email: true,
                         image: true,
                     },
                 },
+                replies: {
+                    include: {
+                        user: {
+                            select: {
+                                name: true,
+                                email: true,
+                                image: true,
+                            },
+                        },
+                    },
+                    orderBy: {
+                        createdAt: "asc",
+                    },
+                },
             },
-            orderBy: { createdAt: "desc" },
+            orderBy: {
+                createdAt: "desc",
+            },
         });
 
         return NextResponse.json({ comments });
     } catch (error) {
-        console.error("Get comments error:", error);
+        console.error("Error fetching comments:", error);
         return NextResponse.json(
             { error: "Failed to fetch comments" },
             { status: 500 }
@@ -41,24 +58,36 @@ export async function GET(request: NextRequest) {
     }
 }
 
-// POST - Create a comment
+// POST - Create a new comment
 export async function POST(request: NextRequest) {
     try {
         const session = await auth();
 
-        if (!session?.user) {
+        if (!session?.user?.email) {
             return NextResponse.json(
                 { error: "You must be logged in to comment" },
                 { status: 401 }
             );
         }
 
-        const { postSlug, content } = await request.json();
+        const { content, postSlug, parentId } = await request.json();
 
-        if (!postSlug || !content) {
+        if (!content || !postSlug) {
             return NextResponse.json(
-                { error: "Post slug and content are required" },
+                { error: "Content and post slug are required" },
                 { status: 400 }
+            );
+        }
+
+        // Get user from database
+        const user = await prisma.user.findUnique({
+            where: { email: session.user.email },
+        });
+
+        if (!user) {
+            return NextResponse.json(
+                { error: "User not found" },
+                { status: 404 }
             );
         }
 
@@ -66,22 +95,23 @@ export async function POST(request: NextRequest) {
             data: {
                 content,
                 postSlug,
-                userId: session.user.id,
+                userId: user.id,
+                parentId: parentId || null,
             },
             include: {
                 user: {
                     select: {
-                        id: true,
                         name: true,
+                        email: true,
                         image: true,
                     },
                 },
             },
         });
 
-        return NextResponse.json({ comment });
+        return NextResponse.json({ comment }, { status: 201 });
     } catch (error) {
-        console.error("Create comment error:", error);
+        console.error("Error creating comment:", error);
         return NextResponse.json(
             { error: "Failed to create comment" },
             { status: 500 }
