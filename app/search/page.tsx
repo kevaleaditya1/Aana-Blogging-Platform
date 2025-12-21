@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/select";
 import { Post } from "@/types";
 
-export default function SearchPage() {
+function SearchContent() {
     const searchParams = useSearchParams();
     const query = searchParams.get("q") || "";
     const [results, setResults] = useState<Post[]>([]);
@@ -175,5 +175,13 @@ export default function SearchPage() {
                 </div>
             )}
         </div>
+    );
+}
+
+export default function SearchPage() {
+    return (
+        <Suspense fallback={<div className="container px-4 md:px-6 py-12 md:py-20"><p>Loading search...</p></div>}>
+            <SearchContent />
+        </Suspense>
     );
 }

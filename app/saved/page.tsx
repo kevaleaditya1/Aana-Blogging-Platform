@@ -80,11 +80,11 @@ export default async function SavedPostsPage() {
                         {validPosts.map((post) => (
                             <Link key={post.slug} href={`/blog/${post.slug}`}>
                                 <Card className="h-full hover:shadow-lg transition-shadow">
-                                    {post.image && (
+                                    {post.ogImage?.url && (
                                         <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                                             <Image
-                                                src={post.image}
-                                                alt={post.title}
+                                                src={post.ogImage.url}
+                                                alt={post.title || "Post image"}
                                                 fill
                                                 className="object-cover"
                                             />
@@ -105,7 +105,7 @@ export default async function SavedPostsPage() {
                                     <CardFooter className="flex justify-between items-center">
                                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                             <Calendar className="h-4 w-4" />
-                                            {new Date(post.date).toLocaleDateString()}
+                                            {post.date && new Date(post.date).toLocaleDateString()}
                                         </div>
                                         <div className="flex items-center gap-1 text-sm font-medium text-primary">
                                             Read <ArrowRight className="h-4 w-4" />

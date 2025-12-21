@@ -34,10 +34,10 @@ export default async function BlogPage() {
                     {allPosts.map((post) => (
                         <Link key={post.slug} href={`/blog/${post.slug}`}>
                             <Card className="h-full hover:shadow-lg transition-shadow">
-                                {post.image && (
+                                {post.ogImage && (
                                     <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                                         <Image
-                                            src={post.image}
+                                            src={post.ogImage.url}
                                             alt={post.title}
                                             fill
                                             className="object-cover"
