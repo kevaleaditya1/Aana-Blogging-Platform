@@ -5,14 +5,14 @@ export async function getSortedPostsData(): Promise<Post[]> {
     try {
         const posts = await prisma.post.findMany({
             where: {
-                OR: [
-                    { published: true },
-                    { status: "published" }
-                ]
+                status: "published", // Only show published posts
+                showInCategory: { not: false }, // Hide posts with showInCategory = false
             },
-            orderBy: {
-                createdAt: "desc",
-            },
+            orderBy: [
+                { pinnedPost: "desc" }, // Pinned posts first
+                { homepagePriority: "desc" }, // Then by priority
+                { createdAt: "desc" }, // Then by date
+            ],
         });
 
         return posts.map(post => ({
@@ -31,6 +31,13 @@ export async function getSortedPostsData(): Promise<Post[]> {
             ogImage: {
                 url: post.coverImage,
             },
+            // Visibility fields
+            featuredPost: post.featuredPost ?? false,
+            pinnedPost: post.pinnedPost ?? false,
+            trending: post.trending ?? false,
+            homepagePriority: post.homepagePriority ?? 0,
+            showInCategory: post.showInCategory ?? true,
+            hideFromSearch: post.hideFromSearch ?? false,
         }));
     } catch (error) {
         console.error("Error fetching posts:", error);
@@ -121,3 +128,51 @@ export async function getAllPostsForAdmin() {
         return [];
     }
 }
+
+// Get related posts based on tags and category
+export async function getRelatedPosts(
+    currentSlug: string,
+    category: string,
+    tags: string[],
+    limit: number = 6
+): Promise<Post[]> {
+    try {
+        const allPosts = await getSortedPostsData();
+
+        // Filter out current post
+        const otherPosts = allPosts.filter(post => post.slug !== currentSlug);
+
+        // Score each post based on similarity
+        const scoredPosts = otherPosts.map(post => {
+            let score = 0;
+
+            // Same category: +5 points
+            if (post.category.toLowerCase() === category.toLowerCase()) {
+                score += 5;
+            }
+
+            // Matching tags: +3 points each
+            const matchingTags = post.tags.filter(tag =>
+                tags.some(currentTag =>
+                    currentTag.toLowerCase() === tag.toLowerCase()
+                )
+            );
+            score += matchingTags.length * 3;
+
+            return { ...post, score };
+        });
+
+        // Sort by score (highest first) and take top N
+        const relatedPosts = scoredPosts
+            .filter(post => post.score > 0) // Only posts with some relevance
+            .sort((a, b) => b.score - a.score)
+            .slice(0, limit)
+            .map(({ score, ...post }) => post); // Remove score from result
+
+        return relatedPosts;
+    } catch (error) {
+        console.error("Error fetching related posts:", error);
+        return [];
+    }
+}
+

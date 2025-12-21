@@ -42,13 +42,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.9,
     }));
 
-    // Blog posts
-    const blogPosts = posts.map((post) => ({
-        url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(post.date),
-        changeFrequency: "weekly" as const,
-        priority: 0.7,
-    }));
+    // Blog posts (exclude hidden from search)
+    const blogPosts = posts
+        .filter(post => !post.hideFromSearch) // Exclude posts hidden from search
+        .map((post) => ({
+            url: `${baseUrl}/blog/${post.slug}`,
+            lastModified: new Date(post.date),
+            changeFrequency: "weekly" as const,
+            priority: 0.7,
+        }));
 
     return [...staticPages, ...categoryPages, ...blogPosts];
 }

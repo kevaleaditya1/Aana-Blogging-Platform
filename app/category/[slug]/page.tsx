@@ -48,6 +48,7 @@ export default async function CategoryPage({ params }: Props) {
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
 
+
     const allPosts = await getSortedPostsData();
     const categoryPosts = allPosts.filter((post) => {
         const postCategorySlug = post.category.toLowerCase().replace(/\s+/g, "-");
@@ -96,10 +97,20 @@ export default async function CategoryPage({ params }: Props) {
                                         </div>
                                     </CardHeader>
                                     <CardContent className="flex-1 p-6">
-                                        <div className="flex items-center gap-2 mb-2">
+                                        <div className="flex items-center gap-2 mb-2 flex-wrap">
                                             <Badge variant="secondary" className="text-xs">
                                                 {post.category}
                                             </Badge>
+                                            {post.pinnedPost && (
+                                                <Badge variant="default" className="text-xs">
+                                                    📌 Pinned
+                                                </Badge>
+                                            )}
+                                            {post.trending && (
+                                                <Badge variant="destructive" className="text-xs">
+                                                    🔥 Trending
+                                                </Badge>
+                                            )}
                                             <span className="text-xs text-muted-foreground">
                                                 {post.date}
                                             </span>

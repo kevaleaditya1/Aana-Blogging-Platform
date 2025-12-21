@@ -14,4 +14,11 @@ export interface Post {
     };
     content: string;
     tags: string[];
+    // Visibility fields
+    featuredPost?: boolean;
+    pinnedPost?: boolean;
+    trending?: boolean;
+    homepagePriority?: number;
+    showInCategory?: boolean;
+    hideFromSearch?: boolean;
 }

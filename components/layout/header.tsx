@@ -7,6 +7,7 @@ import { useSession, signOut } from "next-auth/react";
 import { Search, Sun, Moon, Menu, X, User, LogOut, BookmarkIcon, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { SearchWithSuggestions } from "@/components/search/search-with-suggestions";
 
 export function Header() {
     const { setTheme, theme } = useTheme();
@@ -64,27 +65,10 @@ export function Header() {
 
                 {/* Right Side - Refined with Glass Effect */}
                 <div className="flex items-center gap-2 ml-auto">
-                    {/* Search Bar - Glass Morphism */}
-                    <form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const formData = new FormData(e.currentTarget);
-                            const query = formData.get("search") as string;
-                            if (query.trim()) {
-                                window.location.href = `/search?q=${encodeURIComponent(query)}`;
-                            }
-                        }}
-                        className="hidden md:flex items-center relative group"
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full opacity-0 group-focus-within:opacity-100 transition-opacity blur" />
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none z-10" />
-                        <Input
-                            type="search"
-                            name="search"
-                            placeholder="Search articles..."
-                            className="w-64 pl-10 pr-4 h-10 bg-secondary/50 border-0 focus-visible:ring-2 focus-visible:ring-primary/20 rounded-full relative"
-                        />
-                    </form>
+                    {/* Search Bar with Suggestions */}
+                    <div className="hidden md:block">
+                        <SearchWithSuggestions />
+                    </div>
 
                     {/* Theme Toggle - Animated Sun/Moon */}
                     <Button

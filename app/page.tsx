@@ -19,13 +19,10 @@ export const revalidate = 0;
 
 export default async function Home() {
   const allPosts = await getSortedPostsData();
-  console.log("Total posts fetched:", allPosts.length);
-  console.log("Posts:", allPosts.map(p => ({ title: p.title, slug: p.slug })));
 
-  const featuredPost = allPosts[0];
+  // Get actual featured post or fallback to first post
+  const featuredPost = allPosts.find(p => p.featuredPost) || allPosts[0];
   const latestPosts = allPosts; // Show all posts
-
-  console.log("Latest posts count:", latestPosts.length);
 
   // Calculate trending topics from tags
   const tagCount = new Map<string, number>();
@@ -143,10 +140,15 @@ export default async function Home() {
                       </div>
                     </CardHeader>
                     <CardContent className="flex-1 p-6">
-                      <div className="flex items-center gap-2 mb-2">
+                      <div className="flex items-center gap-2 mb-2 flex-wrap">
                         <Badge variant="secondary" className="text-xs">
                           {post.category}
                         </Badge>
+                        {post.trending && (
+                          <Badge variant="destructive" className="text-xs">
+                            🔥 Trending
+                          </Badge>
+                        )}
                         <span className="text-xs text-muted-foreground">
                           {post.date}
                         </span>
