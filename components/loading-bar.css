@@ -1,0 +1,30 @@
+.loading-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.loading-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+    animation: loading 1.5s ease-in-out infinite;
+    transform-origin: left;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%) scaleX(0);
+    }
+
+    50% {
+        transform: translateX(0%) scaleX(1);
+    }
+
+    100% {
+        transform: translateX(100%) scaleX(0);
+    }
+}

@@ -43,39 +43,42 @@ export default async function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        {/* Subtle background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 via-background to-background" />
+      <section className="relative py-20 md:py-32 min-h-[60vh] flex items-end justify-center pb-16">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-3xl mx-auto">
+            {/* Glassmorphic Card */}
+            <div className="relative backdrop-blur-md bg-white/5 dark:bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
+              {/* Subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 rounded-2xl pointer-events-none" />
 
-        <div className="container px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <Badge variant="secondary" className="w-fit mx-auto">
-              ✨ Tech Insights & Reviews
-            </Badge>
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-              <span className="gradient-text">
-                Welcome to Aana
-              </span>
-            </h1>
-            <p className="text-muted-foreground md:text-xl/relaxed">
-              Your ultimate destination for tech news, smartphone reviews, gadget guides, and AI tools. Stay ahead with the latest insights and expert recommendations.
-            </p>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-              <Button asChild size="lg" className="gap-2">
-                <Link href="/blog">
-                  Explore Articles <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/category">Browse Categories</Link>
-              </Button>
+              <div className="relative z-10 text-center space-y-6">
+                <Badge variant="secondary" className="w-fit mx-auto bg-white/10 backdrop-blur-sm border-white/20">
+                  ✨ Tech Insights & Reviews
+                </Badge>
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+                  Welcome to Aana
+                </h1>
+                <p className="text-muted-foreground md:text-xl/relaxed">
+                  Your ultimate destination for tech news, smartphone reviews, gadget guides, and AI tools. Stay ahead with the latest insights and expert recommendations.
+                </p>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center pt-4">
+                  <Button asChild size="lg" className="gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-gray-900 dark:text-white">
+                    <Link href="/blog">
+                      Explore Articles <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild className="bg-white/5 backdrop-blur-sm hover:bg-white/10 border-white/20 text-gray-900 dark:text-white">
+                    <Link href="/category">Browse Categories</Link>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Trending Topics */}
-      < section className="py-12 bg-secondary/20" >
+      <section className="py-6">
         <div className="container px-4 md:px-6">
           <div className="flex items-center gap-2 mb-6">
             <TrendingUp className="h-5 w-5 text-primary" />
@@ -87,7 +90,7 @@ export default async function Home() {
                 <Badge
                   key={topic}
                   variant="outline"
-                  className="text-sm py-1 px-3 hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:text-white hover:border-transparent cursor-pointer transition-all duration-300"
+                  className="text-sm py-1 px-3"
                 >
                   {topic}
                 </Badge>
@@ -97,7 +100,7 @@ export default async function Home() {
             )}
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Latest Articles */}
       < section className="py-12 md:py-24 lg:py-32" >

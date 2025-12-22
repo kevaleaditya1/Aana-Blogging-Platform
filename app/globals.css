@@ -60,7 +60,7 @@
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #000000;
   --foreground: #fafafa;
 
   --primary: #818cf8;
@@ -78,8 +78,8 @@
   --card: #171717;
   --card-foreground: #fafafa;
 
-  --border: #262626;
-  --input: #262626;
+  --border: #27272a;
+  --input: #27272a;
   --ring: #818cf8;
 }
 

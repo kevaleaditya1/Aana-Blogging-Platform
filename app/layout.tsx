@@ -8,6 +8,7 @@ import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Chatbot } from "@/components/chatbot/chatbot";
+import { LoadingBar } from "@/components/loading-bar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -72,6 +73,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <LoadingBar />
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
