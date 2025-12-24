@@ -89,8 +89,73 @@ export default async function Post({ params }: Props) {
     // Fetch related posts
     const relatedPosts = await getRelatedPosts(post.slug, post.category, post.tags, 6);
 
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+    // JSON-LD Schema for Article
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.excerpt,
+        image: post.ogImage.url,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: {
+            "@type": "Person",
+            name: post.author.name,
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "Aana",
+            logo: {
+                "@type": "ImageObject",
+                url: `${baseUrl}/logo.png`,
+            },
+        },
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/blog/${slug}`,
+        },
+    };
+
+    // JSON-LD Schema for Breadcrumbs
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: baseUrl,
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: `${baseUrl}/blog`,
+            },
+            {
+                "@type": "ListItem",
+                position: 3,
+                name: post.title,
+                item: `${baseUrl}/blog/${slug}`,
+            },
+        ],
+    };
+
     return (
         <>
+            {/* JSON-LD Schema Markup */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+
             <ReadingProgress />
             <div className="container px-4 md:px-6 py-12 md:py-20">
                 <div className="grid grid-cols-1 xl:grid-cols-[1fr_250px] gap-12 max-w-7xl mx-auto">
