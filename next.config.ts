@@ -19,6 +19,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "**.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "www.autonomous.ai",
+      },
+      {
+        protocol: "https",
+        hostname: "www.phonearena.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**",
+      },
     ],
   },
 };
