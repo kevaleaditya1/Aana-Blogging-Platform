@@ -135,6 +135,8 @@ export default async function Home() {
                             fill
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            priority={index < 3} // Prioritize first 3 images for LCP
+                            loading={index < 3 ? "eager" : "lazy"}
                           />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-muted-foreground">

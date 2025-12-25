@@ -14,6 +14,9 @@ import { LoadingBar } from "@/components/loading-bar";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap", // Prevents invisible text during font load
+  preload: true, // Preload font for faster rendering
+  fallback: ["system-ui", "arial"], // Fallback fonts
 });
 
 export const metadata: Metadata = {
@@ -53,6 +56,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Resource Hints for Performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
         <meta name="google-adsense-account" content="ca-pub-8999010834139123" />
         <script
           async
