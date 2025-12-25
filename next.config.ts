@@ -37,7 +37,7 @@ const nextConfig: NextConfig = {
     return [
       // Redirect www to non-www (except sitemap and robots)
       {
-        source: '/:path((?!sitemap\\.xml|robots\\.txt).*)',
+        source: '/:path((?!sitemap\\.xml|feed\\.xml|robots\\.txt).*)',
         has: [
           {
             type: 'host',
