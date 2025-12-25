@@ -33,12 +33,38 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-   async redirects() {
+  async redirects() {
     return [
+      // Redirect www to non-www
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.aanaa.blog',
+          },
+        ],
+        destination: 'https://aanaa.blog/:path*',
+        permanent: true,
+      },
+      // Category page redirect
       {
         source: '/category',
         destination: '/category/',
         permanent: true,
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow',
+          },
+        ],
       },
     ];
   },
