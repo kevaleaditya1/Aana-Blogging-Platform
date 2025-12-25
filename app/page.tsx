@@ -14,9 +14,21 @@ import { Badge } from "@/components/ui/badge";
 import { getSortedPostsData } from "@/lib/posts";
 import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
 import { NewsletterSection } from "@/components/newsletter/newsletter-section";
+import { Metadata } from "next";
 
 // Revalidate immediately to show latest posts
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: "Aana - Tech for the Future",
+  description: "Modern tech blogging: Smartphones, AI, Gadgets, and more. Stay updated with the latest tech news, reviews, and guides.",
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://aanaa.blog",
+  },
+  openGraph: {
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://aanaa.blog",
+  },
+};
 
 export default async function Home() {
   const allPosts = await getSortedPostsData();

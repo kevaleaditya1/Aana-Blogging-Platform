@@ -9,6 +9,9 @@ import { Calendar, ArrowRight, TrendingUp } from "lucide-react";
 export const metadata: Metadata = {
     title: "All Articles - Aanaa Blog",
     description: "Browse all articles on Aanaa Blog",
+    alternates: {
+        canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blog` || "https://aanaa.blog/blog",
+    },
 };
 
 export const revalidate = 60;
