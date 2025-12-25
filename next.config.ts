@@ -35,18 +35,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Redirect www to non-www (except sitemap and robots)
-      {
-        source: '/:path((?!sitemap\\.xml|feed\\.xml|robots\\.txt).*)',
-        has: [
-          {
-            type: 'host',
-            value: 'www.aanaa.blog',
-          },
-        ],
-        destination: 'https://aanaa.blog/:path*',
-        permanent: true,
-      },
       // Category page redirect
       {
         source: '/category',
