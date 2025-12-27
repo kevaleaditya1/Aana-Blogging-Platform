@@ -98,11 +98,12 @@ export default async function Post({ params }: Props) {
         headline: post.title,
         description: post.excerpt,
         image: post.ogImage.url,
-        datePublished: post.date,
-        dateModified: post.date,
+        datePublished: new Date(post.date).toISOString(),
+        dateModified: new Date(post.date).toISOString(),
         author: {
             "@type": "Person",
             name: post.author.name,
+            url: baseUrl,
         },
         publisher: {
             "@type": "Organization",
