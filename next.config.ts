@@ -34,14 +34,7 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return [
-      // Category page redirect
-      {
-        source: '/category',
-        destination: '/category/',
-        permanent: true,
-      },
-    ];
+    return [];
   },
   async headers() {
     return [
