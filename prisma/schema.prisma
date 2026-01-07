@@ -160,3 +160,63 @@ model Subscriber {
   @@index([email])
   @@index([subscribedAt])
 }
+
+// News Aggregation Models
+model NewsItem {
+  id          String   @id @default(cuid())
+  title       String
+  summary     String   @db.Text
+  content     String?  @db.Text
+  link        String   @unique
+  image       String?
+  source      String
+  category    String
+  tags        String[]
+  aiScore     Float?
+  publishedAt DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([category])
+  @@index([publishedAt])
+  @@index([aiScore])
+}
+
+model NewsletterSubscriber {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  name           String?
+  preferences    Json?
+  isActive       Boolean   @default(true)
+  verifiedAt     DateTime?
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+  
+  @@index([email])
+  @@index([isActive])
+}
+
+model NewsletterQueue {
+  id           String    @id @default(cuid())
+  subject      String
+  content      String    @db.Text
+  recipients   Json
+  scheduledFor DateTime
+  sentAt       DateTime?
+  status       String    @default("pending")
+  createdAt    DateTime  @default(now())
+  
+  @@index([status])
+  @@index([scheduledFor])
+}
+
+model NewsAnalytics {
+  id         String   @id @default(cuid())
+  newsItemId String
+  clicks     Int      @default(0)
+  views      Int      @default(0)
+  shares     Int      @default(0)
+  createdAt  DateTime @default(now())
+  
+  @@index([newsItemId])
+}
