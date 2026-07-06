@@ -41,3 +41,6 @@ prisma/migrations/
 
 # test files
 test-db.ts
+
+#.MD Files
+MD's
