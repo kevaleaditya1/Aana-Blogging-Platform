@@ -16,7 +16,7 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap", // Prevents invisible text during font load
   preload: true, // Preload font for faster rendering
-  fallback: ["system-ui", "arial"], // Fallback fonts
+  fallback: ["-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"], // Fallback fonts
 });
 
 export const metadata: Metadata = {

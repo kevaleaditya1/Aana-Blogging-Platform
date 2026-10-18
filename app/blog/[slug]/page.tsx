@@ -158,20 +158,20 @@ export default async function Post({ params }: Props) {
             />
 
             <ReadingProgress />
-            <div className="container px-4 md:px-6 py-12 md:py-20">
-                <div className="grid grid-cols-1 xl:grid-cols-[1fr_250px] gap-12 max-w-7xl mx-auto">
+            <div className="container px-4 md:px-8 py-10 md:py-16">
+                <div className="grid grid-cols-1 xl:grid-cols-[1fr_260px] gap-12 max-w-7xl mx-auto">
                     <article className="max-w-3xl">
-                        <Button variant="ghost" size="sm" asChild className="mb-8 gap-2">
+                        <Button variant="ghost" size="sm" asChild className="mb-8 gap-1.5 rounded-full text-xs text-muted-foreground hover:text-foreground -ml-2">
                             <Link href="/">
-                                <ArrowLeft className="h-4 w-4" /> Back to Home
+                                <ArrowLeft className="h-3.5 w-3.5" /> Back to Home
                             </Link>
                         </Button>
 
-                        <div className="space-y-4 mb-8">
-                            <div className="flex items-center justify-between">
+                        <div className="space-y-4 mb-10 pb-8 border-b border-border/40">
+                            <div className="flex items-center justify-between gap-4">
                                 <div className="flex items-center gap-2">
-                                    <Badge>{post.category}</Badge>
-                                    <span className="text-sm text-muted-foreground flex items-center gap-1">
+                                    <Badge variant="secondary" className="text-xs">{post.category}</Badge>
+                                    <span className="text-xs text-muted-foreground flex items-center gap-1">
                                         <Calendar className="h-3 w-3" /> {post.date}
                                     </span>
                                 </div>
@@ -181,16 +181,22 @@ export default async function Post({ params }: Props) {
                                 </div>
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">{post.title}</h1>
-                            <p className="text-xl text-muted-foreground">{post.excerpt}</p>
+                            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground leading-[1.12]">
+                                {post.title}
+                            </h1>
+                            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-normal">
+                                {post.excerpt}
+                            </p>
 
-                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                <User className="h-4 w-4" />
-                                <span>{post.author.name}</span>
+                            <div className="flex items-center gap-2 text-xs text-muted-foreground pt-1">
+                                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <User className="h-3 w-3" />
+                                </div>
+                                <span className="font-medium text-foreground">{post.author.name}</span>
                             </div>
                         </div>
 
-                        <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground">
+                        <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-p:leading-relaxed prose-p:text-foreground/90 prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
                             <ReactMarkdown
                                 remarkPlugins={[remarkGfm]}
                                 rehypePlugins={[rehypeHighlight]}

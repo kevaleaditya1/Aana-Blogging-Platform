@@ -10,8 +10,8 @@
 
 .loading-bar {
     height: 100%;
-    background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
-    animation: loading 1.5s ease-in-out infinite;
+    background: #0071e3;
+    animation: loading 1.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
     transform-origin: left;
 }
 

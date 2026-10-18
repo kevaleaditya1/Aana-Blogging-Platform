@@ -80,40 +80,41 @@ export function SearchWithSuggestions() {
     };
 
     return (
-        <div ref={wrapperRef} className="relative w-full md:w-64">
+        <div ref={wrapperRef} className="relative w-full md:w-56">
             <form onSubmit={handleSubmit} className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full opacity-0 group-focus-within:opacity-100 transition-opacity blur" />
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none z-10" />
+                <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground pointer-events-none z-10" />
                 <Input
                     type="search"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyDown={handleKeyDown}
                     onFocus={() => query.length >= 2 && setShowSuggestions(true)}
-                    placeholder="Search articles..."
-                    className="w-full pl-10 pr-4 h-10 bg-secondary/50 border-0 focus-visible:ring-2 focus-visible:ring-primary/20 rounded-full relative"
+                    placeholder="Search..."
+                    className="w-full pl-8 pr-3 h-8 bg-black/[0.04] dark:bg-white/[0.06] border border-black/[0.06] dark:border-white/[0.08] focus-visible:ring-2 focus-visible:ring-primary/30 rounded-full text-xs"
                 />
             </form>
 
-            {/* Suggestions Dropdown */}
+            {/* Suggestions Dropdown - Apple Frosted Glass Popover */}
             {showSuggestions && suggestions.length > 0 && (
-                <div className="absolute top-full mt-2 w-full bg-background border rounded-lg shadow-lg z-50 overflow-hidden">
+                <div className="absolute top-full mt-2 w-80 right-0 bg-background/95 backdrop-blur-xl border border-black/[0.08] dark:border-white/[0.12] rounded-2xl shadow-2xl z-50 overflow-hidden p-1.5 animate-in fade-in zoom-in-95 duration-150">
+                    <div className="px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground border-b border-border/40 mb-1">
+                        Quick Suggestions
+                    </div>
                     {suggestions.map((post, index) => (
                         <button
                             key={post.slug}
                             onClick={() => handleSuggestionClick(post.slug)}
-                            className={`w-full text-left px-4 py-3 hover:bg-secondary/50 transition-colors border-b last:border-b-0 ${index === selectedIndex ? "bg-secondary/50" : ""
+                            className={`w-full text-left px-3 py-2 rounded-xl hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors ${index === selectedIndex ? "bg-black/[0.05] dark:bg-white/[0.08]" : ""
                                 }`}
                         >
-                            <div className="flex items-start gap-3">
-                                <Search className="h-4 w-4 text-muted-foreground mt-1 flex-shrink-0" />
+                            <div className="flex items-start gap-2.5">
+                                <Search className="h-3.5 w-3.5 text-primary mt-0.5 shrink-0" />
                                 <div className="flex-1 min-w-0">
-                                    <p className="font-medium text-sm line-clamp-1">{post.title}</p>
-                                    <p className="text-xs text-muted-foreground line-clamp-1">{post.excerpt}</p>
-                                    <div className="flex items-center gap-2 mt-1">
-                                        <span className="text-xs text-muted-foreground">{post.category}</span>
+                                    <p className="font-medium text-xs text-foreground line-clamp-1">{post.title}</p>
+                                    <div className="flex items-center gap-2 mt-0.5">
+                                        <span className="text-[10px] text-muted-foreground">{post.category}</span>
                                         {post.trending && (
-                                            <span className="text-xs">🔥</span>
+                                            <span className="text-[10px] text-amber-600 dark:text-amber-400 font-medium">Trending</span>
                                         )}
                                     </div>
                                 </div>
@@ -123,9 +124,10 @@ export function SearchWithSuggestions() {
                     {suggestions.length > 0 && (
                         <button
                             onClick={handleSubmit}
-                            className="w-full text-left px-4 py-2 text-sm text-primary hover:bg-secondary/50 transition-colors font-medium"
+                            className="w-full text-left px-3 py-2 mt-1 border-t border-border/40 text-xs text-primary hover:underline underline-offset-4 font-medium flex items-center justify-between"
                         >
-                            See all results for "{query}" →
+                            <span>Explore all results for "{query}"</span>
+                            <span>→</span>
                         </button>
                     )}
                 </div>

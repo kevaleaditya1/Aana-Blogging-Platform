@@ -35,43 +35,44 @@ export default async function BlogPage() {
                 {/* Articles Grid */}
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {allPosts.map((post) => (
-                        <Link key={post.slug} href={`/blog/${post.slug}`}>
-                            <Card className="h-full hover:shadow-lg transition-shadow">
+                        <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
+                            <Card className="flex flex-col h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all overflow-hidden">
                                 {post.ogImage && (
-                                    <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+                                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
                                         <Image
                                             src={post.ogImage.url}
                                             alt={post.title}
                                             fill
-                                            className="object-cover"
+                                            className="object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                                         />
                                     </div>
                                 )}
-                                <CardHeader>
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <Badge>{post.category}</Badge>
+                                <CardHeader className="p-5 md:p-6 pb-2">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <Badge variant="secondary" className="text-[11px]">{post.category}</Badge>
                                         {post.trending && (
-                                            <Badge variant="secondary" className="gap-1">
-                                                <TrendingUp className="h-3 w-3" />
+                                            <span className="text-[11px] font-semibold text-amber-600 dark:text-amber-400">
                                                 Trending
-                                            </Badge>
+                                            </span>
                                         )}
                                         {post.featuredPost && (
-                                            <Badge variant="secondary">Featured</Badge>
+                                            <Badge variant="default" className="text-[11px]">Featured</Badge>
                                         )}
                                     </div>
-                                    <CardTitle className="line-clamp-2">{post.title}</CardTitle>
-                                    <CardDescription className="line-clamp-2">
+                                    <CardTitle className="text-lg md:text-xl font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-snug">
+                                        {post.title}
+                                    </CardTitle>
+                                    <CardDescription className="line-clamp-2 text-sm text-muted-foreground leading-relaxed mt-1">
                                         {post.excerpt}
                                     </CardDescription>
                                 </CardHeader>
-                                <CardFooter className="flex justify-between items-center">
-                                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                        <Calendar className="h-4 w-4" />
+                                <CardFooter className="p-5 md:p-6 pt-4 mt-auto flex justify-between items-center text-xs">
+                                    <div className="flex items-center gap-1.5 text-muted-foreground">
+                                        <Calendar className="h-3.5 w-3.5" />
                                         {new Date(post.date).toLocaleDateString()}
                                     </div>
-                                    <div className="flex items-center gap-1 text-sm font-medium text-primary">
-                                        Read <ArrowRight className="h-4 w-4" />
+                                    <div className="flex items-center gap-1 font-medium text-primary">
+                                        Read <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </CardFooter>
                             </Card>

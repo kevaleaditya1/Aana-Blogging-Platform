@@ -37,131 +37,147 @@ export function Footer() {
     };
 
     return (
-        <footer className="border-t bg-background">
-            <div className="container px-4 md:px-6 py-12 md:py-16 lg:py-20">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
-                    <div className="space-y-4">
+        <footer className="border-t border-border/40 bg-secondary/20 text-muted-foreground">
+            <div className="container px-4 md:px-8 max-w-7xl mx-auto py-12 md:py-16">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 pb-12 border-b border-border/40">
+                    <div className="space-y-3">
                         <Link href="/" className="flex items-center gap-2">
-                            <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+                            <span className="text-xl font-semibold tracking-tight text-foreground">
                                 Aana
                             </span>
                         </Link>
-                        <p className="text-sm text-muted-foreground">
-                            Your daily dose of technology, gadgets, and future tech. Stay ahead
-                            of the curve with Aana.
+                        <p className="text-[13px] leading-relaxed text-muted-foreground">
+                            Independent technology journalism, deep hardware insights, and future-forward software reviews.
                         </p>
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 pt-1">
                             <Link
                                 href="#"
-                                className="text-muted-foreground hover:text-primary transition-colors"
+                                className="text-muted-foreground hover:text-foreground transition-colors"
                             >
-                                <Twitter className="h-5 w-5" />
+                                <Twitter className="h-4 w-4" />
                                 <span className="sr-only">Twitter</span>
                             </Link>
                             <Link
                                 href="https://www.instagram.com/aana.blogs/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-primary transition-colors"
+                                className="text-muted-foreground hover:text-foreground transition-colors"
                             >
-                                <Instagram className="h-5 w-5" />
+                                <Instagram className="h-4 w-4" />
                                 <span className="sr-only">Instagram</span>
                             </Link>
                             <Link
                                 href="#"
-                                className="text-muted-foreground hover:text-primary transition-colors"
+                                className="text-muted-foreground hover:text-foreground transition-colors"
                             >
-                                <Linkedin className="h-5 w-5" />
+                                <Linkedin className="h-4 w-4" />
                                 <span className="sr-only">LinkedIn</span>
                             </Link>
                             <Link
                                 href="#"
-                                className="text-muted-foreground hover:text-primary transition-colors"
+                                className="text-muted-foreground hover:text-foreground transition-colors"
                             >
-                                <Github className="h-5 w-5" />
+                                <Github className="h-4 w-4" />
                                 <span className="sr-only">GitHub</span>
                             </Link>
                         </div>
                     </div>
-                    <div className="space-y-4">
-                        <h3 className="text-lg font-semibold">Categories</h3>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
+
+                    <div className="space-y-3">
+                        <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground">
+                            Categories
+                        </h3>
+                        <ul className="space-y-2 text-[13px]">
                             <li>
-                                <Link href="/category/phones" className="hover:text-primary">
+                                <Link href="/category/phones" className="hover:text-foreground transition-colors">
                                     Smartphones
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/category/gadgets" className="hover:text-primary">
+                                <Link href="/category/gadgets" className="hover:text-foreground transition-colors">
                                     Gadgets
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/category/ai-tools" className="hover:text-primary">
+                                <Link href="/category/ai-tools" className="hover:text-foreground transition-colors">
                                     AI Tools
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/category/guides" className="hover:text-primary">
+                                <Link href="/category/guides" className="hover:text-foreground transition-colors">
                                     Buying Guides
                                 </Link>
                             </li>
                         </ul>
                     </div>
-                    <div className="space-y-4">
-                        <h3 className="text-lg font-semibold">Company</h3>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
+
+                    <div className="space-y-3">
+                        <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground">
+                            Platform
+                        </h3>
+                        <ul className="space-y-2 text-[13px]">
                             <li>
-                                <Link href="/about" className="hover:text-primary">
+                                <Link href="/about" className="hover:text-foreground transition-colors">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="hover:text-primary">
+                                <Link href="/contact" className="hover:text-foreground transition-colors">
                                     Contact
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/privacy" className="hover:text-primary">
+                                <Link href="/privacy" className="hover:text-foreground transition-colors">
                                     Privacy Policy
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/terms" className="hover:text-primary">
+                                <Link href="/terms" className="hover:text-foreground transition-colors">
                                     Terms of Service
                                 </Link>
                             </li>
                         </ul>
                     </div>
-                    <div className="space-y-4">
-                        <h3 className="text-lg font-semibold">Subscribe</h3>
-                        <p className="text-sm text-muted-foreground">
-                            Get the latest tech news and reviews delivered to your inbox.
+
+                    <div className="space-y-3">
+                        <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground">
+                            Direct Dispatch
+                        </h3>
+                        <p className="text-[13px] leading-relaxed">
+                            Receive our weekend digest of the biggest breakthroughs in tech.
                         </p>
                         <form onSubmit={handleSubscribe} className="space-y-2">
                             <div className="flex gap-2">
                                 <Input
                                     type="email"
-                                    placeholder="Enter your email"
-                                    className="bg-secondary/50"
+                                    placeholder="email@domain.com"
+                                    className="h-8 text-xs rounded-full bg-background border-black/[0.08] dark:border-white/[0.12]"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
-                                <Button type="submit" disabled={loading}>
-                                    {loading ? "..." : "Subscribe"}
+                                <Button size="sm" type="submit" disabled={loading} className="h-8 px-3 rounded-full text-xs bg-foreground text-background hover:opacity-90">
+                                    {loading ? "..." : "Join"}
                                 </Button>
                             </div>
                             {message && (
-                                <p className="text-xs">{message}</p>
+                                <p className="text-xs text-primary">{message}</p>
                             )}
                         </form>
                     </div>
                 </div>
-                <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
+
+                <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[12px] text-muted-foreground gap-4">
                     <p>
-                        &copy; {new Date().getFullYear()} Aana. All rights reserved.
+                        &copy; {new Date().getFullYear()} Aana Inc. All rights reserved.
                     </p>
+                    <div className="flex gap-4">
+                        <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+                        <span>·</span>
+                        <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Use</Link>
+                        <span>·</span>
+                        <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+                    </div>
                 </div>
             </div>
         </footer>

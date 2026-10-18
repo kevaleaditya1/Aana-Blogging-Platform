@@ -45,22 +45,28 @@ function LoginForm() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-background p-4">
-            <Card className="w-full max-w-md">
-                <CardHeader>
-                    <CardTitle className="text-2xl">Welcome Back</CardTitle>
-                    <CardDescription>
-                        Sign in to your account
-                    </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
+        <div className="min-h-[85vh] flex items-center justify-center bg-background px-4 py-12">
+            <div className="w-full max-w-[420px] rounded-3xl border border-black/[0.08] dark:border-white/[0.12] bg-card p-6 md:p-8 shadow-2xl space-y-6">
+                <div className="text-center space-y-1.5">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-primary">
+                        Account Access
+                    </span>
+                    <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+                        Welcome Back
+                    </h1>
+                    <p className="text-xs text-muted-foreground">
+                        Sign in to sync bookmarks and participate in discussions
+                    </p>
+                </div>
+
+                <div className="space-y-4">
                     <Button
                         onClick={handleGoogleLogin}
-                        className="w-full"
+                        className="w-full h-10 rounded-full border border-black/[0.1] dark:border-white/[0.12] bg-background hover:bg-black/[0.03] dark:hover:bg-white/[0.05] text-foreground text-xs font-medium apple-press"
                         variant="outline"
                         disabled={loading}
                     >
-                        <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
                             <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
                             <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
@@ -69,20 +75,20 @@ function LoginForm() {
                         Continue with Google
                     </Button>
 
-                    <div className="relative">
+                    <div className="relative my-2">
                         <div className="absolute inset-0 flex items-center">
-                            <span className="w-full border-t" />
+                            <span className="w-full border-t border-border/60" />
                         </div>
-                        <div className="relative flex justify-center text-xs uppercase">
-                            <span className="bg-background px-2 text-muted-foreground">
-                                Or continue with email
+                        <div className="relative flex justify-center text-[11px] uppercase tracking-wider">
+                            <span className="bg-card px-3 text-muted-foreground">
+                                or sign in with email
                             </span>
                         </div>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
-                        <div className="space-y-2">
-                            <label htmlFor="email" className="text-sm font-medium">
+                        <div className="space-y-1.5">
+                            <label htmlFor="email" className="text-xs font-medium text-foreground">
                                 Email
                             </label>
                             <Input
@@ -90,19 +96,20 @@ function LoginForm() {
                                 type="email"
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                placeholder="you@example.com"
+                                placeholder="name@domain.com"
+                                className="h-10 rounded-xl bg-black/[0.02] dark:bg-white/[0.04] text-xs px-3.5"
                                 required
                                 disabled={loading}
                             />
                         </div>
-                        <div className="space-y-2">
+                        <div className="space-y-1.5">
                             <div className="flex items-center justify-between">
-                                <label htmlFor="password" className="text-sm font-medium">
+                                <label htmlFor="password" className="text-xs font-medium text-foreground">
                                     Password
                                 </label>
                                 <Link
                                     href="/forgot-password"
-                                    className="text-xs text-primary hover:underline"
+                                    className="text-[11px] text-primary hover:underline underline-offset-4"
                                 >
                                     Forgot password?
                                 </Link>
@@ -113,25 +120,25 @@ function LoginForm() {
                                 value={formData.password}
                                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                                 placeholder="••••••••"
+                                className="h-10 rounded-xl bg-black/[0.02] dark:bg-white/[0.04] text-xs px-3.5"
                                 required
                                 disabled={loading}
                             />
                         </div>
-                        {error && <p className="text-sm text-red-500">{error}</p>}
-                        <Button type="submit" className="w-full" disabled={loading}>
-                            {loading ? "Signing in..." : "Sign In"}
+                        {error && <p className="text-xs text-red-500 font-medium">{error}</p>}
+                        <Button type="submit" className="w-full h-10 rounded-full bg-foreground text-background hover:opacity-90 text-xs font-medium apple-press mt-2" disabled={loading}>
+                            {loading ? "Authenticating..." : "Sign In"}
                         </Button>
                     </form>
 
-
-                    <p className="text-sm text-center text-muted-foreground">
+                    <p className="text-xs text-center text-muted-foreground pt-2">
                         Don't have an account?{" "}
-                        <Link href="/signup" className="text-primary hover:underline">
+                        <Link href="/signup" className="text-primary font-medium hover:underline underline-offset-4">
                             Sign up
                         </Link>
                     </p>
-                </CardContent>
-            </Card>
+                </div>
+            </div>
         </div>
     );
 }

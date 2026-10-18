@@ -28,59 +28,61 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --font-sans: var(--font-inter);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", var(--font-inter), system-ui, sans-serif;
 }
 
 :root {
-  /* Clean, minimal palette */
+  /* Apple Light System Colors */
   --background: #ffffff;
-  --foreground: #0a0a0a;
+  --foreground: #1d1d1f;
 
-  /* Subtle indigo accent */
-  --primary: #6366f1;
+  /* Apple System Blue */
+  --primary: #0071e3;
   --primary-foreground: #ffffff;
 
-  --secondary: #f8fafc;
-  --secondary-foreground: #1e293b;
+  --secondary: #f5f5f7;
+  --secondary-foreground: #1d1d1f;
 
-  --accent: #f1f5f9;
-  --accent-foreground: #0f172a;
+  --accent: #f5f5f7;
+  --accent-foreground: #1d1d1f;
 
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
+  --muted: #f5f5f7;
+  --muted-foreground: #86868b;
 
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #1d1d1f;
 
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #6366f1;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: rgba(0, 0, 0, 0.12);
+  --ring: #0071e3;
 
-  --radius: 0.75rem;
+  --radius: 1rem;
 }
 
 .dark {
+  /* Apple OLED Dark System Colors */
   --background: #000000;
-  --foreground: #fafafa;
+  --foreground: #f5f5f7;
 
-  --primary: #818cf8;
+  /* Apple System Blue for Dark Mode */
+  --primary: #2997ff;
   --primary-foreground: #ffffff;
 
-  --secondary: #1a1a1a;
-  --secondary-foreground: #fafafa;
+  --secondary: #1c1c1e;
+  --secondary-foreground: #f5f5f7;
 
-  --accent: #262626;
-  --accent-foreground: #fafafa;
+  --accent: #2c2c2e;
+  --accent-foreground: #f5f5f7;
 
-  --muted: #262626;
-  --muted-foreground: #cbd5e1;
+  --muted: #1c1c1e;
+  --muted-foreground: #a1a1a6;
 
-  --card: #171717;
-  --card-foreground: #fafafa;
+  --card: #161617;
+  --card-foreground: #f5f5f7;
 
-  --border: #27272a;
-  --input: #27272a;
-  --ring: #818cf8;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #2997ff;
 }
 
 body {
@@ -91,44 +93,56 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle gradient text */
+/* Optical tracking for Apple typography */
+h1, h2, h3 {
+  letter-spacing: -0.022em;
+}
+
+/* Subtle Apple headline gradient */
 .gradient-text {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--muted-foreground) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Smooth hover lift - subtle */
+/* Apple fluid hover lift */
 .hover-lift {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
 }
 
 .dark .hover-lift:hover {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 14px 34px -10px rgba(0, 0, 0, 0.55);
 }
 
-/* Clean transitions */
-* {
-  transition-property: color, background-color, border-color, transform, box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+/* Apple Tactile Press Physics */
+.apple-press {
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.15s ease;
+}
+.apple-press:active {
+  transform: scale(0.975);
 }
 
-/* Subtle glassmorphism */
-.glass {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+/* Apple Materials & Vibrancy */
+.glass,
+.apple-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.dark .glass {
-  background: rgba(23, 23, 23, 0.8);
+.dark .glass,
+.dark .apple-glass {
+  background: rgba(22, 22, 23, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Card cursor pointer */

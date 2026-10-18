@@ -46,7 +46,11 @@ export async function GET(request: Request) {
         try {
             console.log('Calling Groq AI to generate posts...');
             const { generateMultiplePosts } = await import('@/lib/ai/blog-generator');
-            generatedPosts = await generateMultiplePosts(topNews, 2);
+            const formattedNews = topNews.map(item => ({
+                ...item,
+                content: item.content ?? undefined,
+            }));
+            generatedPosts = await generateMultiplePosts(formattedNews, 2);
             console.log(`AI generated ${generatedPosts.length} posts`);
         } catch (error) {
             console.error('Error in generateMultiplePosts:', error);

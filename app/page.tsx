@@ -54,142 +54,202 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 min-h-[60vh] flex items-end justify-center pb-16">
-        <div className="container px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            {/* Glassmorphic Card */}
-            <div className="relative backdrop-blur-md bg-white/5 dark:bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
-              {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 rounded-2xl pointer-events-none" />
+      {/* Hero Section - Apple Newsroom Style */}
+      <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+        <div className="container px-4 md:px-8 max-w-7xl mx-auto">
+          <div className="max-w-3xl space-y-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[12px] font-semibold uppercase tracking-wider">
+              <span>Next-Gen Tech Editorial</span>
+            </div>
+            
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.06]">
+              Future tech, <br />
+              <span className="text-muted-foreground font-normal">distilled for everyone.</span>
+            </h1>
 
-              <div className="relative z-10 text-center space-y-6">
-                <Badge variant="secondary" className="w-fit mx-auto bg-white/10 backdrop-blur-sm border-white/20">
-                  ✨ Tech Insights & Reviews
-                </Badge>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  Welcome to Aana
-                </h1>
-                <p className="text-muted-foreground md:text-xl/relaxed">
-                  Your ultimate destination for tech news, smartphone reviews, gadget guides, and AI tools. Stay ahead with the latest insights and expert recommendations.
-                </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center pt-4">
-                  <Button asChild size="lg" className="gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-gray-900 dark:text-white">
-                    <Link href="/blog">
-                      Explore Articles <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild className="bg-white/5 backdrop-blur-sm hover:bg-white/10 border-white/20 text-gray-900 dark:text-white">
-                    <Link href="/category">Browse Categories</Link>
-                  </Button>
-                </div>
-              </div>
+            <p className="text-lg md:text-xl text-muted-foreground font-normal leading-relaxed max-w-2xl">
+              Independent analysis, deep smartphone reviews, actionable gadget guides, and curated AI insights.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-3 pt-3">
+              <Button asChild size="lg" className="rounded-full px-6 gap-2 bg-foreground text-background hover:opacity-90 apple-press">
+                <Link href="/blog">
+                  Explore Articles <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button variant="secondary" size="lg" asChild className="rounded-full px-6 apple-press">
+                <Link href="/category">Browse Categories</Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trending Topics */}
-      <section className="py-6">
-        <div className="container px-4 md:px-6">
-          <div className="flex items-center gap-2 mb-6">
-            <TrendingUp className="h-5 w-5 text-primary" />
-            <h2 className="text-2xl font-bold tracking-tight">Trending Topics</h2>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {trendingTopics.length > 0 ? (
-              trendingTopics.map((topic) => (
-                <Badge
-                  key={topic}
-                  variant="outline"
-                  className="text-sm py-1 px-3"
-                >
-                  {topic}
-                </Badge>
-              ))
-            ) : (
-              <p className="text-muted-foreground">No trending topics yet</p>
-            )}
-          </div>
-        </div>
-      </section>
+      {/* Featured Story Bento Showcase */}
+      {featuredPost && (
+        <section className="pb-12 md:pb-16">
+          <div className="container px-4 md:px-8 max-w-7xl mx-auto">
+            <div className="mb-4 flex items-center justify-between">
+              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Featured Story
+              </span>
+            </div>
 
-      {/* Latest Articles */}
-      < section className="py-12 md:py-24 lg:py-32" >
-        <div className="container px-4 md:px-6">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold tracking-tight">Latest Articles</h2>
-            <Link
-              href="/blog"
-              className="text-sm font-medium text-primary hover:underline underline-offset-4"
-            >
-              View all articles
+            <Link href={`/blog/${featuredPost.slug}`} className="group block">
+              <div className="relative rounded-3xl overflow-hidden border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+                  {/* Image Column */}
+                  <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-[16/11] w-full overflow-hidden bg-muted">
+                    {featuredPost.coverImage ? (
+                      <Image
+                        src={featuredPost.coverImage}
+                        alt={featuredPost.title}
+                        fill
+                        className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                        priority
+                        sizes="(max-width: 1024px) 100vw, 60vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                        <span className="font-medium">{featuredPost.title}</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Content Column */}
+                  <div className="lg:col-span-5 p-6 md:p-10 lg:p-12 flex flex-col justify-between space-y-6">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <Badge variant="default" className="text-xs">
+                          {featuredPost.category}
+                        </Badge>
+                        <span className="text-xs text-muted-foreground">
+                          {featuredPost.date}
+                        </span>
+                      </div>
+
+                      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors leading-tight">
+                        {featuredPost.title}
+                      </h2>
+
+                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed line-clamp-3">
+                        {featuredPost.excerpt}
+                      </p>
+                    </div>
+
+                    <div className="pt-2">
+                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary group-hover:underline underline-offset-4">
+                        Read Story <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Link>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {latestPosts.map((post, index) => {
-              // Subtle theme colors for each card
-              const themes = [
-                'from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20',
-                'from-blue-50/50 to-cyan-50/50 dark:from-blue-950/20 dark:to-cyan-950/20',
-                'from-violet-50/50 to-pink-50/50 dark:from-violet-950/20 dark:to-pink-950/20',
-              ];
+        </section>
+      )}
 
-              return (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className="block h-full">
-                  <Card className={`flex flex-col h-full hover-lift cursor-pointer bg-gradient-to-br ${themes[index % 3]} transition-all`}>
-                    <CardHeader className="p-0">
-                      <div className="aspect-[16/9] w-full bg-gradient-to-br from-muted/80 to-muted rounded-t-lg overflow-hidden relative">
-                        {post.coverImage ? (
-                          <Image
-                            src={post.coverImage}
-                            alt={post.title}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            priority={index < 3} // Prioritize first 3 images for LCP
-                            loading={index < 3 ? "eager" : "lazy"}
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                            <span className="font-medium">{post.title}</span>
-                          </div>
-                        )}
-                      </div>
-                    </CardHeader>
-                    <CardContent className="flex-1 p-6">
-                      <div className="flex items-center gap-2 mb-2 flex-wrap">
-                        <Badge variant="secondary" className="text-xs">
+      {/* Trending Topics Chips */}
+      {trendingTopics.length > 0 && (
+        <section className="py-6 border-y border-border/40 bg-secondary/30">
+          <div className="container px-4 md:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground shrink-0">
+              <TrendingUp className="h-4 w-4 text-primary" />
+              <span>Trending</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              {trendingTopics.map((topic) => (
+                <Link
+                  key={topic}
+                  href={`/search?q=${encodeURIComponent(topic)}`}
+                  className="px-3.5 py-1 text-xs font-medium rounded-full bg-background border border-black/[0.08] dark:border-white/[0.1] text-foreground hover:bg-secondary transition-colors"
+                >
+                  {topic}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Latest Articles Bento Grid */}
+      <section className="py-12 md:py-20 lg:py-24">
+        <div className="container px-4 md:px-8 max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-8 md:mb-12">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary mb-1 block">
+                Latest Updates
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+                All Stories & Reviews
+              </h2>
+            </div>
+            <Link
+              href="/blog"
+              className="text-xs md:text-sm font-medium text-primary hover:underline underline-offset-4 flex items-center gap-1"
+            >
+              View all <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {latestPosts.map((post, index) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
+                <Card className="flex flex-col h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all overflow-hidden">
+                  <CardHeader className="p-0">
+                    <div className="aspect-[16/10] w-full bg-muted overflow-hidden relative">
+                      {post.coverImage ? (
+                        <Image
+                          src={post.coverImage}
+                          alt={post.title}
+                          fill
+                          className="object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          priority={index < 3}
+                          loading={index < 3 ? "eager" : "lazy"}
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-muted-foreground p-4 text-center">
+                          <span className="font-medium text-sm">{post.title}</span>
+                        </div>
+                      )}
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex-1 p-5 md:p-6 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-2 mb-3 flex-wrap">
+                        <Badge variant="secondary" className="text-[11px]">
                           {post.category}
                         </Badge>
                         {post.trending && (
-                          <Badge variant="destructive" className="text-xs">
-                            🔥 Trending
-                          </Badge>
+                          <span className="text-[11px] font-semibold text-amber-600 dark:text-amber-400">
+                            Trending
+                          </span>
                         )}
-                        <span className="text-xs text-muted-foreground">
+                        <span className="text-xs text-muted-foreground ml-auto">
                           {post.date}
                         </span>
                       </div>
-                      <CardTitle className="line-clamp-2 mb-2">
+                      <CardTitle className="text-lg md:text-xl font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors line-clamp-2 mb-2 leading-snug">
                         {post.title}
                       </CardTitle>
-                      <CardDescription className="line-clamp-3">
+                      <CardDescription className="line-clamp-2 text-sm text-muted-foreground leading-relaxed">
                         {post.excerpt}
                       </CardDescription>
-                    </CardContent>
-                    <CardFooter className="p-6 pt-0">
-                      <div className="ml-auto flex items-center gap-1 text-sm text-primary font-medium">
-                        Read More <ArrowRight className="h-3 w-3" />
-                      </div>
-                    </CardFooter>
-                  </Card>
-                </Link>
-              );
-            })}
+                    </div>
+
+                    <div className="pt-4 mt-auto flex items-center text-xs font-medium text-primary">
+                      <span>Read Story</span>
+                      <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Newsletter Section */}
       <NewsletterSection />

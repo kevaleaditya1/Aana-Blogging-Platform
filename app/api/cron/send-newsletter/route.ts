@@ -65,6 +65,11 @@ export async function GET(request: Request) {
 
         console.log(`Sending to ${subscribers.length} subscribers...`);
 
+        const formattedNews = featuredNews.map(item => ({
+            ...item,
+            image: item.image ?? undefined,
+        }));
+
         // Send emails in batches of 50
         const batchSize = 50;
         let sent = 0;
@@ -77,7 +82,7 @@ export async function GET(request: Request) {
                 await sendNewsletter(
                     emails,
                     '🚀 Your Weekly Tech Digest - Aana',
-                    featuredNews
+                    formattedNews
                 );
 
                 sent += batch.length;

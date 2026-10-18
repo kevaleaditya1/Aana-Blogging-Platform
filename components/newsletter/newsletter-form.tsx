@@ -49,41 +49,42 @@ export function NewsletterForm() {
             <form onSubmit={handleSubmit} className="space-y-3">
                 <div className="flex gap-2">
                     <div className="relative flex-1">
-                        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                        <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
                         <Input
                             type="email"
                             placeholder="Enter your email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             disabled={status === "loading" || status === "success"}
-                            className="pl-10"
+                            className="pl-10 rounded-full bg-background border-black/[0.08] dark:border-white/[0.12]"
                         />
                     </div>
                     <Button
                         type="submit"
                         disabled={status === "loading" || status === "success"}
+                        className="rounded-full px-5 bg-foreground text-background hover:opacity-90 apple-press"
                     >
                         {status === "loading" ? "Subscribing..." : "Subscribe"}
                     </Button>
                 </div>
 
                 {status === "success" && (
-                    <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
-                        <Check className="h-4 w-4" />
+                    <div className="flex items-center justify-center gap-2 text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                        <Check className="h-3.5 w-3.5" />
                         <span>{message}</span>
                     </div>
                 )}
 
                 {status === "error" && (
-                    <div className="flex items-center gap-2 text-sm text-red-600 dark:text-red-400">
-                        <AlertCircle className="h-4 w-4" />
+                    <div className="flex items-center justify-center gap-2 text-xs font-medium text-red-600 dark:text-red-400">
+                        <AlertCircle className="h-3.5 w-3.5" />
                         <span>{message}</span>
                     </div>
                 )}
             </form>
 
-            <p className="text-xs text-muted-foreground mt-2">
-                Join 1,000+ readers. Unsubscribe anytime.
+            <p className="text-[12px] text-muted-foreground mt-3">
+                Join 1,000+ engineers & tech enthusiasts. No spam, ever.
             </p>
         </div>
     );

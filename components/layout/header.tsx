@@ -26,25 +26,24 @@ export function Header() {
 
     return (
         <header
-            className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
-                ? "backdrop-blur-lg bg-black/40 shadow-lg"
-                : "backdrop-blur-md bg-black/20"
+            className={`sticky top-0 z-50 w-full transition-colors duration-200 border-b ${scrolled
+                ? "bg-white/80 dark:bg-black/80 backdrop-blur-xl backdrop-saturate-180 border-black/[0.06] dark:border-white/[0.08] shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
+                : "bg-white/60 dark:bg-black/60 backdrop-blur-md border-transparent"
                 }`}
         >
-            <div className="container flex h-16 items-center px-4 md:px-6">
-                {/* Logo - Creative with Icon */}
-                <Link href="/" className="flex items-center gap-2 mr-10 group">
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity" />
-                        <Sparkles className="h-5 w-5 text-primary relative" />
+            <div className="container flex h-14 items-center px-4 md:px-8 max-w-7xl mx-auto">
+                {/* Logo */}
+                <Link href="/" className="flex items-center gap-2 mr-8 group apple-press">
+                    <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-transform group-hover:scale-105">
+                        <Sparkles className="h-4 w-4" />
                     </div>
-                    <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+                    <span className="text-[17px] font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80">
                         Aana
                     </span>
                 </Link>
 
-                {/* Desktop Navigation - Elegant with Underline Effect */}
-                <nav className="hidden md:flex items-center gap-1 text-sm flex-1">
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex items-center gap-1 text-[13px] font-medium flex-1">
                     {[
                         { href: "/category/phones", label: "Phones" },
                         { href: "/category/gadgets", label: "Gadgets" },
@@ -55,55 +54,53 @@ export function Header() {
                         <Link
                             key={item.href}
                             href={item.href}
-                            className="relative px-3 py-2 text-muted-foreground hover:text-foreground transition-colors group"
+                            className="px-3 py-1.5 text-muted-foreground hover:text-foreground hover:bg-black/[0.04] dark:hover:bg-white/[0.06] rounded-full transition-colors"
                         >
                             {item.label}
-                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                         </Link>
                     ))}
                 </nav>
 
-                {/* Right Side - Refined with Glass Effect */}
-                <div className="flex items-center gap-2 ml-auto">
-                    {/* Search Bar with Suggestions */}
+                {/* Right Side */}
+                <div className="flex items-center gap-2.5 ml-auto">
+                    {/* Search Bar */}
                     <div className="hidden md:block">
                         <SearchWithSuggestions />
                     </div>
 
-                    {/* Theme Toggle - Animated Sun/Moon */}
+                    {/* Theme Toggle */}
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="h-10 w-10 rounded-full hover:bg-secondary/80 relative"
+                        className="h-8 w-8 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08]"
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                     >
-                        <div className="relative w-[1.2rem] h-[1.2rem]">
-                            <Sun className="absolute inset-0 h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-transform duration-700 ease-in-out dark:rotate-180 dark:scale-0 text-amber-500" />
-                            <Moon className="absolute inset-0 h-[1.2rem] w-[1.2rem] -rotate-180 scale-0 transition-transform duration-700 ease-in-out dark:rotate-0 dark:scale-100 text-indigo-400" />
+                        <div className="relative w-4 h-4">
+                            <Sun className="absolute inset-0 h-4 w-4 rotate-0 scale-100 transition-transform duration-500 ease-out dark:rotate-180 dark:scale-0 text-amber-500" />
+                            <Moon className="absolute inset-0 h-4 w-4 -rotate-180 scale-0 transition-transform duration-500 ease-out dark:rotate-0 dark:scale-100 text-primary" />
                         </div>
                         <span className="sr-only">Toggle theme</span>
                     </Button>
 
-                    {/* Auth - Premium Look */}
+                    {/* Auth */}
                     {status === "loading" ? (
-                        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 animate-pulse" />
+                        <div className="h-8 w-8 rounded-full bg-black/10 dark:bg-white/10 animate-pulse" />
                     ) : session?.user ? (
                         <div className="relative">
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className="h-10 w-10 rounded-full hover:bg-secondary/80 relative overflow-hidden group"
+                                className="h-8 w-8 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08] relative overflow-hidden"
                                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 {session.user.image ? (
                                     <img
                                         src={session.user.image}
                                         alt={session.user.name || "User"}
-                                        className="h-9 w-9 rounded-full object-cover ring-2 ring-background"
+                                        className="h-8 w-8 rounded-full object-cover ring-1 ring-border"
                                     />
                                 ) : (
-                                    <User className="h-5 w-5 relative z-10" />
+                                    <User className="h-4 w-4 text-foreground" />
                                 )}
                             </Button>
                             {isUserMenuOpen && (
@@ -112,10 +109,9 @@ export function Header() {
                                         className="fixed inset-0 z-40"
                                         onClick={() => setIsUserMenuOpen(false)}
                                     />
-                                    <div className="absolute right-0 mt-2 w-64 rounded-xl shadow-xl bg-background/95 backdrop-blur-lg border z-50 overflow-hidden">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5" />
+                                    <div className="absolute right-0 mt-2 w-64 rounded-2xl shadow-2xl bg-background/95 backdrop-blur-xl border border-black/[0.08] dark:border-white/[0.1] z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
                                         <div className="relative">
-                                            <div className="px-4 py-3 border-b bg-gradient-to-r from-indigo-500/5 to-purple-500/5">
+                                            <div className="px-4 py-3 border-b border-border/50">
                                                 <p className="font-semibold text-sm">{session.user.name}</p>
                                                 <p className="text-xs text-muted-foreground truncate mt-0.5">
                                                     {session.user.email}
@@ -124,38 +120,38 @@ export function Header() {
                                             <div className="py-1">
                                                 <Link
                                                     href={`/profile/${session.user.id}`}
-                                                    className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors"
+                                                    className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                                                     onClick={() => setIsUserMenuOpen(false)}
                                                 >
-                                                    <User className="h-4 w-4" />
+                                                    <User className="h-4 w-4 text-muted-foreground" />
                                                     <span>My Profile</span>
                                                 </Link>
                                                 <Link
                                                     href="/saved"
-                                                    className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors"
+                                                    className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                                                     onClick={() => setIsUserMenuOpen(false)}
                                                 >
-                                                    <BookmarkIcon className="h-4 w-4" />
+                                                    <BookmarkIcon className="h-4 w-4 text-muted-foreground" />
                                                     <span>Saved Posts</span>
                                                 </Link>
                                                 {session.user.role === "ADMIN" && (
                                                     <Link
                                                         href="/admin"
-                                                        className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors"
+                                                        className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                                                         onClick={() => setIsUserMenuOpen(false)}
                                                     >
-                                                        <User className="h-4 w-4" />
+                                                        <User className="h-4 w-4 text-muted-foreground" />
                                                         <span>Admin Panel</span>
                                                     </Link>
                                                 )}
                                             </div>
-                                            <div className="border-t">
+                                            <div className="border-t border-border/50">
                                                 <button
                                                     onClick={() => {
                                                         setIsUserMenuOpen(false);
                                                         signOut({ callbackUrl: "/" });
                                                     }}
-                                                    className="flex items-center gap-3 w-full px-4 py-2.5 text-sm hover:bg-secondary/50 transition-colors text-left"
+                                                    className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-500/10 transition-colors text-left"
                                                 >
                                                     <LogOut className="h-4 w-4" />
                                                     <span>Sign Out</span>
@@ -171,7 +167,7 @@ export function Header() {
                             <Button
                                 size="sm"
                                 asChild
-                                className="h-10 px-6 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg shadow-indigo-500/25"
+                                className="h-8 px-4 rounded-full text-xs font-medium bg-foreground text-background hover:opacity-90 apple-press"
                             >
                                 <Link href="/login">Sign In</Link>
                             </Button>
@@ -182,21 +178,21 @@ export function Header() {
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="md:hidden h-10 w-10 rounded-full"
+                        className="md:hidden h-8 w-8 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08]"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (
-                            <X className="h-5 w-5" />
+                            <X className="h-4 w-4" />
                         ) : (
-                            <Menu className="h-5 w-5" />
+                            <Menu className="h-4 w-4" />
                         )}
                     </Button>
                 </div>
             </div>
 
-            {/* Mobile Menu - Elegant Slide */}
+            {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden bg-background/95 backdrop-blur-lg">
+                <div className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border/60">
                     <div className="container px-4 py-4 space-y-4">
                         {/* Mobile Search */}
                         <form
@@ -211,12 +207,12 @@ export function Header() {
                             }}
                             className="relative"
                         >
-                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
                             <Input
                                 type="search"
                                 name="search"
                                 placeholder="Search articles..."
-                                className="w-full pl-10 bg-secondary/50 border-0 rounded-full"
+                                className="w-full pl-10 bg-black/[0.03] dark:bg-white/[0.05] border-black/[0.08] dark:border-white/[0.1] rounded-full"
                             />
                         </form>
 
@@ -232,7 +228,7 @@ export function Header() {
                                 <Link
                                     key={item.href}
                                     href={item.href}
-                                    className="px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-lg transition-colors"
+                                    className="px-3.5 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-black/[0.04] dark:hover:bg-white/[0.06] rounded-xl transition-colors"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item.label}
@@ -241,10 +237,10 @@ export function Header() {
                         </nav>
 
                         {/* Mobile Auth */}
-                        <div className="border-t pt-4">
+                        <div className="border-t border-border/50 pt-4">
                             {session?.user ? (
                                 <div className="space-y-1">
-                                    <div className="px-4 py-3 rounded-lg bg-gradient-to-r from-indigo-500/5 to-purple-500/5 border mb-2">
+                                    <div className="px-3.5 py-2.5 rounded-xl bg-black/[0.03] dark:bg-white/[0.05] border border-border/50 mb-2">
                                         <p className="font-semibold text-sm">{session.user.name}</p>
                                         <p className="text-xs text-muted-foreground">
                                             {session.user.email}
@@ -252,19 +248,19 @@ export function Header() {
                                     </div>
                                     <Link
                                         href="/bookmarks"
-                                        className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 rounded-lg transition-colors"
+                                        className="flex items-center gap-3 px-3.5 py-2 text-sm text-foreground hover:bg-black/[0.04] dark:hover:bg-white/[0.06] rounded-xl transition-colors"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
-                                        <BookmarkIcon className="h-4 w-4" />
+                                        <BookmarkIcon className="h-4 w-4 text-muted-foreground" />
                                         My Bookmarks
                                     </Link>
                                     {session.user.role === "ADMIN" && (
                                         <Link
                                             href="/admin"
-                                            className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-secondary/50 rounded-lg transition-colors"
+                                            className="flex items-center gap-3 px-3.5 py-2 text-sm text-foreground hover:bg-black/[0.04] dark:hover:bg-white/[0.06] rounded-xl transition-colors"
                                             onClick={() => setIsMenuOpen(false)}
                                         >
-                                            <User className="h-4 w-4" />
+                                            <User className="h-4 w-4 text-muted-foreground" />
                                             Admin Panel
                                         </Link>
                                     )}
@@ -273,7 +269,7 @@ export function Header() {
                                             setIsMenuOpen(false);
                                             signOut({ callbackUrl: "/" });
                                         }}
-                                        className="flex items-center gap-3 w-full px-4 py-2.5 text-sm hover:bg-secondary/50 rounded-lg transition-colors text-left"
+                                        className="flex items-center gap-3 w-full px-3.5 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-500/10 rounded-xl transition-colors text-left"
                                     >
                                         <LogOut className="h-4 w-4" />
                                         Sign Out
@@ -281,7 +277,7 @@ export function Header() {
                                 </div>
                             ) : (
                                 <Button
-                                    className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700"
+                                    className="w-full rounded-full bg-foreground text-background hover:opacity-90"
                                     asChild
                                 >
                                     <Link href="/login" onClick={() => setIsMenuOpen(false)}>

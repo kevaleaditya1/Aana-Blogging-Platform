@@ -42,45 +42,44 @@ export default async function CategoriesPage() {
     ];
 
     return (
-        <div className="container px-4 md:px-6 py-12 md:py-20">
-            <div className="mb-12">
-                <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
-                    Browse by Category
+        <div className="container px-4 md:px-8 max-w-7xl mx-auto py-12 md:py-20">
+            <div className="mb-12 max-w-3xl">
+                <span className="text-xs font-semibold uppercase tracking-wider text-primary mb-2 block">
+                    Directory
+                </span>
+                <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground mb-3">
+                    Browse Topics & Categories
                 </h1>
-                <p className="text-muted-foreground text-lg max-w-2xl">
-                    Explore our content organized by topics. Find exactly what you're interested in.
+                <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
+                    Explore curated tech intelligence categorized by domain — from smartphone hardware architectures to emerging neural networks.
                 </p>
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {categories.map((category, index) => {
-                    const theme = categoryThemes[index % categoryThemes.length];
-
-                    return (
-                        <Link key={category.slug} href={`/category/${category.slug}`} className="block h-full">
-                            <Card className={`h-full hover-lift cursor-pointer bg-gradient-to-br ${theme.bg} transition-all border-2 border-transparent hover:border-primary/20`}>
-                                <CardHeader>
-                                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${theme.gradient} mb-4 flex items-center justify-center`}>
-                                        <span className="text-2xl text-white font-bold">
-                                            {category.name.charAt(0)}
-                                        </span>
-                                    </div>
-                                    <CardTitle className="text-2xl">{category.name}</CardTitle>
-                                    <CardDescription>
-                                        <Badge variant="secondary" className="mt-2">
-                                            {category.count} {category.count === 1 ? 'article' : 'articles'}
-                                        </Badge>
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground">
-                                        Explore all articles in {category.name}
-                                    </p>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                    );
-                })}
+                {categories.map((category) => (
+                    <Link key={category.slug} href={`/category/${category.slug}`} className="group block h-full">
+                        <Card className="h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all p-6 flex flex-col justify-between">
+                            <CardHeader className="p-0 mb-6">
+                                <div className="w-10 h-10 rounded-2xl bg-secondary border border-border/50 flex items-center justify-center text-foreground font-semibold text-base mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                    {category.name.charAt(0)}
+                                </div>
+                                <CardTitle className="text-xl font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors">
+                                    {category.name}
+                                </CardTitle>
+                                <CardDescription className="mt-1">
+                                    <Badge variant="secondary" className="text-[11px] font-normal">
+                                        {category.count} {category.count === 1 ? 'article' : 'articles'}
+                                    </Badge>
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="p-0">
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Explore all analysis and reviews in {category.name} →
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </Link>
+                ))}
             </div>
 
             {categories.length === 0 && (
