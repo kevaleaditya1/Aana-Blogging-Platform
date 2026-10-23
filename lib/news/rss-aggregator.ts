@@ -7,10 +7,40 @@ interface RSSFeed {
 }
 
 const RSS_FEEDS: RSSFeed[] = [
-    // Tech News
+    // General tech news
     { url: 'https://techcrunch.com/feed/', source: 'TechCrunch', category: 'Tech' },
     { url: 'https://www.theverge.com/rss/index.xml', source: 'The Verge', category: 'Tech' },
+    { url: 'https://feeds.arstechnica.com/arstechnica/index', source: 'Ars Technica', category: 'Tech' },
+    { url: 'https://www.wired.com/feed/rss', source: 'Wired', category: 'Tech' },
+    { url: 'https://news.ycombinator.com/rss', source: 'Hacker News', category: 'Tech' },
     { url: 'https://www.engadget.com/rss.xml', source: 'Engadget', category: 'Tech' },
+
+    // India focused tech and startup news
+    { url: 'https://inc42.com/feed/', source: 'Inc42', category: 'India Tech' },
+    { url: 'https://yourstory.com/feed', source: 'YourStory', category: 'India Tech' },
+    { url: 'https://entrackr.com/feed/', source: 'Entrackr', category: 'India Tech' },
+    { url: 'https://www.moneycontrol.com/rss/technology.xml', source: 'Moneycontrol Tech', category: 'India Tech' },
+    { url: 'https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms', source: 'Economic Times Tech', category: 'India Tech' },
+    { url: 'https://analyticsindiamag.com/feed/', source: 'Analytics India Magazine', category: 'AI' },
+
+    // Developer focused reading
+    { url: 'https://feed.infoq.com/', source: 'InfoQ', category: 'Developer' },
+    { url: 'https://feeds.dzone.com/home', source: 'DZone', category: 'Developer' },
+    { url: 'https://feeds.feedburner.com/baeldung', source: 'Baeldung', category: 'Developer' },
+    { url: 'https://dev.to/feed', source: 'dev.to', category: 'Developer' },
+    { url: 'https://hashnode.com/feed', source: 'Hashnode', category: 'Developer' },
+    { url: 'https://newsletter.pragmaticengineer.com/feed', source: 'The Pragmatic Engineer', category: 'Developer' },
+
+    // Gadget and tech reviews
+    { url: 'https://www.gsmarena.com/rss-news-reviews.php3', source: 'GSMArena', category: 'Reviews' },
+    { url: 'https://www.digit.in/feed/', source: 'Digit', category: 'Reviews' },
+    { url: 'https://www.91mobiles.com/hub/feed/', source: '91mobiles', category: 'Reviews' },
+    { url: 'https://www.gadgets360.com/rss/tech-news', source: 'Gadgets 360', category: 'Reviews' },
+    { url: 'https://www.rtings.com/rss.xml', source: 'RTINGS', category: 'Reviews' },
+    { url: 'https://www.notebookcheck.net/News.152.0.html?type=rss', source: 'Notebookcheck', category: 'Reviews' },
+    { url: 'https://www.tomshardware.com/feeds/all', source: "Tom's Hardware", category: 'Reviews' },
+    { url: 'https://www.tomsguide.com/feeds/all', source: "Tom's Guide", category: 'Reviews' },
+    { url: 'https://www.cnet.com/rss/news/', source: 'CNET', category: 'Reviews' },
 
     // Business & Finance
     { url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'Bloomberg', category: 'Business' },
