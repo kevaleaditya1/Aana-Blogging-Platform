@@ -20,7 +20,7 @@ export async function GET(request: Request) {
         const topNews = await prisma.newsItem.findMany({
             where: { publishedAt: { gte: trendingSince } },
             orderBy: [{ aiScore: 'desc' }, { publishedAt: 'desc' }],
-            take: 10,
+            take: 50,
             select: {
                 title: true,
                 summary: true,
@@ -41,6 +41,50 @@ export async function GET(request: Request) {
                 generated: 0
             });
         }
+
+        // Syndicate each authorized source item as its own post. The source
+        // link is stored as canonicalUrl so scheduled runs remain idempotent.
+        const syndicated = [];
+        for (const item of topNews) {
+            const alreadyPublished = await prisma.post.findFirst({
+                where: { canonicalUrl: item.link },
+                select: { slug: true },
+            });
+            if (alreadyPublished) continue;
+
+            const slugBase = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            const slug = `${slugBase}-${Date.now()}-${syndicated.length}`;
+            const content = item.content?.trim() || item.summary;
+            const excerpt = item.summary.slice(0, 300);
+            const post = await prisma.post.create({
+                data: {
+                    title: item.title,
+                    slug,
+                    excerpt,
+                    content: `${content}\n\n## Original source\n[Read the original article on ${item.source}](${item.link})`,
+                    category: item.category,
+                    tags: item.tags,
+                    coverImage: item.image || '/images/default-blog-cover.jpg',
+                    published: true,
+                    status: 'published',
+                    trending: true,
+                    canonicalUrl: item.link,
+                    metaTitle: item.title.slice(0, 60),
+                    metaDescription: excerpt.slice(0, 160),
+                    readingTime: Math.max(1, Math.ceil(content.split(/\s+/).length / 200)),
+                    contentType: 'news',
+                    schemaType: 'Article',
+                },
+            });
+            syndicated.push({ title: post.title, slug: post.slug, source: item.source });
+        }
+
+        return NextResponse.json({
+            success: true,
+            mode: 'syndicated',
+            generated: syndicated.length,
+            posts: syndicated,
+        });
 
         console.log(`Generating blog posts from ${topNews.length} news items...`);
 
