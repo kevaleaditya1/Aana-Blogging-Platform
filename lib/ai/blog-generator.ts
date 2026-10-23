@@ -49,7 +49,7 @@ Return ONLY a JSON object with this exact structure:
 
     try {
         const completion = await groq.chat.completions.create({
-            model: 'llama-3.3-70b-versatile', // Free, powerful model
+            model: 'openai/gpt-oss-120b', // Current Groq production model
             messages: [
                 {
                     role: 'system',
