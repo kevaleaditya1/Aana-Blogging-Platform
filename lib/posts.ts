@@ -106,28 +106,6 @@ export async function getPostData(slug: string): Promise<Post | null> {
     }
 }
 
-// Admin function to get all posts including unpublished
-export async function getAllPostsForAdmin() {
-    try {
-        const posts = await prisma.post.findMany({
-            orderBy: {
-                createdAt: "desc",
-            },
-        });
-
-        return posts.map(post => ({
-            slug: post.slug,
-            title: post.title,
-            date: post.createdAt.toISOString().split('T')[0],
-            excerpt: post.excerpt,
-            category: post.category,
-            published: post.published,
-        }));
-    } catch (error) {
-        console.error("Error fetching posts for admin:", error);
-        return [];
-    }
-}
 
 // Get related posts based on tags and category
 export async function getRelatedPosts(

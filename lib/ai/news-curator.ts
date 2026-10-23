@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
 const model = genAI.getGenerativeModel({ model: 'models/gemini-pro' });
 
-export async function summarizeNews(content: string): Promise<string> {
+async function summarizeNews(content: string): Promise<string> {
     try {
         const prompt = `Summarize this tech news article in 3-5 concise sentences, focusing on key points:\n\n${content.substring(0, 2000)}`;
 
@@ -18,7 +18,7 @@ export async function summarizeNews(content: string): Promise<string> {
     }
 }
 
-export async function categorizeNews(title: string, content: string): Promise<string> {
+async function categorizeNews(title: string, content: string): Promise<string> {
     try {
         const prompt = `Categorize this tech news into ONE of these categories: Smartphones, AI, Gadgets, Software, Gaming, Reviews, Guides, News\n\nTitle: ${title}\nContent: ${content.substring(0, 500)}\n\nRespond with ONLY the category name.`;
 
@@ -34,7 +34,7 @@ export async function categorizeNews(title: string, content: string): Promise<st
     }
 }
 
-export async function extractTags(title: string, content: string): Promise<string[]> {
+async function extractTags(title: string, content: string): Promise<string[]> {
     try {
         const prompt = `Extract 3-5 relevant tags from this article. Return ONLY comma-separated tags.\n\nTitle: ${title}\nContent: ${content.substring(0, 500)}`;
 
@@ -55,7 +55,7 @@ export async function extractTags(title: string, content: string): Promise<strin
     }
 }
 
-export async function calculateRelevanceScore(title: string, content: string): Promise<number> {
+async function calculateRelevanceScore(title: string, content: string): Promise<number> {
     // Keywords that indicate high relevance
     const highPriorityKeywords = [
         'AI', 'iPhone', 'Android', 'launch', 'release', 'new', 'update',

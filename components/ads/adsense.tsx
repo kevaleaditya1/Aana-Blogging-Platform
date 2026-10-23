@@ -8,7 +8,7 @@ interface AdSenseProps {
     fullWidthResponsive?: boolean;
 }
 
-export function AdSense({
+function AdSense({
     adSlot,
     adFormat = "auto",
     fullWidthResponsive = true
@@ -42,16 +42,6 @@ export function InArticleAd() {
         <AdSense
             adSlot="1234567890" // Replace with your ad slot ID
             adFormat="fluid"
-        />
-    );
-}
-
-// Display ad component
-export function DisplayAd() {
-    return (
-        <AdSense
-            adSlot="0987654321" // Replace with your ad slot ID
-            adFormat="auto"
         />
     );
 }

@@ -22,24 +22,6 @@ export function generateSlug(title: string): string {
 }
 
 /**
- * Extract headings from markdown content for table of contents
- */
-export function extractHeadings(content: string): { level: number; text: string; id: string }[] {
-    const headingRegex = /^(#{1,6})\s+(.+)$/gm;
-    const headings: { level: number; text: string; id: string }[] = [];
-
-    let match;
-    while ((match = headingRegex.exec(content)) !== null) {
-        const level = match[1].length;
-        const text = match[2].trim();
-        const id = generateSlug(text);
-        headings.push({ level, text, id });
-    }
-
-    return headings;
-}
-
-/**
  * Calculate SEO score based on various factors
  */
 export function calculateSEOScore(data: {
@@ -116,37 +98,6 @@ export function calculateSEOScore(data: {
     }
 
     return { score, suggestions };
-}
-
-/**
- * Generate meta description from content if not provided
- */
-export function generateMetaDescription(content: string, maxLength: number = 160): string {
-    // Remove markdown syntax
-    const plainText = content
-        .replace(/#{1,6}\s+/g, '')
-        .replace(/\*\*(.+?)\*\*/g, '$1')
-        .replace(/\*(.+?)\*/g, '$1')
-        .replace(/\[(.+?)\]\(.+?\)/g, '$1')
-        .replace(/`(.+?)`/g, '$1')
-        .trim();
-
-    // Get first sentence or first maxLength characters
-    const firstSentence = plainText.split(/[.!?]/)[0];
-    if (firstSentence.length <= maxLength) {
-        return firstSentence + '.';
-    }
-
-    return plainText.substring(0, maxLength - 3) + '...';
-}
-
-/**
- * Optimize image filename for SEO
- */
-export function optimizeImageFilename(filename: string, title: string): string {
-    const ext = filename.split('.').pop();
-    const slug = generateSlug(title);
-    return `${slug}.${ext}`;
 }
 
 /**

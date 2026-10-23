@@ -113,24 +113,3 @@ export async function fetchRSSFeeds(): Promise<NewsItem[]> {
     return allNews;
 }
 
-export async function fetchSingleFeed(feedUrl: string, source: string): Promise<NewsItem[]> {
-    const parser = new Parser();
-
-    try {
-        const parsed = await parser.parseURL(feedUrl);
-
-        return parsed.items.map(item => ({
-            title: item.title || 'Untitled',
-            link: item.link || '',
-            summary: item.contentSnippet || item.summary || '',
-            content: item.content || '',
-            image: item.enclosure?.url || extractImageFromContent(item.content),
-            source,
-            category: 'Tech',
-            publishedAt: new Date(item.pubDate || Date.now()),
-        }));
-    } catch (error) {
-        console.error(`Error fetching feed from ${source}:`, error);
-        return [];
-    }
-}
