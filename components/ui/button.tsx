@@ -3,10 +3,6 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-// Note: I need to install class-variance-authority and @radix-ui/react-slot
-// I will add them to the install list or run a separate install command.
-// For now, I'll write the code assuming they will be installed.
-
 const buttonVariants = cva(
     "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-40 active:scale-[0.98]",
     {
@@ -20,6 +16,8 @@ const buttonVariants = cva(
                     "border border-black/[0.12] dark:border-white/[0.15] bg-transparent hover:bg-black/[0.04] dark:hover:bg-white/[0.06] text-foreground",
                 secondary:
                     "bg-black/[0.05] dark:bg-white/[0.08] text-foreground hover:bg-black/[0.08] dark:hover:bg-white/[0.12]",
+                glass:
+                    "bg-white/70 dark:bg-white/10 backdrop-blur-xl border border-black/[0.08] dark:border-white/[0.12] text-foreground hover:bg-white/90 dark:hover:bg-white/15 shadow-sm",
                 ghost: "hover:bg-black/[0.04] dark:hover:bg-white/[0.06] text-foreground",
                 link: "text-primary underline-offset-4 hover:underline p-0 h-auto font-normal",
             },

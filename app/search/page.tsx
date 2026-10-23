@@ -130,7 +130,7 @@ function SearchContent() {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {results.map((post) => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} className="block h-full">
-                            <Card className="flex flex-col h-full hover-lift cursor-pointer transition-all">
+                            <Card className="flex flex-col h-full glass-card hover-lift cursor-pointer transition-all overflow-hidden">
                                 <CardHeader className="p-0">
                                     <div className="aspect-[16/9] w-full bg-gradient-to-br from-muted/80 to-muted rounded-t-lg overflow-hidden relative">
                                         {post.coverImage ? (
@@ -150,7 +150,7 @@ function SearchContent() {
                                 </CardHeader>
                                 <CardContent className="flex-1 p-6">
                                     <div className="flex items-center gap-2 mb-2 flex-wrap">
-                                        <Badge variant="secondary" className="text-xs">
+                                        <Badge variant="glass" className="text-xs">
                                             {post.category}
                                         </Badge>
                                         {post.trending && (

@@ -6,13 +6,11 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getSortedPostsData } from "@/lib/posts";
-import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
 import { NewsletterSection } from "@/components/newsletter/newsletter-section";
 import { Metadata } from "next";
 
@@ -51,14 +49,14 @@ export default async function Home() {
     .slice(0, 6)
     .map(([tag]) => tag);
 
-
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Apple Newsroom Style */}
+      {/* Hero Section - Apple Newsroom Style with Glass Accents */}
       <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
-          <div className="max-w-3xl space-y-5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[12px] font-semibold uppercase tracking-wider">
+          <div className="max-w-3xl space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-subtle text-primary text-[12px] font-semibold uppercase tracking-wider shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span>Next-Gen Tech Editorial</span>
             </div>
             
@@ -71,13 +69,13 @@ export default async function Home() {
               Independent analysis, deep smartphone reviews, actionable gadget guides, and curated AI insights.
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 pt-3">
-              <Button asChild size="lg" className="rounded-full px-6 gap-2 bg-foreground text-background hover:opacity-90 apple-press">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <Button asChild size="lg" className="rounded-full px-6 gap-2 bg-foreground text-background hover:opacity-90 apple-press shadow-md">
                 <Link href="/blog">
                   Explore Articles <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="secondary" size="lg" asChild className="rounded-full px-6 apple-press">
+              <Button variant="glass" size="lg" asChild className="rounded-full px-6 apple-press">
                 <Link href="/category">Browse Categories</Link>
               </Button>
             </div>
@@ -85,7 +83,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured Story Bento Showcase */}
+      {/* Featured Story Bento Showcase with Liquid Glass Treatment */}
       {featuredPost && (
         <section className="pb-12 md:pb-16">
           <div className="container px-4 md:px-8 max-w-7xl mx-auto">
@@ -96,7 +94,7 @@ export default async function Home() {
             </div>
 
             <Link href={`/blog/${featuredPost.slug}`} className="group block">
-              <div className="relative rounded-3xl overflow-hidden border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all">
+              <div className="relative rounded-3xl overflow-hidden glass-card hover-lift transition-all">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
                   {/* Image Column */}
                   <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-[16/11] w-full overflow-hidden bg-muted">
@@ -150,9 +148,9 @@ export default async function Home() {
         </section>
       )}
 
-      {/* Trending Topics Chips */}
+      {/* Trending Topics Frosted Glass Strip */}
       {trendingTopics.length > 0 && (
-        <section className="py-6 border-y border-border/40 bg-secondary/30">
+        <section className="py-6 border-y border-black/[0.05] dark:border-white/[0.08] glass-subtle">
           <div className="container px-4 md:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center gap-4">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground shrink-0">
               <TrendingUp className="h-4 w-4 text-primary" />
@@ -163,7 +161,7 @@ export default async function Home() {
                 <Link
                   key={topic}
                   href={`/search?q=${encodeURIComponent(topic)}`}
-                  className="px-3.5 py-1 text-xs font-medium rounded-full bg-background border border-black/[0.08] dark:border-white/[0.1] text-foreground hover:bg-secondary transition-colors"
+                  className="px-3.5 py-1 text-xs font-medium rounded-full glass-subtle text-foreground hover:bg-black/[0.06] dark:hover:bg-white/[0.1] hover-lift transition-all shadow-xs"
                 >
                   {topic}
                 </Link>
@@ -173,7 +171,7 @@ export default async function Home() {
         </section>
       )}
 
-      {/* Latest Articles Bento Grid */}
+      {/* Latest Articles Bento Grid with Frosted Glass Cards */}
       <section className="py-12 md:py-20 lg:py-24">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8 md:mb-12">
@@ -196,7 +194,7 @@ export default async function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {latestPosts.map((post, index) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
-                <Card className="flex flex-col h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all overflow-hidden">
+                <Card className="flex flex-col h-full rounded-2xl glass-card hover-lift transition-all overflow-hidden">
                   <CardHeader className="p-0">
                     <div className="aspect-[16/10] w-full bg-muted overflow-hidden relative">
                       {post.coverImage ? (
@@ -219,7 +217,7 @@ export default async function Home() {
                   <CardContent className="flex-1 p-5 md:p-6 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center gap-2 mb-3 flex-wrap">
-                        <Badge variant="secondary" className="text-[11px]">
+                        <Badge variant="glass" className="text-[11px]">
                           {post.category}
                         </Badge>
                         {post.trending && (
@@ -251,7 +249,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      {/* Newsletter Bento Section with Glass Card */}
       <NewsletterSection />
     </div>
   );

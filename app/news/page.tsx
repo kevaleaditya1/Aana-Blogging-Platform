@@ -55,13 +55,13 @@ export default async function NewsPage({
             {/* Category Filter */}
             <div className="flex gap-2 mb-8 flex-wrap">
                 <Link href="/news">
-                    <Badge variant={!category ? 'default' : 'outline'}>
+                    <Badge variant={!category ? 'default' : 'glass'}>
                         All
                     </Badge>
                 </Link>
                 {categories.map((cat) => (
                     <Link key={cat.category} href={`/news?category=${cat.category}`}>
-                        <Badge variant={category === cat.category ? 'default' : 'outline'}>
+                        <Badge variant={category === cat.category ? 'default' : 'glass'}>
                             {cat.category}
                         </Badge>
                     </Link>
@@ -78,7 +78,7 @@ export default async function NewsPage({
                         rel="noopener noreferrer"
                         className="block h-full"
                     >
-                        <Card className="h-full hover:shadow-lg transition-shadow">
+                        <Card className="h-full glass-card hover-lift transition-all overflow-hidden">
                             {item.image && (
                                 <div className="aspect-video relative overflow-hidden rounded-t-lg">
                                     <Image
@@ -150,7 +150,7 @@ export default async function NewsPage({
                 <div className="text-center py-12">
                     <p className="text-muted-foreground">No news items found.</p>
                     <p className="text-sm text-muted-foreground mt-2">
-                        News will be automatically aggregated every 6 hours.
+                        News is automatically refreshed daily.
                     </p>
                 </div>
             )}

@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send } from "lucide-react";
+import { MessageCircle, X, Send, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
 
 interface Message {
     id: string;
@@ -79,29 +78,35 @@ export function Chatbot() {
 
     return (
         <>
-            {/* Chat Button */}
+            {/* Liquid Glass Chat Launcher Button */}
             {!isOpen && (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="fixed bottom-6 right-6 z-50 h-12 w-12 rounded-full flex items-center justify-center bg-white/80 dark:bg-[#1c1c1e]/80 backdrop-blur-xl border border-black/[0.08] dark:border-white/[0.12] text-foreground shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.2)] apple-press transition-all duration-200"
+                    className="fixed bottom-6 right-6 z-50 h-13 w-13 rounded-full flex items-center justify-center glass-floating shadow-[0_12px_32px_rgba(0,113,227,0.25)] hover:shadow-[0_16px_40px_rgba(0,113,227,0.35)] hover-lift apple-press transition-all duration-300 group"
                     aria-label="Open chat"
                 >
-                    <MessageCircle className="h-5 w-5 text-primary" />
+                    <div className="relative flex items-center justify-center">
+                        <MessageCircle className="h-5 w-5 text-primary transition-transform group-hover:scale-110" />
+                        <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+                        </span>
+                    </div>
                 </button>
             )}
 
-            {/* Chat Window */}
+            {/* Liquid Glass Chat Sheet */}
             {isOpen && (
-                <div className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[520px] flex flex-col rounded-3xl shadow-2xl border border-black/[0.08] dark:border-white/[0.12] bg-background/95 backdrop-blur-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-                    {/* Header */}
-                    <div className="bg-secondary/40 backdrop-blur-md p-4 border-b border-border/50 flex items-center justify-between">
+                <div className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[530px] flex flex-col rounded-3xl glass-floating overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                    {/* Frosted Header */}
+                    <div className="p-4 border-b border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between bg-black/[0.02] dark:bg-white/[0.02]">
                         <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                                <MessageCircle className="h-4 w-4" />
+                            <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center text-primary shadow-sm">
+                                <Sparkles className="h-4 w-4" />
                             </div>
                             <div>
-                                <h3 className="font-semibold text-sm text-foreground">Aana Assistant</h3>
-                                <p className="text-[11px] text-muted-foreground">Apple HIG Tech Guide</p>
+                                <h3 className="font-semibold text-sm text-foreground tracking-tight">Aana Assistant</h3>
+                                <p className="text-[11px] text-muted-foreground">Interactive Tech Intelligence</p>
                             </div>
                         </div>
                         <button
@@ -113,8 +118,8 @@ export function Chatbot() {
                         </button>
                     </div>
 
-                    {/* Messages */}
-                    <div className="flex-1 overflow-y-auto p-4 space-y-3.5 bg-background">
+                    {/* Messages Container with Translucent Bubbles */}
+                    <div className="flex-1 overflow-y-auto p-4 space-y-3.5 bg-transparent">
                         {messages.map((message) => (
                             <div
                                 key={message.id}
@@ -122,15 +127,15 @@ export function Chatbot() {
                                     }`}
                             >
                                 <div
-                                    className={`max-w-[82%] px-4 py-2.5 text-[13px] leading-relaxed ${message.sender === "user"
-                                            ? "bg-primary text-primary-foreground rounded-2xl rounded-tr-sm shadow-sm"
-                                            : "bg-secondary text-foreground rounded-2xl rounded-tl-sm border border-border/40"
+                                    className={`max-w-[84%] px-4 py-2.5 text-[13px] leading-relaxed ${message.sender === "user"
+                                            ? "bg-primary text-primary-foreground rounded-2xl rounded-tr-xs shadow-[0_4px_14px_rgba(0,113,227,0.3)]"
+                                            : "glass-card text-foreground rounded-2xl rounded-tl-xs"
                                         }`}
                                 >
                                     <p className="whitespace-pre-line">{message.text}</p>
                                     <p
                                         className={`text-[10px] mt-1 text-right ${message.sender === "user"
-                                                ? "text-primary-foreground/70"
+                                                ? "text-primary-foreground/75"
                                                 : "text-muted-foreground"
                                             }`}
                                     >
@@ -145,20 +150,20 @@ export function Chatbot() {
                         <div ref={messagesEndRef} />
                     </div>
 
-                    {/* Input */}
-                    <div className="p-3 border-t border-border/50 bg-secondary/20">
+                    {/* Frosted Input Toolbar */}
+                    <div className="p-3 border-t border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.02]">
                         <div className="flex gap-2 items-center">
                             <Input
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyPress={(e) => e.key === "Enter" && handleSend()}
                                 placeholder="Ask about smartphones, AI, guides..."
-                                className="flex-1 h-9 rounded-full bg-background border-black/[0.08] dark:border-white/[0.12] text-xs px-3.5"
+                                className="flex-1 h-9 rounded-full glass-input text-xs px-4"
                             />
                             <Button
                                 onClick={handleSend}
                                 size="icon"
-                                className="h-9 w-9 rounded-full bg-primary text-primary-foreground hover:opacity-90 shrink-0 apple-press"
+                                className="h-9 w-9 rounded-full bg-primary text-primary-foreground hover:opacity-90 shrink-0 apple-press shadow-sm"
                             >
                                 <Send className="h-3.5 w-3.5" />
                             </Button>

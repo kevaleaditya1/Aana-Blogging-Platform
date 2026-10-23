@@ -51,7 +51,7 @@ export default function ContactPage() {
                         <a href="mailto:kevaleaditya1@gmail.com">kevaleaditya1@gmail.com</a>.
                     </p>
                 </div>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4 glass-card p-6 md:p-8 rounded-3xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                             <label htmlFor="name" className="text-sm font-medium">
@@ -89,7 +89,7 @@ export default function ContactPage() {
                         </label>
                         <textarea
                             id="message"
-                            className="flex min-h-[150px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            className="flex min-h-[150px] w-full rounded-xl glass-input px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                             placeholder="Your message..."
                             value={formData.message}
                             onChange={(e) =>

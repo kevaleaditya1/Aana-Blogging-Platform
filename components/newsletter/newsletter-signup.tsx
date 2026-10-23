@@ -46,7 +46,7 @@ export function NewsletterSignup() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="pl-9"
+                        className="pl-9 glass-input rounded-xl"
                         disabled={loading}
                     />
                 </div>

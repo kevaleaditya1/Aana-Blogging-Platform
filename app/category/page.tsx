@@ -58,16 +58,16 @@ export default async function CategoriesPage() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {categories.map((category) => (
                     <Link key={category.slug} href={`/category/${category.slug}`} className="group block h-full">
-                        <Card className="h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all p-6 flex flex-col justify-between">
+                        <Card className="h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] glass-card hover-lift transition-all p-6 flex flex-col justify-between">
                             <CardHeader className="p-0 mb-6">
-                                <div className="w-10 h-10 rounded-2xl bg-secondary border border-border/50 flex items-center justify-center text-foreground font-semibold text-base mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                <div className="w-10 h-10 rounded-2xl glass-subtle border border-black/[0.06] dark:border-white/[0.08] flex items-center justify-center text-foreground font-semibold text-base mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all shadow-xs">
                                     {category.name.charAt(0)}
                                 </div>
                                 <CardTitle className="text-xl font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors">
                                     {category.name}
                                 </CardTitle>
                                 <CardDescription className="mt-1">
-                                    <Badge variant="secondary" className="text-[11px] font-normal">
+                                    <Badge variant="glass" className="text-[11px] font-normal">
                                         {category.count} {category.count === 1 ? 'article' : 'articles'}
                                     </Badge>
                                 </CardDescription>

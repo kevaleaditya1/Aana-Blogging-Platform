@@ -73,9 +73,16 @@ export default function RootLayout({
       <body
         className={clsx(
           inter.variable,
-          "antialiased min-h-screen bg-background text-foreground flex flex-col"
+          "antialiased min-h-screen bg-background text-foreground flex flex-col relative selection:bg-primary/20 selection:text-primary"
         )}
       >
+        {/* Ambient Liquid Glass Aurora Backdrop */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-primary/12 dark:bg-primary/20 blur-[140px]" />
+          <div className="absolute top-[35%] -left-36 w-[550px] h-[550px] rounded-full bg-purple-500/10 dark:bg-purple-600/15 blur-[150px]" />
+          <div className="absolute -bottom-36 right-1/4 w-[500px] h-[500px] rounded-full bg-cyan-500/10 dark:bg-cyan-600/15 blur-[140px]" />
+        </div>
+
         <GoogleAnalytics />
         <SessionProvider>
           <ThemeProvider
@@ -86,7 +93,7 @@ export default function RootLayout({
           >
             <LoadingBar />
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 relative z-10">{children}</main>
             <Footer />
             <Chatbot />
           </ThemeProvider>

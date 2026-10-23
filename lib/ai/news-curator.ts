@@ -55,7 +55,7 @@ async function extractTags(title: string, content: string): Promise<string[]> {
     }
 }
 
-async function calculateRelevanceScore(title: string, content: string): Promise<number> {
+function calculateRelevanceScore(title: string, content: string, publishedAt: Date): number {
     // Keywords that indicate high relevance
     const highPriorityKeywords = [
         'AI', 'iPhone', 'Android', 'launch', 'release', 'new', 'update',
@@ -83,23 +83,26 @@ async function calculateRelevanceScore(title: string, content: string): Promise<
         if (lowerContent.includes(keyword.toLowerCase())) score += 0.5;
     });
 
-    // Recency bonus (newer = higher score)
-    score += 5;
-
-    // Normalize to 0-1 range
-    return Math.min(score / 20, 1);
+    // Favor stories published recently, with relevance contributing up to half
+    // of the final score. This lets the generator rank current stories instead
+    // of repeatedly selecting old high-keyword items.
+    const ageHours = Math.max(0, (Date.now() - publishedAt.getTime()) / (1000 * 60 * 60));
+    const recency = Math.exp(-ageHours / 36);
+    const relevance = Math.min(score / 20, 1);
+    return Number((recency * 0.6 + relevance * 0.4).toFixed(4));
 }
 
 export async function processNewsItem(item: {
     title: string;
     content: string;
     summary: string;
+    publishedAt?: Date;
 }) {
     const [summary, category, tags, aiScore] = await Promise.all([
         summarizeNews(item.content || item.summary),
         categorizeNews(item.title, item.content || item.summary),
         extractTags(item.title, item.content || item.summary),
-        calculateRelevanceScore(item.title, item.content || item.summary),
+        Promise.resolve(calculateRelevanceScore(item.title, item.content || item.summary, item.publishedAt ?? new Date())),
     ]);
 
     return {

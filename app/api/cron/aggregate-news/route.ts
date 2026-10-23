@@ -41,6 +41,7 @@ export async function GET(request: Request) {
                     title: item.title,
                     content: item.content || '',
                     summary: item.summary,
+                    publishedAt: item.publishedAt,
                 });
 
                 // Save to database

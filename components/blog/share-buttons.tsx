@@ -72,10 +72,10 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
     return (
         <div className="relative">
             <Button
-                variant="outline"
+                variant="glass"
                 size="sm"
                 onClick={handleNativeShare}
-                className="gap-2"
+                className="gap-2 apple-press"
             >
                 <Share2 className="h-4 w-4" />
                 Share
@@ -89,65 +89,60 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
                         onClick={() => setShowMenu(false)}
                     />
 
-                    {/* Menu */}
-                    <div className="absolute right-0 mt-2 w-56 rounded-lg shadow-lg bg-background border z-20 overflow-hidden">
+                    {/* Liquid Glass Popover */}
+                    <div className="absolute right-0 mt-2 w-60 rounded-2xl glass-floating z-20 overflow-hidden p-1.5 animate-in fade-in zoom-in-95 duration-150">
                         <div className="py-1">
                             <button
                                 onClick={() => handleShare("twitter", shareLinks.twitter)}
-                                className="flex items-center gap-3 w-full px-4 py-3 text-sm hover:bg-secondary transition-colors"
+                                className="flex items-center gap-3 w-full px-3 py-2 text-xs rounded-xl hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                             >
-                                <div className="h-8 w-8 rounded-full bg-blue-500/10 flex items-center justify-center">
-                                    <Twitter className="h-4 w-4 text-blue-500" />
+                                <div className="h-7 w-7 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                                    <Twitter className="h-3.5 w-3.5 text-blue-500" />
                                 </div>
-                                <span className="font-medium">Share on Twitter</span>
+                                <span className="font-medium text-foreground">Share on Twitter</span>
                             </button>
                             <button
                                 onClick={() => handleShare("facebook", shareLinks.facebook)}
-                                className="flex items-center gap-3 w-full px-4 py-3 text-sm hover:bg-secondary transition-colors"
+                                className="flex items-center gap-3 w-full px-3 py-2 text-xs rounded-xl hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                             >
-                                <div className="h-8 w-8 rounded-full bg-blue-600/10 flex items-center justify-center">
-                                    <Facebook className="h-4 w-4 text-blue-600" />
+                                <div className="h-7 w-7 rounded-lg bg-blue-600/10 flex items-center justify-center">
+                                    <Facebook className="h-3.5 w-3.5 text-blue-600" />
                                 </div>
-                                <span className="font-medium">Share on Facebook</span>
+                                <span className="font-medium text-foreground">Share on Facebook</span>
                             </button>
                             <button
                                 onClick={() => handleShare("linkedin", shareLinks.linkedin)}
-                                className="flex items-center gap-3 w-full px-4 py-3 text-sm hover:bg-secondary transition-colors"
+                                className="flex items-center gap-3 w-full px-3 py-2 text-xs rounded-xl hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                             >
-                                <div className="h-8 w-8 rounded-full bg-blue-700/10 flex items-center justify-center">
-                                    <Linkedin className="h-4 w-4 text-blue-700" />
+                                <div className="h-7 w-7 rounded-lg bg-blue-700/10 flex items-center justify-center">
+                                    <Linkedin className="h-3.5 w-3.5 text-blue-700" />
                                 </div>
-                                <span className="font-medium">Share on LinkedIn</span>
+                                <span className="font-medium text-foreground">Share on LinkedIn</span>
                             </button>
                             <button
                                 onClick={() => handleShare("whatsapp", shareLinks.whatsapp)}
-                                className="flex items-center gap-3 w-full px-4 py-3 text-sm hover:bg-secondary transition-colors"
+                                className="flex items-center gap-3 w-full px-3 py-2 text-xs rounded-xl hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                             >
-                                <div className="h-8 w-8 rounded-full bg-green-500/10 flex items-center justify-center">
-                                    <MessageCircle className="h-4 w-4 text-green-500" />
+                                <div className="h-7 w-7 rounded-lg bg-green-500/10 flex items-center justify-center">
+                                    <MessageCircle className="h-3.5 w-3.5 text-green-500" />
                                 </div>
-                                <span className="font-medium">Share on WhatsApp</span>
+                                <span className="font-medium text-foreground">Share on WhatsApp</span>
                             </button>
-                            <div className="border-t my-1" />
+                            <div className="my-1 border-t border-black/[0.05] dark:border-white/[0.08]" />
                             <button
                                 onClick={handleCopyLink}
-                                className="flex items-center gap-3 w-full px-4 py-3 text-sm hover:bg-secondary transition-colors"
+                                className="flex items-center gap-3 w-full px-3 py-2 text-xs rounded-xl hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                             >
-                                {copied ? (
-                                    <>
-                                        <div className="h-8 w-8 rounded-full bg-green-500/10 flex items-center justify-center">
-                                            <Check className="h-4 w-4 text-green-500" />
-                                        </div>
-                                        <span className="font-medium text-green-500">Link Copied!</span>
-                                    </>
-                                ) : (
-                                    <>
-                                        <div className="h-8 w-8 rounded-full bg-gray-500/10 flex items-center justify-center">
-                                            <LinkIcon className="h-4 w-4 text-gray-500" />
-                                        </div>
-                                        <span className="font-medium">Copy Link</span>
-                                    </>
-                                )}
+                                <div className="h-7 w-7 rounded-lg bg-primary/10 flex items-center justify-center">
+                                    {copied ? (
+                                        <Check className="h-3.5 w-3.5 text-green-500" />
+                                    ) : (
+                                        <LinkIcon className="h-3.5 w-3.5 text-primary" />
+                                    )}
+                                </div>
+                                <span className="font-medium text-foreground">
+                                    {copied ? "Link Copied!" : "Copy Link"}
+                                </span>
                             </button>
                         </div>
                     </div>

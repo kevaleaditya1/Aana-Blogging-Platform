@@ -63,7 +63,7 @@ export default async function SavedPostsPage() {
                 </div>
 
                 {validPosts.length === 0 ? (
-                    <Card className="text-center py-16">
+                    <Card className="text-center py-16 glass-card">
                         <CardContent>
                             <Bookmark className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
                             <h2 className="text-2xl font-bold mb-2">No saved posts yet</h2>
@@ -79,7 +79,7 @@ export default async function SavedPostsPage() {
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {validPosts.map((post) => (
                             <Link key={post.slug} href={`/blog/${post.slug}`}>
-                                <Card className="h-full hover:shadow-lg transition-shadow">
+                                <Card className="h-full glass-card hover-lift transition-all overflow-hidden">
                                     {post.ogImage?.url && (
                                         <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                                             <Image
@@ -92,9 +92,9 @@ export default async function SavedPostsPage() {
                                     )}
                                     <CardHeader>
                                         <div className="flex items-center gap-2 mb-2">
-                                            <Badge>{post.category}</Badge>
+                                            <Badge variant="glass">{post.category}</Badge>
                                             {post.trending && (
-                                                <Badge variant="secondary">Trending</Badge>
+                                                <Badge variant="glass" className="border-red-500/30 text-red-500">Trending</Badge>
                                             )}
                                         </div>
                                         <CardTitle className="line-clamp-2">{post.title}</CardTitle>

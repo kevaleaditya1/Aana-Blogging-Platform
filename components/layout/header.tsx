@@ -26,9 +26,9 @@ export function Header() {
 
     return (
         <header
-            className={`sticky top-0 z-50 w-full transition-colors duration-200 border-b ${scrolled
-                ? "bg-white/80 dark:bg-black/80 backdrop-blur-xl backdrop-saturate-180 border-black/[0.06] dark:border-white/[0.08] shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
-                : "bg-white/60 dark:bg-black/60 backdrop-blur-md border-transparent"
+            className={`sticky top-0 z-50 w-full transition-all duration-300 border-b ${scrolled
+                ? "bg-white/75 dark:bg-black/75 backdrop-blur-2xl backdrop-saturate-200 border-black/[0.06] dark:border-white/[0.08] shadow-[0_4px_24px_-4px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_24px_-4px_rgba(0,0,0,0.5)]"
+                : "bg-white/45 dark:bg-black/40 backdrop-blur-xl border-transparent"
                 }`}
         >
             <div className="container flex h-14 items-center px-4 md:px-8 max-w-7xl mx-auto">
@@ -109,7 +109,7 @@ export function Header() {
                                         className="fixed inset-0 z-40"
                                         onClick={() => setIsUserMenuOpen(false)}
                                     />
-                                    <div className="absolute right-0 mt-2 w-64 rounded-2xl shadow-2xl bg-background/95 backdrop-blur-xl border border-black/[0.08] dark:border-white/[0.1] z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+                                    <div className="absolute right-0 mt-2 w-64 rounded-2xl shadow-2xl glass-floating z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-150 p-1.5">
                                         <div className="relative">
                                             <div className="px-4 py-3 border-b border-border/50">
                                                 <p className="font-semibold text-sm">{session.user.name}</p>
@@ -192,7 +192,7 @@ export function Header() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border/60">
+                <div className="md:hidden glass-floating border-b border-border/60">
                     <div className="container px-4 py-4 space-y-4">
                         {/* Mobile Search */}
                         <form

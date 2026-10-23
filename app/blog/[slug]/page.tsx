@@ -161,7 +161,7 @@ export default async function Post({ params }: Props) {
             <div className="container px-4 md:px-8 py-10 md:py-16">
                 <div className="grid grid-cols-1 xl:grid-cols-[1fr_260px] gap-12 max-w-7xl mx-auto">
                     <article className="max-w-3xl">
-                        <Button variant="ghost" size="sm" asChild className="mb-8 gap-1.5 rounded-full text-xs text-muted-foreground hover:text-foreground -ml-2">
+                        <Button variant="glass" size="sm" asChild className="mb-8 gap-1.5 rounded-full text-xs apple-press">
                             <Link href="/">
                                 <ArrowLeft className="h-3.5 w-3.5" /> Back to Home
                             </Link>
@@ -170,7 +170,7 @@ export default async function Post({ params }: Props) {
                         <div className="space-y-4 mb-10 pb-8 border-b border-border/40">
                             <div className="flex items-center justify-between gap-4">
                                 <div className="flex items-center gap-2">
-                                    <Badge variant="secondary" className="text-xs">{post.category}</Badge>
+                                    <Badge variant="glass" className="text-xs">{post.category}</Badge>
                                     <span className="text-xs text-muted-foreground flex items-center gap-1">
                                         <Calendar className="h-3 w-3" /> {post.date}
                                     </span>
@@ -224,7 +224,7 @@ export default async function Post({ params }: Props) {
                             <h3 className="text-lg font-semibold mb-4">Tags</h3>
                             <div className="flex flex-wrap gap-2">
                                 {post.tags.map((tag) => (
-                                    <Badge key={tag} variant="secondary">
+                                    <Badge key={tag} variant="glass" className="hover-lift">
                                         {tag}
                                     </Badge>
                                 ))}

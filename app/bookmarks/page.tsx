@@ -76,7 +76,7 @@ export default function BookmarksPage() {
                     <div className="h-8 w-48 bg-secondary rounded animate-pulse mb-8" />
                     <div className="space-y-4">
                         {[1, 2, 3].map((i) => (
-                            <Card key={i} className="animate-pulse">
+                            <Card key={i} className="glass-card animate-pulse">
                                 <CardContent className="p-6">
                                     <div className="h-6 bg-secondary rounded w-3/4 mb-2" />
                                     <div className="h-4 bg-secondary rounded w-full" />
@@ -107,7 +107,7 @@ export default function BookmarksPage() {
                 </div>
 
                 {bookmarkedPosts.length === 0 ? (
-                    <Card className="p-12 text-center">
+                    <Card className="p-12 text-center glass-card">
                         <BookmarkCheck className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
                         <h2 className="text-xl font-semibold mb-2">No bookmarks yet</h2>
                         <p className="text-muted-foreground mb-6">
@@ -120,12 +120,12 @@ export default function BookmarksPage() {
                 ) : (
                     <div className="space-y-4">
                         {bookmarkedPosts.map((post) => (
-                            <Card key={post.slug} className="group hover:shadow-lg transition-shadow">
+                            <Card key={post.slug} className="group glass-card hover-lift transition-all overflow-hidden">
                                 <CardContent className="p-6">
                                     <div className="flex items-start justify-between gap-4">
                                         <div className="flex-1">
                                             <div className="flex items-center gap-2 mb-2">
-                                                <Badge>{post.category}</Badge>
+                                                <Badge variant="glass">{post.category}</Badge>
                                                 <span className="text-xs text-muted-foreground">
                                                     {post.date}
                                                 </span>

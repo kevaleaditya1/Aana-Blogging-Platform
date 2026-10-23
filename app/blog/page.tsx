@@ -36,7 +36,7 @@ export default async function BlogPage() {
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {allPosts.map((post) => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
-                            <Card className="flex flex-col h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all overflow-hidden">
+                            <Card className="flex flex-col h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] glass-card hover-lift transition-all overflow-hidden">
                                 {post.ogImage && (
                                     <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
                                         <Image
@@ -49,7 +49,7 @@ export default async function BlogPage() {
                                 )}
                                 <CardHeader className="p-5 md:p-6 pb-2">
                                     <div className="flex items-center gap-2 mb-3">
-                                        <Badge variant="secondary" className="text-[11px]">{post.category}</Badge>
+                                        <Badge variant="glass" className="text-[11px]">{post.category}</Badge>
                                         {post.trending && (
                                             <span className="text-[11px] font-semibold text-amber-600 dark:text-amber-400">
                                                 Trending

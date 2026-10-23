@@ -90,13 +90,13 @@ export function SearchWithSuggestions() {
                     onKeyDown={handleKeyDown}
                     onFocus={() => query.length >= 2 && setShowSuggestions(true)}
                     placeholder="Search..."
-                    className="w-full pl-8 pr-3 h-8 bg-black/[0.04] dark:bg-white/[0.06] border border-black/[0.06] dark:border-white/[0.08] focus-visible:ring-2 focus-visible:ring-primary/30 rounded-full text-xs"
+                    className="w-full pl-8 pr-3 h-8 glass-input rounded-full text-xs placeholder:text-muted-foreground/70"
                 />
             </form>
 
             {/* Suggestions Dropdown - Apple Frosted Glass Popover */}
             {showSuggestions && suggestions.length > 0 && (
-                <div className="absolute top-full mt-2 w-80 right-0 bg-background/95 backdrop-blur-xl border border-black/[0.08] dark:border-white/[0.12] rounded-2xl shadow-2xl z-50 overflow-hidden p-1.5 animate-in fade-in zoom-in-95 duration-150">
+                <div className="absolute top-full mt-2 w-80 right-0 glass-floating rounded-2xl z-50 overflow-hidden p-2 animate-in fade-in zoom-in-95 duration-150">
                     <div className="px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground border-b border-border/40 mb-1">
                         Quick Suggestions
                     </div>

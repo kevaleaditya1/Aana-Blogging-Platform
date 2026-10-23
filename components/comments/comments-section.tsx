@@ -60,8 +60,8 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    content: newComment,
                     postSlug,
+                    content: newComment,
                 }),
             });
 
@@ -76,7 +76,7 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
         }
     };
 
-    const handleDelete = useCallback(async (commentId: string) => {
+    const handleDelete = async (commentId: string) => {
         if (!confirm("Are you sure you want to delete this comment?")) return;
 
         try {
@@ -90,9 +90,9 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
         } catch (error) {
             console.error("Error deleting comment:", error);
         }
-    }, [fetchComments]);
+    };
 
-    const handleReply = useCallback(async (parentId: string) => {
+    const handleReply = async (parentId: string) => {
         if (!replyContent.trim() || !session) return;
 
         setLoading(true);
@@ -101,8 +101,8 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    content: replyContent,
                     postSlug,
+                    content: replyContent,
                     parentId,
                 }),
             });
@@ -117,24 +117,23 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
         } finally {
             setLoading(false);
         }
-    }, [replyContent, session, postSlug, fetchComments]);
-
+    };
 
     const CommentItem = ({ comment, isReply = false }: { comment: Comment; isReply?: boolean }) => (
-        <div className={`${isReply ? "ml-12 mt-4" : "mt-6"}`}>
+        <div className={`${isReply ? "ml-8 md:ml-12 mt-4" : "mt-6"}`}>
             <div className="flex gap-3">
-                <Avatar className="h-10 w-10">
+                <Avatar className="h-9 w-9 border border-black/[0.06] dark:border-white/[0.08]">
                     <AvatarImage src={comment.user.image || undefined} />
-                    <AvatarFallback>
+                    <AvatarFallback className="text-xs bg-primary/10 text-primary font-semibold">
                         {comment.user.name?.charAt(0) || comment.user.email?.charAt(0) || "U"}
                     </AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
-                    <div className="bg-secondary/50 rounded-lg p-4">
+                    <div className="glass-card rounded-2xl p-4 shadow-xs">
                         <div className="flex items-center justify-between mb-2">
                             <div>
-                                <span className="font-semibold text-sm">{comment.user.name || "Anonymous"}</span>
-                                <span className="text-xs text-muted-foreground ml-2">
+                                <span className="font-semibold text-xs text-foreground">{comment.user.name || "Anonymous"}</span>
+                                <span className="text-[11px] text-muted-foreground ml-2">
                                     {formatDistanceToNow(new Date(comment.createdAt), { addSuffix: true })}
                                 </span>
                             </div>
@@ -143,48 +142,50 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
                                     variant="ghost"
                                     size="sm"
                                     onClick={() => handleDelete(comment.id)}
-                                    className="h-8 w-8 p-0"
+                                    className="h-7 w-7 p-0 rounded-full hover:bg-red-500/10 hover:text-red-500 transition-colors"
                                 >
-                                    <Trash2 className="h-4 w-4" />
+                                    <Trash2 className="h-3.5 w-3.5" />
                                 </Button>
                             )}
                         </div>
-                        <p className="text-sm whitespace-pre-wrap">{comment.content}</p>
+                        <p className="text-xs leading-relaxed text-foreground/90 whitespace-pre-wrap">{comment.content}</p>
                     </div>
                     {!isReply && session && (
                         <Button
                             variant="ghost"
                             size="sm"
                             onClick={() => setReplyTo(replyTo === comment.id ? null : comment.id)}
-                            className="mt-2"
+                            className="mt-1.5 h-7 px-2.5 text-xs text-muted-foreground hover:text-foreground rounded-full"
                         >
-                            <Reply className="h-4 w-4 mr-2" />
+                            <Reply className="h-3 w-3 mr-1.5 text-primary" />
                             Reply
                         </Button>
                     )}
                     {replyTo === comment.id && (
-                        <div className="mt-3">
+                        <div className="mt-3 space-y-2">
                             <Textarea
                                 value={replyContent}
                                 onChange={(e) => setReplyContent(e.target.value)}
                                 placeholder="Write a reply..."
-                                className="min-h-[80px]"
+                                className="min-h-[80px] glass-input rounded-2xl text-xs resize-none p-3"
                             />
-                            <div className="flex gap-2 mt-2">
+                            <div className="flex gap-2">
                                 <Button
                                     onClick={() => handleReply(comment.id)}
                                     disabled={loading || !replyContent.trim()}
                                     size="sm"
+                                    className="rounded-full text-xs px-4 apple-press"
                                 >
                                     {loading ? "Posting..." : "Post Reply"}
                                 </Button>
                                 <Button
-                                    variant="outline"
+                                    variant="glass"
                                     size="sm"
                                     onClick={() => {
                                         setReplyTo(null);
                                         setReplyContent("");
                                     }}
+                                    className="rounded-full text-xs px-4 apple-press"
                                 >
                                     Cancel
                                 </Button>
@@ -192,7 +193,7 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
                         </div>
                     )}
                     {comment.replies && comment.replies.length > 0 && (
-                        <div className="mt-4">
+                        <div className="mt-3">
                             {comment.replies.map((reply) => (
                                 <CommentItem key={reply.id} comment={reply} isReply />
                             ))}
@@ -204,49 +205,51 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
     );
 
     return (
-        <div className="mt-16 pt-16 border-t">
+        <div className="mt-16 pt-16 border-t border-black/[0.06] dark:border-white/[0.08]">
             <div className="flex items-center gap-2 mb-8">
-                <MessageCircle className="h-6 w-6" />
-                <h2 className="text-2xl font-bold">
+                <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                    <MessageCircle className="h-4 w-4" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
                     Comments ({comments.length})
                 </h2>
             </div>
 
             {session ? (
-                <form onSubmit={handleSubmit} className="mb-8">
+                <form onSubmit={handleSubmit} className="mb-10">
                     <Textarea
                         value={newComment}
                         onChange={(e) => setNewComment(e.target.value)}
                         placeholder="Share your thoughts..."
-                        className="min-h-[120px]"
+                        className="min-h-[110px] glass-input rounded-2xl text-xs leading-relaxed p-4 resize-none"
                     />
                     <Button
                         type="submit"
                         disabled={loading || !newComment.trim()}
-                        className="mt-3"
+                        className="mt-3 rounded-full px-5 text-xs apple-press shadow-sm"
                     >
                         {loading ? "Posting..." : "Post Comment"}
                     </Button>
                 </form>
             ) : (
-                <div className="bg-secondary/50 rounded-lg p-6 mb-8 text-center">
-                    <p className="text-muted-foreground mb-3">
-                        Please sign in to leave a comment
+                <div className="glass-card rounded-3xl p-6 sm:p-8 mb-10 text-center">
+                    <p className="text-sm text-muted-foreground mb-4">
+                        Please sign in to join the conversation and leave a comment
                     </p>
-                    <Button asChild>
+                    <Button asChild className="rounded-full px-6 apple-press">
                         <Link href="/login">Sign In</Link>
                     </Button>
                 </div>
             )}
 
             {fetchLoading ? (
-                <p className="text-muted-foreground">Loading comments...</p>
+                <p className="text-xs text-muted-foreground text-center py-6">Loading comments...</p>
             ) : comments.length === 0 ? (
-                <p className="text-muted-foreground text-center py-8">
-                    No comments yet. Be the first to comment!
-                </p>
+                <div className="glass-subtle rounded-2xl p-8 text-center text-muted-foreground text-xs">
+                    No comments yet. Be the first to share your thoughts!
+                </div>
             ) : (
-                <div>
+                <div className="space-y-2">
                     {comments.map((comment) => (
                         <CommentItem key={comment.id} comment={comment} />
                     ))}

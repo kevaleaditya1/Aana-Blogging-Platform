@@ -65,7 +65,7 @@ export default function SignupPage() {
 
     return (
         <div className="min-h-[85vh] flex items-center justify-center bg-background px-4 py-12">
-            <div className="w-full max-w-[420px] rounded-3xl border border-black/[0.08] dark:border-white/[0.12] bg-card p-6 md:p-8 shadow-2xl space-y-6">
+            <div className="w-full max-w-[420px] rounded-3xl glass-floating p-6 md:p-8 shadow-2xl space-y-6">
                 <div className="text-center space-y-1.5">
                     <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                         Join Aana
@@ -99,7 +99,7 @@ export default function SignupPage() {
                             <span className="w-full border-t border-border/60" />
                         </div>
                         <div className="relative flex justify-center text-[11px] uppercase tracking-wider">
-                            <span className="bg-card px-3 text-muted-foreground">
+                            <span className="bg-transparent backdrop-blur-md px-3 text-muted-foreground">
                                 or sign up with email
                             </span>
                         </div>
@@ -115,7 +115,7 @@ export default function SignupPage() {
                                 value={formData.name}
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                 placeholder="Steve Jobs"
-                                className="h-10 rounded-xl bg-black/[0.02] dark:bg-white/[0.04] text-xs px-3.5"
+                                className="h-10 rounded-xl glass-input text-xs px-3.5"
                                 required
                                 disabled={loading}
                             />

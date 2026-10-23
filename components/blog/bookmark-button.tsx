@@ -69,11 +69,11 @@ export function BookmarkButton({ postSlug }: BookmarkButtonProps) {
 
     return (
         <Button
-            variant={isBookmarked ? "default" : "outline"}
+            variant={isBookmarked ? "default" : "glass"}
             size="sm"
             onClick={toggleBookmark}
             disabled={loading}
-            className="gap-2"
+            className="gap-2 apple-press"
         >
             {isBookmarked ? (
                 <>

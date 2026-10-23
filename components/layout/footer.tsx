@@ -37,7 +37,7 @@ export function Footer() {
     };
 
     return (
-        <footer className="border-t border-border/40 bg-secondary/20 text-muted-foreground">
+        <footer className="border-t border-black/[0.05] dark:border-white/[0.08] glass-subtle text-muted-foreground relative z-10">
             <div className="container px-4 md:px-8 max-w-7xl mx-auto py-12 md:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 pb-12 border-b border-border/40">
                     <div className="space-y-3">
@@ -151,12 +151,12 @@ export function Footer() {
                                 <Input
                                     type="email"
                                     placeholder="email@domain.com"
-                                    className="h-8 text-xs rounded-full bg-background border-black/[0.08] dark:border-white/[0.12]"
+                                    className="h-8 text-xs rounded-full glass-input"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
-                                <Button size="sm" type="submit" disabled={loading} className="h-8 px-3 rounded-full text-xs bg-foreground text-background hover:opacity-90">
+                                <Button size="sm" type="submit" disabled={loading} className="h-8 px-3.5 rounded-full text-xs bg-foreground text-background hover:opacity-90 apple-press shadow-sm">
                                     {loading ? "..." : "Join"}
                                 </Button>
                             </div>

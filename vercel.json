@@ -1,12 +1,16 @@
 {
     "crons": [
         {
+            "path": "/api/cron/aggregate-news",
+            "schedule": "0 8 * * *"
+        },
+        {
             "path": "/api/cron/send-newsletter",
             "schedule": "0 9 * * 0"
         },
         {
             "path": "/api/cron/generate-blog-posts",
-            "schedule": "0 10 * * *"
+            "schedule": "0 9 * * *"
         }
     ]
 }

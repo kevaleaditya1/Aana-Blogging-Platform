@@ -56,36 +56,32 @@ export function NewsletterForm() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             disabled={status === "loading" || status === "success"}
-                            className="pl-10 rounded-full bg-background border-black/[0.08] dark:border-white/[0.12]"
+                            className="pl-10 rounded-full glass-input"
                         />
                     </div>
                     <Button
                         type="submit"
                         disabled={status === "loading" || status === "success"}
-                        className="rounded-full px-5 bg-foreground text-background hover:opacity-90 apple-press"
+                        className="rounded-full px-5 bg-foreground text-background hover:opacity-90 apple-press shadow-sm shrink-0"
                     >
                         {status === "loading" ? "Subscribing..." : "Subscribe"}
                     </Button>
                 </div>
 
                 {status === "success" && (
-                    <div className="flex items-center justify-center gap-2 text-xs font-medium text-emerald-600 dark:text-emerald-400">
-                        <Check className="h-3.5 w-3.5" />
+                    <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400 bg-green-500/10 backdrop-blur-md py-2 px-3 rounded-full">
+                        <Check className="h-4 w-4" />
                         <span>{message}</span>
                     </div>
                 )}
 
                 {status === "error" && (
-                    <div className="flex items-center justify-center gap-2 text-xs font-medium text-red-600 dark:text-red-400">
-                        <AlertCircle className="h-3.5 w-3.5" />
+                    <div className="flex items-center justify-center gap-2 text-sm text-red-600 dark:text-red-400 bg-red-500/10 backdrop-blur-md py-2 px-3 rounded-full">
+                        <AlertCircle className="h-4 w-4" />
                         <span>{message}</span>
                     </div>
                 )}
             </form>
-
-            <p className="text-[12px] text-muted-foreground mt-3">
-                Join 1,000+ engineers & tech enthusiasts. No spam, ever.
-            </p>
         </div>
     );
 }

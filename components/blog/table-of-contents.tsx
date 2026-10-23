@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { ListOrdered } from "lucide-react";
 
 interface TocItem {
     id: string;
@@ -75,9 +76,12 @@ export function TableOfContents() {
 
     return (
         <div className="hidden xl:block">
-            <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
-                <div className="mb-4">
-                    <h4 className="text-sm font-semibold mb-3">Table of Contents</h4>
+            <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto glass-card p-5 rounded-2xl">
+                <div className="flex items-center gap-2 mb-3.5 pb-2.5 border-b border-black/[0.05] dark:border-white/[0.08]">
+                    <ListOrdered className="h-4 w-4 text-primary" />
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        On This Page
+                    </h4>
                 </div>
                 <nav className="space-y-1">
                     {headings.map((heading) => (
@@ -85,11 +89,11 @@ export function TableOfContents() {
                             key={heading.id}
                             onClick={() => scrollToHeading(heading.id)}
                             className={cn(
-                                "block w-full text-left text-sm transition-colors hover:text-foreground",
-                                heading.level === 3 && "pl-4",
+                                "block w-full text-left text-xs leading-relaxed transition-all py-1 rounded-md",
+                                heading.level === 3 && "pl-3 text-[11px]",
                                 activeId === heading.id
-                                    ? "text-foreground font-medium border-l-2 border-primary pl-3"
-                                    : "text-muted-foreground border-l-2 border-transparent pl-3"
+                                    ? "text-primary font-semibold border-l-2 border-primary pl-2.5 bg-primary/5"
+                                    : "text-muted-foreground hover:text-foreground border-l-2 border-transparent pl-2.5"
                             )}
                         >
                             {heading.text}

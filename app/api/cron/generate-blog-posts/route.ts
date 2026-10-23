@@ -14,9 +14,12 @@ export async function GET(request: Request) {
     try {
         console.log('Starting auto blog generation...');
 
-        // Get top news (all time for testing)
+        // Build posts only from current stories. Old items stay in the news
+        // archive, but should not be recycled into a new "trending" article.
+        const trendingSince = new Date(Date.now() - 24 * 60 * 60 * 1000);
         const topNews = await prisma.newsItem.findMany({
-            orderBy: { aiScore: 'desc' },
+            where: { publishedAt: { gte: trendingSince } },
+            orderBy: [{ aiScore: 'desc' }, { publishedAt: 'desc' }],
             take: 10,
             select: {
                 title: true,
@@ -30,7 +33,7 @@ export async function GET(request: Request) {
             }
         });
 
-        console.log(`Found ${topNews.length} news items`);
+        console.log(`Found ${topNews.length} current news items`);
 
         if (topNews.length < 3) {
             return NextResponse.json({

@@ -78,7 +78,7 @@ export default async function CategoryPage({ params }: Props) {
 
                         return (
                             <Link key={post.slug} href={`/blog/${post.slug}`} className="block h-full">
-                                <Card className={`flex flex-col h-full hover-lift cursor-pointer bg-gradient-to-br ${themes[index % 3]} transition-all`}>
+                                <Card className="glass-card hover-lift cursor-pointer flex flex-col h-full overflow-hidden transition-all duration-300">
                                     <CardHeader className="p-0">
                                         <div className="aspect-[16/9] w-full bg-gradient-to-br from-muted/80 to-muted rounded-t-lg overflow-hidden relative">
                                             {post.coverImage ? (
@@ -98,7 +98,7 @@ export default async function CategoryPage({ params }: Props) {
                                     </CardHeader>
                                     <CardContent className="flex-1 p-6">
                                         <div className="flex items-center gap-2 mb-2 flex-wrap">
-                                            <Badge variant="secondary" className="text-xs">
+                                            <Badge variant="glass" className="text-xs">
                                                 {post.category}
                                             </Badge>
                                             {post.pinnedPost && (

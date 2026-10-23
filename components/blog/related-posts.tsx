@@ -14,12 +14,12 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
     }
 
     return (
-        <section className="mt-16 pt-16 border-t">
+        <section className="mt-16 pt-16 border-t border-black/[0.06] dark:border-white/[0.08]">
             <div className="mb-8">
-                <h2 className="text-3xl font-bold tracking-tighter mb-2">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
                     Related Articles
                 </h2>
-                <p className="text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                     Continue reading with these similar posts
                 </p>
             </div>
@@ -27,7 +27,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {posts.map((post) => (
                     <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
-                        <Card className="flex flex-col h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-card hover-lift transition-all overflow-hidden">
+                        <Card className="flex flex-col h-full rounded-2xl glass-card hover-lift transition-all overflow-hidden border border-black/[0.06] dark:border-white/[0.08]">
                             <CardHeader className="p-0">
                                 <div className="aspect-[16/10] w-full bg-muted overflow-hidden relative">
                                     {post.coverImage ? (
@@ -50,7 +50,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
                             <CardContent className="flex-1 p-5 flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center gap-2 mb-2 flex-wrap">
-                                        <Badge variant="secondary" className="text-[11px]">
+                                        <Badge variant="glass" className="text-[11px]">
                                             {post.category}
                                         </Badge>
                                         <span className="text-xs text-muted-foreground ml-auto">
