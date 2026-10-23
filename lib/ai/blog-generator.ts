@@ -90,6 +90,7 @@ export async function generateMultiplePosts(
     tags: string[];
 }>> {
     const posts = [];
+    const errors: string[] = [];
     const itemsPerPost = Math.ceil(newsItems.length / count);
 
     for (let i = 0; i < count; i++) {
@@ -109,8 +110,13 @@ export async function generateMultiplePosts(
                 }
             } catch (error) {
                 console.error(`Error generating post ${i + 1}:`, error);
+                errors.push(error instanceof Error ? error.message : 'Unknown Groq error');
             }
         }
+    }
+
+    if (posts.length === 0 && errors.length > 0) {
+        throw new Error(`Groq could not generate a post: ${errors.join(' | ')}`);
     }
 
     return posts;
