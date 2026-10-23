@@ -4,6 +4,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/kevaleaditya1/aana-blogging-platform?utm_source=readme&utm_medium=badge)
+[![Architecture diagram of kevaleaditya1/aana-blogging-platform](https://gitdiagram.com/kevaleaditya1/aana-blogging-platform/diagram.png)](https://gitdiagram.com/kevaleaditya1/aana-blogging-platform?utm_source=readme&utm_medium=picture)
+
+<img width="13545" height="5318" alt="diagram" src="https://github.com/user-attachments/assets/031e338a-6144-4b70-b80d-3a6d024f38a5" />
+
 ```bash
 npm run dev
 # or
