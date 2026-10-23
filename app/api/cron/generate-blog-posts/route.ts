@@ -72,8 +72,10 @@ export async function GET(request: Request) {
 
         // Save posts to database
         const savedPosts = [];
-        for (const post of generatedPosts) {
+        const itemsPerPost = Math.ceil(topNews.length / generatedPosts.length);
+        for (const [postIndex, post] of generatedPosts.entries()) {
             try {
+                const postNews = topNews.slice(postIndex * itemsPerPost, (postIndex + 1) * itemsPerPost);
                 // Create slug from title with timestamp to ensure uniqueness
                 const slug = post.title
                     .toLowerCase()
@@ -81,13 +83,15 @@ export async function GET(request: Request) {
                     .replace(/(^-|-$)/g, '') + '-' + Date.now();
 
                 // Fetch cover image from web using Pexels
-                let coverImage = '/images/default-blog-cover.jpg';
+                let coverImage = postNews.find(item => item.image)?.image || '/images/default-blog-cover.jpg';
                 try {
+                    if (coverImage === '/images/default-blog-cover.jpg') {
                     const { searchWebImage } = await import('@/lib/pexels');
                     const webImage = await searchWebImage(post.title);
                     if (webImage) {
                         coverImage = webImage;
                         console.log(`✓ Found cover image for: ${post.title}`);
+                    }
                     }
                 } catch (error) {
                     console.error('Error fetching cover image:', error);
@@ -102,8 +106,9 @@ export async function GET(request: Request) {
                     let imageUrl = null;
 
                     // Try to get image from news items first
-                    if (topNews[i] && topNews[i].image) {
-                        imageUrl = topNews[i].image;
+                    const sourceImage = postNews[i % Math.max(postNews.length, 1)]?.image;
+                    if (sourceImage) {
+                        imageUrl = sourceImage;
                         console.log(`✓ Using news image ${i + 1}`);
                     } else {
                         // Fallback to Pexels search based on post tags
@@ -129,7 +134,7 @@ export async function GET(request: Request) {
                 }
 
                 // Add source references to content
-                const newsLinks = topNews.map((news: any) =>
+                const newsLinks = postNews.map((news: any) =>
                     `- [${news.title}](${news.link || '#'}) - *${news.source}*`
                 ).join('\n');
 
