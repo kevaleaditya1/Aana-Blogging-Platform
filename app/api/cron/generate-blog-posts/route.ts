@@ -53,7 +53,8 @@ export async function GET(request: Request) {
             if (alreadyPublished) continue;
 
             const slugBase = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-            const slug = `${slugBase}-${Date.now()}-${syndicated.length}`;
+            const postIndex = syndicated.length;
+            const slug: string = `${slugBase}-${Date.now()}-${postIndex}`;
             const content = item.content?.trim() || item.summary;
             const excerpt = item.summary.slice(0, 300);
             const post = await prisma.post.create({
