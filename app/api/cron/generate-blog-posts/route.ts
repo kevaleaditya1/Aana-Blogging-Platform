@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { generateMultiplePosts } from '@/lib/ai/blog-generator';
+import { submitToIndexNow } from '@/lib/indexnow';
 
 export const dynamic = 'force-dynamic';
 
@@ -78,6 +79,12 @@ export async function GET(request: Request) {
                 },
             });
             syndicated.push({ title: post.title, slug: post.slug, source: item.source });
+        }
+
+        try {
+            await submitToIndexNow(syndicated.map(post => `${(process.env.NEXT_PUBLIC_SITE_URL || 'https://aanaa.blog').replace(/\/$/, '')}/blog/${post.slug}`));
+        } catch (error) {
+            console.error('IndexNow submission failed:', error);
         }
 
         return NextResponse.json({
