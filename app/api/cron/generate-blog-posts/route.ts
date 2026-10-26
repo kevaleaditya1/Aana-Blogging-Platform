@@ -104,7 +104,7 @@ export async function GET(request: Request) {
             console.error('Error in generateMultiplePosts:', error);
             return NextResponse.json({
                 error: 'Failed to generate posts with AI',
-                details: error instanceof Error ? error.message : 'Unknown error'
+                details: error instanceof Error ? String((error as Error).message) : 'Unknown error'
             }, { status: 500 });
         }
 
@@ -134,7 +134,7 @@ export async function GET(request: Request) {
                     const { searchWebImage } = await import('@/lib/pexels');
                     const webImage = await searchWebImage(post.title);
                     if (webImage) {
-                        coverImage = webImage;
+                        coverImage = String(webImage);
                         console.log(`✓ Found cover image for: ${post.title}`);
                     }
                     }
