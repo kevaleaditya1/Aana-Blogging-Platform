@@ -31,7 +31,7 @@ export default async function BlogPage() {
                     {allPosts.map((post) => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
                             <Card className="flex flex-col h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.08] glass-card hover-lift transition-all overflow-hidden">
-                                {post.ogImage && (
+                                {post.ogImage?.url && (
                                     <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
                                         <Image
                                             src={post.ogImage.url}

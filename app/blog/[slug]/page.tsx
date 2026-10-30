@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     const description = plainText(post.metaDescription || "") || plainText(post.excerpt) || `Read ${post.title} and explore its linked sources on Aana.`;
-    const metadata = pageMetadata(post.metaTitle || post.title, description, `/blog/${slug}`, `/blog/${slug}/opengraph-image`);
+    const metadata = pageMetadata(post.metaTitle || post.title, description, `/blog/${slug}`, post.ogImage.url || "/social-default.png");
     return {
         ...metadata,
         alternates: { canonical: post.canonicalUrl || `${SITE_URL}/blog/${slug}` },
@@ -75,7 +75,7 @@ export default async function Post({ params }: Props) {
         "@type": "Article",
         headline: post.title,
         description: post.excerpt,
-        image: `${SITE_URL}/blog/${slug}/opengraph-image`,
+        image: new URL(post.ogImage.url || "/social-default.png", SITE_URL).href,
         datePublished: new Date(post.date).toISOString(),
         dateModified: new Date(post.updatedAt || post.date).toISOString(),
         author: {

@@ -1,5 +1,7 @@
 # Website quality implementation and verification
 
+Subsequent owner-requested image repair: see `image-repair-summary.md`. Original post covers were recovered, branding fallbacks were removed from post covers, and original covers now supply article sharing metadata. The generated branded article-preview route described in this earlier audit was superseded by that repair. Other outstanding quality-audit limitations remain unchanged.
+
 30 October 2026. Production origin: https://aanaa.blog. Public contact supplied by the owner: contact.aanaa.blog@gmail.com.
 
 The requested implementation work is in the local checkout. It has not been deployed. The website is **not fully signed off**: owner details, policy decisions, live integrations and some authenticated/device verification remain unresolved.

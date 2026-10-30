@@ -1,0 +1,19 @@
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\api\admin\update-old-posts\route.ts
+  7:28  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\api\cron\generate-blog-posts\route.ts
+  4:10  warning  'generateMultiplePosts' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\blog\[slug]\page.tsx
+    4:10  warning  'MDXRemote' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+  182:65  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\blog\page.tsx
+  7:32  warning  'TrendingUp' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\lib\posts.ts
+  153:21  warning  'score' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 6 problems (0 errors, 6 warnings)
+

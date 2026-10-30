@@ -1,3 +1,4 @@
+import { articleImage, extractArticleImage, originalArticleImage } from "@/lib/article-images";
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
@@ -24,17 +25,9 @@ export async function POST(request: Request) {
             try {
                 // Fetch cover image if it's the default
                 let coverImage = post.coverImage;
-                if (coverImage === '/images/default-blog-cover.jpg') {
-                    try {
-                        const { searchWebImage } = await import('@/lib/pexels');
-                        const webImage = await searchWebImage(post.title);
-                        if (webImage) {
-                            coverImage = webImage;
-                            console.log(`✓ Found cover image for: ${post.title}`);
-                        }
-                    } catch (error) {
-                        console.error('Error fetching cover image:', error);
-                    }
+                if (!articleImage(coverImage)) {
+                    coverImage = extractArticleImage(post.content, post.canonicalUrl || undefined) ||
+                        (post.canonicalUrl ? await originalArticleImage(post.canonicalUrl) : "");
                 }
 
                 // Update post with SEO metadata

@@ -42,9 +42,10 @@ let browser;
         }
         if (path === article) {
             await page.screenshot({ path: 'audit/quality-article-desktop.png' });
-            const image = await context.request.get(origin + article + '/opengraph-image', { timeout: 90000 });
-            check('Article preview returns PNG', image.ok() && image.headers()['content-type']?.includes('image/png'), {status:image.status(),type:image.headers()['content-type']});
-            if (image.ok()) fs.writeFileSync('audit/quality-article-preview.png', await image.body());
+            const imageURL = metadata.image.startsWith('https://aanaa.blog/') ? origin + new URL(metadata.image).pathname : metadata.image;
+            const image = await context.request.get(imageURL, { timeout: 90000 });
+            check('Article sharing image is reachable', image.ok() && image.headers()['content-type']?.startsWith('image/'), {status:image.status(),type:image.headers()['content-type']});
+            if (image.ok()) fs.writeFileSync('audit/quality-article-source-image.jpg', await image.body());
         }
     }
     for (const path of ['/api/admin/posts', '/api/admin/update-old-posts', '/api/upload']) {

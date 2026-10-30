@@ -1,3 +1,4 @@
+import { articleImage } from "@/lib/article-images";
 import { plainText } from "@/lib/site";
 import prisma from "@/lib/prisma";
 import { Post } from "@/types";
@@ -24,7 +25,7 @@ export async function getSortedPostsData(includeContent = false): Promise<Post[]
             date: post.createdAt.toISOString().split('T')[0],
             excerpt: plainText(post.excerpt) || `Read ${post.title} and explore its linked sources.`,
             content: post.content || "",
-            coverImage: post.coverImage && !post.coverImage.includes("default-blog-cover") ? post.coverImage : "/social-default.png",
+            coverImage: articleImage(post.coverImage),
             category: post.category,
             tags: post.tags,
             author: {
@@ -32,7 +33,7 @@ export async function getSortedPostsData(includeContent = false): Promise<Post[]
                 picture: "/images/avatar.jpg",
             },
             ogImage: {
-                url: post.coverImage && !post.coverImage.includes("default-blog-cover") ? post.coverImage : "/social-default.png",
+                url: articleImage(post.coverImage),
             },
             // Visibility fields
             featuredPost: post.featuredPost ?? false,
@@ -93,7 +94,7 @@ export async function getPostData(slug: string): Promise<Post | null> {
             date: post.createdAt.toISOString().split('T')[0],
             excerpt: plainText(post.excerpt) || `Read ${post.title} and explore its linked sources.`,
             content: post.content,
-            coverImage: post.coverImage && !post.coverImage.includes("default-blog-cover") ? post.coverImage : "/social-default.png",
+            coverImage: articleImage(post.coverImage),
             category: post.category,
             tags: post.tags,
             author: {
@@ -101,12 +102,13 @@ export async function getPostData(slug: string): Promise<Post | null> {
                 picture: "/images/avatar.jpg",
             },
             ogImage: {
-                url: post.coverImage && !post.coverImage.includes("default-blog-cover") ? post.coverImage : "/social-default.png",
+                url: articleImage(post.coverImage),
             },
         };
     } catch (error) {
         console.error("Error fetching post:", error);
-        return null;
+        // A database outage is not a missing article and must not be cached as a 404.
+        throw error;
     }
 }
 

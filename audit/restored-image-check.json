@@ -1,0 +1,55 @@
+{
+  "images": [
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fa3.espncdn.com%2Fcombiner%2Fi%3Fimg%3D%252Fphoto%252F2026%252F0512%252Fr1657317_1296x729_16%252D9.jpg&w=1080&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fa3.espncdn.com%2Fcombiner%2Fi%3Fimg%3D%252Fphoto%252F2026%252F0512%252Fr1657317_1296x729_16%252D9.jpg&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fa.espncdn.com%2Fcombiner%2Fi%3Fimg%3D%252Fphoto%252F2026%252F1007%252Fr1727131_1296x729_16%252D9.jpg&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fa.espncdn.com%2Fcombiner%2Fi%3Fimg%3D%252Fphoto%252F2026%252F1030%252Fr1738467_1296x729_16%252D9.jpg&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fimage.cnbcfm.com%2Fapi%2Fv1%2Fimage%2F108483727-1793321377615-gettyimages-2301853686-AFP_D4MW2T3.jpeg%3Fv%3D1793321396%26w%3D1920%26h%3D1080&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fopengraph.githubassets.com%2F051dbf48802505c63aa0e39058b084b986077d6a3a96bbd527e401b0d82d85c1%2Fherdrdev%2Fherdr-app&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fstatic.digit.in%2Fsatellite-fiber-internet-news-malayalam.jpg&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Finc42.com%2Fcdn-cgi%2Fimage%2Fquality%3D90%2Fhttps%3A%2F%2Fasset.inc42.com%2F2023%2F03%2Fbitbns-hack-featured-.png&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Finc42.com%2Fcdn-cgi%2Fimage%2Fquality%3D90%2Fhttps%3A%2F%2Fasset.inc42.com%2F2026%2F10%2FSmartworks-1.jpg&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fmedia2.dev.to%2Fdynamic%2Fimage%2Fwidth%3D1200%2Cheight%3D627%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.us-east-2.amazonaws.com%252Fuploads%252Farticles%252F6pdqd0t9azhkg1z96nid.png&w=640&q=75",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:3200/_next/image?url=https%3A%2F%2Fimg.etimg.com%2Fphoto%2Fmsid-135341877%2Cimgsize-1119087.cms&w=640&q=75",
+      "loaded": true
+    }
+  ],
+  "brandedPostCovers": 0,
+  "shareImage": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0512%2Fr1657317_1296x729_16%2D9.jpg",
+  "checks": {
+    "coversLoaded": true,
+    "noBrandedPostCover": true,
+    "originalSharingImage": true
+  }
+}

@@ -8,6 +8,7 @@ For future changes, maintain these checks:
 2. Shareable pages need absolute canonical/Open Graph/Twitter URLs and real images; retain the branded 1200 × 630 default.
 3. Keep robots and automatically generated sitemap aligned with published, canonical, indexable content. Exclude private, utility, error and redirect URLs. Robots is not authorization.
 4. Inspect meaningful imagery before writing alt descriptions; use empty alternatives for decorative thumbnails that repeat adjacent text. Functional images need accessible names.
+   Article covers must come from the matching article, its RSS content/media or its declared original-source image. Never substitute the Aana logo/social graphic or unrelated keyword-search images for a missing article cover. Leave the cover empty if no original can be verified; preserve a URL-change record when repairing stored images.
 5. Keep tracking opt-in. Respect acceptance, rejection and withdrawal; preserve footer preferences and essential functionality. Never send form fields, personal data, search queries or reset tokens to analytics. Record conversions only after confirmed operations, never success-page views.
 6. Retain HTTPS/canonical redirects, branded favicon/Apple/Android icons and manifest, and an HTTP-404 recovery page.
 7. Keep verified contact details actionable in footer/contact page. Flag missing operator/address information. Privacy and terms must reflect actual processing and remain drafts until owner/appropriate review.

@@ -1,3 +1,4 @@
+import { articleImage, extractArticleImage } from "@/lib/article-images";
 import Parser from 'rss-parser';
 
 interface RSSFeed {
@@ -80,25 +81,12 @@ interface NewsItem {
     publishedAt: Date;
 }
 
-function extractImageFromContent(content?: string): string | undefined {
-    if (!content) return undefined;
-
-    // Try to extract image from HTML content
-    const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
-    if (imgMatch) return imgMatch[1];
-
-    // Try to extract from markdown
-    const mdMatch = content.match(/!\[.*?\]\((.*?)\)/);
-    if (mdMatch) return mdMatch[1];
-
-    return undefined;
-}
-
 export async function fetchRSSFeeds(): Promise<NewsItem[]> {
     const parser = new Parser({
         customFields: {
             item: [
-                ['media:content', 'media'],
+                ['media:content', 'media', { keepArray: true }],
+                ['media:thumbnail', 'thumbnail', { keepArray: true }],
                 ['content:encoded', 'contentEncoded'],
             ]
         }
@@ -113,19 +101,28 @@ export async function fetchRSSFeeds(): Promise<NewsItem[]> {
 
             const items = parsed.items.slice(0, 10).map(item => {
                 // Extract image from various sources
-                let image = item.enclosure?.url;
-                if (!image && item.media) {
-                    image = (item.media as any)?.$?.url;
-                }
-                if (!image) {
-                    image = extractImageFromContent(item.content || item.contentEncoded);
-                }
+                const mediaURL = (value: unknown): string => {
+                    const values = Array.isArray(value) ? value : [value];
+                    for (const entry of values) {
+                        if (entry && typeof entry === "object" && "$" in entry) {
+                            const attrs = (entry as { $?: { url?: string } }).$;
+                            if (attrs?.url) return attrs.url;
+                        }
+                    }
+                    return "";
+                };
+                const encoded = item.contentEncoded || item["content:encoded"] || "";
+                const enclosure = item.enclosure;
+                const enclosureImage = enclosure && (enclosure.type?.startsWith("image/") || (!enclosure.type && /\.(?:jpe?g|png|webp|gif|avif)(?:[?#]|$)/i.test(enclosure.url))) ? enclosure.url : "";
+                const image = articleImage(enclosureImage, item.link) ||
+                    articleImage(mediaURL(item.media) || mediaURL(item.thumbnail), item.link) ||
+                    extractArticleImage(encoded || item.content, item.link);
 
                 return {
                     title: item.title || 'Untitled',
                     link: item.link || '',
                     summary: item.contentSnippet || item.summary || '',
-                    content: item.content || item.contentEncoded || '',
+                    content: encoded || item.content || '',
                     image,
                     source: feed.source,
                     category: feed.category,

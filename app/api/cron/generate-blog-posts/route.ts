@@ -1,3 +1,4 @@
+import { articleImage, extractArticleImage, originalArticleImage } from "@/lib/article-images";
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { generateMultiplePosts } from '@/lib/ai/blog-generator';
@@ -58,6 +59,7 @@ export async function GET(request: Request) {
             const slug: string = `${slugBase}-${Date.now()}-${postIndex}`;
             const content = item.content?.trim() || item.summary;
             const excerpt = item.summary.slice(0, 300);
+            const coverImage = articleImage(item.image, item.link) || extractArticleImage(item.content || item.summary, item.link) || await originalArticleImage(item.link);
             const post = await prisma.post.create({
                 data: {
                     title: item.title,
@@ -66,7 +68,7 @@ export async function GET(request: Request) {
                     content: `${content}\n\n## Original source\n[Read the original article on ${item.source}](${item.link})`,
                     category: item.category,
                     tags: item.tags,
-                    coverImage: item.image || '/images/default-blog-cover.jpg',
+                    coverImage,
                     published: true,
                     status: 'published',
                     trending: true,
@@ -186,7 +188,7 @@ export async function GET(request: Request) {
                 }
 
                 // Add source references to content
-                const newsLinks = postNews.map((news: any) =>
+                const newsLinks = postNews.map((news) =>
                     `- [${news.title}](${news.link || '#'}) - *${news.source}*`
                 ).join('\n');
 

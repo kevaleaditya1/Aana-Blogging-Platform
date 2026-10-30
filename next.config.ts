@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   distDir: process.env.NEXT_BUILD_DIR || ".next",
+  // Static article generation reads the hosted database; limit parallel connections.
+  experimental: { cpus: 2 },
   images: {
     remotePatterns: [
       {

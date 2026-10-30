@@ -1,0 +1,12 @@
+
+> Aana-web@0.1.0 start
+> next start --hostname 127.0.0.1 --port 3200
+
+   ▲ Next.js 16.0.8
+   - Local:         http://127.0.0.1:3200
+   - Network:       http://127.0.0.1:3200
+
+ ✓ Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Ready in 2.3s
+Cloudinary Config: { cloud_name: 'dd6iomjs4', api_key: 'SET', api_secret: 'SET' }

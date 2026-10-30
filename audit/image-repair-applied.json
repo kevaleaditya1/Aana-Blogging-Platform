@@ -1,0 +1,782 @@
+{
+  "repaired": [
+    {
+      "id": "cmvqh8oyd00021x971zqdx3pf",
+      "slug": "we-sent-23-ai-agents-to-our-website-most-looked-human-1793092942163-2",
+      "title": "We sent 23 AI agents to our website. Most looked human",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6i2hy8y3avke6kmaoeml.png",
+      "source": "https://dev.to/quentin_wendegass/we-sent-23-ai-agents-to-our-website-most-looked-human-3a7e",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p0u000f1x97k2hdnpxk",
+      "slug": "infinix-gt-50-pro-launched-at-nearly-thrice-the-gt-30-pro-s-launch-price-specs-gaming-accessories-and-more-1793092942254-15",
+      "title": "Infinix GT 50 Pro launched at nearly thrice the GT 30 Pro’s launch price: Specs, gaming accessories and more",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/Infinix-GT-50-Pro-with-gaming-accessories.png",
+      "source": "https://www.digit.in/news/mobile-phones/infinix-gt-50-pro-with-gaming-accessories-launched-in-india-check-price-specs-and-other-details.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p17000h1x973dacevjc",
+      "slug": "designing-an-empty-state-before-generating-the-illustration-1793092942267-17",
+      "title": "Designing an Empty State Before Generating the Illustration",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fguvwe261uzhlwqeen76d.png",
+      "source": "https://dev.to/carollin_rolling_a3f2b9ed/designing-an-empty-state-before-generating-the-illustration-58jp",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p1f000i1x974ec0520o",
+      "slug": "rate-limiters-are-not-your-enemy-how-token-buckets-work-and-how-automation-should-behave-under-them-1793092942274-18",
+      "title": "Rate Limiters Are Not Your Enemy: How Token Buckets Work and How Automation Should Behave Under Them",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fuoaq44xdce1b7av5xrhu.png",
+      "source": "https://dev.to/nguyen_tu_ca842184efc96f4/rate-limiters-are-not-your-enemy-how-token-buckets-work-and-how-automation-should-behave-under-them-59gm",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p03000b1x97swotkdno",
+      "slug": "pure-in-app-navigation-implemented-in-elm-url-become-a-thin-wrapper-instead-1793092942225-11",
+      "title": "Pure in-app navigation implemented in Elm (URL become a thin wrapper instead)",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7594ikcwvy5osc75808l.png",
+      "source": "https://dev.to/rinn7e/elm-navigation-with-a-thin-url-wrapper-h2j",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8oyl00031x9730ax94je",
+      "slug": "a-chatbot-answers-an-agent-does-the-difference-in-plain-english-1793092942172-3",
+      "title": "A Chatbot Answers, an Agent Does: The Difference, in Plain English",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frsc1bawtlrc1u666zp06.png",
+      "source": "https://dev.to/elarigent/a-chatbot-answers-an-agent-does-the-difference-in-plain-english-1nfo",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p4e000v1x97npfpzk2k",
+      "slug": "major-chinese-brands-drop-mbapp-as-backlash-grows-over-mao-joke-1793092942382-31",
+      "title": "Major Chinese brands drop Mbappé as backlash grows over Mao joke",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/e10e/live/f7b26730-d1c6-11f1-9381-5f06d29fdf11.jpg",
+      "source": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p3d000p1x97orcftg2l",
+      "slug": "truce-begins-in-wartorn-ukraine-city-after-it-was-announced-by-melania-trump-1793092942344-25",
+      "title": "Truce begins in wartorn Ukraine city after it was announced by Melania Trump",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/af90/live/ca109650-d1b0-11f1-93f3-e3ba7480d857.jpg",
+      "source": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8oxy00011x97sa992x95",
+      "slug": "how-to-check-an-app-idea-against-real-app-store-data-before-you-build-it-1793092942148-1",
+      "title": "How to check an app idea against real App Store data before you build it",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Foztpt5mds73df078ed1o.png",
+      "source": "https://dev.to/jack_fruit/how-to-check-an-app-idea-against-real-app-store-data-before-you-build-it-4cp0",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p3j000q1x97kyu2a0kc",
+      "slug": "risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai-1793092942351-26",
+      "title": "Risks spelled out for Anthropic investors include possible harms from runaway AI ",
+      "old": "https://img.etimg.com/photo/msid-135226081,imgsize-103.cms",
+      "image": "https://img.etimg.com/photo/124385886.cms",
+      "source": "https://economictimes.indiatimes.com/tech/artificial-intelligence/risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai/articleshow/135226081.cms",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p53000z1x97x7rlr4dg",
+      "slug": "the-one-about-matthew-perry-review-netflix-s-intimate-and-sincere-but-overly-padded-docuseries-1793092942406-35",
+      "title": "‘The One About Matthew Perry’ Review: Netflix’s Intimate and Sincere but Overly Padded Docuseries",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://www.hollywoodreporter.com/wp-content/uploads/2026/10/The_One_About_Matthew_Perry_n_S1_E1_00_06_25_01-2.jpg?w=1440&h=750&crop=1",
+      "source": "https://www.hollywoodreporter.com/tv/tv-reviews/the-one-about-matthew-perry-review-netflix-documentary-1236740422/",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p5f00111x97sy6u7npq",
+      "slug": "oil-falls-as-renewed-diplomatic-efforts-to-end-mideast-conflict-ease-supply-concerns-1793092942419-37",
+      "title": "Oil falls as renewed diplomatic efforts to end Mideast conflict ease supply concerns",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://image.cnbcfm.com/api/v1/image/108438224-17925170852026-10-20t163958z_828190046_rc2q1oas10hw_rtrmadp_0_syria-saudi-aramco.jpeg?v=1792517248&w=1920&h=1080",
+      "source": "https://www.cnbc.com/2026/10/27/oil-today-iran-us-crude-wti-brent-trump.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p48000u1x971gogxvkc",
+      "slug": "motorola-edge-70-neo-tipped-to-launch-with-7-000mah-battery-check-expected-india-launch-timeline-price-and-specs-1793092942376-30",
+      "title": "Motorola Edge 70 Neo tipped to launch with 7,000mAh battery: Check expected India launch timeline, price and specs",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/Motorola-Edge-70-Neo-4.png",
+      "source": "https://www.digit.in/news/mobile-phones/motorola-edge-70-neo-tipped-to-launch-with-7000mah-battery-check-expected-india-launch-timeline-price-and-specs.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p5s00131x9773sryno3",
+      "slug": "opinion-uk-bond-investors-want-spending-cuts-john-healey-s-first-budget-may-disappoint-1793092942431-39",
+      "title": "Opinion: UK bond investors want spending cuts. John Healey’s first Budget may disappoint",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://image.cnbcfm.com/api/v1/image/108464636-1793029412571-gettyimages-2291715938-Getty.jpeg?v=1793029449&w=1920&h=1080",
+      "source": "https://www.cnbc.com/2026/10/27/uk-budget-2026-john-healey-bond-market.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p6z001a1x97ofjlebhf",
+      "slug": "afc-munich-re-to-share-1-billion-trade-finance-risk-1793092942475-46",
+      "title": "AFC, Munich Re to Share $1 Billion Trade Finance Risk",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isKah70bI4to/v3/500x-1.webp",
+      "source": "https://www.bloomberg.com/news/videos/2026-10-27/afc-munich-re-to-share-1-billion-trade-finance-risk-video",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p7b001c1x976brri73s",
+      "slug": "apple-responds-to-user-reports-of-broken-iphone-duo-screens-on-new-foldable-phone-1793092942487-48",
+      "title": "Apple responds to user reports of broken iPhone Duo screens on new foldable phone",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://image.cnbcfm.com/api/v1/image/108452229-1792771288556-gettyimages-2301112643-APPLE_DUO.jpeg?v=1792771325&w=1920&h=1080",
+      "source": "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p7h001d1x978bn4vxa7",
+      "slug": "how-do-smart-rings-work-sensors-accuracy-and-how-they-compare-to-smartwatches-1793092942492-49",
+      "title": "How do smart rings work? Sensors, accuracy and how they compare to smartwatches",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/Smart-ring-deals.png",
+      "source": "https://www.digit.in/features/wearable-devices/how-do-smart-rings-work-sensors-accuracy-and-how-they-compare-to-smartwatches.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p6m00181x97iwyg3mix",
+      "slug": "he-likes-the-moment-jackson-chourio-was-made-for-october-1793092942462-44",
+      "title": "'He likes the moment': Jackson Chourio was made for October",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1027%2Fr1736848_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/mlb/story/_/id/50293252/world-series-brewers-jackson-chourio",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwoji90005v1ljnbxf1yx6",
+      "slug": "gta-6-download-size-leaked-ahead-of-launch-here-is-how-much-space-it-may-occupy-on-your-gaming-consoles-1793179342017-5",
+      "title": "GTA 6 download size leaked ahead of launch: Here is how much space it may occupy on your gaming consoles",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/gta-6-download-size.png",
+      "source": "https://www.digit.in/news/gaming/gta-6-download-size-leaked-ahead-of-launch-here-is-how-much-space-it-may-occupy-on-your-gaming-consoles.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvqh8p6t00191x97a8wjg1th",
+      "slug": "three-doors-one-address-1793092942467-45",
+      "title": "Three Doors, One Address",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2ikq47t6d3bkqdkvy0jl.png",
+      "source": "https://dev.to/mattheosoft/three-doors-one-address-2bop",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojht0003v1ljci4vqwxo",
+      "slug": "us-warns-of-two-serious-security-flaws-being-exploited-in-attacks-1793179342000-3",
+      "title": "US warns of two serious security flaws being exploited in attacks",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fhacks.gr%2Fwp-content%2Fuploads%2F2026%2F10%2Fcisa-warning.webp",
+      "source": "https://dev.to/hacksgr/us-warns-of-two-serious-security-flaws-being-exploited-in-attacks-pok",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojii0006v1lj205k2s0z",
+      "slug": "cloudflare-vs-namecheap-which-com-renewal-is-cheaper-in-2026-1793179342025-6",
+      "title": "Cloudflare vs Namecheap: Which .com Renewal Is Cheaper in 2026?",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8285qnx8nimbwlp1d98q.png",
+      "source": "https://dev.to/fixsflowteam/cloudflare-vs-namecheap-which-com-renewal-is-cheaper-in-2026-4ei4",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojla000iv1ljlo3k7jke",
+      "slug": "dream-say-concerns-over-finding-available-finals-venue-went-unheeded-1793179342126-18",
+      "title": "Dream say concerns over finding available Finals venue went unheeded",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1027%2Fr1737280_1024x576_16%2D9.jpg",
+      "source": "https://www.espn.com/wnba/story/_/id/50302463/dream-say-concerns-finding-available-wnba-finals-venue-went-unheeded",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojmf000nv1ljvst6rqpu",
+      "slug": "free-fire-india-launched-1793179342166-23",
+      "title": "Free Fire India Launched: నేటి నుంచే అందుబాటులోకి గేమ్.. డౌన్‌లోడ్ ఎక్కడంటే.!",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/Free-Fire-India-Launched-in-india-know-where-to-download.jpg",
+      "source": "https://www.digit.in/te/news/gaming/free-fire-india-launched-in-india-know-where-to-download.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojka000ev1lj7labnkh9",
+      "slug": "the-power-of-git-rebase-onto-surgical-commit-slicing-in-git-1793179342089-14",
+      "title": "The Power of git rebase --onto: Surgical Commit Slicing in Git",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvwoq3s194tmiqmf1f8vl.png",
+      "source": "https://dev.to/amitg01/the-power-of-git-rebase-onto-surgical-commit-slicing-in-git-4h7m",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojn3000qv1ljoylq23pm",
+      "slug": "building-a-baby-memory-book-with-swiftui-1793179342190-26",
+      "title": "Building a baby memory book with SwiftUI",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fodsgqjoweegn63l1ox9q.png",
+      "source": "https://dev.to/_8f5abeda89bd0a842a1d0/-building-a-baby-memory-book-with-swiftui-3di9",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojnt000sv1ljnx5bkgic",
+      "slug": "jio-vs-airtel-vs-vi-1793179342216-28",
+      "title": "Jio vs Airtel vs Vi: किसके रिचार्ज में मिल रहे हैं ज़्यादा फायदे, तीनों रिचार्ज प्लान्स के फायदों की तुलना",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/Jio-vs-Airtel-vs-Vi.png",
+      "source": "https://www.digit.in/hi/features/telecom/jio-vs-airtel-vs-vi-recharge-plans-free-ott-ai-premium-subscriptions.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojoy000wv1ljkm1vgprr",
+      "slug": "should-ai-decide-your-court-case-this-judge-says-yes-1793179342258-32",
+      "title": "Should AI Decide Your Court Case? This Judge Says Yes",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media.wired.com/photos/6ae127c278c885541c89a02e/191:100/w_1280,c_limit/Business_Should%20AI%20Decide%20Your%20Court%20Case%20This%20Judge%20Says%20Yes_v1.jpg",
+      "source": "https://www.wired.com/story/geoffrey-vos-uk-judge-ai-legal-profession-challenges/",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojp5000xv1lj8m59tl5r",
+      "slug": "rip-scrum-story-points-in-the-age-of-coding-agents-1793179342265-33",
+      "title": "RIP scrum? Story points in the age of coding agents",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fse6hjnf24qneju2qungt.png",
+      "source": "https://dev.to/bickov/rip-scrum-story-points-in-the-age-of-coding-agents-21i5",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojli000jv1ljygkifb4g",
+      "slug": "ex-usmnt-star-johnson-to-train-3-year-old-removed-from-florida-soccer-game-1793179342133-19",
+      "title": "Ex-USMNT star Johnson to train 3-year-old removed from Florida soccer game",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1028%2Fr1737238_2_1999x1129cc.jpg",
+      "source": "https://www.espn.com/soccer/story/_/id/50301379/3-year-old-florida-youth-soccer-police-eddie-johnson",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojmv000pv1lj3bsur19e",
+      "slug": "the-joy-and-pain-that-define-baseball-were-in-full-force-in-rays-incredible-game-4-win-1793179342182-25",
+      "title": "The joy and pain that define baseball were in full force in Rays' incredible Game 4 win",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1028%2Fr1737378_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/mlb/story/_/id/50304811/world-series-rays-game-4-incredible-rally",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojpd000yv1ljhuryadd8",
+      "slug": "a-simple-daily-fiber-supplement-reduced-arthritis-pain-and-improved-strength-1793179342272-34",
+      "title": "A simple daily fiber supplement reduced arthritis pain and improved strength",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://www.sciencedaily.com/images/1920/knee-joint-pain-woman.webp",
+      "source": "https://www.sciencedaily.com/releases/2026/10/261027230715.htm",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8jk0004rpjrfc02horx",
+      "slug": "ai-agent-payments-usually-get-the-flow-right-and-the-trust-wrong-1793352141631-4",
+      "title": "AI agent payments usually get the flow right and the trust wrong",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fovrd4qg6yfhs43h5jgy7.png",
+      "source": "https://dev.to/bloqarl/ai-agent-payments-usually-get-the-flow-right-and-the-trust-wrong-1f4c",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojs9001cv1ljwvcpeak3",
+      "slug": "nordstrom-s-fall-sale-just-dropped-snag-60-percent-off-tory-burch-shoes-saint-laurent-sunglasses-and-more-1793179342376-48",
+      "title": "Nordstrom’s Fall Sale Just Dropped: Snag 60 Percent Off Tory Burch Shoes, Saint Laurent Sunglasses and More",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://www.hollywoodreporter.com/wp-content/uploads/2026/10/Nordstroms-Fall-Sale-Just-Dropped-Snag-60-Percent-Off-Saint-Laurent-Sunglasses-Bobbi-Brown-Beauty-and-More-MAIN.jpg?w=1296&h=730&crop=1",
+      "source": "https://www.hollywoodreporter.com/lifestyle/shopping/nordstrom-fall-clearance-sale-2026-dates-shop-savings-event-1236741222/",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojqs0015v1ljr1b2s1pg",
+      "slug": "israel-election-appears-to-have-no-clear-winner-with-netanyahu-opponent-eisenkot-far-short-of-majorities-1793179342323-41",
+      "title": "Israel election appears to have no clear winner with Netanyahu, opponent Eisenkot far short of majorities",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://image.cnbcfm.com/api/v1/image/108471491-1793144780727-gettyimages-2301467717-AA_25102026_3009268.jpeg?v=1793144798&w=1920&h=1080",
+      "source": "https://www.cnbc.com/2026/10/28/israel-election-netanyahu-trump-gaza-.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojpk000zv1ljr4spn01d",
+      "slug": "tokyo-all-of-a-sudden-star-tao-okamoto-honored-with-the-hollywood-reporter-s-trailblazer-award-1793179342280-35",
+      "title": "Tokyo: ‘All of A Sudden’ Star Tao Okamoto Honored With The Hollywood Reporter’s Trailblazer Award",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://www.hollywoodreporter.com/wp-content/uploads/2026/10/Tao-Okamoto.jpg?w=1296&h=730&crop=1",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/thr-japan-mpa-2026-american-film-night-gala-1236741542/",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4ek4000011nm1dav0fwh",
+      "slug": "gta-6-update-rockstar-exec-and-new-screenshots-reveal-map-size-gameplay-features-and-more-1793265742515-0",
+      "title": "GTA 6 update: Rockstar exec and new screenshots reveal map size, gameplay features and more",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/gta-6-screenshots.png",
+      "source": "https://www.digit.in/news/gaming/gta-6-update-rockstar-exec-and-new-screenshots-reveal-map-size-gameplay-features-and-more.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojoq000vv1ljtv23z2nl",
+      "slug": "nfl-power-rankings-updated-1-32-poll-plus-best-offseason-additions-1793179342250-31",
+      "title": "🏈 NFL Power Rankings: Updated 1-32 poll, plus best offseason additions",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1026%2Fnfl_power_rankings_1296x729.png",
+      "source": "https://www.espn.com/nfl/story/_/id/50288293/nfl-power-rankings-week-8-teams-best-offseason-additions",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4en6000b11nmavpqgd5w",
+      "slug": "why-i-built-api-market-after-pipfeed-1793265742625-11",
+      "title": "Why I Built API.market After PipFeed",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fy3vqbthxool5r3mwrfdo.png",
+      "source": "https://dev.to/imshashank/why-i-built-apimarket-after-pipfeed-2nep",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojru001av1ljilo8z5gb",
+      "slug": "oil-prices-rise-as-houthi-attacks-on-saudi-arabian-refinery-raise-supply-worries-1793179342361-46",
+      "title": "Oil prices rise as Houthi attacks on Saudi Arabian refinery raise supply worries",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://image.cnbcfm.com/api/v1/image/108419670-1792156386789-gettyimages-2299888156-US_OIL.jpeg?v=1792156436&w=1920&h=1080",
+      "source": "https://www.cnbc.com/2026/10/28/oil-price-today-wti-brent-hormuz.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4enf000c11nmxz3ofgrx",
+      "slug": "ki-m-tra-ai-crawler-c-c-c-site-kh-ng-robots-txt-html-ban-u-v-log-server-1793265742633-12",
+      "title": "Kiểm tra AI crawler có đọc được site không: robots.txt, HTML ban đầu và log server",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5d0r2k67t5dgsfn7wygv.png",
+      "source": "https://dev.to/manhdigital68/kiem-tra-ai-crawler-co-doc-duoc-site-khong-robotstxt-html-ban-dau-va-log-server-3cc6",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4eks000111nmzucarn95",
+      "slug": "serverless-ai-in-brief-week-43-2026-1793265742539-1",
+      "title": "Serverless & AI in brief: week 43/2026",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fsascha-ms.de%2Fwp-content%2Fuploads%2F2026%2F10%2Fserverless-ai-in-brief-week-43-2026-en.png",
+      "source": "https://dev.to/sascha-ms/serverless-ai-in-brief-week-432026-5e6i",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4elh000311nmavv27j1w",
+      "slug": "dynadot-renewals-in-2026-the-10-88-com-nobody-talks-about-1793265742564-3",
+      "title": "Dynadot Renewals in 2026: The $10.88 .com Nobody Talks About",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frclqye6ob1712qdtx4lu.png",
+      "source": "https://dev.to/fixsflowteam/dynadot-renewals-in-2026-the-1088-com-nobody-talks-about-5d87",
+      "updated": 1
+    },
+    {
+      "id": "cmvrwojs1001bv1ljm9wz8fjo",
+      "slug": "the-autistic-brain-processes-faces-differently-than-scientists-thought-1793179342369-47",
+      "title": "The autistic brain processes faces differently than scientists thought",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://www.sciencedaily.com/images/1920/confused-girl-with-stickers-on-face.webp",
+      "source": "https://www.sciencedaily.com/releases/2026/10/261027063824.htm",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4elw000511nmbqeqgnos",
+      "slug": "oneplus-16-vs-iphone-17-vs-vivo-x300-fe-expected-price-in-india-battery-chip-camera-and-other-differences-1793265742580-5",
+      "title": "OnePlus 16 vs iPhone 17 vs Vivo X300 FE: Expected price in India, battery, chip, camera and other differences",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/oneplus-16-versus-iphone-17-versus-vivo-x300-fe.png",
+      "source": "https://www.digit.in/news/mobile-phones/oneplus-16-vs-iphone-17-vs-vivo-x300-fe-expected-price-in-india-battery-performance-camera-and-other-differences.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4emz000a11nmmr7e2bj4",
+      "slug": "architecting-production-technical-seo-real-time-core-web-vitals-inp-lcp-cls-and-http-security-hardening-1793265742618-10",
+      "title": "Architecting Production Technical SEO: Real-Time Core Web Vitals (INP, LCP, CLS) and HTTP Security Hardening",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F112alp4hb1wbje5r1ruy.png",
+      "source": "https://dev.to/romangrid/architecting-production-technical-seo-real-time-core-web-vitals-inp-lcp-cls-and-http-security-2mi4",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4eo9000g11nmbn1p0if1",
+      "slug": "iqoo-16-india-launch-date-tipped-check-expected-specs-price-and-more-1793265742664-16",
+      "title": "iQOO 16 India launch date tipped: Check expected specs, price and more",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/iqoo-16-india-launch-teased.png",
+      "source": "https://www.digit.in/news/mobile-phones/iqoo-16-india-launch-date-tipped-check-expected-specs-price-and-more.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4epb000l11nmbu4cobmx",
+      "slug": "contreras-wins-world-series-mvp-proclaims-himself-best-catcher-in-the-world-1793265742702-21",
+      "title": "Contreras wins World Series MVP, proclaims himself 'best catcher in the world'",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1029%2Fr1737934_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/mlb/story/_/id/50314424/brewers-william-contreras-earns-world-series-mvp-honors",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4epi000m11nmketi1s2j",
+      "slug": "google-s-investments-in-ai-are-driving-more-searches-sundar-pichai-reveals-during-q3-2026-earnings-call-1793265742710-22",
+      "title": "Google’s investments in AI are driving more searches, Sundar Pichai reveals during Q3 2026 earnings call",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/Sundar-Pichai-1.jpg",
+      "source": "https://www.digit.in/news/general/googles-investments-in-ai-are-driving-more-searches-sundar-pichai-reveals-during-q3-2026-earnings-call.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4elp000411nm4q3iymrp",
+      "slug": "letting-claude-maintain-wordpress-sites-without-giving-it-ssh-access-1793265742572-4",
+      "title": "Letting Claude maintain WordPress sites without giving it SSH access",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3otvb2z646ytpt1hl2rv.jpg",
+      "source": "https://dev.to/pressbridgesupport/letting-claude-maintain-wordpress-sites-without-giving-it-ssh-access-l6",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4epx000o11nm4iji5vur",
+      "slug": "testing-algerian-darija-tts-a-checklist-for-scripts-numbers-and-code-switching-1793265742724-24",
+      "title": "Testing Algerian Darija TTS: A Checklist for Scripts, Numbers, and Code-Switching",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fa8qtiu0fbyg6k9sb6a76.png",
+      "source": "https://dev.to/natiq/testing-algerian-darija-tts-a-checklist-for-scripts-numbers-and-code-switching-89",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4em5000611nmii61ggxe",
+      "slug": "what-wall-street-really-thanks-about-the-ai-trade-podcast-1793265742588-6",
+      "title": "What Wall Street Really Thanks About the AI Trade (Podcast)",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqye2HyYHH1M/v14/284x284.png",
+      "source": "https://www.bloomberg.com/news/audio/2026-10-29/what-wall-street-really-thanks-about-the-ai-trade-podcast",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4eqk000r11nmgutxgzlw",
+      "slug": "i-built-a-free-privacy-first-8th-pay-commission-pension-calculator-as-a-static-site-1793265742747-27",
+      "title": "I built a free, privacy-first 8th Pay Commission pension calculator as a static site",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8yq6fasa3eag7tmavxj8.png",
+      "source": "https://dev.to/manish_singh_283b806ee654/i-built-a-free-privacy-first-8th-pay-commission-pension-calculator-as-a-static-site-7l5",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4ere000v11nm9yosapjx",
+      "slug": "el-salvador-sends-2-000-troops-to-haiti-to-rescue-four-missing-soldiers-1793265742778-31",
+      "title": "El Salvador sends 2,000 troops to Haiti to rescue four missing soldiers ",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/846b/live/2e1cb430-d355-11f1-a772-cb496d11fa15.jpg",
+      "source": "https://www.bbc.co.uk/news/articles/ck0e075n79j5o?at_medium=RSS&at_campaign=rss",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4eqc000q11nmgeoa5c7h",
+      "slug": "over-41-000-u-s-homeland-security-officials-details-apparently-exposed-after-massive-data-breach-1793265742739-26",
+      "title": "Over 41,000 U.S. Homeland Security officials' details apparently exposed after massive data breach",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://image.cnbcfm.com/api/v1/image/108300169-1777569523757-gettyimages-649149526-AA_07032017_470756.jpeg?v=1777569555&w=1920&h=1080",
+      "source": "https://www.cnbc.com/2026/10/29/dhs-data-breach-ice-cdp-deportations.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4etp001311nm3olbo7hb",
+      "slug": "ucf-fined-for-fans-chants-at-byu-big-12-sets-policy-with-in-game-penalties-1793265742861-39",
+      "title": "UCF fined for fans' chants at BYU; Big 12 sets policy with in-game penalties",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1025%2Fr1735808_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/college-football/story/_/id/50312595/big-12-fines-ucf-fans-chant-aimed-byu-mormon-church",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4etw001411nmhylh4kz0",
+      "slug": "study-estimated-75-of-nfl-players-who-died-between-2008-to-2023-had-cte-1793265742867-40",
+      "title": "Study: Estimated 75% of NFL players who died between 2008 to 2023 had CTE",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0904%2F260904_nfl_risk%2Dof%2Dcte_16x9.jpg",
+      "source": "https://www.espn.com/nfl/story/_/id/50311853/study-nearly-75-nfl-players-died-2008-23-had-cte",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4eqy000t11nm46bngwwf",
+      "slug": "s-ance-ghost-in-the-machine-1793265742761-29",
+      "title": "Séance — Ghost in the Machine",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpt0ynjo69lbqbr5z9ywx.png",
+      "source": "https://dev.to/mahil_1330/seance-ghost-in-the-machine-18hh",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8iw0001rpjrxt4olzcn",
+      "slug": "whatsapp-groups-gets-4-new-features-status-forever-message-pinning-chat-filtering-and-more-1793352141607-1",
+      "title": "WhatsApp groups gets 4 new features: Status, forever message pinning, chat filtering and more",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/whatsapp-group-new-features-1.png",
+      "source": "https://www.digit.in/news/general/whatsapp-gets-4-new-features-group-status-forever-message-pinning-mentions-and-replies-filter-and-more.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8k00006rpjrxmfa6rmm",
+      "slug": "temple-pre-order-starts-in-two-days-price-in-india-features-how-to-pre-book-and-all-other-details-1793352141647-6",
+      "title": "Temple pre-order starts in two days: Price in India, features, how to pre-book and all other details",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/Zomato-CEO-Deepinder-Goyals-Temple-device-is-all-over-the-internet-Heres-what-it-really-does.png",
+      "source": "https://www.digit.in/features/wearable-devices/temple-pre-order-starts-in-two-days-price-in-india-features-how-to-pre-book-and-all-other-details.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8ke0008rpjr58jfs76q",
+      "slug": "apple-vs-openai-trade-secrets-trial-set-for-july-2027-full-story-in-5-points-1793352141661-8",
+      "title": "Apple vs OpenAI trade secrets trial set for July 2027: Full story in 5 points",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/Apple-vs-OpenAI-trade-secrets-trial.png",
+      "source": "https://www.digit.in/news/general/apple-vs-openai-trade-secrets-trial-set-for-july-2027-full-story-in-5-points.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4evg001c11nmdvqn3day",
+      "slug": "harbaugh-winless-chargers-to-stick-with-mcdaniel-as-offensive-playcaller-1793265742923-48",
+      "title": "Harbaugh: Winless Chargers to stick with McDaniel as offensive playcaller",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1019%2Fr1733141_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/nfl/story/_/id/50310259/chargers-sticking-mike-mcdaniel-offensive-playcaller",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8kl0009rpjr00tvaznj",
+      "slug": "killing-duplicate-telegram-posts-with-idempotent-sends-and-rate-limits-1793352141667-9",
+      "title": "Killing duplicate Telegram posts with idempotent sends and rate limits",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fapj3n3ds96qx3r1y3w75.png",
+      "source": "https://dev.to/qunirice_verase_1ab0caeba/killing-duplicate-telegram-posts-with-idempotent-sends-and-rate-limits-5aif",
+      "updated": 1
+    },
+    {
+      "id": "cmvtc4evo001d11nmeq2dr7fh",
+      "slug": "jefferson-on-down-year-amid-vikes-6-0-start-what-we-re-doing-is-working-1793265742932-49",
+      "title": "Jefferson on down year amid Vikes' 6-0 start: 'What we're doing is working'",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0928%2Fr1722809_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/nfl/story/_/id/50311965/justin-jefferson-addresses-year-amid-vikings-6-0-start",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8lm000erpjr83d32bpw",
+      "slug": "addressing-schadenfreude-combating-societal-pleasure-in-software-engineers-job-losses-1793352141705-14",
+      "title": "Addressing Schadenfreude: Combating Societal Pleasure in Software Engineers' Job Losses",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzp3dnkmadvrm9ih88plz.png",
+      "source": "https://dev.to/svetlix/addressing-schadenfreude-combating-societal-pleasure-in-software-engineers-job-losses-1kim",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8m7000hrpjrtl3s2si8",
+      "slug": "iran-claims-four-tankers-struck-mines-in-hormuz-as-strike-fears-grow-after-u-s-midterms-1793352141727-17",
+      "title": "Iran claims four tankers struck mines in Hormuz as strike fears grow after U.S. midterms",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://image.cnbcfm.com/api/v1/image/108484423-1793336204524-gettyimages-2293738583-AA_09092026_2944246.jpeg?v=1793336240&w=1920&h=1080",
+      "source": "https://www.cnbc.com/2026/10/30/iran-trump-hormuz-oil-middle-east-.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8nx000qrpjr4pl8mijf",
+      "slug": "source-bears-qb-williams-fined-again-for-cleats-1793352141788-26",
+      "title": "Source: Bears QB Williams fined again for cleats",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1028%2Fr1737784_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/nfl/story/_/id/50323203/bears-quarterback-caleb-williams-fined-again-cleats",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8o4000rrpjrf5dxyo4m",
+      "slug": "new-epfo-rules-pf-1793352141795-27",
+      "title": "New EPFO rules: உங்களின் PF சேமிப்பு அக்கவுண்டிலிருந்து பணம் எடுக்க விதிமுறை உண்டு பணம் எத்தனை முறை எடுக்கலாம்",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/EPFO-withdraw.jpg",
+      "source": "https://www.digit.in/ta/features/general/new-epfo-rules-how-many-times-can-you-withdraw-money-from-pf-know-everything.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8m1000grpjrc8thhp7u",
+      "slug": "jamie-dornan-boards-nostalgie-starring-aidan-gillen-as-washed-up-pop-star-as-executive-producer-exclusive-1793352141720-16",
+      "title": "Jamie Dornan Boards ‘Nostalgie,’ Starring Aidan Gillen as Washed-up Pop Star, as Executive Producer (Exclusive)",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://www.hollywoodreporter.com/wp-content/uploads/2026/10/Jamie-Dornan.jpg?w=1440&h=810&crop=1",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/jamie-dornan-short-film-nostalgie-executive-producer-1236742889/",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8np000prpjrvve6n6q2",
+      "slug": "i-asked-eight-models-which-clubs-footballers-played-for-1793352141780-25",
+      "title": "I asked eight models which clubs footballers played for",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F425iehmdmq40oyrl5p7n.png",
+      "source": "https://dev.to/remdore/i-asked-eight-models-which-clubs-footballers-played-for-11kh",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8pg000trpjrkenk7tcw",
+      "slug": "i-got-tired-of-postman-using-1gb-ram-so-i-built-ghostman-tui-api-client-1793352141843-29",
+      "title": "I got tired of Postman using 1GB RAM, so I built Ghostman (TUI API Client)",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3ostn31k3qqjfg4rfhc3.png",
+      "source": "https://dev.to/4yk5/i-got-tired-of-postman-using-1gb-ram-so-i-built-ghostman-tui-api-client-2hhe",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8th0013rpjrql56r3hq",
+      "slug": "how-i-built-a-set-of-free-salary-calculators-with-react-vite-and-typescript-1793352141989-39",
+      "title": "How I built a set of free salary calculators with React, Vite and TypeScript",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6pdqd0t9azhkg1z96nid.png",
+      "source": "https://dev.to/salarypaytools/how-i-built-a-set-of-free-salary-calculators-with-react-vite-and-typescript-9ih",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8ue0018rpjrd2c1bzfy",
+      "slug": "satellite-vs-fiber-internet-1793352142021-44",
+      "title": "Satellite vs Fiber Internet: ഇന്ത്യയുടെ ഇന്റർനെറ്റ് വിപ്ലവത്തിന് ആര് മികച്ചത്?",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://static.digit.in/satellite-fiber-internet-news-malayalam.jpg",
+      "source": "https://www.digit.in/ml/features/general/satellite-vs-fiber-which-is-best-internet-india.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8uk0019rpjr5riekw8d",
+      "slug": "herdr-has-released-native-app-1793352142028-45",
+      "title": "Herdr has released native app",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://opengraph.githubassets.com/051dbf48802505c63aa0e39058b084b986077d6a3a96bbd527e401b0d82d85c1/herdrdev/herdr-app",
+      "source": "https://github.com/herdrdev/herdr-app",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8ux001brpjr0qvpl2e0",
+      "slug": "packers-jacobs-says-td-celebration-was-ode-to-gospel-song-not-mocking-arrest-1793352142041-47",
+      "title": "Packers' Jacobs says TD celebration was ode to gospel song, not mocking arrest",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1030%2Fr1738467_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/nfl/story/_/id/50325876/packers-josh-jacobs-says-td-celebration-mocking-arrest",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8v4001crpjr46tz27c0",
+      "slug": "red-wings-suspend-larkin-as-team-explores-trade-options-players-keen-to-move-on-1793352142047-48",
+      "title": "Red Wings suspend Larkin as team explores trade options; players keen to move on",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1007%2Fr1727131_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/nhl/story/_/id/50322532/red-wings-suspend-dylan-larkin-explore-trade-options",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8uq001arpjrhsme6itq",
+      "slug": "israel-faces-weeks-of-coalition-haggling-as-netanyahu-s-party-claims-election-stolen-1793352142034-46",
+      "title": "Israel faces weeks of coalition haggling as Netanyahu’s party claims election 'stolen'",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://image.cnbcfm.com/api/v1/image/108483727-1793321377615-gettyimages-2301853686-AFP_D4MW2T3.jpeg?v=1793321396&w=1920&h=1080",
+      "source": "https://www.cnbc.com/2026/10/30/israel-election-netanyahu-eisenkot-coalition-talks-.html",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8va001drpjr2k3yhspt",
+      "slug": "sources-missouri-rb-hardy-shot-in-offseason-to-return-vs-arkansas-1793352142054-49",
+      "title": "Sources: Missouri RB Hardy, shot in offseason, to return vs. Arkansas",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0512%2Fr1657317_1296x729_16%2D9.jpg",
+      "source": "https://www.espn.com/college-football/story/_/id/50321651/sources-missouri-rb-hardy-make-season-debut-vs-arkansas",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8q7000wrpjr4izpdv99",
+      "slug": "investigating-a-traffic-spike-with-vercel-analytics-and-first-party-events-1793352141870-32",
+      "title": "Investigating a traffic spike with Vercel Analytics and first-party events",
+      "old": "/images/default-blog-cover.jpg",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fx9bq5jkk6x406t5o5jau.png",
+      "source": "https://dev.to/luhw/investigating-a-traffic-spike-with-vercel-analytics-and-first-party-events-k09",
+      "updated": 1
+    },
+    {
+      "id": "cmvurk8jb0003rpjrnkwk2klh",
+      "slug": "beyond-ai-bengaluru-tech-summit-2026-to-spotlight-new-technologies-markets-and-opportunities-1793352141623-3",
+      "title": "Beyond AI: Bengaluru Tech Summit 2026 to spotlight new technologies, markets and opportunities",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://yourstory.com/2026/10/beyond-ai-bengaluru-tech-summit-spotlight-technologies",
+      "image": "https://images.yourstory.com/cs/2/21ccd920843c11ec88170b5512a0f9d5/BTSfeatureimage-1793343147567.jpeg",
+      "updated": 1
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "cmvqh8p1m000j1x97xgiz0vq5",
+      "slug": "noel-tata-challenges-resolution-to-reappoint-chandrasekaran-as-tata-sons-chairman-1793092942282-19",
+      "title": "Noel Tata challenges resolution to reappoint Chandrasekaran as Tata Sons chairman",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://yourstory.com/2026/10/noel-tata-challenges-resolution-reappoint-chandrasekaran-tata-sons-chairman"
+    },
+    {
+      "id": "cmvrwojki000fv1ljkt4fh6wc",
+      "slug": "why-better-data-could-be-the-key-to-ai-driven-food-r-d-1793179342098-15",
+      "title": "Why better data could be the key to AI-driven food R&D",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://yourstory.com/2026/10/how-genai-digital-ontologies-are-redefining-food-rd-food-safety"
+    },
+    {
+      "id": "cmvtc4ep2000k11nm7pqi7pcs",
+      "slug": "south-african-bank-absa-expands-to-dubai-1793265742693-20",
+      "title": "South African Bank Absa Expands to Dubai",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://www.bloomberg.com/news/videos/2026-10-29/south-african-bank-absa-expands-to-dubai-video"
+    },
+    {
+      "id": "cmvtc4ev2001a11nmter2w2m0",
+      "slug": "shell-boosts-share-buyback-to-5-billion-as-refining-soars-1793265742910-46",
+      "title": "Shell Boosts Share Buyback to $5 Billion as Refining Soars",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://www.bloomberg.com/news/articles/2026-10-29/shell-reports-second-highest-profit-ever-as-refining-hits-record"
+    },
+    {
+      "id": "cmvurk8lf000drpjrbeyjh36g",
+      "slug": "odd-lots-what-cybersecurity-means-in-the-age-of-ai-podcast-1793352141698-13",
+      "title": "Odd Lots: What Cybersecurity Means in the Age of AI (Podcast)",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://www.bloomberg.com/news/audio/2026-10-30/odd-lots-what-cybersecurity-means-in-the-age-of-ai-podcast"
+    },
+    {
+      "id": "cmvurk8s7000zrpjr6cejfhtv",
+      "slug": "bp-earnings-profits-jump-as-refining-margins-surge-1793352141942-35",
+      "title": "BP Earnings: Profits Jump as Refining Margins Surge",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://www.bloomberg.com/news/newsletters/2026-10-30/bp-earnings-profits-jump-as-refining-margins-surge"
+    },
+    {
+      "id": "cmvurk8u10016rpjrmsp1bhrf",
+      "slug": "bp-s-refining-business-had-a-banner-quarter-ceo-says-1793352142009-42",
+      "title": "BP's Refining Business Had a 'Banner Quarter,' CEO Says",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://www.bloomberg.com/news/videos/2026-10-30/bp-s-refining-business-had-a-banner-quarter-ceo-says-video"
+    },
+    {
+      "id": "cmvurk8to0014rpjrosolxmfd",
+      "slug": "tesco-strikes-deal-to-sell-czech-slovakia-unit-for-1-7-billion-1793352141996-40",
+      "title": "Tesco Strikes Deal to Sell Czech, Slovakia Unit for €1.7 Billion",
+      "old": "/images/default-blog-cover.jpg",
+      "source": "https://www.bloomberg.com/news/articles/2026-10-30/tesco-strikes-deal-to-sell-czech-slovakia-unit-for-1-7-billion"
+    }
+  ]
+}
