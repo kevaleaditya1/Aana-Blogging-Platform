@@ -59,7 +59,8 @@ const provider = {
 };
 const welcome = load('lib/email/welcome.ts', { '@/lib/prisma': { default: db }, '@/lib/site': site, '@/lib/email/unitpost': provider, '@/lib/email/confirmation': confirmation, '@/lib/email/unsubscribe': unsubscribe }, env);
 const next = { NextResponse: { json: (body, init) => Response.json(body, init) } };
-const subscribe = load('app/api/newsletter/subscribe/route.ts', { 'next/server': next, '@/lib/validation': validation, '@/lib/email/welcome': welcome });
+const diagnostics = load('lib/email/diagnostics.ts');
+const subscribe = load('app/api/newsletter/subscribe/route.ts', { 'next/server': next, '@/lib/validation': validation, '@/lib/email/welcome': welcome, '@/lib/email/diagnostics': diagnostics });
 const confirm = load('app/api/newsletter/confirm/route.ts', { 'next/server': next, '@/lib/prisma': { default: db }, '@/lib/email/confirmation': confirmation });
 const optout = load('app/api/newsletter/unsubscribe/route.ts', { 'next/server': next, '@/lib/prisma': { default: db }, '@/lib/email/unsubscribe': unsubscribe });
 const request = (path, body) => new Request('https://aanaa.blog' + path, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
