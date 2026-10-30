@@ -1,0 +1,15 @@
+User-Agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /profile
+Disallow: /saved
+Disallow: /bookmarks
+Disallow: /login
+Disallow: /signup
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /search
+Disallow: /success
+
+Sitemap: https://aanaa.blog/sitemap.xml

@@ -20,7 +20,7 @@ export function NewsletterSection() {
                         </h2>
 
                         <p className="text-base text-muted-foreground leading-relaxed max-w-lg mx-auto">
-                            Curated tech briefings, hardware teardowns, and actionable AI discoveries delivered straight to your inbox weekly.
+                            Subscribe for technology articles, gadget guides and AI updates by email.
                         </p>
 
                         <div className="pt-4 flex justify-center">

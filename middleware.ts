@@ -4,6 +4,15 @@ import { NextResponse } from "next/server";
 export default auth((req) => {
     const { pathname } = req.nextUrl;
 
+    // API authorization must not depend on the admin UI or robots.txt.
+    if (pathname.startsWith("/api/admin") || pathname === "/api/upload") {
+        if (req.auth?.user?.role !== "ADMIN") return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    if (pathname.startsWith("/profile/") && !req.auth?.user) {
+        return NextResponse.redirect(new URL("/login", req.url));
+    }
+
     // Allow access to login page
     if (pathname === "/admin/login") {
         return NextResponse.next();
@@ -22,5 +31,5 @@ export default auth((req) => {
 });
 
 export const config = {
-    matcher: ["/admin/:path*"],
+    matcher: ["/admin/:path*", "/api/admin/:path*", "/api/upload", "/profile/:path*"],
 };

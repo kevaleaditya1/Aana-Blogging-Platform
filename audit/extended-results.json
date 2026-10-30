@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Consent banner suppresses sticky CTA",
+    "passed": true
+  },
+  {
+    "name": "Focused form suppresses sticky CTA",
+    "passed": true
+  },
+  {
+    "name": "Preferences reopening focuses heading",
+    "passed": true
+  },
+  {
+    "name": "Desktop CTA above fold",
+    "passed": true
+  },
+  {
+    "name": "Wordmark matches selected theme",
+    "passed": true
+  },
+  {
+    "name": "Dynamic route /blog/sources-missouri-rb-hardy-shot-in-offseason-to-return-vs-arkansas-1793352142054-49",
+    "passed": true
+  },
+  {
+    "name": "Dynamic metadata lengths",
+    "passed": true,
+    "detail": {
+      "title": "Sources: Missouri RB Hardy, shot in offseason, to r | Aana",
+      "description": "Missouri All-America tailback Ahmad Hardy is set to make his season debut for the Tigers this weekend at Arkansas, sources told ESPN.",
+      "image": "https://aanaa.blog/blog/sources-missouri-rb-hardy-shot-in-offseason-to-return-vs-arkansas-1793352142054-49/opengraph-image"
+    }
+  },
+  {
+    "name": "Dynamic layout 320px",
+    "passed": true
+  },
+  {
+    "name": "Dynamic layout 390px",
+    "passed": true
+  },
+  {
+    "name": "Dynamic layout 768px",
+    "passed": true
+  },
+  {
+    "name": "Dynamic layout 1440px",
+    "passed": true
+  },
+  {
+    "name": "Article preview returns PNG",
+    "passed": true,
+    "detail": {
+      "status": 200,
+      "type": "image/png"
+    }
+  },
+  {
+    "name": "Dynamic route /category/phones",
+    "passed": true
+  },
+  {
+    "name": "Dynamic metadata lengths",
+    "passed": true,
+    "detail": {
+      "title": "Phones articles | Aana",
+      "description": "Explore Phones news, reviews and practical guides on Aana.",
+      "image": "https://aanaa.blog/social-default.png"
+    }
+  },
+  {
+    "name": "Dynamic layout 320px",
+    "passed": true
+  },
+  {
+    "name": "Dynamic layout 390px",
+    "passed": true
+  },
+  {
+    "name": "Dynamic layout 768px",
+    "passed": true
+  },
+  {
+    "name": "Dynamic layout 1440px",
+    "passed": true
+  },
+  {
+    "name": "Unauthorized write blocked /api/admin/posts",
+    "passed": true
+  },
+  {
+    "name": "Unauthorized write blocked /api/admin/update-old-posts",
+    "passed": true
+  },
+  {
+    "name": "Unauthorized write blocked /api/upload",
+    "passed": true
+  },
+  {
+    "name": "Anonymous profile access redirects to login",
+    "passed": true
+  },
+  {
+    "name": "Direct success URL does not claim submission",
+    "passed": true
+  },
+  {
+    "name": "Password request uses inline utility success",
+    "passed": true
+  },
+  {
+    "name": "Password mismatch is accessible",
+    "passed": true
+  },
+  {
+    "name": "Mocked reset success inline",
+    "passed": true
+  }
+]

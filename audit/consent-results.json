@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Enabled integration makes no Google request before consent",
+    "passed": true
+  },
+  {
+    "name": "Enabled integration makes no Google request after rejection",
+    "passed": true
+  },
+  {
+    "name": "Acceptance loads only the stubbed Google tag",
+    "passed": true
+  },
+  {
+    "name": "Manual pageview excludes query values",
+    "passed": true
+  },
+  {
+    "name": "Ad storage stays denied",
+    "passed": true
+  },
+  {
+    "name": "Client navigation records a sanitized pageview",
+    "passed": true
+  },
+  {
+    "name": "Confirmed operation emits one conversion without form values",
+    "passed": true
+  },
+  {
+    "name": "Success-page refresh emits no conversion",
+    "passed": true
+  },
+  {
+    "name": "Withdrawal reloads without reloading Google",
+    "passed": true
+  },
+  {
+    "name": "Withdrawal clears accessible analytics cookies",
+    "passed": true
+  }
+]

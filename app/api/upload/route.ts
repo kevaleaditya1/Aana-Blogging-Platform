@@ -1,5 +1,6 @@
+import { auth } from "@/lib/auth";
 import { NextRequest, NextResponse } from "next/server";
-import { v2 as cloudinary } from "cloudinary";
+import { v2 as cloudinary, type UploadApiResponse } from "cloudinary";
 
 // Log configuration on startup
 console.log("Cloudinary Config:", {
@@ -16,14 +17,15 @@ cloudinary.config({
 
 export async function POST(request: NextRequest) {
     try {
-        console.log("Upload request received");
+        const session = await auth();
+        if (session?.user?.role !== "ADMIN") return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
         const formData = await request.formData();
         const file = formData.get("file") as File;
 
-        if (!file) {
+        if (!(file instanceof File) || !["image/jpeg", "image/png", "image/webp", "image/gif"].includes(file.type) || file.size > 10 * 1024 * 1024) {
             console.error("No file in request");
-            return NextResponse.json({ error: "No file provided" }, { status: 400 });
+            return NextResponse.json({ error: "Provide a JPG, PNG, WebP or GIF under 10 MB." }, { status: 400 });
         }
 
         console.log("File received:", file.name, file.type, file.size);
@@ -35,7 +37,7 @@ export async function POST(request: NextRequest) {
         console.log("Starting Cloudinary upload...");
 
         // Upload to Cloudinary
-        const result = await new Promise((resolve, reject) => {
+        const result = await new Promise<UploadApiResponse>((resolve, reject) => {
             cloudinary.uploader
                 .upload_stream(
                     {
@@ -48,7 +50,7 @@ export async function POST(request: NextRequest) {
                             reject(error);
                         } else {
                             console.log("Upload successful:", result?.secure_url);
-                            resolve(result);
+                            if (result) resolve(result); else reject(new Error("Upload returned no result"));
                         }
                     }
                 )
@@ -57,7 +59,7 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json({
             success: true,
-            url: (result as any).secure_url,
+            url: result.secure_url,
         });
     } catch (error) {
         console.error("Upload error:", error);

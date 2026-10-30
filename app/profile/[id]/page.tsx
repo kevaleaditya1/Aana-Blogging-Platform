@@ -1,3 +1,6 @@
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
+import { privateMetadata } from "@/lib/site";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
@@ -14,20 +17,13 @@ interface Props {
     params: Promise<{ id: string }>;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { id } = await params;
-    const user = await prisma.user.findUnique({
-        where: { id },
-    });
-
-    return {
-        title: user ? `${user.name || "User"}'s Profile - Aanaa Blog` : "User Not Found",
-        description: user ? `View ${user.name || "User"}'s activity on Aanaa Blog` : "",
-    };
-}
+export const metadata = privateMetadata("Your profile");
 
 export default async function ProfilePage({ params }: Props) {
     const { id } = await params;
+    const session = await auth();
+    if (!session?.user) redirect("/login");
+    if (session.user.id !== id && session.user.role !== "ADMIN") notFound();
 
     const user = await prisma.user.findUnique({
         where: { id },
@@ -82,7 +78,7 @@ export default async function ProfilePage({ params }: Props) {
                     <CardContent className="pt-6">
                         <div className="flex items-start gap-6">
                             <Avatar className="h-24 w-24">
-                                <AvatarImage src={user.image || undefined} />
+                                <AvatarImage src={user.image || undefined} alt="" />
                                 <AvatarFallback className="text-2xl">
                                     {user.name?.charAt(0) || user.email?.charAt(0) || "U"}
                                 </AvatarFallback>

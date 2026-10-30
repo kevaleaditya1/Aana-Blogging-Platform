@@ -1,13 +1,10 @@
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { getSortedPostsData } from "@/lib/posts";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    title: "Browse Categories - Aana",
-    description: "Explore articles by category - Phones, Gadgets, AI Tools, Guides, and more.",
-};
+export const metadata = pageMetadata('Browse Technology Categories', 'Find Aana articles by topic, from smartphones and gadgets to AI tools and technology guides.', '/category');
 
 export default async function CategoriesPage() {
     const allPosts = await getSortedPostsData();

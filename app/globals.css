@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 @plugin "@tailwindcss/typography";
 
 @theme {
@@ -265,3 +266,16 @@ h1, h2, h3 {
 .cursor-pointer {
   cursor: pointer;
 }
+/* Site quality: keyboard access, narrow layouts and mobile reading action. */
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 200; padding: 12px 18px; background: var(--foreground); color: var(--background); border-radius: 8px; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+main, article, .prose, form { min-width: 0; }
+.prose { overflow-wrap: anywhere; }
+.prose pre { max-width: 100%; overflow-x: auto; }
+.prose table { display: block; max-width: 100%; overflow-x: auto; }
+input, textarea, select { font-size: 16px; }
+@media (max-width: 767px) { body { padding-bottom: calc(88px + env(safe-area-inset-bottom)); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+
+.grid > * { min-width: 0; }

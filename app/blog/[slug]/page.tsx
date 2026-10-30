@@ -1,3 +1,4 @@
+import { SITE_URL, pageMetadata, plainText } from "@/lib/site";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -45,36 +46,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
+    const description = plainText(post.metaDescription || "") || plainText(post.excerpt) || `Read ${post.title} and explore its linked sources on Aana.`;
+    const metadata = pageMetadata(post.metaTitle || post.title, description, `/blog/${slug}`, `/blog/${slug}/opengraph-image`);
     return {
-        title: post.title,
-        description: post.excerpt,
-        keywords: post.tags,
-        authors: [{ name: post.author.name }],
-        openGraph: {
-            title: post.title,
-            description: post.excerpt,
-            type: "article",
-            url: `${baseUrl}/blog/${slug}`,
-            publishedTime: post.date,
-            authors: [post.author.name],
-            tags: post.tags,
-            images: [
-                {
-                    url: post.ogImage.url,
-                    width: 1200,
-                    height: 630,
-                    alt: post.title,
-                },
-            ],
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: post.title,
-            description: post.excerpt,
-            images: [post.ogImage.url],
-        },
+        ...metadata,
+        alternates: { canonical: post.canonicalUrl || `${SITE_URL}/blog/${slug}` },
+        robots: { index: !post.hideFromSearch && !post.robots?.includes("noindex"), follow: !post.robots?.includes("nofollow") },
+        openGraph: { ...metadata.openGraph, type: "article", publishedTime: post.date, modifiedTime: post.updatedAt, authors: [post.author.name], tags: post.tags },
     };
 }
 
@@ -89,7 +67,7 @@ export default async function Post({ params }: Props) {
     // Fetch related posts
     const relatedPosts = await getRelatedPosts(post.slug, post.category, post.tags, 6);
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+    const baseUrl = SITE_URL;
 
     // JSON-LD Schema for Article
     const articleSchema = {
@@ -97,9 +75,9 @@ export default async function Post({ params }: Props) {
         "@type": "Article",
         headline: post.title,
         description: post.excerpt,
-        image: post.ogImage.url,
+        image: `${SITE_URL}/blog/${slug}/opengraph-image`,
         datePublished: new Date(post.date).toISOString(),
-        dateModified: new Date(post.date).toISOString(),
+        dateModified: new Date(post.updatedAt || post.date).toISOString(),
         author: {
             "@type": "Person",
             name: post.author.name,
@@ -201,8 +179,9 @@ export default async function Post({ params }: Props) {
                                 remarkPlugins={[remarkGfm]}
                                 rehypePlugins={[rehypeHighlight]}
                                 components={{
-                                    code: ({ node, inline, className, children, ...props }: any) => {
-                                        if (inline) {
+                                    img: ({ alt, ...props }) => <img {...props} alt={alt || ""} loading="lazy" className="max-w-full h-auto rounded-xl" />,
+                                    code: ({ className, children, ...props }) => {
+                                        if (!className && !String(children).includes("\n")) {
                                             return <code className={className} {...props}>{children}</code>;
                                         }
                                         return (

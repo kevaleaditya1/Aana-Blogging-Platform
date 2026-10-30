@@ -46,3 +46,5 @@ test-db.ts
 
 #.MD Files
 MD's
+# Isolated quality verification output
+/.next-quality*/

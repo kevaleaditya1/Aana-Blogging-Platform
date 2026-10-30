@@ -11,6 +11,7 @@ import { Bookmark, Calendar, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export const metadata: Metadata = {
+    robots: { index: false, follow: false },
     title: "Saved Posts - Aanaa Blog",
     description: "Your bookmarked articles",
 };

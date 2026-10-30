@@ -1,0 +1,7 @@
+PASS Provider accepts message
+PASS Provider returns error object
+PASS Provider returns no accepted ID
+PASS Missing email configuration fails honestly
+PASS Validation rejects non-string contact input
+PASS Validation rejects non-string newsletter input
+PASS Validation rejects non-string signup input

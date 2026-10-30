@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
         }
 
         // Get all posts
-        const allPosts = await getSortedPostsData();
+        const allPosts = (await getSortedPostsData(true)).filter(post => !post.hideFromSearch);
 
         // Search and score posts
         const scoredPosts = allPosts.map((post) => {

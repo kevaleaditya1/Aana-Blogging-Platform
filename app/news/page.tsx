@@ -19,7 +19,7 @@ export default async function NewsPage({
 }) {
     const params = await searchParams;
     const category = params.category;
-    const page = parseInt(params.page || '1');
+    const page = Math.max(1, Math.min(10000, Number.parseInt(params.page || '1', 10) || 1));
     const perPage = 12;
 
     // Fetch news items
@@ -44,7 +44,7 @@ export default async function NewsPage({
     });
 
     return (
-        <div className="container py-12">
+        <div className="container mx-auto max-w-7xl px-4 md:px-8 py-12">
             <div className="mb-8">
                 <h1 className="text-4xl font-bold mb-4">Latest Tech News</h1>
                 <p className="text-muted-foreground">
@@ -83,7 +83,7 @@ export default async function NewsPage({
                                 <div className="aspect-video relative overflow-hidden rounded-t-lg">
                                     <Image
                                         src={item.image}
-                                        alt={item.title}
+                                        alt=""
                                         fill
                                         className="object-cover"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -91,7 +91,7 @@ export default async function NewsPage({
                                 </div>
                             )}
                             <CardHeader>
-                                <div className="flex gap-2 mb-2">
+                                <div className="flex flex-wrap gap-2 mb-2">
                                     <Badge variant="secondary" className="text-xs">
                                         {item.source}
                                     </Badge>

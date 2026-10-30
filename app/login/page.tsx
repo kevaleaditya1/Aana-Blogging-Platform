@@ -1,6 +1,7 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { isEmail } from "@/lib/validation";
+import { Suspense, useState, useRef } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
@@ -11,7 +12,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 function LoginForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const callbackUrl = searchParams.get("callbackUrl") || "/";
+    const requestedCallback = searchParams.get("callbackUrl") || "/";
+    const callbackUrl = requestedCallback.startsWith("/") && !requestedCallback.startsWith("//") && !requestedCallback.includes("\\") ? requestedCallback : "/";
+    const inFlight = useRef(false);
 
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
@@ -21,27 +24,27 @@ function LoginForm() {
     });
 
     const handleGoogleLogin = async () => {
-        setLoading(true);
-        await signIn("google", { callbackUrl });
+        if (inFlight.current) return;
+        inFlight.current = true; setLoading(true); setError("");
+        try { await signIn("google", { callbackUrl }); }
+        catch { setError("Google sign-in could not start. Please try again."); }
+        finally { inFlight.current = false; setLoading(false); }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setLoading(true);
-        setError("");
-
-        const result = await signIn("credentials", {
-            email: formData.email,
-            password: formData.password,
-            redirect: false,
-        });
-
-        if (result?.error) {
-            setError("Invalid email or password");
-            setLoading(false);
-        } else {
-            router.push(callbackUrl);
+        if (inFlight.current) return;
+        if (!isEmail(formData.email) || !formData.password) {
+            setError("Enter a valid email address and your password.");
+            document.getElementById("email")?.focus(); return;
         }
+        inFlight.current = true; setLoading(true); setError("");
+        try {
+            const result = await signIn("credentials", { email: formData.email.trim().toLowerCase(), password: formData.password, redirect: false });
+            if (!result?.ok || result.error) setError("Invalid email or password. Please check both fields.");
+            else router.push(callbackUrl);
+        } catch { setError("Couldn’t connect. Your entries have been kept. Please try again."); }
+        finally { inFlight.current = false; setLoading(false); }
     };
 
     return (
@@ -86,13 +89,13 @@ function LoginForm() {
                         </div>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form noValidate aria-busy={loading} onSubmit={handleSubmit} className="space-y-4">
                         <div className="space-y-1.5">
                             <label htmlFor="email" className="text-xs font-medium text-foreground">
                                 Email
                             </label>
                             <Input
-                                id="email"
+                                id="email" autoComplete="email" aria-invalid={Boolean(error)} aria-describedby={error ? "login-error" : undefined}
                                 type="email"
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -115,7 +118,7 @@ function LoginForm() {
                                 </Link>
                             </div>
                             <Input
-                                id="password"
+                                id="password" autoComplete="current-password" aria-invalid={Boolean(error)} aria-describedby={error ? "login-error" : undefined}
                                 type="password"
                                 value={formData.password}
                                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
@@ -125,14 +128,14 @@ function LoginForm() {
                                 disabled={loading}
                             />
                         </div>
-                        {error && <p className="text-xs text-red-500 font-medium">{error}</p>}
+                        {error && <p id="login-error" role="alert" className="text-xs text-red-500 font-medium">{error}</p>}
                         <Button type="submit" className="w-full h-10 rounded-full bg-foreground text-background hover:opacity-90 text-xs font-medium apple-press mt-2" disabled={loading}>
                             {loading ? "Authenticating..." : "Sign In"}
                         </Button>
                     </form>
 
                     <p className="text-xs text-center text-muted-foreground pt-2">
-                        Don't have an account?{" "}
+                        Need an account?{" "}
                         <Link href="/signup" className="text-primary font-medium hover:underline underline-offset-4">
                             Sign up
                         </Link>

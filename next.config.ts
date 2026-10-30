@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  distDir: process.env.NEXT_BUILD_DIR || ".next",
   images: {
     remotePatterns: [
       {
@@ -77,11 +78,6 @@ const nextConfig: NextConfig = {
           {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://www.google.com; frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com;"
-          },
-          // Performance Headers
-          {
-            key: 'X-Robots-Tag',
-            value: 'index, follow'
           },
         ],
       },

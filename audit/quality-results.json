@@ -1,0 +1,1314 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Tech for the Future | Aana",
+      "description": "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles.",
+      "canonical": "https://aanaa.blog/",
+      "robots": "index, follow",
+      "og": [
+        [
+          "og:title",
+          "Tech for the Future | Aana"
+        ],
+        [
+          "og:description",
+          "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Tech for the Future — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Tech for the Future | Aana"
+        ],
+        [
+          "twitter:description",
+          "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "title": "All Technology Articles | Aana",
+      "description": "Browse Aana articles on phones, gadgets, AI tools and practical technology guides.",
+      "canonical": "https://aanaa.blog/blog",
+      "robots": "index, follow",
+      "og": [
+        [
+          "og:title",
+          "All Technology Articles | Aana"
+        ],
+        [
+          "og:description",
+          "Browse Aana articles on phones, gadgets, AI tools and practical technology guides."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog/blog"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "All Technology Articles — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "All Technology Articles | Aana"
+        ],
+        [
+          "twitter:description",
+          "Browse Aana articles on phones, gadgets, AI tools and practical technology guides."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/category",
+      "status": 200,
+      "title": "Browse Technology Categories | Aana",
+      "description": "Find Aana articles by topic, from smartphones and gadgets to AI tools and technology guides.",
+      "canonical": "https://aanaa.blog/category",
+      "robots": "index, follow",
+      "og": [
+        [
+          "og:title",
+          "Browse Technology Categories | Aana"
+        ],
+        [
+          "og:description",
+          "Find Aana articles by topic, from smartphones and gadgets to AI tools and technology guides."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog/category"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Browse Technology Categories — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Browse Technology Categories | Aana"
+        ],
+        [
+          "twitter:description",
+          "Find Aana articles by topic, from smartphones and gadgets to AI tools and technology guides."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "title": "About the Publication | Aana",
+      "description": "Meet Aana, a technology publication covering hardware, software and practical guides.",
+      "canonical": "https://aanaa.blog/about",
+      "robots": "index, follow",
+      "og": [
+        [
+          "og:title",
+          "About the Publication | Aana"
+        ],
+        [
+          "og:description",
+          "Meet Aana, a technology publication covering hardware, software and practical guides."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog/about"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "About the Publication — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "About the Publication | Aana"
+        ],
+        [
+          "twitter:description",
+          "Meet Aana, a technology publication covering hardware, software and practical guides."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "title": "Contact the Team | Aana",
+      "description": "Send Aana a question, feedback or a story suggestion using our contact form or published email.",
+      "canonical": "https://aanaa.blog/contact",
+      "robots": "index, follow",
+      "og": [
+        [
+          "og:title",
+          "Contact the Team | Aana"
+        ],
+        [
+          "og:description",
+          "Send Aana a question, feedback or a story suggestion using our contact form or published email."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog/contact"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Contact the Team — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Contact the Team | Aana"
+        ],
+        [
+          "twitter:description",
+          "Send Aana a question, feedback or a story suggestion using our contact form or published email."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "title": "Privacy Policy — Draft | Aana",
+      "description": "Read how Aana handles accounts, contact messages, newsletter subscriptions and optional analytics, with owner decisions still under review.",
+      "canonical": "https://aanaa.blog/privacy",
+      "robots": "index, follow",
+      "og": [
+        [
+          "og:title",
+          "Privacy Policy — Draft | Aana"
+        ],
+        [
+          "og:description",
+          "Read how Aana handles accounts, contact messages, newsletter subscriptions and optional analytics, with owner decisions still under review."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog/privacy"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Privacy Policy — Draft — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Privacy Policy — Draft | Aana"
+        ],
+        [
+          "twitter:description",
+          "Read how Aana handles accounts, contact messages, newsletter subscriptions and optional analytics, with owner decisions still under review."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "title": "Terms of Use — Draft | Aana",
+      "description": "Review draft terms for reading Aana articles, maintaining an account and contributing comments. Business and legal review is pending.",
+      "canonical": "https://aanaa.blog/terms",
+      "robots": "index, follow",
+      "og": [
+        [
+          "og:title",
+          "Terms of Use — Draft | Aana"
+        ],
+        [
+          "og:description",
+          "Review draft terms for reading Aana articles, maintaining an account and contributing comments. Business and legal review is pending."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog/terms"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Terms of Use — Draft — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Terms of Use — Draft | Aana"
+        ],
+        [
+          "twitter:description",
+          "Review draft terms for reading Aana articles, maintaining an account and contributing comments. Business and legal review is pending."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/news",
+      "status": 200,
+      "title": "Latest Technology News | Aana",
+      "description": "Browse recent technology headlines and summaries from external news sources, curated on Aana.",
+      "canonical": "https://aanaa.blog/news",
+      "robots": "index, follow",
+      "og": [
+        [
+          "og:title",
+          "Latest Technology News | Aana"
+        ],
+        [
+          "og:description",
+          "Browse recent technology headlines and summaries from external news sources, curated on Aana."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog/news"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Latest Technology News — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Latest Technology News | Aana"
+        ],
+        [
+          "twitter:description",
+          "Browse recent technology headlines and summaries from external news sources, curated on Aana."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/products/smartphone-guide",
+      "status": 200,
+      "title": "Smartphone Buying Guide | Aana",
+      "description": "Browse Aana's smartphone articles while a downloadable buying guide is being prepared.",
+      "canonical": "https://aanaa.blog/products/smartphone-guide",
+      "robots": "noindex, follow",
+      "og": [
+        [
+          "og:title",
+          "Smartphone Buying Guide | Aana"
+        ],
+        [
+          "og:description",
+          "Browse Aana's smartphone articles while a downloadable buying guide is being prepared."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog/products/smartphone-guide"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Smartphone Buying Guide — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Smartphone Buying Guide | Aana"
+        ],
+        [
+          "twitter:description",
+          "Browse Aana's smartphone articles while a downloadable buying guide is being prepared."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "title": "Sign in | Aana",
+      "description": "Sign in on Aana.",
+      "robots": "noindex, nofollow",
+      "og": [
+        [
+          "og:title",
+          "Sign in | Aana"
+        ],
+        [
+          "og:description",
+          "Sign in on Aana."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Sign in — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Sign in | Aana"
+        ],
+        [
+          "twitter:description",
+          "Sign in on Aana."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/signup",
+      "status": 200,
+      "title": "Create an account | Aana",
+      "description": "Create an account on Aana.",
+      "robots": "noindex, nofollow",
+      "og": [
+        [
+          "og:title",
+          "Create an account | Aana"
+        ],
+        [
+          "og:description",
+          "Create an account on Aana."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Create an account — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Create an account | Aana"
+        ],
+        [
+          "twitter:description",
+          "Create an account on Aana."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/forgot-password",
+      "status": 200,
+      "title": "Reset your password | Aana",
+      "description": "Reset your password on Aana.",
+      "robots": "noindex, nofollow",
+      "og": [
+        [
+          "og:title",
+          "Reset your password | Aana"
+        ],
+        [
+          "og:description",
+          "Reset your password on Aana."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Reset your password — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Reset your password | Aana"
+        ],
+        [
+          "twitter:description",
+          "Reset your password on Aana."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/search?q=ai",
+      "status": 200,
+      "title": "Search articles | Aana",
+      "description": "Search articles on Aana.",
+      "robots": "noindex, nofollow",
+      "og": [
+        [
+          "og:title",
+          "Search articles | Aana"
+        ],
+        [
+          "og:description",
+          "Search articles on Aana."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Search articles — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Search articles | Aana"
+        ],
+        [
+          "twitter:description",
+          "Search articles on Aana."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/this-page-does-not-exist-quality-audit",
+      "status": 404,
+      "title": "Tech for the Future | Aana",
+      "description": "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles.",
+      "canonical": "https://aanaa.blog/",
+      "robots": "noindex",
+      "og": [
+        [
+          "og:title",
+          "Tech for the Future | Aana"
+        ],
+        [
+          "og:description",
+          "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles."
+        ],
+        [
+          "og:url",
+          "https://aanaa.blog"
+        ],
+        [
+          "og:site_name",
+          "Aana"
+        ],
+        [
+          "og:image",
+          "https://aanaa.blog/social-default.png"
+        ],
+        [
+          "og:image:alt",
+          "Tech for the Future — Aana"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "twitter": [
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:title",
+          "Tech for the Future | Aana"
+        ],
+        [
+          "twitter:description",
+          "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles."
+        ],
+        [
+          "twitter:image",
+          "https://aanaa.blog/social-default.png"
+        ]
+      ]
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200
+    },
+    {
+      "path": "/manifest.webmanifest",
+      "status": 200
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200
+    },
+    {
+      "path": "/apple-icon.png",
+      "status": 200
+    },
+    {
+      "path": "/brand/android-192.png",
+      "status": 200
+    },
+    {
+      "path": "/brand/android-512.png",
+      "status": 200
+    },
+    {
+      "path": "/social-default.png",
+      "status": 200
+    },
+    {
+      "path": "/images/default-blog-cover.jpg",
+      "status": 200
+    }
+  ],
+  "layouts": [
+    {
+      "path": "/",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/blog",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/blog",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/blog",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/blog",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/category",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/category",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/category",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/category",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/privacy",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/privacy",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/privacy",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/privacy",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/terms",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/terms",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/terms",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/terms",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/news",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/news",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/news",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/news",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/products/smartphone-guide",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/products/smartphone-guide",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/products/smartphone-guide",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/products/smartphone-guide",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/login",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/login",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/login",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/login",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/signup",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/signup",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/signup",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/signup",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/forgot-password",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/forgot-password",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/forgot-password",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/forgot-password",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/search?q=ai",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/search?q=ai",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/search?q=ai",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/search?q=ai",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    },
+    {
+      "path": "/this-page-does-not-exist-quality-audit",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "path": "/this-page-does-not-exist-quality-audit",
+      "width": 390,
+      "scrollWidth": 390,
+      "passed": true
+    },
+    {
+      "path": "/this-page-does-not-exist-quality-audit",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "path": "/this-page-does-not-exist-quality-audit",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "No optional trackers before consent",
+      "passed": true
+    },
+    {
+      "name": "Reject persists",
+      "passed": true
+    },
+    {
+      "name": "Rejection survives reload",
+      "passed": true
+    },
+    {
+      "name": "Acceptance persists",
+      "passed": true
+    },
+    {
+      "name": "Withdrawal persists",
+      "passed": true
+    },
+    {
+      "name": "Empty fields flagged and first focused",
+      "passed": true
+    },
+    {
+      "name": "Malformed email is associated with field",
+      "passed": true
+    },
+    {
+      "name": "Server failure preserves input and restores submit",
+      "passed": true
+    },
+    {
+      "name": "Network failure feedback",
+      "passed": true
+    },
+    {
+      "name": "Pending is busy and submit disabled",
+      "passed": true
+    },
+    {
+      "name": "Confirmed contact goes to success URL once",
+      "passed": true
+    },
+    {
+      "name": "Success refresh does not resubmit",
+      "passed": true
+    },
+    {
+      "name": "Short signup password rejected",
+      "passed": true
+    },
+    {
+      "name": "Mocked email signup success route",
+      "passed": true
+    },
+    {
+      "name": "Duplicate subscription feedback",
+      "passed": true
+    },
+    {
+      "name": "Mocked newsletter success route",
+      "passed": true
+    },
+    {
+      "name": "Mobile homepage CTA above fold",
+      "passed": true
+    },
+    {
+      "name": "Mobile sticky CTA visible after rejection",
+      "passed": true
+    },
+    {
+      "name": "Mobile menu exposes expanded state",
+      "passed": true
+    },
+    {
+      "name": "Unknown route returns HTTP 404",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /robots.txt",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /sitemap.xml",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /manifest.webmanifest",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /favicon.ico",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /apple-icon.png",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /brand/android-192.png",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /brand/android-512.png",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /social-default.png",
+      "passed": true
+    },
+    {
+      "name": "Asset/metadata route /images/default-blog-cover.jpg",
+      "passed": true
+    },
+    {
+      "name": "Server rejects invalid /api/contact",
+      "passed": true,
+      "detail": "HTTP 400"
+    },
+    {
+      "name": "Server rejects invalid /api/newsletter/subscribe",
+      "passed": true,
+      "detail": "HTTP 400"
+    },
+    {
+      "name": "Server rejects invalid /api/newsletter",
+      "passed": true,
+      "detail": "HTTP 400"
+    },
+    {
+      "name": "Server rejects invalid /api/auth/signup",
+      "passed": true,
+      "detail": "HTTP 400"
+    },
+    {
+      "name": "Server rejects invalid /api/auth/forgot-password",
+      "passed": true,
+      "detail": "HTTP 400"
+    },
+    {
+      "name": "Server rejects invalid /api/auth/reset-password",
+      "passed": true,
+      "detail": "HTTP 400"
+    },
+    {
+      "name": "All sampled layouts fit viewport",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [
+    "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+  ]
+}

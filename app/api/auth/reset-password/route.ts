@@ -6,11 +6,11 @@ const prisma = new PrismaClient();
 
 export async function POST(request: NextRequest) {
     try {
-        const { token, password } = await request.json();
+        const { token, password } = await request.json().catch(() => ({}));
 
-        if (!token || !password) {
+        if (typeof token !== "string" || !/^[a-f0-9]{64}$/.test(token) || typeof password !== "string" || password.length < 8 || password.length > 72) {
             return NextResponse.json(
-                { error: "Token and password are required" },
+                { error: "Provide a valid reset link and a password between 8 and 72 characters." },
                 { status: 400 }
             );
         }

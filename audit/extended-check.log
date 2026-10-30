@@ -1,0 +1,34 @@
+PASS Consent banner suppresses sticky CTA 
+PASS Focused form suppresses sticky CTA 
+PASS Preferences reopening focuses heading 
+PASS Desktop CTA above fold 
+PASS Wordmark matches selected theme 
+PASS Dynamic route /blog/sources-missouri-rb-hardy-shot-in-offseason-to-return-vs-arkansas-1793352142054-49 
+PASS Dynamic metadata lengths {
+  title: 'Sources: Missouri RB Hardy, shot in offseason, to r | Aana',
+  description: 'Missouri All-America tailback Ahmad Hardy is set to make his season debut for the Tigers this weekend at Arkansas, sources told ESPN.',
+  image: 'https://aanaa.blog/blog/sources-missouri-rb-hardy-shot-in-offseason-to-return-vs-arkansas-1793352142054-49/opengraph-image'
+}
+PASS Dynamic layout 320px 
+PASS Dynamic layout 390px 
+PASS Dynamic layout 768px 
+PASS Dynamic layout 1440px 
+FAIL Article preview returns PNG { status: 500, type: undefined }
+PASS Dynamic route /category/phones 
+PASS Dynamic metadata lengths {
+  title: 'Phones articles | Aana',
+  description: 'Explore Phones news, reviews and practical guides on Aana.',
+  image: 'https://aanaa.blog/social-default.png'
+}
+PASS Dynamic layout 320px 
+PASS Dynamic layout 390px 
+PASS Dynamic layout 768px 
+PASS Dynamic layout 1440px 
+PASS Unauthorized write blocked /api/admin/posts 
+PASS Unauthorized write blocked /api/admin/update-old-posts 
+PASS Unauthorized write blocked /api/upload 
+PASS Anonymous profile access redirects to login 
+PASS Direct success URL does not claim submission 
+PASS Password request uses inline utility success 
+PASS Password mismatch is accessible 
+PASS Mocked reset success inline 

@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,13 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowRight, TrendingUp } from "lucide-react";
 
-export const metadata: Metadata = {
-    title: "All Articles - Aanaa Blog",
-    description: "Browse all articles on Aanaa Blog",
-    alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blog` || "https://aanaa.blog/blog",
-    },
-};
+export const metadata = pageMetadata('All Technology Articles', 'Browse Aana articles on phones, gadgets, AI tools and practical technology guides.', '/blog');
 
 export const revalidate = 60;
 
@@ -41,7 +35,7 @@ export default async function BlogPage() {
                                     <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
                                         <Image
                                             src={post.ogImage.url}
-                                            alt={post.title}
+                                            alt=""
                                             fill
                                             className="object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                                         />

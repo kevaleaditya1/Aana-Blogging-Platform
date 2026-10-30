@@ -1,0 +1,35 @@
+
+> Aana-web@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3300
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   ▲ Next.js 16.0.8 (Turbopack)
+   - Local:         http://127.0.0.1:3300
+   - Network:       http://127.0.0.1:3300
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+
+   We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+   The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+   	- include was updated to add '.next-quality-consent/types/**/*.ts'
+   	- include was updated to add '.next-quality-consent/dev/types/**/*.ts'
+
+ ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+ ✓ Ready in 2.8s
+ ○ Compiling /about ...
+ GET /about?email=must-not-track%40example.com 200 in 6.8s (compile: 6.3s, render: 500ms)
+ GET /api/auth/session 200 in 3.4s (compile: 3.4s, render: 74ms)
+ GET /api/auth/session 200 in 42ms (compile: 28ms, render: 14ms)
+ GET /about?email=must-not-track%40example.com 200 in 217ms (compile: 15ms, render: 202ms)
+ GET /api/auth/session 200 in 35ms (compile: 9ms, render: 26ms)
+ GET /api/auth/session 200 in 23ms (compile: 9ms, render: 13ms)
+ GET /contact 200 in 1580ms (compile: 1514ms, render: 66ms)
+ GET /success/contact 200 in 3.0s (compile: 3.0s, render: 39ms)
+ GET /success/contact 200 in 321ms (compile: 56ms, render: 265ms)
+ GET /api/auth/session 200 in 35ms (compile: 19ms, render: 16ms)
+ GET /api/auth/session 200 in 15ms (compile: 3ms, render: 12ms)
+ GET /success/contact 200 in 189ms (compile: 5ms, render: 183ms)
+ GET /api/auth/session 200 in 21ms (compile: 4ms, render: 17ms)
+ GET /api/auth/session 200 in 19ms (compile: 7ms, render: 13ms)

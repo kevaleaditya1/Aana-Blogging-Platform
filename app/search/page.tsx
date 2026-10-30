@@ -60,13 +60,13 @@ function SearchContent() {
                 </h1>
                 {query && (
                     <p className="text-muted-foreground text-lg">
-                        Showing results for: <span className="font-semibold text-foreground">"{query}"</span>
+                        Showing results for: <span className="font-semibold text-foreground">&quot;{query}&quot;</span>
                     </p>
                 )}
             </div>
 
             {/* Filters */}
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex flex-wrap items-center gap-4 mb-8">
                 <div className="flex items-center gap-2">
                     <Filter className="h-4 w-4 text-muted-foreground" />
                     <span className="text-sm text-muted-foreground">Filter by:</span>
@@ -116,7 +116,7 @@ function SearchContent() {
                     <Search className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
                     <h2 className="text-2xl font-bold mb-2">No Results Found</h2>
                     <p className="text-muted-foreground mb-4">
-                        We couldn't find any posts matching "{query}"
+                        No posts matched &quot;{query}&quot;
                         {category && ` in ${category}`}.
                     </p>
                     <Button asChild variant="outline">
@@ -136,7 +136,7 @@ function SearchContent() {
                                         {post.coverImage ? (
                                             <Image
                                                 src={post.coverImage}
-                                                alt={post.title}
+                                                alt=""
                                                 fill
                                                 className="object-cover"
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

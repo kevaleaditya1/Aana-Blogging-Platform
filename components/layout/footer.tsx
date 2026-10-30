@@ -1,42 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { PublicForm } from "@/components/public-form";
+import { CookiePreferencesButton } from "@/components/privacy-controls";
+import { CONTACT_EMAIL } from "@/lib/site";
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Facebook, Instagram, Twitter, Linkedin, Github } from "lucide-react";
+
+
+import { Instagram } from "lucide-react";
 
 export function Footer() {
-    const [email, setEmail] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState("");
-
-    const handleSubscribe = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setLoading(true);
-        setMessage("");
-
-        try {
-            const response = await fetch("/api/newsletter", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email }),
-            });
-
-            if (response.ok) {
-                setMessage("✅ Subscribed successfully!");
-                setEmail("");
-            } else {
-                setMessage("❌ Failed to subscribe");
-            }
-        } catch (error) {
-            setMessage("❌ Something went wrong");
-        } finally {
-            setLoading(false);
-        }
-    };
-
     return (
         <footer className="border-t border-black/[0.05] dark:border-white/[0.08] glass-subtle text-muted-foreground relative z-10">
             <div className="container px-4 md:px-8 max-w-7xl mx-auto py-12 md:py-16">
@@ -48,14 +21,9 @@ export function Footer() {
                         <p className="text-[13px] leading-relaxed text-muted-foreground">
                             Independent technology journalism, deep hardware insights, and future-forward software reviews.
                         </p>
+                        <p className="text-sm break-all"><a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+                        <CookiePreferencesButton />
                         <div className="flex gap-4 pt-1">
-                            <Link
-                                href="#"
-                                className="text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                <Twitter className="h-4 w-4" />
-                                <span className="sr-only">Twitter</span>
-                            </Link>
                             <Link
                                 href="https://www.instagram.com/aana.blogs/"
                                 target="_blank"
@@ -64,20 +32,6 @@ export function Footer() {
                             >
                                 <Instagram className="h-4 w-4" />
                                 <span className="sr-only">Instagram</span>
-                            </Link>
-                            <Link
-                                href="#"
-                                className="text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                <Linkedin className="h-4 w-4" />
-                                <span className="sr-only">LinkedIn</span>
-                            </Link>
-                            <Link
-                                href="#"
-                                className="text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                <Github className="h-4 w-4" />
-                                <span className="sr-only">GitHub</span>
                             </Link>
                         </div>
                     </div>
@@ -143,32 +97,15 @@ export function Footer() {
                             Direct Dispatch
                         </h3>
                         <p className="text-[13px] leading-relaxed">
-                            Receive our weekend digest of the biggest breakthroughs in tech.
+                            Subscribe to technology updates from Aana.
                         </p>
-                        <form onSubmit={handleSubscribe} className="space-y-2">
-                            <div className="flex gap-2">
-                                <Input
-                                    type="email"
-                                    placeholder="email@domain.com"
-                                    className="h-8 text-xs rounded-full glass-input"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                />
-                                <Button size="sm" type="submit" disabled={loading} className="h-8 px-3.5 rounded-full text-xs bg-foreground text-background hover:opacity-90 apple-press shadow-sm">
-                                    {loading ? "..." : "Join"}
-                                </Button>
-                            </div>
-                            {message && (
-                                <p className="text-xs text-primary">{message}</p>
-                            )}
-                        </form>
+                        <PublicForm kind="newsletter" compact />
                     </div>
                 </div>
 
                 <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[12px] text-muted-foreground gap-4">
                     <p>
-                        &copy; {new Date().getFullYear()} Aana Inc. All rights reserved.
+                        &copy; {new Date().getFullYear()} Aana. All rights reserved.
                     </p>
                     <div className="flex gap-4">
                         <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>

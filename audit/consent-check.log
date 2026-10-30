@@ -1,0 +1,10 @@
+PASS Enabled integration makes no Google request before consent
+PASS Enabled integration makes no Google request after rejection
+PASS Acceptance loads only the stubbed Google tag
+PASS Manual pageview excludes query values
+PASS Ad storage stays denied
+PASS Client navigation records a sanitized pageview
+PASS Confirmed operation emits one conversion without form values
+PASS Success-page refresh emits no conversion
+PASS Withdrawal reloads without reloading Google
+PASS Withdrawal clears accessible analytics cookies

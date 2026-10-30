@@ -1,0 +1,261 @@
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\about\page.tsx
+   2:10   warning  'Metadata' is defined but never used                             @typescript-eslint/no-unused-vars
+  22:121  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\analytics\page.tsx
+  13:33  warning  'Eye' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\comments\page.tsx
+   9:5   warning  'CardDescription' is defined but never used                                                                        @typescript-eslint/no-unused-vars
+  13:10  warning  'Badge' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  15:37  warning  'Check' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  15:44  warning  'X' is defined but never used                                                                                      @typescript-eslint/no-unused-vars
+  40:8   warning  React Hook useEffect has a missing dependency: 'filterComments'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\forgot-password\page.tsx
+  48:18  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\login\page.tsx
+  17:11  warning  'router' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\media\page.tsx
+    9:5   warning  'CardDescription' is defined but never used                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   10:5   warning  'CardHeader' is defined but never used                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+   11:5   warning  'CardTitle' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+   13:10  warning  'Input' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   14:35  warning  'Trash2' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  150:33  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\news\page.tsx
+  5:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\posts\[slug]\edit\page.tsx
+   16:32  warning  'generateSlug' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+   72:8   warning  React Hook useEffect has a missing dependency: 'fetchPost'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  124:18  warning  'error' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  232:18  warning  'error' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\posts\new\page.tsx
+  183:18  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\posts\page.tsx
+   9:5  warning  'CardDescription' is defined but never used                                                                     @typescript-eslint/no-unused-vars
+  38:8  warning  React Hook useEffect has a missing dependency: 'filterPosts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\settings\page.tsx
+  38:18  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\admin\users\page.tsx
+   9:5  warning  'CardDescription' is defined but never used                                                                     @typescript-eslint/no-unused-vars
+  37:8  warning  React Hook useEffect has a missing dependency: 'filterUsers'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\api\admin\auth\route.ts
+  27:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\api\admin\update-old-posts\route.ts
+  6:28  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\api\bookmarks\route.ts
+  8:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\api\cron\generate-blog-posts\route.ts
+    3:10  warning  'generateMultiplePosts' is defined but never used  @typescript-eslint/no-unused-vars
+  189:55  error    Unexpected any. Specify a different type           @typescript-eslint/no-explicit-any
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\api\search\route.ts
+  63:21  warning  'score' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\api\upload\route.ts
+  62:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\blog\[slug]\page.tsx
+    4:10  warning  'MDXRemote' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+  181:65  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\blog\page.tsx
+  2:10  warning  'Metadata' is defined but never used    @typescript-eslint/no-unused-vars
+  8:32  warning  'TrendingUp' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\bookmarks\page.tsx
+   27:19  warning  'session' is assigned a value but never used                                                               @typescript-eslint/no-unused-vars
+   39:8   warning  React Hook useEffect has a missing dependency: 'router'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  105:37  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                            react/no-unescaped-entities
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\category\[slug]\page.tsx
+  72:46  warning  'index' is defined but never used            @typescript-eslint/no-unused-vars
+  74:31  warning  'themes' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\category\page.tsx
+   6:10  warning  'Metadata' is defined but never used                 @typescript-eslint/no-unused-vars
+  33:11  warning  'categoryThemes' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\login\page.tsx
+    9:10  warning  'Card' is defined but never used                                 @typescript-eslint/no-unused-vars
+    9:16  warning  'CardContent' is defined but never used                          @typescript-eslint/no-unused-vars
+    9:29  warning  'CardDescription' is defined but never used                      @typescript-eslint/no-unused-vars
+    9:46  warning  'CardHeader' is defined but never used                           @typescript-eslint/no-unused-vars
+    9:58  warning  'CardTitle' is defined but never used                            @typescript-eslint/no-unused-vars
+  135:28  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\news\page.tsx
+  1:10  warning  'Suspense' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\page.tsx
+   16:10  warning  'Metadata' is defined but never used  @typescript-eslint/no-unused-vars
+  187:37  warning  'index' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\profile\[id]\page.tsx
+   4:10  warning  'Metadata' is defined but never used  @typescript-eslint/no-unused-vars
+  11:53  warning  'UserIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\app\search\page.tsx
+   63:94   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   63:102  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  119:34   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  119:61   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  119:69   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\admin\markdown-editor.tsx
+   6:16  warning  'TabsContent' is defined but never used   @typescript-eslint/no-unused-vars
+  71:79  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\admin\seo-panel.tsx
+  10:23  warning  'CheckCircle2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  44:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\admin\seo-panel.tsx:44:9
+  42 |             headings,
+  43 |         });
+> 44 |         setSeoScore(score);
+     |         ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  45 |     }, [title, metaTitle, metaDescription, focusKeyword, content]);
+  46 |
+  47 |     const getScoreColor = (score: number) => {  react-hooks/set-state-in-effect
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\blog\bookmark-button.tsx
+  21:8   warning  React Hook useEffect has a missing dependency: 'checkBookmarkStatus'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  28:21  error    Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\blog\table-of-contents.tsx
+  38:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\blog\table-of-contents.tsx:38:9
+  36 |         });
+  37 |
+> 38 |         setHeadings(items);
+     |         ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  39 |
+  40 |         // Set up intersection observer for active heading
+  41 |         const observer = new IntersectionObserver(  react-hooks/set-state-in-effect
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\chatbot\chatbot.tsx
+  42:17  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\chatbot\chatbot.tsx:42:17
+  40 |
+  41 |         const userMessage: Message = {
+> 42 |             id: Date.now().toString(),
+     |                 ^^^^^^^^^^ Cannot call impure function
+  43 |             text: inputValue,
+  44 |             sender: "user",
+  45 |             timestamp: new Date(),  react-hooks/purity
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\comments\comments-section.tsx
+    3:31  warning  'useCallback' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+   41:8   warning  React Hook useEffect has a missing dependency: 'fetchComments'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+   49:18  warning  'error' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   76:18  warning  'error' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   94:18  warning  'error' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  120:18  warning  'error' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\layout\header.tsx
+  95:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\loading-bar.tsx
+  12:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\loading-bar.tsx:12:9
+  10 |
+  11 |     useEffect(() => {
+> 12 |         setLoading(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  13 |         const timeout = setTimeout(() => setLoading(false), 500);
+  14 |         return () => clearTimeout(timeout);
+  15 |     }, [pathname]);  react-hooks/set-state-in-effect
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\privacy-controls.tsx
+  29:63  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\privacy-controls.tsx:29:63
+  27 |         try {
+  28 |             const value = localStorage.getItem(CONSENT_KEY);
+> 29 |             if (value === "accepted" || value === "rejected") setChoice(value);
+     |                                                               ^^^^^^^^^ Avoid calling setState() directly within an effect
+  30 |             else setOpen(true);
+  31 |         } catch { setOpen(true); }
+  32 |         setReady(true);  react-hooks/set-state-in-effect
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\search\search-with-suggestions.tsx
+   20:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\search\search-with-suggestions.tsx:20:13
+  18 |     useEffect(() => {
+  19 |         if (query.trim().length < 2) {
+> 20 |             setSuggestions([]);
+     |             ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  21 |             setShowSuggestions(false);
+  22 |             return;
+  23 |         }  react-hooks/set-state-in-effect
+  129:59  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react/no-unescaped-entities
+  129:67  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react/no-unescaped-entities
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\ui\input.tsx
+  4:18  error  An interface declaring no members is equivalent to its supertype  @typescript-eslint/no-empty-object-type
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\components\ui\textarea.tsx
+  5:18  error  An interface declaring no members is equivalent to its supertype  @typescript-eslint/no-empty-object-type
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\lib\auth.ts
+  16:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\lib\news\rss-aggregator.ts
+  118:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\lib\posts.ts
+  151:21  warning  'score' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 86 problems (24 errors, 62 warnings)
+

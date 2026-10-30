@@ -1,5 +1,6 @@
 "use client";
 
+import { usePrivacy } from "@/components/privacy-controls";
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,20 +10,21 @@ interface Message {
     id: string;
     text: string;
     sender: "user" | "bot";
-    timestamp: Date;
 }
 
 export function Chatbot() {
+    const { preferencesOpen } = usePrivacy();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
         {
             id: "1",
             text: "Hi! 👋 I'm your tech assistant. How can I help you today?",
             sender: "bot",
-            timestamp: new Date(),
         },
     ]);
     const [inputValue, setInputValue] = useState("");
+    const messageCounter = useRef(1);
+    const [pending, setPending] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -34,13 +36,13 @@ export function Chatbot() {
     }, [messages]);
 
     const handleSend = async () => {
-        if (!inputValue.trim()) return;
+        if (!inputValue.trim() || pending) return;
+        setPending(true);
 
         const userMessage: Message = {
-            id: Date.now().toString(),
+            id: String(++messageCounter.current),
             text: inputValue,
             sender: "user",
-            timestamp: new Date(),
         };
 
         setMessages((prev) => [...prev, userMessage]);
@@ -49,12 +51,12 @@ export function Chatbot() {
         // Simulate bot response
         setTimeout(() => {
             const botMessage: Message = {
-                id: (Date.now() + 1).toString(),
+                id: String(++messageCounter.current),
                 text: getBotResponse(inputValue),
                 sender: "bot",
-                timestamp: new Date(),
-            };
+                };
             setMessages((prev) => [...prev, botMessage]);
+            setPending(false);
         }, 1000);
     };
 
@@ -76,13 +78,15 @@ export function Chatbot() {
         }
     };
 
+    if (preferencesOpen) return null;
+
     return (
         <>
             {/* Liquid Glass Chat Launcher Button */}
             {!isOpen && (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="fixed bottom-6 right-6 z-50 h-13 w-13 rounded-full flex items-center justify-center glass-floating shadow-[0_12px_32px_rgba(0,113,227,0.25)] hover:shadow-[0_16px_40px_rgba(0,113,227,0.35)] hover-lift apple-press transition-all duration-300 group"
+                    className="fixed bottom-24 md:bottom-6 right-4 z-50 h-13 w-13 rounded-full flex items-center justify-center glass-floating shadow-[0_12px_32px_rgba(0,113,227,0.25)] hover:shadow-[0_16px_40px_rgba(0,113,227,0.35)] hover-lift apple-press transition-all duration-300 group"
                     aria-label="Open chat"
                 >
                     <div className="relative flex items-center justify-center">
@@ -97,7 +101,7 @@ export function Chatbot() {
 
             {/* Liquid Glass Chat Sheet */}
             {isOpen && (
-                <div className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[530px] flex flex-col rounded-3xl glass-floating overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                <div className="fixed bottom-24 md:bottom-6 right-4 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[min(530px,65dvh)] flex flex-col rounded-3xl glass-floating overflow-hidden animate-in fade-in zoom-in-95 duration-200">
                     {/* Frosted Header */}
                     <div className="p-4 border-b border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between bg-black/[0.02] dark:bg-white/[0.02]">
                         <div className="flex items-center gap-3">
@@ -133,27 +137,18 @@ export function Chatbot() {
                                         }`}
                                 >
                                     <p className="whitespace-pre-line">{message.text}</p>
-                                    <p
-                                        className={`text-[10px] mt-1 text-right ${message.sender === "user"
-                                                ? "text-primary-foreground/75"
-                                                : "text-muted-foreground"
-                                            }`}
-                                    >
-                                        {message.timestamp.toLocaleTimeString([], {
-                                            hour: "2-digit",
-                                            minute: "2-digit",
-                                        })}
-                                    </p>
                                 </div>
                             </div>
                         ))}
                         <div ref={messagesEndRef} />
                     </div>
 
+                    <span role="status" className="sr-only">{pending ? "Preparing a reply…" : ""}</span>
                     {/* Frosted Input Toolbar */}
                     <div className="p-3 border-t border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.02]">
                         <div className="flex gap-2 items-center">
                             <Input
+                                aria-label="Message to site helper" disabled={pending}
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyPress={(e) => e.key === "Enter" && handleSend()}
@@ -162,6 +157,7 @@ export function Chatbot() {
                             />
                             <Button
                                 onClick={handleSend}
+                                aria-label="Send message" aria-busy={pending} disabled={pending || !inputValue.trim()}
                                 size="icon"
                                 className="h-9 w-9 rounded-full bg-primary text-primary-foreground hover:opacity-90 shrink-0 apple-press shadow-sm"
                             >

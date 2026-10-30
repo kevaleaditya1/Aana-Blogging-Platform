@@ -1,80 +1,18 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Privacy Policy - Aana Tech Blog",
-    description: "Privacy policy for Aana Tech Blog",
-};
-
-export default function PrivacyPage() {
-    return (
-        <div className="container px-4 md:px-6 py-12 md:py-20">
-            <div className="max-w-3xl mx-auto prose prose-slate dark:prose-invert prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-a:text-primary">
-                <h1>Privacy Policy</h1>
-
-                <p className="lead">
-                    Last updated: {new Date().toLocaleDateString()}
-                </p>
-
-                <h2>Information We Collect</h2>
-                <p>
-                    When you use our blog, we may collect the following information:
-                </p>
-                <ul>
-                    <li>Email address (when you create an account or comment)</li>
-                    <li>Name (optional, for display purposes)</li>
-                    <li>Usage data via Google Analytics</li>
-                </ul>
-
-                <h2>How We Use Your Information</h2>
-                <p>We use the collected information to:</p>
-                <ul>
-                    <li>Provide and maintain our service</li>
-                    <li>Allow you to comment on blog posts</li>
-                    <li>Save your bookmarks</li>
-                    <li>Improve our content and user experience</li>
-                    <li>Send you updates (if you opt-in)</li>
-                </ul>
-
-                <h2>Google Analytics</h2>
-                <p>
-                    We use Google Analytics to understand how visitors use our site. Google Analytics collects
-                    information anonymously and reports website trends without identifying individual visitors.
-                </p>
-
-                <h2>Cookies</h2>
-                <p>
-                    We use cookies to maintain your session and remember your preferences. You can disable
-                    cookies in your browser settings, but this may affect site functionality.
-                </p>
-
-                <h2>Third-Party Services</h2>
-                <p>We use the following third-party services:</p>
-                <ul>
-                    <li><strong>Google OAuth:</strong> For authentication</li>
-                    <li><strong>Cloudinary:</strong> For image hosting</li>
-                    <li><strong>Vercel:</strong> For hosting</li>
-                </ul>
-
-                <h2>Data Security</h2>
-                <p>
-                    We implement appropriate security measures to protect your personal information. However,
-                    no method of transmission over the internet is 100% secure.
-                </p>
-
-                <h2>Your Rights</h2>
-                <p>You have the right to:</p>
-                <ul>
-                    <li>Access your personal data</li>
-                    <li>Request deletion of your data</li>
-                    <li>Opt-out of communications</li>
-                </ul>
-
-                <h2>Contact Us</h2>
-                <p>
-                    If you have questions about this Privacy Policy, please contact us at:{" "}
-                    <a href="mailto:kevaleaditya1@gmail.com">kevaleaditya1@gmail.com</a>
-                </p>
-            </div>
-        </div>
-    );
-}
+import { pageMetadata, CONTACT_EMAIL } from "@/lib/site";
+export const metadata = pageMetadata("Privacy Policy — Draft", "Read how Aana handles accounts, contact messages, newsletter subscriptions and optional analytics, with owner decisions still under review.", "/privacy");
+export default function PrivacyPage() { return <div className="mx-auto max-w-3xl px-4 py-12"><article className="prose dark:prose-invert max-w-none">
+<h1>Privacy policy</h1><p><strong>Draft for business and appropriate legal review. Prepared 30 October 2026.</strong> This describes the current implementation; it is not a claim of legal compliance.</p>
+<h2>Who to contact</h2><p>Aana publishes this website. For privacy questions, requests to access or delete information, or newsletter removal, email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. The operator’s legal name, public business address, target markets and applicable jurisdiction still require owner confirmation.</p>
+<h2>Information and purposes</h2><ul>
+<li>Contact form: your name, email address and message are sent through Resend to Aana to respond to your enquiry.</li>
+<li>Accounts: name, email, hashed password for email registration, account creation date and authentication records are stored in the configured PostgreSQL database through Prisma. Google sign-in can supply your name, email, profile image and provider tokens.</li>
+<li>Community: comments and replies are associated with your account; your display name, avatar and comments appear publicly. Bookmarks and profile reading lists require your signed-in account or administrator access.</li>
+<li>Newsletter: your email, subscription date and active status are saved when you request updates. Ask Aana to unsubscribe using the contact email. Automated mailing and an operational unsubscribe process require owner verification before sending campaigns.</li>
+<li>Hosting and media: Vercel and image providers receive technical request information such as IP addresses and requested resources. Cloudinary hosts uploaded images. Third-party news links lead to other websites with their own practices.</li>
+</ul>
+<h2>Cookies and browser storage</h2><p>Essential authentication cookies maintain sessions and protect sign-in requests. The theme preference is stored by the theme provider. The localStorage key <code>aana-consent-v1</code> remembers your analytics choice. Session storage holds a non-personal confirmation flag after a successful form submission. None of these flags contains your form values.</p>
+<h2>Optional analytics and advertising</h2><p>Google Analytics loads only after you select Accept analytics. It receives public page paths and fixed events for article exploration and successful contact, subscription or email signup actions. Form values, search queries, reset tokens and private routes are excluded from our events. Google may process device, network and cookie identifiers; we do not describe this as anonymous. The owner must disable enhanced automatic collection in the Analytics account as described in the project audit.</p><p>Use Cookie preferences in the footer to reject analytics or withdraw a previous choice. Withdrawal disables collection, clears accessible first-party analytics cookies and reloads the page. Cookies on third-party domains cannot be removed by this site. Ads and Vercel Analytics are disabled in this implementation. Advertising requires a separately reviewed consent platform before reactivation.</p>
+<h2>Other services and editorial tools</h2><p>Project integrations include Google OAuth, Google Analytics, Resend, Vercel, Cloudinary, external RSS/image sources, and editorial AI services including Google Gemini and Groq. Editorial tools are intended for public content; contact messages and passwords are not sent to them by these forms. The database host, processor agreements, international transfers and provider retention settings require owner review.</p>
+<h2>Retention, requests and security</h2><p>The owner has not supplied retention periods for accounts, messages, logs, subscriptions or backups. These periods and deletion procedures must be decided and documented. Contact Aana to request access, correction, deletion or withdrawal from updates; available rights and response obligations depend on the applicable rules. Passwords are hashed and authenticated routes restrict access, but no service can guarantee complete security.</p>
+<h2>Before publication as a final policy</h2><p>Confirm the operator details, retention schedule, database hosting, target markets, newsletter verification/unsubscribe procedure, cookie inventory after deployment, and any additional processing outside this codebase. Review this draft whenever integrations change.</p>
+</article></div>; }

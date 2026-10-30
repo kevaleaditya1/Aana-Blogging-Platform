@@ -1,0 +1,36 @@
+PASS No optional trackers before consent 
+PASS Reject persists 
+PASS Rejection survives reload 
+PASS Acceptance persists 
+PASS Withdrawal persists 
+PASS Empty fields flagged and first focused 
+PASS Malformed email is associated with field 
+PASS Server failure preserves input and restores submit 
+PASS Network failure feedback 
+PASS Pending is busy and submit disabled 
+PASS Confirmed contact goes to success URL once 
+PASS Success refresh does not resubmit 
+PASS Short signup password rejected 
+PASS Mocked email signup success route 
+PASS Duplicate subscription feedback 
+PASS Mocked newsletter success route 
+PASS Mobile homepage CTA above fold 
+PASS Mobile sticky CTA visible after rejection 
+PASS Mobile menu exposes expanded state 
+PASS Unknown route returns HTTP 404 
+PASS Asset/metadata route /robots.txt 
+PASS Asset/metadata route /sitemap.xml 
+PASS Asset/metadata route /manifest.webmanifest 
+PASS Asset/metadata route /favicon.ico 
+PASS Asset/metadata route /apple-icon.png 
+PASS Asset/metadata route /brand/android-192.png 
+PASS Asset/metadata route /brand/android-512.png 
+PASS Asset/metadata route /social-default.png 
+PASS Asset/metadata route /images/default-blog-cover.jpg 
+PASS Server rejects invalid /api/contact HTTP 400
+PASS Server rejects invalid /api/newsletter/subscribe HTTP 400
+PASS Server rejects invalid /api/newsletter HTTP 400
+PASS Server rejects invalid /api/auth/signup HTTP 400
+PASS Server rejects invalid /api/auth/forgot-password HTTP 400
+PASS Server rejects invalid /api/auth/reset-password HTTP 400
+PASS All sampled layouts fit viewport []

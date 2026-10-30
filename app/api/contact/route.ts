@@ -1,55 +1,18 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-export async function POST(request: NextRequest) {
-    try {
-        const { name, email, message } = await request.json();
-
-        if (!name || !email || !message) {
-            return NextResponse.json(
-                { error: "All fields are required" },
-                { status: 400 }
-            );
-        }
-
-        // Send email to admin
-        await resend.emails.send({
-            from: "Aana Contact <onboarding@resend.dev>", // Use your verified domain
-            to: process.env.CONTACT_EMAIL!,
-            replyTo: email,
-            subject: `New Contact Form Submission from ${name}`,
-            html: `
-        <h2>New Contact Form Message</h2>
-        <p><strong>From:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
-      `,
-        });
-
-        // Send confirmation to user
-        await resend.emails.send({
-            from: "Aana <onboarding@resend.dev>",
-            to: email,
-            subject: "We received your message!",
-            html: `
-        <h2>Thank you for contacting Aana!</h2>
-        <p>Hi ${name},</p>
-        <p>We've received your message and will get back to you as soon as possible.</p>
-        <p><strong>Your message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
-        <p>Best regards,<br>The Aana Team</p>
-      `,
-        });
-
-        return NextResponse.json({ success: true });
-    } catch (error) {
-        console.error("Contact form error:", error);
-        return NextResponse.json(
-            { error: "Failed to send message" },
-            { status: 500 }
-        );
-    }
+import { validateForm } from "@/lib/validation";
+export async function POST(request: Request) {
+ const body = await request.json().catch(() => null);
+ if (!body || typeof body !== "object" || Array.isArray(body)) return NextResponse.json({ error: "Provide valid form data." }, { status: 400 });
+ const fields = validateForm("contact", body);
+ if (Object.keys(fields).length) return NextResponse.json({ error: "Check the highlighted fields.", fields }, { status: 400 });
+ if (!process.env.RESEND_API_KEY || !process.env.EMAIL_FROM || !process.env.CONTACT_EMAIL) return NextResponse.json({ error: "Messaging is temporarily unavailable. Please use the published email address." }, { status: 503 });
+ try {
+  const result = await new Resend(process.env.RESEND_API_KEY).emails.send({
+   from: process.env.EMAIL_FROM, to: process.env.CONTACT_EMAIL, replyTo: body.email.trim(),
+   subject: "New Aana contact message", text: `From: ${body.name.trim()}\nEmail: ${body.email.trim()}\n\n${body.message.trim()}`,
+  });
+  if (result.error || !result.data?.id) return NextResponse.json({ error: "The email service could not accept your message. Please try again." }, { status: 502 });
+  return NextResponse.json({ success: true });
+ } catch { return NextResponse.json({ error: "Could not send your message. Please try again." }, { status: 502 }); }
 }

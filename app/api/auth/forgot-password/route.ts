@@ -1,3 +1,5 @@
+import { isEmail } from "@/lib/validation";
+import { SITE_URL } from "@/lib/site";
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 import { Resend } from "resend";
@@ -8,11 +10,11 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
     try {
-        const { email } = await request.json();
+        const { email } = await request.json().catch(() => ({}));
 
-        if (!email) {
+        if (!isEmail(email)) {
             return NextResponse.json(
-                { error: "Email is required" },
+                { error: "Enter a valid email address." },
                 { status: 400 }
             );
         }
@@ -22,10 +24,7 @@ export async function POST(request: NextRequest) {
         });
 
         if (!user) {
-            return NextResponse.json(
-                { error: "User not found" },
-                { status: 404 }
-            );
+            return NextResponse.json({ success: true });
         }
 
         // Generate reset token
@@ -41,9 +40,9 @@ export async function POST(request: NextRequest) {
         });
 
         // Send reset email
-        const resetUrl = `${process.env.NEXTAUTH_URL}/reset-password/${resetToken}`;
+        const resetUrl = `${SITE_URL}/reset-password/${resetToken}`;
 
-        await resend.emails.send({
+        const result = await resend.emails.send({
             from: process.env.EMAIL_FROM!,
             to: email,
             subject: "Reset Your Password - Aana",
@@ -56,6 +55,7 @@ export async function POST(request: NextRequest) {
       `,
         });
 
+        if (result.error || !result.data?.id) return NextResponse.json({ error: "The email service could not accept the request. Try again." }, { status: 502 });
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error("Forgot password error:", error);

@@ -1,15 +1,16 @@
-import { Analytics } from "@vercel/analytics/next"
+import { PrivacyControls } from "@/components/privacy-controls";
+import { MobileCTA } from "@/components/mobile-cta";
+import { SITE_URL, pageMetadata } from "@/lib/site";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { clsx } from "clsx";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SessionProvider } from "next-auth/react";
-import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Chatbot } from "@/components/chatbot/chatbot";
-import { LoadingBar } from "@/components/loading-bar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,32 +21,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Aana - Tech for the Future",
-    template: "%s | Aana",
-  },
-  description: "Modern tech blogging: Smartphones, AI, Gadgets, and more. Stay updated with the latest tech news, reviews, and guides.",
-  keywords: ["tech blog", "smartphones", "AI", "gadgets", "technology", "reviews", "guides"],
-  authors: [{ name: "Aana" }],
-  creator: "Aana",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-    title: "Aana - Tech for the Future",
-    description: "Modern tech blogging: Smartphones, AI, Gadgets, and more.",
-    siteName: "Aana",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Aana - Tech for the Future",
-    description: "Modern tech blogging: Smartphones, AI, Gadgets, and more.",
-    creator: "@Aana",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  ...pageMetadata("Tech for the Future", "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles.", "/"),
+  metadataBase: new URL(SITE_URL),
+  manifest: "/manifest.webmanifest",
+  icons: { icon: [{ url: "/favicon.ico", sizes: "16x16 32x32 48x48" }], apple: [{ url: "/apple-icon.png", sizes: "180x180" }] },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -55,21 +35,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Resource Hints for Performance */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        <meta name="google-adsense-account" content="ca-pub-8999010834139123" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8999010834139123"
-          crossOrigin="anonymous"
-        ></script>
-      </head>
       <body
         className={clsx(
           inter.variable,
@@ -83,7 +48,7 @@ export default function RootLayout({
           <div className="absolute -bottom-36 right-1/4 w-[500px] h-[500px] rounded-full bg-cyan-500/10 dark:bg-cyan-600/15 blur-[140px]" />
         </div>
 
-        <GoogleAnalytics />
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <SessionProvider>
           <ThemeProvider
             attribute="class"
@@ -91,15 +56,17 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <LoadingBar />
+            <PrivacyControls>
             <Header />
-            <main className="flex-1 relative z-10">{children}</main>
+            <main id="main-content" tabIndex={-1} className="flex-1 relative z-10">{children}</main>
             <Footer />
             <Chatbot />
+            <MobileCTA />
+            </PrivacyControls>
           </ThemeProvider>
         </SessionProvider>
       </body>
-      <Analytics />
+
     </html>
   );
 }

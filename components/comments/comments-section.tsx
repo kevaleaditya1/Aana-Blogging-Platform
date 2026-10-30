@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useSession } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -31,6 +31,8 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
     const [newComment, setNewComment] = useState("");
     const [replyTo, setReplyTo] = useState<string | null>(null);
     const [replyContent, setReplyContent] = useState("");
+    const [error, setError] = useState("");
+    const inFlight = useRef(false);
     const [loading, setLoading] = useState(false);
     const [fetchLoading, setFetchLoading] = useState(true);
 
@@ -41,10 +43,11 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
     const fetchComments = async () => {
         try {
             const response = await fetch(`/api/comments?postSlug=${postSlug}`);
+            if (!response.ok) throw new Error("Failed to load");
             const data = await response.json();
             setComments(data.comments || []);
         } catch (error) {
-            console.error("Error fetching comments:", error);
+            setError("Comments could not load. Please reload to try again.");
         } finally {
             setFetchLoading(false);
         }
@@ -52,9 +55,10 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!newComment.trim() || !session) return;
+        if (inFlight.current || !session) return;
+        if (!newComment.trim() || newComment.length > 5000) { setError("Enter a comment between 1 and 5,000 characters."); return; }
 
-        setLoading(true);
+        inFlight.current = true; setError(""); setLoading(true);
         try {
             const response = await fetch("/api/comments", {
                 method: "POST",
@@ -68,11 +72,11 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
             if (response.ok) {
                 setNewComment("");
                 fetchComments();
-            }
+            } else { setError("Couldn’t save the change. Please try again."); }
         } catch (error) {
-            console.error("Error posting comment:", error);
+            setError("Couldn’t connect. Your comment has been kept.");
         } finally {
-            setLoading(false);
+            inFlight.current = false; setLoading(false);
         }
     };
 
@@ -86,16 +90,17 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
 
             if (response.ok) {
                 fetchComments();
-            }
+            } else { setError("Couldn’t save the change. Please try again."); }
         } catch (error) {
-            console.error("Error deleting comment:", error);
+            setError("Couldn’t delete the comment. Try again.");
         }
     };
 
     const handleReply = async (parentId: string) => {
-        if (!replyContent.trim() || !session) return;
+        if (inFlight.current || !session) return;
+        if (!replyContent.trim() || replyContent.length > 5000) { setError("Enter a reply between 1 and 5,000 characters."); return; }
 
-        setLoading(true);
+        inFlight.current = true; setError(""); setLoading(true);
         try {
             const response = await fetch("/api/comments", {
                 method: "POST",
@@ -111,11 +116,11 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
                 setReplyContent("");
                 setReplyTo(null);
                 fetchComments();
-            }
+            } else { setError("Couldn’t save the change. Please try again."); }
         } catch (error) {
-            console.error("Error posting reply:", error);
+            setError("Couldn’t connect. Your reply has been kept.");
         } finally {
-            setLoading(false);
+            inFlight.current = false; setLoading(false);
         }
     };
 
@@ -123,7 +128,7 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
         <div className={`${isReply ? "ml-8 md:ml-12 mt-4" : "mt-6"}`}>
             <div className="flex gap-3">
                 <Avatar className="h-9 w-9 border border-black/[0.06] dark:border-white/[0.08]">
-                    <AvatarImage src={comment.user.image || undefined} />
+                    <AvatarImage src={comment.user.image || undefined} alt="" />
                     <AvatarFallback className="text-xs bg-primary/10 text-primary font-semibold">
                         {comment.user.name?.charAt(0) || comment.user.email?.charAt(0) || "U"}
                     </AvatarFallback>
@@ -141,8 +146,9 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
                                 <Button
                                     variant="ghost"
                                     size="sm"
+                                    aria-label="Delete comment"
                                     onClick={() => handleDelete(comment.id)}
-                                    className="h-7 w-7 p-0 rounded-full hover:bg-red-500/10 hover:text-red-500 transition-colors"
+                                    className="h-11 w-11 p-0 rounded-full hover:bg-red-500/10 hover:text-red-500 transition-colors"
                                 >
                                     <Trash2 className="h-3.5 w-3.5" />
                                 </Button>
@@ -164,6 +170,7 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
                     {replyTo === comment.id && (
                         <div className="mt-3 space-y-2">
                             <Textarea
+                                aria-label="Your reply" maxLength={5000} aria-describedby="comments-feedback"
                                 value={replyContent}
                                 onChange={(e) => setReplyContent(e.target.value)}
                                 placeholder="Write a reply..."
@@ -215,9 +222,11 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
                 </h2>
             </div>
 
+            <p id="comments-feedback" role={error ? "alert" : "status"} className="text-sm mb-4">{error || (loading ? "Saving…" : "")}</p>
             {session ? (
-                <form onSubmit={handleSubmit} className="mb-10">
+                <form onSubmit={handleSubmit} aria-busy={loading} className="mb-10">
                     <Textarea
+                        aria-label="Your comment" maxLength={5000} aria-describedby="comments-feedback"
                         value={newComment}
                         onChange={(e) => setNewComment(e.target.value)}
                         placeholder="Share your thoughts..."

@@ -1,0 +1,1866 @@
+[
+  {
+    "file": "about.html",
+    "title": "About the Publication | Aana",
+    "description": "Meet Aana, a technology publication covering hardware, software and practical guides.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/about",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "blog.html",
+    "title": "All Technology Articles | Aana",
+    "description": "Browse Aana articles on phones, gadgets, AI tools and practical technology guides.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/blog",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "bookmarks.html",
+    "title": "Bookmarks | Aana",
+    "description": "Bookmarks on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "category.html",
+    "title": "Browse Technology Categories | Aana",
+    "description": "Find Aana articles by topic, from smartphones and gadgets to AI tools and technology guides.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/category",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "contact.html",
+    "title": "Contact the Team | Aana",
+    "description": "Send Aana a question, feedback or a story suggestion using our contact form or published email.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/contact",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "forgot-password.html",
+    "title": "Reset your password | Aana",
+    "description": "Reset your password on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "login.html",
+    "title": "Sign in | Aana",
+    "description": "Sign in on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "privacy.html",
+    "title": "Privacy Policy — Draft | Aana",
+    "description": "Read how Aana handles accounts, contact messages, newsletter subscriptions and optional analytics, with owner decisions still under review.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/privacy",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "search.html",
+    "title": "Search articles | Aana",
+    "description": "Search articles on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "signup.html",
+    "title": "Create an account | Aana",
+    "description": "Create an account on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "terms.html",
+    "title": "Terms of Use — Draft | Aana",
+    "description": "Review draft terms for reading Aana articles, maintaining an account and contributing comments. Business and legal review is pending.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/terms",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "_global-error.html",
+    "title": "500: Internal Server Error.",
+    "description": "",
+    "robots": "",
+    "canonical": "",
+    "image": ""
+  },
+  {
+    "file": "_not-found.html",
+    "title": "Tech for the Future | Aana",
+    "description": "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles.",
+    "robots": "noindex",
+    "canonical": "https://aanaa.blog",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\analytics.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\comments.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\forgot-password.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\login.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\media.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\posts.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\settings.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\users.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "blog\\10-things-you-need-to-know-about-the-new-oled-macbook-pro-1793352141851-30.html",
+    "title": "10 things you need to know about the new OLED MacBo | Aana",
+    "description": "Apple’s MacBook Pro PROLED XDR packs in a lot of new features. Here’s what you need to know before you buy.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/computing/macbooks/10-things-you-need-to-know-about-the-new-oled-macbook-pro",
+    "image": "https://aanaa.blog/blog/10-things-you-need-to-know-about-the-new-oled-macbook-pro-1793352141851-30/opengraph-image"
+  },
+  {
+    "file": "blog\\a-chatbot-answers-an-agent-does-the-difference-in-plain-english-1793092942172-3.html",
+    "title": "A Chatbot Answers, an Agent Does: The Difference, i | Aana",
+    "description": "Ask a chatbot about an invoice and you will get a good explanation. It will tell you what an invoice is, what usually goes on one, and how payment terms n",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/elarigent/a-chatbot-answers-an-agent-does-the-difference-in-plain-english-1nfo",
+    "image": "https://aanaa.blog/blog/a-chatbot-answers-an-agent-does-the-difference-in-plain-english-1793092942172-3/opengraph-image"
+  },
+  {
+    "file": "blog\\a-simple-daily-fiber-supplement-reduced-arthritis-pain-and-improved-strength-1793179342272-34.html",
+    "title": "A simple daily fiber supplement reduced arthritis p | Aana",
+    "description": "A new clinical trial suggests that a simple daily fiber supplement could significantly reduce knee osteoarthritis pain, improve muscle strength, and make",
+    "robots": "index, follow",
+    "canonical": "https://www.sciencedaily.com/releases/2026/10/261027230715.htm",
+    "image": "https://aanaa.blog/blog/a-simple-daily-fiber-supplement-reduced-arthritis-pain-and-improved-strength-1793179342272-34/opengraph-image"
+  },
+  {
+    "file": "blog\\ace-blend-raises-9-9-mn-to-fund-clinical-trials-expand-nutrition-portfolio-1793265742686-19.html",
+    "title": "Ace Blend Raises $9.9 Mn To Fund Clinical Trials, E | Aana",
+    "description": "Read Ace Blend Raises $9.9 Mn To Fund Clinical Trials, Expand Nutrition Portfolio and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/buzz/ace-blend-raises-9-9-mn-to-fund-clinical-trials-expand-nutrition-portfolio/",
+    "image": "https://aanaa.blog/blog/ace-blend-raises-9-9-mn-to-fund-clinical-trials-expand-nutrition-portfolio-1793265742686-19/opengraph-image"
+  },
+  {
+    "file": "blog\\addressing-schadenfreude-combating-societal-pleasure-in-software-engineers-job-losses-1793352141705-14.html",
+    "title": "Addressing Schadenfreude: Combating Societal Pleasu | Aana",
+    "description": "The Societal Roots of Schadenfreude in Software Engineers' Job Losses: An Analytical Perspective Impact Chains: Tracing the Pat",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/svetlix/addressing-schadenfreude-combating-societal-pleasure-in-software-engineers-job-losses-1kim",
+    "image": "https://aanaa.blog/blog/addressing-schadenfreude-combating-societal-pleasure-in-software-engineers-job-losses-1793352141705-14/opengraph-image"
+  },
+  {
+    "file": "blog\\afc-munich-re-to-share-1-billion-trade-finance-risk-1793092942475-46.html",
+    "title": "AFC, Munich Re to Share $1 Billion Trade Finance Ri | Aana",
+    "description": "Africa Finance Corporation says it's agreed to share 1 billion dollars worth of risk on African trade finance with Munich Re. In an exclusive conversation",
+    "robots": "index, follow",
+    "canonical": "https://www.bloomberg.com/news/videos/2026-10-27/afc-munich-re-to-share-1-billion-trade-finance-risk-video",
+    "image": "https://aanaa.blog/blog/afc-munich-re-to-share-1-billion-trade-finance-risk-1793092942475-46/opengraph-image"
+  },
+  {
+    "file": "blog\\agentic-ai-can-cut-banks-transaction-monitoring-workload-by-up-to-50-improve-compliance-quality-mckinsey-1793179342106-16.html",
+    "title": "Agentic AI can cut banks' transaction monitoring wo | Aana",
+    "description": "Banks could reduce the human effort required for transaction monitoring investigations by 30-50% by deploying agentic artificial intelligence (AI), while",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/agentic-ai-can-cut-banks-transaction-monitoring-workload-by-up-to-50-improve-compliance-quality-mckinsey/articleshow/135257083.cms",
+    "image": "https://aanaa.blog/blog/agentic-ai-can-cut-banks-transaction-monitoring-workload-by-up-to-50-improve-compliance-quality-mckinsey-1793179342106-16/opengraph-image"
+  },
+  {
+    "file": "blog\\ai-agent-payments-usually-get-the-flow-right-and-the-trust-wrong-1793352141631-4.html",
+    "title": "AI agent payments usually get the flow right and th | Aana",
+    "description": "Over the last two weeks I kept running into AI agent payment projects: a pay-per-call facilitator, a swap API built for agents, a test suite for x402 paym",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/bloqarl/ai-agent-payments-usually-get-the-flow-right-and-the-trust-wrong-1f4c",
+    "image": "https://aanaa.blog/blog/ai-agent-payments-usually-get-the-flow-right-and-the-trust-wrong-1793352141631-4/opengraph-image"
+  },
+  {
+    "file": "blog\\ai-chip-giant-sk-hynix-says-quarterly-operating-profit-soars-630-1793179342339-43.html",
+    "title": "AI chip giant SK hynix says quarterly operating pro | Aana",
+    "description": "South Korean chip giant SK hynix said Wednesday its third-quarter operating profit soared 632 percent on-year, largely driven by the artificial intelligen",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-chip-giant-sk-hynix-says-quarterly-operating-profit-soars-630/articleshow/135252393.cms",
+    "image": "https://aanaa.blog/blog/ai-chip-giant-sk-hynix-says-quarterly-operating-profit-soars-630-1793179342339-43/opengraph-image"
+  },
+  {
+    "file": "blog\\ai-chips-worth-12-1-million-seized-at-malaysia-airport-customs-authority-says-1793179342174-24.html",
+    "title": "AI chips worth $12.1 million seized at Malaysia air | Aana",
+    "description": "Malaysian customs said on Wednesday that it had seized about 49.5 million ringgit ($12.11 million) worth of advanced artificial intelligence chips this mo",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-chips-worth-12-1-million-seized-at-malaysia-airport-customs-authority-says/articleshow/135255556.cms",
+    "image": "https://aanaa.blog/blog/ai-chips-worth-12-1-million-seized-at-malaysia-airport-customs-authority-says-1793179342174-24/opengraph-image"
+  },
+  {
+    "file": "blog\\ai-is-supposed-to-save-you-time-but-these-3-signs-mean-it-s-actually-slowing-you-down-1793179342301-38.html",
+    "title": "AI is supposed to save you time - but these 3 signs | Aana",
+    "description": "While the promise of AI revolves around making your work life easier and boosting your productivity, there are cases of adding mor",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/ai/ai-is-supposed-to-save-you-time-but-these-3-signs-mean-its-actually-slowing-you-down",
+    "image": "https://aanaa.blog/blog/ai-is-supposed-to-save-you-time-but-these-3-signs-mean-it-s-actually-slowing-you-down-1793179342301-38/opengraph-image"
+  },
+  {
+    "file": "blog\\alibaba-ai-model-secretly-tried-to-reach-beijing-server-in-test-rival-cohere-says-1793092942362-28.html",
+    "title": "Alibaba AI model secretly tried to reach Beijing se | Aana",
+    "description": "Canadian AI company Cohere said on Monday one of Alibaba's Qwen AI models tried to send data to an Alibaba Cloud storage server in Beijing during a securi",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/alibaba-ai-model-secretly-tried-to-reach-beijing-server-in-test-rival-cohere-says/articleshow/135226204.cms",
+    "image": "https://aanaa.blog/blog/alibaba-ai-model-secretly-tried-to-reach-beijing-server-in-test-rival-cohere-says-1793092942362-28/opengraph-image"
+  },
+  {
+    "file": "blog\\amazon-unveils-new-lineup-of-alexa-devices-including-redesigned-echo-show-1793265742812-32.html",
+    "title": "Amazon unveils new lineup of Alexa devices includin | Aana",
+    "description": "Amazon.com on Wednesday unveiled five new Alexa-powered devices including a redesigned Echo Show 16 smart display and a photo frame with built-in Alexa, a",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/amazon-unveils-new-lineup-of-alexa-devices-including-redesigned-echo-show/articleshow/135287353.cms",
+    "image": "https://aanaa.blog/blog/amazon-unveils-new-lineup-of-alexa-devices-including-redesigned-echo-show-1793265742812-32/opengraph-image"
+  },
+  {
+    "file": "blog\\anduril-now-says-its-bluechip-laptop-will-meet-buy-american-standards-at-launch-1793265742854-38.html",
+    "title": "Anduril now says its BlueChip laptop will meet Buy | Aana",
+    "description": "Read Anduril now says its BlueChip laptop will meet Buy American standards at launch and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.theverge.com/policy/1021554/anduril-bluechip-65-percent-domestic-buy-american",
+    "image": "https://aanaa.blog/blog/anduril-now-says-its-bluechip-laptop-will-meet-buy-american-standards-at-launch-1793265742854-38/opengraph-image"
+  },
+  {
+    "file": "blog\\apple-adds-more-siri-ai-tools-in-its-27-2-system-updates-out-today-1793092942444-41.html",
+    "title": "Apple adds more Siri AI tools in its 27.2 system up | Aana",
+    "description": "Apple has rolled out software updates for all its platforms today.",
+    "robots": "index, follow",
+    "canonical": "https://www.engadget.com/2297577/apple-adds-more-siri-ai-tools-in-27-2-system-updates-out-today/",
+    "image": "https://aanaa.blog/blog/apple-adds-more-siri-ai-tools-in-its-27-2-system-updates-out-today-1793092942444-41/opengraph-image"
+  },
+  {
+    "file": "blog\\apple-releases-ios-and-macos-27-2-with-new-siri-ai-features-new-music-logo-1793092942234-12.html",
+    "title": "Apple releases iOS and macOS 27.2 with new Siri AI | Aana",
+    "description": "Included is the ability to limit which applications Siri can directly access.",
+    "robots": "index, follow",
+    "canonical": "https://arstechnica.com/apple/2026/10/apple-releases-ios-and-macos-27-2-with-new-siri-ai-features-new-music-logo/",
+    "image": "https://aanaa.blog/blog/apple-releases-ios-and-macos-27-2-with-new-siri-ai-features-new-music-logo-1793092942234-12/opengraph-image"
+  },
+  {
+    "file": "blog\\apple-responds-to-the-iphone-duo-inner-display-cracking-issue-1793092942194-6.html",
+    "title": "Apple responds to the iPhone Duo inner display crac | Aana",
+    "description": "Read Apple responds to the iPhone Duo inner display cracking issue and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/apple_responds_to_iphone_duo_inner_display_cracking_issue-news-75219.php",
+    "image": "https://aanaa.blog/blog/apple-responds-to-the-iphone-duo-inner-display-cracking-issue-1793092942194-6/opengraph-image"
+  },
+  {
+    "file": "blog\\apple-responds-to-user-reports-of-broken-iphone-duo-screens-on-new-foldable-phone-1793092942487-48.html",
+    "title": "Apple responds to user reports of broken iPhone Duo | Aana",
+    "description": "Apple on Monday said it was aware of the issue and that it would replace the devices under its AppleCare warranty.",
+    "robots": "index, follow",
+    "canonical": "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html",
+    "image": "https://aanaa.blog/blog/apple-responds-to-user-reports-of-broken-iphone-duo-screens-on-new-foldable-phone-1793092942487-48/opengraph-image"
+  },
+  {
+    "file": "blog\\apple-teases-more-launches-this-week-after-the-new-ipad-mini-1793092942294-21.html",
+    "title": "Apple teases more launches this week after the new | Aana",
+    "description": "Read Apple teases more launches this week after the new iPad mini and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/apple_teases_more_launches_this_week_after_the_new_ipad_mini-news-75212.php",
+    "image": "https://aanaa.blog/blog/apple-teases-more-launches-this-week-after-the-new-ipad-mini-1793092942294-21/opengraph-image"
+  },
+  {
+    "file": "blog\\apple-vs-openai-trade-secrets-trial-set-for-july-2027-full-story-in-5-points-1793352141661-8.html",
+    "title": "Apple vs OpenAI trade secrets trial set for July 20 | Aana",
+    "description": "The legal fight between Apple and OpenAI will only be heating up, with the courts recently setting a trial date for the ongoing legal tussle. This legal f",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/general/apple-vs-openai-trade-secrets-trial-set-for-july-2027-full-story-in-5-points.html",
+    "image": "https://aanaa.blog/blog/apple-vs-openai-trade-secrets-trial-set-for-july-2027-full-story-in-5-points-1793352141661-8/opengraph-image"
+  },
+  {
+    "file": "blog\\architecting-production-technical-seo-real-time-core-web-vitals-inp-lcp-cls-and-http-security-hardening-1793265742618-10.html",
+    "title": "Architecting Production Technical SEO: Real-Time Co | Aana",
+    "description": "In modern web engineering, technical SEO is no longer about keyword stuffing or static XML sitemaps. Search engine bots (such as Googlebot and Bingbot) ex",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/romangrid/architecting-production-technical-seo-real-time-core-web-vitals-inp-lcp-cls-and-http-security-2mi4",
+    "image": "https://aanaa.blog/blog/architecting-production-technical-seo-real-time-core-web-vitals-inp-lcp-cls-and-http-security-hardening-1793265742618-10/opengraph-image"
+  },
+  {
+    "file": "blog\\are-we-making-a-fundamental-mistake-by-modelling-ai-agent-swarms-on-human-corporate-hierarchies-1793092942180-4.html",
+    "title": "Are We Making a Fundamental Mistake by Modelling AI | Aana",
+    "description": "Code. Tests. Documentation. They kept coming. And coming. And coming. Coherent work, far more than I needed. I'd given a group of coding agents",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/fourixai/are-we-making-a-fundamental-mistake-by-modelling-ai-agent-swarms-on-human-corporate-hierarchies-5c2d",
+    "image": "https://aanaa.blog/blog/are-we-making-a-fundamental-mistake-by-modelling-ai-agent-swarms-on-human-corporate-hierarchies-1793092942180-4/opengraph-image"
+  },
+  {
+    "file": "blog\\ather-energy-shares-jump-8-after-hsbc-nomura-raise-price-targets-1793092942288-20.html",
+    "title": "Ather Energy Shares Jump 8% After HSBC, Nomura Rais | Aana",
+    "description": "Read Ather Energy Shares Jump 8% After HSBC, Nomura Raise Price Targets and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/buzz/ather-energy-shares-jump-8-after-hsbc-nomura-raise-price-targets/",
+    "image": "https://aanaa.blog/blog/ather-energy-shares-jump-8-after-hsbc-nomura-raise-price-targets-1793092942288-20/opengraph-image"
+  },
+  {
+    "file": "blog\\australia-s-corporate-regulator-probing-failed-5-billion-firmus-ipo-1793265742882-42.html",
+    "title": "Australia's corporate regulator probing failed $5 b | Aana",
+    "description": "Australia's corporate regulator said on Thursday it was probing the failed $5 billion initial public offering of AI data centre operator Firmus.",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/australias-corporate-regulator-probing-failed-5-billion-firmus-ipo/articleshow/135291363.cms",
+    "image": "https://aanaa.blog/blog/australia-s-corporate-regulator-probing-failed-5-billion-firmus-ipo-1793265742882-42/opengraph-image"
+  },
+  {
+    "file": "blog\\australia-warns-of-unprecedented-ai-threat-1793092942437-40.html",
+    "title": "Australia warns of 'unprecedented' AI threat | Aana",
+    "description": "Artificial intelligence poses an \"unprecedented\" threat as foreign governments turn it loose to hack computer networks and critical infrastructure, Austra",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/australia-warns-of-unprecedented-ai-threat/articleshow/135226144.cms",
+    "image": "https://aanaa.blog/blog/australia-warns-of-unprecedented-ai-threat-1793092942437-40/opengraph-image"
+  },
+  {
+    "file": "blog\\aws-architecture-design-secure-resilient-cost-optimised-1793179342048-9.html",
+    "title": "AWS Architecture Design: Secure, Resilient & Cost-O | Aana",
+    "description": "Designing a new system on Amazon Web Services (AWS) includes planning and building scalable and secure infrastructure using core services. But the respons",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/ryan_scott_e2a183d81dc260/aws-architecture-design-secure-resilient-cost-optimised-19f0",
+    "image": "https://aanaa.blog/blog/aws-architecture-design-secure-resilient-cost-optimised-1793179342048-9/opengraph-image"
+  },
+  {
+    "file": "blog\\bengaluru-tech-summit-2026-what-s-in-store-for-startups-at-asia-s-largest-tech-event-1793265742754-28.html",
+    "title": "Bengaluru Tech Summit 2026: What’s In Store For Sta | Aana",
+    "description": "Read Bengaluru Tech Summit 2026: What’s In Store For Startups At Asia’s Largest Tech Event and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/buzz/bengaluru-tech-summit-2026-whats-in-store-for-startups-at-asias-largest-tech-event/",
+    "image": "https://aanaa.blog/blog/bengaluru-tech-summit-2026-what-s-in-store-for-startups-at-asia-s-largest-tech-event-1793265742754-28/opengraph-image"
+  },
+  {
+    "file": "blog\\beyond-ai-bengaluru-tech-summit-2026-to-spotlight-new-technologies-markets-and-opportunities-1793352141623-3.html",
+    "title": "Beyond AI: Bengaluru Tech Summit 2026 to spotlight | Aana",
+    "description": "The 29th edition of Bengaluru Tech Summit will bring together global technology leaders, investors, and entrepreneurs to explore emerging sectors and busi",
+    "robots": "index, follow",
+    "canonical": "https://yourstory.com/2026/10/beyond-ai-bengaluru-tech-summit-spotlight-technologies",
+    "image": "https://aanaa.blog/blog/beyond-ai-bengaluru-tech-summit-2026-to-spotlight-new-technologies-markets-and-opportunities-1793352141623-3/opengraph-image"
+  },
+  {
+    "file": "blog\\binance-hit-by-record-6-3-bn-crypto-breach-suspends-withdrawals-1793352142015-43.html",
+    "title": "Binance Hit By Record $6.3 Bn Crypto Breach, Suspen | Aana",
+    "description": "Read Binance Hit By Record $6.3 Bn Crypto Breach, Suspends Withdrawals and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/buzz/binance-hit-by-record-6-3-bn-crypto-breach-suspends-withdrawals/",
+    "image": "https://aanaa.blog/blog/binance-hit-by-record-6-3-bn-crypto-breach-suspends-withdrawals-1793352142015-43/opengraph-image"
+  },
+  {
+    "file": "blog\\blockchain-analysis-firm-trm-says-north-korea-behind-binance-crypto-theft-1793352141863-31.html",
+    "title": "Blockchain analysis firm TRM says North Korea behin | Aana",
+    "description": "North Korean hackers were behind a $6.3 billion raid on cryptocurrency exchange Binance, according to US blockchain analysis firm TRM Labs.",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/blockchain-analysis-firm-trm-says-north-korea-behind-binance-crypto-theft/articleshow/135344258.cms",
+    "image": "https://aanaa.blog/blog/blockchain-analysis-firm-trm-says-north-korea-behind-binance-crypto-theft-1793352141863-31/opengraph-image"
+  },
+  {
+    "file": "blog\\bought-a-new-tablet-for-your-kids-here-s-how-to-lock-it-down-before-handing-it-over-1793352141714-15.html",
+    "title": "Bought a new tablet for your kids? Here's how to lo | Aana",
+    "description": "If you just bought your kids a new tablet, you should learn how to manage the parental controls for their online safety.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/computing/online-security/bought-a-new-tablet-for-your-kids-heres-how-to-lock-it-down-before-handing-it-over",
+    "image": "https://aanaa.blog/blog/bought-a-new-tablet-for-your-kids-here-s-how-to-lock-it-down-before-handing-it-over-1793352141714-15/opengraph-image"
+  },
+  {
+    "file": "blog\\bp-earnings-profits-jump-as-refining-margins-surge-1793352141942-35.html",
+    "title": "BP Earnings: Profits Jump as Refining Margins Surge | Aana",
+    "description": "Plus, hiding from AI tech worries in the FTSE 100",
+    "robots": "index, follow",
+    "canonical": "https://www.bloomberg.com/news/newsletters/2026-10-30/bp-earnings-profits-jump-as-refining-margins-surge",
+    "image": "https://aanaa.blog/blog/bp-earnings-profits-jump-as-refining-margins-surge-1793352141942-35/opengraph-image"
+  },
+  {
+    "file": "blog\\bp-s-refining-business-had-a-banner-quarter-ceo-says-1793352142009-42.html",
+    "title": "BP's Refining Business Had a 'Banner Quarter,' CEO | Aana",
+    "description": "BP said profit surged to the highest in 18 years as soaring refining margins boosted earnings, giving Chief Executive Officer Meg O’Neill a powerful tailw",
+    "robots": "index, follow",
+    "canonical": "https://www.bloomberg.com/news/videos/2026-10-30/bp-s-refining-business-had-a-banner-quarter-ceo-says-video",
+    "image": "https://aanaa.blog/blog/bp-s-refining-business-had-a-banner-quarter-ceo-says-1793352142009-42/opengraph-image"
+  },
+  {
+    "file": "blog\\building-a-baby-memory-book-with-swiftui-1793179342190-26.html",
+    "title": "Building a baby memory book with SwiftUI | Aana",
+    "description": "A photo can show a baby's first smile. A caption can preserve what happened just before it. That is the kind of detail I wanted Pagewren to make room",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/_8f5abeda89bd0a842a1d0/-building-a-baby-memory-book-with-swiftui-3di9",
+    "image": "https://aanaa.blog/blog/building-a-baby-memory-book-with-swiftui-1793179342190-26/opengraph-image"
+  },
+  {
+    "file": "blog\\busan-winner-birds-in-the-dark-to-close-dharamshala-international-film-festival-varun-grover-s-damned-among-new-titles-1793265742732-25.html",
+    "title": "Busan Winner ‘Birds in the Dark’ to Close Dharamsha | Aana",
+    "description": "Shashank Walia’s “Birds in the Dark,” about a call center executive whom a police informer mistakes for a suspect, will close the 15th Dharamshala Interna",
+    "robots": "index, follow",
+    "canonical": "https://variety.com/2026/film/festivals/busan-winner-birds-in-the-dark-dharamshala-film-festival-1236933942/",
+    "image": "https://aanaa.blog/blog/busan-winner-birds-in-the-dark-to-close-dharamshala-international-film-festival-varun-grover-s-damned-among-new-titles-1793265742732-25/opengraph-image"
+  },
+  {
+    "file": "blog\\can-t-find-variable-aperture-on-your-iphone-18-pro-here-s-how-to-get-started-1793179342234-29.html",
+    "title": "Can't find variable aperture on your iPhone 18 Pro? | Aana",
+    "description": "iPhone 18 Pro Max's standout feature isn't particularly easy to find if you don't know where to look. Here's how to get started wi",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/phones/iphones/cant-find-variable-aperture-on-your-iphone-18-pro-heres-how-to-get-started",
+    "image": "https://aanaa.blog/blog/can-t-find-variable-aperture-on-your-iphone-18-pro-here-s-how-to-get-started-1793179342234-29/opengraph-image"
+  },
+  {
+    "file": "blog\\china-s-cxmt-to-start-advanced-ai-memory-production-despite-poor-yields-1793179342151-21.html",
+    "title": "China's CXMT to start advanced AI memory production | Aana",
+    "description": "The decision highlights China's intense shortage of the AI memory chips, which are essential to a government-backed push to develop domestic alternatives",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/chinas-cxmt-to-start-advanced-ai-memory-production-despite-poor-yields/articleshow/135255386.cms",
+    "image": "https://aanaa.blog/blog/china-s-cxmt-to-start-advanced-ai-memory-production-despite-poor-yields-1793179342151-21/opengraph-image"
+  },
+  {
+    "file": "blog\\china-s-new-export-curbs-draw-a-line-around-its-ai-crown-jewels-1793265742598-7.html",
+    "title": "China's new export curbs draw a line around its AI | Aana",
+    "description": "The draft rules, released on October 16, distinguish between foreign customers using Chinese AI services and foreign companies obtaining the models, data",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135289950.cms",
+    "image": "https://aanaa.blog/blog/china-s-new-export-curbs-draw-a-line-around-its-ai-crown-jewels-1793265742598-7/opengraph-image"
+  },
+  {
+    "file": "blog\\choosing-the-right-ai-design-to-code-tool-depends-on-your-workflow-explore-11-tools-compared-by-design-accuracy-code-integration-functionality-and-developer-control-to-find-the-best-fit-for-your-next-project-1793092942240-13.html",
+    "title": "Choosing the right AI design-to-code tool depends o | Aana",
+    "description": "Read Choosing the right AI design-to-code tool depends on your workflow. 🚀 Explore 11 tools compared by design accuracy, code integration, functionality,",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/rafidbottler/choosing-the-right-ai-design-to-code-tool-depends-on-your-workflow-explore-11-tools-compared-by-482l",
+    "image": "https://aanaa.blog/blog/choosing-the-right-ai-design-to-code-tool-depends-on-your-workflow-explore-11-tools-compared-by-design-accuracy-code-integration-functionality-and-developer-control-to-find-the-best-fit-for-your-next-project-1793092942240-13/opengraph-image"
+  },
+  {
+    "file": "blog\\cloudflare-vs-namecheap-which-com-renewal-is-cheaper-in-2026-1793179342025-6.html",
+    "title": "Cloudflare vs Namecheap: Which .com Renewal Is Chea | Aana",
+    "description": "Cloudflare vs Namecheap: Which .com Renewal Is Cheaper in 2026? Namecheap is where many of us bought our first domain. Cloudflare Registr",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/fixsflowteam/cloudflare-vs-namecheap-which-com-renewal-is-cheaper-in-2026-4ei4",
+    "image": "https://aanaa.blog/blog/cloudflare-vs-namecheap-which-com-renewal-is-cheaper-in-2026-1793179342025-6/opengraph-image"
+  },
+  {
+    "file": "blog\\contreras-wins-world-series-mvp-proclaims-himself-best-catcher-in-the-world-1793265742702-21.html",
+    "title": "Contreras wins World Series MVP, proclaims himself | Aana",
+    "description": "Brewers catcher William Contreras capped his stellar postseason run by winning World Series MVP honors after batting .381 and winning 10 of 13 ABS appeals",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/mlb/story/_/id/50314424/brewers-william-contreras-earns-world-series-mvp-honors",
+    "image": "https://aanaa.blog/blog/contreras-wins-world-series-mvp-proclaims-himself-best-catcher-in-the-world-1793265742702-21/opengraph-image"
+  },
+  {
+    "file": "blog\\designing-an-empty-state-before-generating-the-illustration-1793092942267-17.html",
+    "title": "Designing an Empty State Before Generating the Illu | Aana",
+    "description": "An empty dashboard is a surprisingly awkward thing to design. Leave it blank, and the page looks unfinished. Add a large illustration, and suddenly a",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/carollin_rolling_a3f2b9ed/designing-an-empty-state-before-generating-the-illustration-58jp",
+    "image": "https://aanaa.blog/blog/designing-an-empty-state-before-generating-the-illustration-1793092942267-17/opengraph-image"
+  },
+  {
+    "file": "blog\\ditch-the-daily-coffee-run-5-barista-approved-coffee-machines-with-early-black-friday-discounts-1793092942260-16.html",
+    "title": "Ditch the daily coffee run: 5 barista-approved coff | Aana",
+    "description": "No need to wait for Black Friday, because five of my barista-approved coffee makers are already discounted, including Ninja, Nespr",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/home/coffee-makers/ditch-the-daily-coffee-run-5-barista-approved-coffee-machines-with-early-black-friday-discounts",
+    "image": "https://aanaa.blog/blog/ditch-the-daily-coffee-run-5-barista-approved-coffee-machines-with-early-black-friday-discounts-1793092942260-16/opengraph-image"
+  },
+  {
+    "file": "blog\\dream-say-concerns-over-finding-available-finals-venue-went-unheeded-1793179342126-18.html",
+    "title": "Dream say concerns over finding available Finals ve | Aana",
+    "description": "In a letter to the city, the Atlanta Dream said Game 6 getting moved to 12:30 p.m. so they can play in State Farm Arena was \"not what we fought for.\"",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/wnba/story/_/id/50302463/dream-say-concerns-finding-available-wnba-finals-venue-went-unheeded",
+    "image": "https://aanaa.blog/blog/dream-say-concerns-over-finding-available-finals-venue-went-unheeded-1793179342126-18/opengraph-image"
+  },
+  {
+    "file": "blog\\dynadot-renewals-in-2026-the-10-88-com-nobody-talks-about-1793265742564-3.html",
+    "title": "Dynadot Renewals in 2026: The $10.88 .com Nobody Ta | Aana",
+    "description": "Dynadot Renewals in 2026: The $10.88 .com Nobody Talks About Everyone talks about GoDaddy and Namecheap. Almost nobody talks about Dynado",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/fixsflowteam/dynadot-renewals-in-2026-the-1088-com-nobody-talks-about-5d87",
+    "image": "https://aanaa.blog/blog/dynadot-renewals-in-2026-the-10-88-com-nobody-talks-about-1793265742564-3/opengraph-image"
+  },
+  {
+    "file": "blog\\el-salvador-sends-2-000-troops-to-haiti-to-rescue-four-missing-soldiers-1793265742778-31.html",
+    "title": "El Salvador sends 2,000 troops to Haiti to rescue f | Aana",
+    "description": "The troops are trying to recover four military personnel who went missing in an ambush on the outskirts of the Haitian capital Port-au-Prince.",
+    "robots": "index, follow",
+    "canonical": "https://www.bbc.co.uk/news/articles/ck0e075n79j5o?at_medium=RSS&at_campaign=rss",
+    "image": "https://aanaa.blog/blog/el-salvador-sends-2-000-troops-to-haiti-to-rescue-four-missing-soldiers-1793265742778-31/opengraph-image"
+  },
+  {
+    "file": "blog\\everything-new-on-apple-tv-in-november-2026-a-heist-thriller-new-chris-pratt-movie-and-more-1793092942248-14.html",
+    "title": "Everything new on Apple TV in November 2026: A heis | Aana",
+    "description": "Our guide to the new movies and shows coming to Apple TV in November 2026.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/entertainment/apple-tv/everything-new-on-apple-tv-in-november-2026-a-heist-thriller-new-chris-pratt-movie-and-more",
+    "image": "https://aanaa.blog/blog/everything-new-on-apple-tv-in-november-2026-a-heist-thriller-new-chris-pratt-movie-and-more-1793092942248-14/opengraph-image"
+  },
+  {
+    "file": "blog\\ex-usmnt-star-johnson-to-train-3-year-old-removed-from-florida-soccer-game-1793179342133-19.html",
+    "title": "Ex-USMNT star Johnson to train 3-year-old removed f | Aana",
+    "description": "Former USMNT player Eddie Johnson said Monday his soccer academy would train the 3-year-old boy who was removed from a youth soccer program in Florida, af",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/soccer/story/_/id/50301379/3-year-old-florida-youth-soccer-police-eddie-johnson",
+    "image": "https://aanaa.blog/blog/ex-usmnt-star-johnson-to-train-3-year-old-removed-from-florida-soccer-game-1793179342133-19/opengraph-image"
+  },
+  {
+    "file": "blog\\finding-india-s-next-ai-goldmine-1793179342143-20.html",
+    "title": "Finding India’s Next AI Goldmine | Aana",
+    "description": "Read Finding India’s Next AI Goldmine and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/features/finding-indias-next-ai-goldmine/",
+    "image": "https://aanaa.blog/blog/finding-india-s-next-ai-goldmine-1793179342143-20/opengraph-image"
+  },
+  {
+    "file": "blog\\flurry-of-diplomacy-in-iran-amid-reports-of-u-s-and-israeli-plans-to-renew-war-1793092942301-22.html",
+    "title": "Flurry of Diplomacy in Iran Amid Reports of U.S. an | Aana",
+    "description": "Saudi Arabia, Turkey and Pakistan made a rare joint visit to Tehran amid reports that the U.S. and Israel were drawing up plans to renew their attacks on",
+    "robots": "index, follow",
+    "canonical": "https://www.nytimes.com/2026/10/26/world/middleeast/iran-war-new-attacks-diplomacy.html",
+    "image": "https://aanaa.blog/blog/flurry-of-diplomacy-in-iran-amid-reports-of-u-s-and-israeli-plans-to-renew-war-1793092942301-22/opengraph-image"
+  },
+  {
+    "file": "blog\\foreign-gadget-bans-all-the-news-about-the-fcc-s-clampdown-on-chinese-tech-1793265742874-41.html",
+    "title": "Foreign gadget bans: all the news about the FCC’s c | Aana",
+    "description": "Read Foreign gadget bans: all the news about the FCC’s clampdown on Chinese tech and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.theverge.com/policy/1019851/fcc-foreign-gadget-ban-drone-robot-roomba-storystream",
+    "image": "https://aanaa.blog/blog/foreign-gadget-bans-all-the-news-about-the-fcc-s-clampdown-on-chinese-tech-1793265742874-41/opengraph-image"
+  },
+  {
+    "file": "blog\\former-github-ceo-launches-git-platform-built-for-ai-agents-1793092942206-8.html",
+    "title": "Former GitHub CEO Launches Git Platform Built for A | Aana",
+    "description": "The platform combines automated code reviews, distributed repository hosting and persistent memory to help AI agents retain context across coding sessions",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/former-github-ceo-launches-git-platform-built-for-ai-agents",
+    "image": "https://aanaa.blog/blog/former-github-ceo-launches-git-platform-built-for-ai-agents-1793092942206-8/opengraph-image"
+  },
+  {
+    "file": "blog\\free-fire-india-launched-1793179342166-23.html",
+    "title": "Free Fire India Launched: నేటి నుంచే అందుబాటులోకి గ | Aana",
+    "description": "మొబైల్ గేమింగ్‌ ను ఇష్టపడే భారతీయ గేమర్స్ కి గుడ్ న్యూస్. ఎంతోకాలంగా ఎదురుచూస్తున్న Free Fire India గేమ్ అక్టోబర్ 28, అంటే ఈరోజు నుంచి డౌన్‌ లోడ్‌ కు అందు",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/te/news/gaming/free-fire-india-launched-in-india-know-where-to-download.html",
+    "image": "https://aanaa.blog/blog/free-fire-india-launched-1793179342166-23/opengraph-image"
+  },
+  {
+    "file": "blog\\freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform-1793265742657-15.html",
+    "title": "Freshworks Acquires AI Startup Robusta To Strengthe | Aana",
+    "description": "Read Freshworks Acquires AI Startup Robusta To Strengthen IT Operations Platform and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform/",
+    "image": "https://aanaa.blog/blog/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform-1793265742657-15/opengraph-image"
+  },
+  {
+    "file": "blog\\from-a-mumbai-pavement-to-india-s-esports-league-table-santanu-basu-s-journey-1793352141753-21.html",
+    "title": "From a Mumbai pavement to India’s esports league ta | Aana",
+    "description": "In 2007, Santanu Basu embarked on his esports journey, conquering the World Cyber Games. Over the years, he has proudly represented India in numerous FIFA",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/from-a-mumbai-pavement-to-indias-esports-league-table-santanu-basus-journey/articleshow/135348214.cms",
+    "image": "https://aanaa.blog/blog/from-a-mumbai-pavement-to-india-s-esports-league-table-santanu-basu-s-journey-1793352141753-21/opengraph-image"
+  },
+  {
+    "file": "blog\\from-code-generators-to-ai-powered-job-hunting-five-tech-trends-shaping-2026-1793006553143.html",
+    "title": "From Code Generators to AI‑Powered Job Hunting: Fiv | Aana",
+    "description": "Explore five 2026 tech trends—from a candid Jostraca code‑generator review and Flutter performance hacks to Zomato’s Temple wearable, Unacademy’s massive",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/blog/from-code-generators-to-ai-powered-job-hunting-five-tech-trends-shaping-2026-1793006553143",
+    "image": "https://aanaa.blog/blog/from-code-generators-to-ai-powered-job-hunting-five-tech-trends-shaping-2026-1793006553143/opengraph-image"
+  },
+  {
+    "file": "blog\\from-displacement-films-to-ai-moonshots-what-this-week-s-tech-culture-news-means-for-you-1792833753995.html",
+    "title": "From Displacement Films to AI Moonshots: What This | Aana",
+    "description": "A week of bold moves—from Cate Blanchett’s film fund teaming up with The New Yorker, to Brick’s bedtime app blocker, iOS 27’s new features, BPA cost insig",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/blog/from-displacement-films-to-ai-moonshots-what-this-week-s-tech-culture-news-means-for-you-1792833753995",
+    "image": "https://aanaa.blog/blog/from-displacement-films-to-ai-moonshots-what-this-week-s-tech-culture-news-means-for-you-1792833753995/opengraph-image"
+  },
+  {
+    "file": "blog\\from-iphone-air-2-to-garmin-enduro-4-what-this-week-s-tech-trends-mean-for-you-1793006552905.html",
+    "title": "From iPhone Air 2 to Garmin Enduro 4: What This Wee | Aana",
+    "description": "Apple’s rumored iPhone Air 2, IRDAI’s extended insurance reforms, a solo dev’s multilingual launch, a savvy Garmin Enduro 3 deal, and a quick Android stor",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/blog/from-iphone-air-2-to-garmin-enduro-4-what-this-week-s-tech-trends-mean-for-you-1793006552905",
+    "image": "https://aanaa.blog/blog/from-iphone-air-2-to-garmin-enduro-4-what-this-week-s-tech-trends-mean-for-you-1793006552905/opengraph-image"
+  },
+  {
+    "file": "blog\\gay-filipino-couple-s-homecoming-documentary-we-had-a-plan-boarded-by-cat-docs-ahead-of-idfa-premiere-trailer-unveiled-exclusive-1793352141740-19.html",
+    "title": "Gay Filipino Couple’s Homecoming Documentary ‘We Ha | Aana",
+    "description": "“We Had a Plan,” a documentary about a gay Filipino couple who head home after a decade as undocumented cleaners in the Netherlands, has been picked up fo",
+    "robots": "index, follow",
+    "canonical": "https://variety.com/2026/film/news/gay-filipino-couple-documentary-catdocs-idfa-1236934716/",
+    "image": "https://aanaa.blog/blog/gay-filipino-couple-s-homecoming-documentary-we-had-a-plan-boarded-by-cat-docs-ahead-of-idfa-premiere-trailer-unveiled-exclusive-1793352141740-19/opengraph-image"
+  },
+  {
+    "file": "blog\\google-s-investments-in-ai-are-driving-more-searches-sundar-pichai-reveals-during-q3-2026-earnings-call-1793265742710-22.html",
+    "title": "Google’s investments in AI are driving more searche | Aana",
+    "description": "Google CEO Sundar Pichai has revealed that the company’s investments in AI are driving more searches and overall query growth. Speaking during Alphabet’s",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/general/googles-investments-in-ai-are-driving-more-searches-sundar-pichai-reveals-during-q3-2026-earnings-call.html",
+    "image": "https://aanaa.blog/blog/google-s-investments-in-ai-are-driving-more-searches-sundar-pichai-reveals-during-q3-2026-earnings-call-1793265742710-22/opengraph-image"
+  },
+  {
+    "file": "blog\\gta-6-download-size-leaked-ahead-of-launch-here-is-how-much-space-it-may-occupy-on-your-gaming-consoles-1793179342017-5.html",
+    "title": "GTA 6 download size leaked ahead of launch: Here is | Aana",
+    "description": "Rockstar Games is gearing up to release the next iteration of its popular Grand Theft Auto series on November 19 for select gaming consoles. Ahead of a re",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/gaming/gta-6-download-size-leaked-ahead-of-launch-here-is-how-much-space-it-may-occupy-on-your-gaming-consoles.html",
+    "image": "https://aanaa.blog/blog/gta-6-download-size-leaked-ahead-of-launch-here-is-how-much-space-it-may-occupy-on-your-gaming-consoles-1793179342017-5/opengraph-image"
+  },
+  {
+    "file": "blog\\gta-6-update-rockstar-exec-and-new-screenshots-reveal-map-size-gameplay-features-and-more-1793265742515-0.html",
+    "title": "GTA 6 update: Rockstar exec and new screenshots rev | Aana",
+    "description": "Grand Theft Auto VI, the highly anticipated successor to GTA V, is all set to launch on November 19 for eligible gaming consoles. Ahead of the release, Ga",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/gaming/gta-6-update-rockstar-exec-and-new-screenshots-reveal-map-size-gameplay-features-and-more.html",
+    "image": "https://aanaa.blog/blog/gta-6-update-rockstar-exec-and-new-screenshots-reveal-map-size-gameplay-features-and-more-1793265742515-0/opengraph-image"
+  },
+  {
+    "file": "blog\\halide-releases-its-first-batch-of-updates-for-the-iphone-duo-1793092942200-7.html",
+    "title": "Halide releases its first batch of updates for the | Aana",
+    "description": "Camera app Halide released a new update for the iPhone Duo that adds three different shooting modes based on what position the foldable is in.",
+    "robots": "index, follow",
+    "canonical": "https://www.engadget.com/2297806/halide-releases-its-first-batch-of-updates-for-the-iphone-duo/",
+    "image": "https://aanaa.blog/blog/halide-releases-its-first-batch-of-updates-for-the-iphone-duo-1793092942200-7/opengraph-image"
+  },
+  {
+    "file": "blog\\harbaugh-winless-chargers-to-stick-with-mcdaniel-as-offensive-playcaller-1793265742923-48.html",
+    "title": "Harbaugh: Winless Chargers to stick with McDaniel a | Aana",
+    "description": "Embattled offensive coordinator Mike McDaniel will continue as the Chargers' playcaller, coach Jim Harbaugh announced Wednesday.",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/nfl/story/_/id/50310259/chargers-sticking-mike-mcdaniel-offensive-playcaller",
+    "image": "https://aanaa.blog/blog/harbaugh-winless-chargers-to-stick-with-mcdaniel-as-offensive-playcaller-1793265742923-48/opengraph-image"
+  },
+  {
+    "file": "blog\\hcltech-launches-nano-gcc-model-with-aws-to-build-ai-operations-1793265742557-2.html",
+    "title": "HCLTech Launches Nano GCC Model With AWS to Build A | Aana",
+    "description": "The offering targets enterprises with existing GCCs and mid-market companies seeking to establish AI-focused teams in India, with an initial rollout acros",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/hcltech-launches-nano-gcc-model-with-aws-to-build-ai-operations",
+    "image": "https://aanaa.blog/blog/hcltech-launches-nano-gcc-model-with-aws-to-build-ai-operations-1793265742557-2/opengraph-image"
+  },
+  {
+    "file": "blog\\he-likes-the-moment-jackson-chourio-was-made-for-october-1793092942462-44.html",
+    "title": "'He likes the moment': Jackson Chourio was made for | Aana",
+    "description": "After a four-hit Game 3, Chourio is setting a new standard for young players in October.",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/mlb/story/_/id/50293252/world-series-brewers-jackson-chourio",
+    "image": "https://aanaa.blog/blog/he-likes-the-moment-jackson-chourio-was-made-for-october-1793092942462-44/opengraph-image"
+  },
+  {
+    "file": "blog\\herdr-has-released-native-app-1793352142028-45.html",
+    "title": "Herdr has released native app | Aana",
+    "description": "Comments",
+    "robots": "index, follow",
+    "canonical": "https://github.com/herdrdev/herdr-app",
+    "image": "https://aanaa.blog/blog/herdr-has-released-native-app-1793352142028-45/opengraph-image"
+  },
+  {
+    "file": "blog\\here-s-when-the-vivo-x500-series-could-launch-in-india-1793179342242-30.html",
+    "title": "Here's when the vivo X500 series could launch in In | Aana",
+    "description": "Read Here's when the vivo X500 series could launch in India and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/heres_when_the_vivo_x500_series_could_launch_in_india-news-75233.php",
+    "image": "https://aanaa.blog/blog/here-s-when-the-vivo-x500-series-could-launch-in-india-1793179342242-30/opengraph-image"
+  },
+  {
+    "file": "blog\\here-s-why-the-iphone-duo-s-hinge-could-be-cracking-the-screen-1793179342346-44.html",
+    "title": "Here’s why the iPhone Duo’s hinge could be cracking | Aana",
+    "description": "Read Here’s why the iPhone Duo’s hinge could be cracking the screen and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.theverge.com/tech/1020145/iphone-duo-crackgate-broken-screen-hinge",
+    "image": "https://aanaa.blog/blog/here-s-why-the-iphone-duo-s-hinge-could-be-cracking-the-screen-1793179342346-44/opengraph-image"
+  },
+  {
+    "file": "blog\\honor-x8e-4g-quietly-launches-with-a-108mp-camera-and-a-7-700mah-battery-1793265742839-36.html",
+    "title": "Honor X8e 4G quietly launches with a 108MP camera a | Aana",
+    "description": "Read Honor X8e 4G quietly launches with a 108MP camera and a 7,700mAh battery and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/honor_x8e_4g_quietly_launches_with_a_108mp_camera_and_a_7700mah_battery-news-75251.php",
+    "image": "https://aanaa.blog/blog/honor-x8e-4g-quietly-launches-with-a-108mp-camera-and-a-7-700mah-battery-1793265742839-36/opengraph-image"
+  },
+  {
+    "file": "blog\\how-do-smart-rings-work-sensors-accuracy-and-how-they-compare-to-smartwatches-1793092942492-49.html",
+    "title": "How do smart rings work? Sensors, accuracy and how | Aana",
+    "description": "Smart rings have now become a popular option for those who want to track health without wearing a smartwatch or dealing with constant notifications. Just",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/features/wearable-devices/how-do-smart-rings-work-sensors-accuracy-and-how-they-compare-to-smartwatches.html",
+    "image": "https://aanaa.blog/blog/how-do-smart-rings-work-sensors-accuracy-and-how-they-compare-to-smartwatches-1793092942492-49/opengraph-image"
+  },
+  {
+    "file": "blog\\how-i-built-a-set-of-free-salary-calculators-with-react-vite-and-typescript-1793352141989-39.html",
+    "title": "How I built a set of free salary calculators with R | Aana",
+    "description": "I recently built SalaryPayTools , a small site of free US pay calculators. Here is a short",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/salarypaytools/how-i-built-a-set-of-free-salary-calculators-with-react-vite-and-typescript-9ih",
+    "image": "https://aanaa.blog/blog/how-i-built-a-set-of-free-salary-calculators-with-react-vite-and-typescript-1793352141989-39/opengraph-image"
+  },
+  {
+    "file": "blog\\how-to-check-an-app-idea-against-real-app-store-data-before-you-build-it-1793092942148-1.html",
+    "title": "How to check an app idea against real App Store dat | Aana",
+    "description": "AI made building an app cheap. It didn't make picking the right app cheap. A week spent on an idea the market already owns is still a week g",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/jack_fruit/how-to-check-an-app-idea-against-real-app-store-data-before-you-build-it-4cp0",
+    "image": "https://aanaa.blog/blog/how-to-check-an-app-idea-against-real-app-store-data-before-you-build-it-1793092942148-1/opengraph-image"
+  },
+  {
+    "file": "blog\\huawei-s-starlight-brand-to-debut-with-a-wide-screen-phone-leak-claims-1793265742611-9.html",
+    "title": "Huawei's Starlight brand to debut with a wide-scree | Aana",
+    "description": "Read Huawei's Starlight brand to debut with a wide-screen phone, leak claims and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/huaweis_starlight_brand_to_debut_with_a_widescreen_phone_leak_claims-news-75257.php",
+    "image": "https://aanaa.blog/blog/huawei-s-starlight-brand-to-debut-with-a-wide-screen-phone-leak-claims-1793265742611-9/opengraph-image"
+  },
+  {
+    "file": "blog\\i-asked-eight-models-which-clubs-footballers-played-for-1793352141780-25.html",
+    "title": "I asked eight models which clubs footballers played | Aana",
+    "description": "ExtraTime, my football quiz site, has a database of footballers and every club they played for, checked by hand, because the games depend on it. Career Pa",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/remdore/i-asked-eight-models-which-clubs-footballers-played-for-11kh",
+    "image": "https://aanaa.blog/blog/i-asked-eight-models-which-clubs-footballers-played-for-1793352141780-25/opengraph-image"
+  },
+  {
+    "file": "blog\\i-built-a-free-privacy-first-8th-pay-commission-pension-calculator-as-a-static-site-1793265742747-27.html",
+    "title": "I built a free, privacy-first 8th Pay Commission pe | Aana",
+    "description": "India's 8th Central Pay Commission will revise pensions for roughly 69 lakh central government pensioners. Most \"calculators\" online are ad-heavy, English",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/manish_singh_283b806ee654/i-built-a-free-privacy-first-8th-pay-commission-pension-calculator-as-a-static-site-7l5",
+    "image": "https://aanaa.blog/blog/i-built-a-free-privacy-first-8th-pay-commission-pension-calculator-as-a-static-site-1793265742747-27/opengraph-image"
+  },
+  {
+    "file": "blog\\i-found-a-free-ai-chatbot-that-works-without-wi-fi-and-it-could-be-incredibly-useful-in-an-emergency-1793265742903-45.html",
+    "title": "I found a free AI chatbot that works without Wi-Fi | Aana",
+    "description": "I found a free AI chatbot that works completely offline, giving you access to emergency advice, survival guides and useful informa",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/ai/i-found-a-free-ai-chatbot-that-works-without-wi-fi-and-it-could-be-incredibly-useful-in-an-emergency",
+    "image": "https://aanaa.blog/blog/i-found-a-free-ai-chatbot-that-works-without-wi-fi-and-it-could-be-incredibly-useful-in-an-emergency-1793265742903-45/opengraph-image"
+  },
+  {
+    "file": "blog\\i-got-tired-of-postman-using-1gb-ram-so-i-built-ghostman-tui-api-client-1793352141843-29.html",
+    "title": "I got tired of Postman using 1GB RAM, so I built Gh | Aana",
+    "description": "Hi everyone, Like many developers, I got frustrated with what happened to Postman: it turned from a simple dev tool into a 1GB+ Electron app that for",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/4yk5/i-got-tired-of-postman-using-1gb-ram-so-i-built-ghostman-tui-api-client-2hhe",
+    "image": "https://aanaa.blog/blog/i-got-tired-of-postman-using-1gb-ram-so-i-built-ghostman-tui-api-client-1793352141843-29/opengraph-image"
+  },
+  {
+    "file": "blog\\i-m-trying-the-burrowcore-trend-this-fall-here-are-3-upgrades-to-make-your-home-cozier-from-just-10-1793352141967-36.html",
+    "title": "I'm trying the 'burrowcore' trend this fall — here | Aana",
+    "description": "How I’m keeping my home cozy this fall without cranking up the heat.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/home/im-going-into-hibernation-mode-and-making-my-home-cozy-all-without-turning-up-the-thermostat",
+    "image": "https://aanaa.blog/blog/i-m-trying-the-burrowcore-trend-this-fall-here-are-3-upgrades-to-make-your-home-cozier-from-just-10-1793352141967-36/opengraph-image"
+  },
+  {
+    "file": "blog\\i-put-the-iphone-duo-vs-iphone-18-pro-max-through-a-10-round-camera-face-off-here-s-the-winner-1793092942481-47.html",
+    "title": "I put the iPhone Duo vs. iPhone 18 Pro Max through | Aana",
+    "description": "I captured the same photos with the iPhone Duo and iPhone 18 Pro Max to see which is the better camera phone across various shooti",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/phones/iphones/i-put-the-iphone-duo-vs-iphone-18-pro-max-through-a-10-round-camera-face-off-heres-the-winner",
+    "image": "https://aanaa.blog/blog/i-put-the-iphone-duo-vs-iphone-18-pro-max-through-a-10-round-camera-face-off-here-s-the-winner-1793092942481-47/opengraph-image"
+  },
+  {
+    "file": "blog\\i-used-google-s-ask-maps-feature-to-plan-my-halloween-weekend-festivities-7-events-it-recommended-i-d-actually-attend-1793352141974-37.html",
+    "title": "I used Google’s ‘Ask Maps’ feature to plan my Hallo | Aana",
+    "description": "With Halloween falling on a Saturday this year, I used the ‘Ask Maps’ feature in Google Maps to find out where I should go to have",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/ai/i-used-googles-ask-maps-feature-to-plan-my-halloween-weekend-festivities-7-events-it-recommended-id-actually-attend",
+    "image": "https://aanaa.blog/blog/i-used-google-s-ask-maps-feature-to-plan-my-halloween-weekend-festivities-7-events-it-recommended-i-d-actually-attend-1793352141974-37/opengraph-image"
+  },
+  {
+    "file": "blog\\i-used-the-megu-ai-styling-app-to-solve-my-three-day-clothing-dilemma-and-it-changed-how-i-plan-my-outfits-1793265742643-13.html",
+    "title": "I used the Megu AI styling app to solve my three-da | Aana",
+    "description": "Using the Megu: SI Closet & Planner app exposed me to a method that helps me make better clothing choices and leave my home for sp",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/ai/i-used-the-megu-ai-styling-app-to-solve-my-three-day-clothing-dilemma-and-it-changed-how-i-plan-my-outfits",
+    "image": "https://aanaa.blog/blog/i-used-the-megu-ai-styling-app-to-solve-my-three-day-clothing-dilemma-and-it-changed-how-i-plan-my-outfits-1793265742643-13/opengraph-image"
+  },
+  {
+    "file": "blog\\i-ve-tested-the-iphone-duo-galaxy-z-fold-8-pixel-11-pro-fold-and-razr-fold-here-s-the-foldable-phone-i-recommend-1793265742889-43.html",
+    "title": "I’ve tested the iPhone Duo, Galaxy Z Fold 8, Pixel | Aana",
+    "description": "After putting the iPhone Duo, Galaxy Z Fold 8, Z Fold 8 Ultra, Razr Fold, and Pixel 11 Pro Fold to the test, there's only one fold",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/phones/ive-tested-the-iphone-duo-galaxy-z-fold-8-pixel-11-pro-fold-and-razr-fold-heres-the-foldable-phone-i-recommend",
+    "image": "https://aanaa.blog/blog/i-ve-tested-the-iphone-duo-galaxy-z-fold-8-pixel-11-pro-fold-and-razr-fold-here-s-the-foldable-phone-i-recommend-1793265742889-43/opengraph-image"
+  },
+  {
+    "file": "blog\\in-the-era-of-folding-glass-and-endless-feeds-apple-s-ipod-easter-egg-hits-differently-1793092942338-24.html",
+    "title": "In the era of folding glass and endless feeds, Appl | Aana",
+    "description": "Apple’s interactive 2001 iPod easter egg reminds us of tech’s greatest lost luxury: a device that played your music and left you a",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/computing/in-the-era-of-folding-glass-and-endless-feeds-apples-ipod-easter-egg-hits-differently",
+    "image": "https://aanaa.blog/blog/in-the-era-of-folding-glass-and-endless-feeds-apple-s-ipod-easter-egg-hits-differently-1793092942338-24/opengraph-image"
+  },
+  {
+    "file": "blog\\india-s-smartphone-market-just-had-its-worst-quarter-in-a-decade-counterpoint-says-1793092942425-38.html",
+    "title": "India's smartphone market just had its worst quarte | Aana",
+    "description": "Read India's smartphone market just had its worst quarter in a decade, Counterpoint says and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/indias_smartphone_market_just_had_its_worst_quarter_in_a_decade_counterpoint_says-news-75216.php",
+    "image": "https://aanaa.blog/blog/india-s-smartphone-market-just-had-its-worst-quarter-in-a-decade-counterpoint-says-1793092942425-38/opengraph-image"
+  },
+  {
+    "file": "blog\\indian-it-firms-poised-to-benefit-from-enterprise-ai-adoption-as-infrastructure-costs-rise-report-1793179342203-27.html",
+    "title": "Indian IT firms poised to benefit from enterprise A | Aana",
+    "description": "Indian information technology (IT) companies are well-positioned to benefit from the growing adoption of artificial intelligence (AI) by enterprises, as r",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/information-tech/indian-it-firms-poised-to-benefit-from-enterprise-ai-adoption-as-infrastructure-costs-rise-report/articleshow/135253790.cms",
+    "image": "https://aanaa.blog/blog/indian-it-firms-poised-to-benefit-from-enterprise-ai-adoption-as-infrastructure-costs-rise-report-1793179342203-27/opengraph-image"
+  },
+  {
+    "file": "blog\\infinix-gt-50-pro-launched-at-nearly-thrice-the-gt-30-pro-s-launch-price-specs-gaming-accessories-and-more-1793092942254-15.html",
+    "title": "Infinix GT 50 Pro launched at nearly thrice the GT | Aana",
+    "description": "Infinix has expanded its GT-series in India with the launch of the GT 50 Pro. The latest gaming smartphone comes with a 6.78-inch AMOLED, a MediaTek Dimen",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/mobile-phones/infinix-gt-50-pro-with-gaming-accessories-launched-in-india-check-price-specs-and-other-details.html",
+    "image": "https://aanaa.blog/blog/infinix-gt-50-pro-launched-at-nearly-thrice-the-gt-30-pro-s-launch-price-specs-gaming-accessories-and-more-1793092942254-15/opengraph-image"
+  },
+  {
+    "file": "blog\\infosys-s-5-2-billion-deal-wins-fail-to-lift-fy27-outlook-1793092942309-23.html",
+    "title": "Infosys’s $5.2 Billion Deal Wins Fail to Lift FY27 | Aana",
+    "description": "Infosys cut FY27 guidance to 1%-2% despite $5.2 billion in large deals and AI at 10.5% of revenue, as its largest new deal ramps up only next year.",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/it-services/infosyss-52-billion-deal-wins-fail-to-lift-fy27-outlook",
+    "image": "https://aanaa.blog/blog/infosys-s-5-2-billion-deal-wins-fail-to-lift-fy27-outlook-1793092942309-23/opengraph-image"
+  },
+  {
+    "file": "blog\\intel-forecast-disappoints-as-israel-fab-blast-pc-weakness-weigh-1793352141773-24.html",
+    "title": "Intel forecast disappoints as Israel fab blast, PC | Aana",
+    "description": "The guidance could test confidence in a stock that has more than doubled this year, as investors weigh ongoing manufacturing constraints and soft PC deman",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/intel-forecast-disappoints-as-israel-fab-blast-pc-weakness-weigh/articleshow/135350115.cms",
+    "image": "https://aanaa.blog/blog/intel-forecast-disappoints-as-israel-fab-blast-pc-weakness-weigh-1793352141773-24/opengraph-image"
+  },
+  {
+    "file": "blog\\investigating-a-traffic-spike-with-vercel-analytics-and-first-party-events-1793352141870-32.html",
+    "title": "Investigating a traffic spike with Vercel Analytics | Aana",
+    "description": "A traffic spike on a small website can be surprisingly difficult to explain. On October 28, my text graphics tool,",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/luhw/investigating-a-traffic-spike-with-vercel-analytics-and-first-party-events-k09",
+    "image": "https://aanaa.blog/blog/investigating-a-traffic-spike-with-vercel-analytics-and-first-party-events-1793352141870-32/opengraph-image"
+  },
+  {
+    "file": "blog\\ios-27-2-brings-two-new-features-to-apple-s-carplay-1793179342057-10.html",
+    "title": "iOS 27.2 brings two new features to Apple's CarPlay | Aana",
+    "description": "iOS 27.2 comes with some changes for Apple CarPlay, too.",
+    "robots": "index, follow",
+    "canonical": "https://www.engadget.com/2299185/ios-27-2-two-new-features-apple-carplay/",
+    "image": "https://aanaa.blog/blog/ios-27-2-brings-two-new-features-to-apple-s-carplay-1793179342057-10/opengraph-image"
+  },
+  {
+    "file": "blog\\ios-27-2-update-rolling-out-with-these-new-features-1793092942130-0.html",
+    "title": "iOS 27.2 update rolling out with these new features | Aana",
+    "description": "Read iOS 27.2 update rolling out with these new features and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/ios_272_update_rolling_out_with_these_new_features-news-75220.php",
+    "image": "https://aanaa.blog/blog/ios-27-2-update-rolling-out-with-these-new-features-1793092942130-0/opengraph-image"
+  },
+  {
+    "file": "blog\\iphone-air-2-specs-surface-again-in-new-leak-1793352141616-2.html",
+    "title": "iPhone Air 2 specs surface again in new leak | Aana",
+    "description": "Read iPhone Air 2 specs surface again in new leak and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/iphone_air_2_specs_surface_again_in_new_leak-news-75274.php",
+    "image": "https://aanaa.blog/blog/iphone-air-2-specs-surface-again-in-new-leak-1793352141616-2/opengraph-image"
+  },
+  {
+    "file": "blog\\iphone-duo-now-supports-apple-pencil-with-ios-27-2-1793092942388-32.html",
+    "title": "iPhone Duo now supports Apple Pencil with iOS 27.2 | Aana",
+    "description": "Read iPhone Duo now supports Apple Pencil with iOS 27.2 and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.theverge.com/tech/1018827/ios-27-2-iphone-duo-apple-pencil",
+    "image": "https://aanaa.blog/blog/iphone-duo-now-supports-apple-pencil-with-ios-27-2-1793092942388-32/opengraph-image"
+  },
+  {
+    "file": "blog\\iphone-lockdown-mode-the-pros-and-cons-of-enabling-apple-s-security-feature-1793092942450-42.html",
+    "title": "iPhone Lockdown Mode: The pros and cons of enabling | Aana",
+    "description": "Lockdown Mode enables extreme protections for those most at risk, but it's overkill for most people.",
+    "robots": "index, follow",
+    "canonical": "https://www.engadget.com/2295333/iphone-lockdown-mode-pros-cons/",
+    "image": "https://aanaa.blog/blog/iphone-lockdown-mode-the-pros-and-cons-of-enabling-apple-s-security-feature-1793092942450-42/opengraph-image"
+  },
+  {
+    "file": "blog\\iqoo-16-india-launch-date-tipped-check-expected-specs-price-and-more-1793265742664-16.html",
+    "title": "iQOO 16 India launch date tipped: Check expected sp | Aana",
+    "description": "iQOO is reportedly gearing up to unveil its next-generation flagship device in the Indian market. While the company has not yet officially announced anyth",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/mobile-phones/iqoo-16-india-launch-date-tipped-check-expected-specs-price-and-more.html",
+    "image": "https://aanaa.blog/blog/iqoo-16-india-launch-date-tipped-check-expected-specs-price-and-more-1793265742664-16/opengraph-image"
+  },
+  {
+    "file": "blog\\iqoo-pad-pro-brings-the-ultra-s-165hz-screen-and-big-battery-for-less-1793265742896-44.html",
+    "title": "iQOO Pad Pro brings the Ultra's 165Hz screen and bi | Aana",
+    "description": "Read iQOO Pad Pro brings the Ultra's 165Hz screen and big battery for less and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/iqoo_pad_pro_brings_the_ultras_165hz_screen_and_big_battery_for_less-news-75252.php",
+    "image": "https://aanaa.blog/blog/iqoo-pad-pro-brings-the-ultra-s-165hz-screen-and-big-battery-for-less-1793265742896-44/opengraph-image"
+  },
+  {
+    "file": "blog\\iran-claims-four-tankers-struck-mines-in-hormuz-as-strike-fears-grow-after-u-s-midterms-1793352141727-17.html",
+    "title": "Iran claims four tankers struck mines in Hormuz as | Aana",
+    "description": "Iran said four tankers struck mines in the Strait of Hormuz, while Tehran disputed a U.S. claim that key shipping lanes had been cleared.",
+    "robots": "index, follow",
+    "canonical": "https://www.cnbc.com/2026/10/30/iran-trump-hormuz-oil-middle-east-.html",
+    "image": "https://aanaa.blog/blog/iran-claims-four-tankers-struck-mines-in-hormuz-as-strike-fears-grow-after-u-s-midterms-1793352141727-17/opengraph-image"
+  },
+  {
+    "file": "blog\\is-your-iphone-listening-to-you-the-live-listen-setting-you-should-check-right-now-1793265742679-18.html",
+    "title": "Is your iPhone listening to you? The 'live listen' | Aana",
+    "description": "Why everyone is panicking about iPhone’s 'live listen' feature — and what it actually does.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/phones/iphones/is-your-iphone-listening-to-you-the-live-listen-setting-you-should-check-right-now",
+    "image": "https://aanaa.blog/blog/is-your-iphone-listening-to-you-the-live-listen-setting-you-should-check-right-now-1793265742679-18/opengraph-image"
+  },
+  {
+    "file": "blog\\israel-election-appears-to-have-no-clear-winner-with-netanyahu-opponent-eisenkot-far-short-of-majorities-1793179342323-41.html",
+    "title": "Israel election appears to have no clear winner wit | Aana",
+    "description": "Exit polls show Prime Minister Benjamin Netanyahu's alliance and Gadi Eisenkot's opposition bloc both well off the numbers needed to form a governing majo",
+    "robots": "index, follow",
+    "canonical": "https://www.cnbc.com/2026/10/28/israel-election-netanyahu-trump-gaza-.html",
+    "image": "https://aanaa.blog/blog/israel-election-appears-to-have-no-clear-winner-with-netanyahu-opponent-eisenkot-far-short-of-majorities-1793179342323-41/opengraph-image"
+  },
+  {
+    "file": "blog\\israel-faces-weeks-of-coalition-haggling-as-netanyahu-s-party-claims-election-stolen-1793352142034-46.html",
+    "title": "Israel faces weeks of coalition haggling as Netanya | Aana",
+    "description": "Israel's election leaves the country facing weeks of coalition bargaining and an uphill battle for the opposition party to form a majority government.",
+    "robots": "index, follow",
+    "canonical": "https://www.cnbc.com/2026/10/30/israel-election-netanyahu-eisenkot-coalition-talks-.html",
+    "image": "https://aanaa.blog/blog/israel-faces-weeks-of-coalition-haggling-as-netanyahu-s-party-claims-election-stolen-1793352142034-46/opengraph-image"
+  },
+  {
+    "file": "blog\\jamie-dornan-boards-nostalgie-starring-aidan-gillen-as-washed-up-pop-star-as-executive-producer-exclusive-1793352141720-16.html",
+    "title": "Jamie Dornan Boards ‘Nostalgie,’ Starring Aidan Gil | Aana",
+    "description": "Kathryn Ferguson’s IFTA-winning short film features original music by Bastille’s Dan Smith and cinematography by two-time Oscar nominee Robbie Ryan.",
+    "robots": "index, follow",
+    "canonical": "https://www.hollywoodreporter.com/movies/movie-news/jamie-dornan-short-film-nostalgie-executive-producer-1236742889/",
+    "image": "https://aanaa.blog/blog/jamie-dornan-boards-nostalgie-starring-aidan-gillen-as-washed-up-pop-star-as-executive-producer-exclusive-1793352141720-16/opengraph-image"
+  },
+  {
+    "file": "blog\\jefferson-on-down-year-amid-vikes-6-0-start-what-we-re-doing-is-working-1793265742932-49.html",
+    "title": "Jefferson on down year amid Vikes' 6-0 start: 'What | Aana",
+    "description": "Justin Jefferson, whose 23 catches are a career low through the first seven weeks of a season, said ultimately what the 6-0 Vikings are doing now \"is work",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/nfl/story/_/id/50311965/justin-jefferson-addresses-year-amid-vikings-6-0-start",
+    "image": "https://aanaa.blog/blog/jefferson-on-down-year-amid-vikes-6-0-start-what-we-re-doing-is-working-1793265742932-49/opengraph-image"
+  },
+  {
+    "file": "blog\\jio-vs-airtel-vs-vi-1793179342216-28.html",
+    "title": "Jio vs Airtel vs Vi: किसके रिचार्ज में मिल रहे हैं | Aana",
+    "description": "अब टेलीकॉम कंपनियां सिर्फ कॉल, एसएमएस और इंटरनेट की ही सुविधा देने तक सीमित नहीं रह गईं हैं। जियो हो या एयरटेल या फिर वोडाफोन, सभी टेलीकॉम कंपनियां अलग-अल",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/hi/features/telecom/jio-vs-airtel-vs-vi-recharge-plans-free-ott-ai-premium-subscriptions.html",
+    "image": "https://aanaa.blog/blog/jio-vs-airtel-vs-vi-1793179342216-28/opengraph-image"
+  },
+  {
+    "file": "blog\\ki-m-tra-ai-crawler-c-c-c-site-kh-ng-robots-txt-html-ban-u-v-log-server-1793265742633-12.html",
+    "title": "Kiểm tra AI crawler có đọc được site không: robots. | Aana",
+    "description": "Tuần trước một người quen nhờ mình xem vì sao ChatGPT trả lời về công ty anh ấy toàn thông tin cũ. Nội dung không sai, schema cũng có. Kiểm tra một lúc mớ",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/manhdigital68/kiem-tra-ai-crawler-co-doc-duoc-site-khong-robotstxt-html-ban-dau-va-log-server-3cc6",
+    "image": "https://aanaa.blog/blog/ki-m-tra-ai-crawler-c-c-c-site-kh-ng-robots-txt-html-ban-u-v-log-server-1793265742633-12/opengraph-image"
+  },
+  {
+    "file": "blog\\killing-duplicate-telegram-posts-with-idempotent-sends-and-rate-limits-1793352141667-9.html",
+    "title": "Killing duplicate Telegram posts with idempotent se | Aana",
+    "description": "Our channel bot used to publish the same announcement twice, sometimes three times. Not because the code was clever — because it was naive: a retry after",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/qunirice_verase_1ab0caeba/killing-duplicate-telegram-posts-with-idempotent-sends-and-rate-limits-5aif",
+    "image": "https://aanaa.blog/blog/killing-duplicate-telegram-posts-with-idempotent-sends-and-rate-limits-1793352141667-9/opengraph-image"
+  },
+  {
+    "file": "blog\\letting-claude-maintain-wordpress-sites-without-giving-it-ssh-access-1793265742572-4.html",
+    "title": "Letting Claude maintain WordPress sites without giv | Aana",
+    "description": "I look after WordPress sites for a living, and lately I've wanted Claude to take over the boring parts: find where a piece of text lives in a theme, fix i",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/pressbridgesupport/letting-claude-maintain-wordpress-sites-without-giving-it-ssh-access-l6",
+    "image": "https://aanaa.blog/blog/letting-claude-maintain-wordpress-sites-without-giving-it-ssh-access-1793265742572-4/opengraph-image"
+  },
+  {
+    "file": "blog\\m6-imac-vs-m4-imac-is-apple-s-latest-all-in-one-actually-worth-the-upgrade-1793179342080-13.html",
+    "title": "M6 iMac vs M4 iMac: Is Apple’s latest all-in-one ac | Aana",
+    "description": "The ultimate all-in-one just got an upgrade: the M6 iMac is here. But if you already have the M4 model, is this worth the upgrade?",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/computing/apple-desktops/imac-m6-vs-imac-m4",
+    "image": "https://aanaa.blog/blog/m6-imac-vs-m4-imac-is-apple-s-latest-all-in-one-actually-worth-the-upgrade-1793179342080-13/opengraph-image"
+  },
+  {
+    "file": "blog\\macbook-pro-m6-vs-macbook-pro-m5-biggest-upgrades-you-need-to-know-1793179342294-37.html",
+    "title": "MacBook Pro M6 vs MacBook Pro M5: Biggest upgrades | Aana",
+    "description": "The MacBook Pro M6 was just announced, but should you upgrade from the M5 model? We explain the differences to help you decide.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/computing/macbooks/macbook-pro-m6-vs-macbook-pro-m5-biggest-upgrades-you-need-to-know",
+    "image": "https://aanaa.blog/blog/macbook-pro-m6-vs-macbook-pro-m5-biggest-upgrades-you-need-to-know-1793179342294-37/opengraph-image"
+  },
+  {
+    "file": "blog\\major-chinese-brands-drop-mbapp-as-backlash-grows-over-mao-joke-1793092942382-31.html",
+    "title": "Major Chinese brands drop Mbappé as backlash grows | Aana",
+    "description": "He allegedly said his \"favourite meme\" is \"the one where they put my face on a Chinese dictator\".",
+    "robots": "index, follow",
+    "canonical": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
+    "image": "https://aanaa.blog/blog/major-chinese-brands-drop-mbapp-as-backlash-grows-over-mao-joke-1793092942382-31/opengraph-image"
+  },
+  {
+    "file": "blog\\mastering-mobile-tech-trends-2026-free-up-android-space-boost-wordpress-scores-1tb-phones-huawei-pura-90-plus-stats-help-for-grad-students-1792920154446.html",
+    "title": "Mastering Mobile & Tech Trends 2026: Free Up Androi | Aana",
+    "description": "Explore practical Android storage hacks, unconventional WordPress performance tricks, the best 1TB smartphones in India, a sneak peek at Huawei's AI‑drive",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/blog/mastering-mobile-tech-trends-2026-free-up-android-space-boost-wordpress-scores-1tb-phones-huawei-pura-90-plus-stats-help-for-grad-students-1792920154446",
+    "image": "https://aanaa.blog/blog/mastering-mobile-tech-trends-2026-free-up-android-space-boost-wordpress-scores-1tb-phones-huawei-pura-90-plus-stats-help-for-grad-students-1792920154446/opengraph-image"
+  },
+  {
+    "file": "blog\\mirzapur-tops-a-decade-of-indian-streaming-as-new-commissions-fall-imdb-report-finds-exclusive-1793092942400-34.html",
+    "title": "‘Mirzapur’ Tops a Decade of Indian Streaming as New | Aana",
+    "description": "Viewer interest in Indian shows on IMDb rose about 17-fold over the past decade, even as the number of new shows and seasons commissioned in the country h",
+    "robots": "index, follow",
+    "canonical": "https://variety.com/2026/tv/news/mirzapur-indian-streaming-commissions-fall-imdb-report-1236931765/",
+    "image": "https://aanaa.blog/blog/mirzapur-tops-a-decade-of-indian-streaming-as-new-commissions-fall-imdb-report-finds-exclusive-1793092942400-34/opengraph-image"
+  },
+  {
+    "file": "blog\\moto-g47-power-arrives-with-a-7-000-mah-battery-and-faster-charging-1793179342316-40.html",
+    "title": "Moto G47 Power arrives with a 7,000 mAh battery and | Aana",
+    "description": "Read Moto G47 Power arrives with a 7,000 mAh battery and faster charging and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/moto_g47_power_arrives_with_a_7000_mah_battery_and_faster_charging-news-75236.php",
+    "image": "https://aanaa.blog/blog/moto-g47-power-arrives-with-a-7-000-mah-battery-and-faster-charging-1793179342316-40/opengraph-image"
+  },
+  {
+    "file": "blog\\motorola-confirms-the-signature-27-s-exact-launch-date-1793352141733-18.html",
+    "title": "Motorola confirms the Signature 27's exact launch d | Aana",
+    "description": "Read Motorola confirms the Signature 27's exact launch date and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/motorola_confirms_the_exact_signature_27_launch_date-news-75275.php",
+    "image": "https://aanaa.blog/blog/motorola-confirms-the-signature-27-s-exact-launch-date-1793352141733-18/opengraph-image"
+  },
+  {
+    "file": "blog\\motorola-edge-70-neo-tipped-to-launch-with-7-000mah-battery-check-expected-india-launch-timeline-price-and-specs-1793092942376-30.html",
+    "title": "Motorola Edge 70 Neo tipped to launch with 7,000mAh | Aana",
+    "description": "Motorola is reportedly gearing up to expand its Edge 70 series in India and global markets with the upcoming Motorola Edge 70 Neo. The smartphone will be",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/mobile-phones/motorola-edge-70-neo-tipped-to-launch-with-7000mah-battery-check-expected-india-launch-timeline-price-and-specs.html",
+    "image": "https://aanaa.blog/blog/motorola-edge-70-neo-tipped-to-launch-with-7-000mah-battery-check-expected-india-launch-timeline-price-and-specs-1793092942376-30/opengraph-image"
+  },
+  {
+    "file": "blog\\motorola-edge-70-pro-starts-receiving-the-update-to-android-17-1793265742650-14.html",
+    "title": "Motorola Edge 70 Pro starts receiving the update to | Aana",
+    "description": "Read Motorola Edge 70 Pro starts receiving the update to Android 17 and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/motorola_edge_70_pro_starts_receiving_android_17-news-75253.php",
+    "image": "https://aanaa.blog/blog/motorola-edge-70-pro-starts-receiving-the-update-to-android-17-1793265742650-14/opengraph-image"
+  },
+  {
+    "file": "blog\\moving-data-between-shopify-stores-is-more-complicated-than-it-should-be-1793265742672-17.html",
+    "title": "Moving Data Between Shopify Stores Is More Complica | Aana",
+    "description": "One thing that can be frustrating when running a Shopify store is moving data from one store to another.",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/tarun_narwariya_a88f13137/moving-data-between-shopify-stores-is-more-complicated-than-it-should-be-4aa5",
+    "image": "https://aanaa.blog/blog/moving-data-between-shopify-stores-is-more-complicated-than-it-should-be-1793265742672-17/opengraph-image"
+  },
+  {
+    "file": "blog\\multi-agent-system-for-business-when-to-build-a-team-1793179342354-45.html",
+    "title": "Multi-agent system for business: when to build a te | Aana",
+    "description": "If there are only a few tasks and scenarios, one general-purpose AI agent is enough. There's no need to create a complex architecture for that. When the w",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/matintellect/multi-agent-system-for-business-when-to-build-a-team-41cm",
+    "image": "https://aanaa.blog/blog/multi-agent-system-for-business-when-to-build-a-team-1793179342354-45/opengraph-image"
+  },
+  {
+    "file": "blog\\netflix-docuseries-the-one-about-matthew-perry-is-a-tragic-mournful-portrait-of-addiction-tv-review-1793092942212-9.html",
+    "title": "Netflix Docuseries ‘The One About Matthew Perry’ Is | Aana",
+    "description": "There are not a lot of famous people in “The One About Matthew Perry.” None of the late actor’s “Friends” castmates sat for an interview for the three-par",
+    "robots": "index, follow",
+    "canonical": "https://variety.com/2026/tv/reviews/the-one-about-matthew-perry-review-netflix-1236931448/",
+    "image": "https://aanaa.blog/blog/netflix-docuseries-the-one-about-matthew-perry-is-a-tragic-mournful-portrait-of-addiction-tv-review-1793092942212-9/opengraph-image"
+  },
+  {
+    "file": "blog\\new-epfo-rules-pf-1793352141795-27.html",
+    "title": "New EPFO rules: உங்களின் PF சேமிப்பு அக்கவுண்டிலிரு | Aana",
+    "description": "ஊழியர் வருங்கால வைப்பு நிதி அமைப்பு (EPFO) பணம் எடுப்பதற்கு புதிய விதிமுறை கொண்டுவரப்பட்டுள்ளது. இந்த புதிய விதிமுறையின் படி PF பணம் எடுப்பதற்கு விதிமுறை",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/ta/features/general/new-epfo-rules-how-many-times-can-you-withdraw-money-from-pf-know-everything.html",
+    "image": "https://aanaa.blog/blog/new-epfo-rules-pf-1793352141795-27/opengraph-image"
+  },
+  {
+    "file": "blog\\new-iphone-18e-leak-covers-its-chip-cameras-and-display-1793179342065-11.html",
+    "title": "New iPhone 18e leak covers its chip, cameras, and d | Aana",
+    "description": "Read New iPhone 18e leak covers its chip, cameras, and display and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/new_iphone_18e_leak_covers_its_chip_cameras_and_display-news-75230.php",
+    "image": "https://aanaa.blog/blog/new-iphone-18e-leak-covers-its-chip-cameras-and-display-1793179342065-11/opengraph-image"
+  },
+  {
+    "file": "blog\\new-models-move-fast-your-api-integration-should-not-need-to-start-over-1793352141584-0.html",
+    "title": "New Models Move Fast. Your API Integration Should N | Aana",
+    "description": "Read New Models Move Fast. Your API Integration Should Not Need to Start Over and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/relayrouter/new-models-move-fast-your-api-integration-should-not-need-to-start-over-4b4o",
+    "image": "https://aanaa.blog/blog/new-models-move-fast-your-api-integration-should-not-need-to-start-over-1793352141584-0/opengraph-image"
+  },
+  {
+    "file": "blog\\new-on-hbo-max-in-november-2026-all-the-new-shows-and-movies-to-watch-1793265742826-34.html",
+    "title": "New on HBO Max in November 2026: All the new shows | Aana",
+    "description": "There's a ton of new stuff to watch on HBO Max this November, so we've rounded up some of our favorites along with the complete li",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/entertainment/hbo-max/new-on-hbo-max-in-november-2026-all-the-new-shows-and-movies-to-watch",
+    "image": "https://aanaa.blog/blog/new-on-hbo-max-in-november-2026-all-the-new-shows-and-movies-to-watch-1793265742826-34/opengraph-image"
+  },
+  {
+    "file": "blog\\new-on-netflix-in-november-2026-5-best-movies-and-shows-to-stream-plus-full-release-list-1793179342009-4.html",
+    "title": "New on Netflix in November 2026: 5 best movies and | Aana",
+    "description": "Netflix has confirmed its slate for November 2026, and it includes new TV shows and movies alongside plenty of returning favorites",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/entertainment/netflix/new-on-netflix-in-november-2026-5-best-movies-and-shows-to-stream-plus-full-release-list",
+    "image": "https://aanaa.blog/blog/new-on-netflix-in-november-2026-5-best-movies-and-shows-to-stream-plus-full-release-list-1793179342009-4/opengraph-image"
+  },
+  {
+    "file": "blog\\new-on-peacock-in-november-2026-all-the-new-shows-and-movies-to-watch-1793352141767-23.html",
+    "title": "New on Peacock in November 2026: All the new shows | Aana",
+    "description": "Our guide to all the new movies and shows coming to Peacock in November 2026.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/entertainment/peacock/new-on-peacock-in-november-2026-all-the-new-shows-and-movies-to-watch",
+    "image": "https://aanaa.blog/blog/new-on-peacock-in-november-2026-all-the-new-shows-and-movies-to-watch-1793352141767-23/opengraph-image"
+  },
+  {
+    "file": "blog\\new-york-passes-law-restricting-children-s-use-of-ai-chatbots-1793265742604-8.html",
+    "title": "New York passes law restricting children's use of A | Aana",
+    "description": "The governor of New York state signed a new law Wednesday preventing minors from using AI chatbots that act as companions, in one of the broadest moves ye",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/new-york-passes-law-restricting-childrens-use-of-ai-chatbots/articleshow/135289429.cms",
+    "image": "https://aanaa.blog/blog/new-york-passes-law-restricting-children-s-use-of-ai-chatbots-1793265742604-8/opengraph-image"
+  },
+  {
+    "file": "blog\\nfl-power-rankings-updated-1-32-poll-plus-best-offseason-additions-1793179342250-31.html",
+    "title": "🏈 NFL Power Rankings: Updated 1-32 poll, plus best | Aana",
+    "description": "How does every NFL team stack up heading into Week 8? We made our 1-32 list and picked the best offseason additions -- coach or players -- for every team.",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/nfl/story/_/id/50288293/nfl-power-rankings-week-8-teams-best-offseason-additions",
+    "image": "https://aanaa.blog/blog/nfl-power-rankings-updated-1-32-poll-plus-best-offseason-additions-1793179342250-31/opengraph-image"
+  },
+  {
+    "file": "blog\\noel-tata-challenges-resolution-to-reappoint-chandrasekaran-as-tata-sons-chairman-1793092942282-19.html",
+    "title": "Noel Tata challenges resolution to reappoint Chandr | Aana",
+    "description": "Noel Tata wrote to Tata Sons' company secretary Suprakash Mukhopadhyay on Monday, challenging the resolution for the reappointment of Chandrasekaran beyon",
+    "robots": "index, follow",
+    "canonical": "https://yourstory.com/2026/10/noel-tata-challenges-resolution-reappoint-chandrasekaran-tata-sons-chairman",
+    "image": "https://aanaa.blog/blog/noel-tata-challenges-resolution-to-reappoint-chandrasekaran-as-tata-sons-chairman-1793092942282-19/opengraph-image"
+  },
+  {
+    "file": "blog\\nordstrom-s-fall-sale-just-dropped-snag-60-percent-off-tory-burch-shoes-saint-laurent-sunglasses-and-more-1793179342376-48.html",
+    "title": "Nordstrom’s Fall Sale Just Dropped: Snag 60 Percent | Aana",
+    "description": "Presenting the 17 most unbeatable markdowns across premium beauty, designer footwear, best-selling basics and the season's hottest handbags.",
+    "robots": "index, follow",
+    "canonical": "https://www.hollywoodreporter.com/lifestyle/shopping/nordstrom-fall-clearance-sale-2026-dates-shop-savings-event-1236741222/",
+    "image": "https://aanaa.blog/blog/nordstrom-s-fall-sale-just-dropped-snag-60-percent-off-tory-burch-shoes-saint-laurent-sunglasses-and-more-1793179342376-48/opengraph-image"
+  },
+  {
+    "file": "blog\\now-is-the-perfect-time-for-samsung-to-release-a-cheaper-galaxy-z-fold-9-fe-and-it-s-all-because-of-iphone-duo-1793352141685-11.html",
+    "title": "Now is the perfect time for Samsung to release a ch | Aana",
+    "description": "Samsung could be preparing to release a cheaper version of the Galaxy Z Fold 9 — and the timing couldn't be better.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/phones/samsung-phones/now-is-the-perfect-time-for-samsung-to-release-a-cheaper-galaxy-z-fold-9-fe-and-its-all-because-of-iphone-duo",
+    "image": "https://aanaa.blog/blog/now-is-the-perfect-time-for-samsung-to-release-a-cheaper-galaxy-z-fold-9-fe-and-it-s-all-because-of-iphone-duo-1793352141685-11/opengraph-image"
+  },
+  {
+    "file": "blog\\nvidia-s-web-of-ai-bets-smart-strategy-or-bubble-risk-1793352141826-28.html",
+    "title": "Nvidia's web of AI bets: smart strategy or bubble r | Aana",
+    "description": "Nvidia's $3 billion investment in Meta's share sale, announced Tuesday, is the latest addition to a portfolio of stakes, loans and guarantees that has mad",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidias-web-of-ai-bets-smart-strategy-or-bubble-risk/articleshow/135343465.cms",
+    "image": "https://aanaa.blog/blog/nvidia-s-web-of-ai-bets-smart-strategy-or-bubble-risk-1793352141826-28/opengraph-image"
+  },
+  {
+    "file": "blog\\odd-lots-what-cybersecurity-means-in-the-age-of-ai-podcast-1793352141698-13.html",
+    "title": "Odd Lots: What Cybersecurity Means in the Age of AI | Aana",
+    "description": "Earlier this year, cybersecurity researchers discovered a vulnerability in PHP, an open-source coding language used in roughly 70% of the world's websites",
+    "robots": "index, follow",
+    "canonical": "https://www.bloomberg.com/news/audio/2026-10-30/odd-lots-what-cybersecurity-means-in-the-age-of-ai-podcast",
+    "image": "https://aanaa.blog/blog/odd-lots-what-cybersecurity-means-in-the-age-of-ai-podcast-1793352141698-13/opengraph-image"
+  },
+  {
+    "file": "blog\\oil-falls-as-renewed-diplomatic-efforts-to-end-mideast-conflict-ease-supply-concerns-1793092942419-37.html",
+    "title": "Oil falls as renewed diplomatic efforts to end Mide | Aana",
+    "description": "Renewed diplomatic efforts to end the U.S.-Israeli war with Iran pushed oil prices lower",
+    "robots": "index, follow",
+    "canonical": "https://www.cnbc.com/2026/10/27/oil-today-iran-us-crude-wti-brent-trump.html",
+    "image": "https://aanaa.blog/blog/oil-falls-as-renewed-diplomatic-efforts-to-end-mideast-conflict-ease-supply-concerns-1793092942419-37/opengraph-image"
+  },
+  {
+    "file": "blog\\oil-prices-rise-as-houthi-attacks-on-saudi-arabian-refinery-raise-supply-worries-1793179342361-46.html",
+    "title": "Oil prices rise as Houthi attacks on Saudi Arabian | Aana",
+    "description": "Oil prices climbed Wednesday as investors weighed the prospect of a prolonged conflict in the Middle East.",
+    "robots": "index, follow",
+    "canonical": "https://www.cnbc.com/2026/10/28/oil-price-today-wti-brent-hormuz.html",
+    "image": "https://aanaa.blog/blog/oil-prices-rise-as-houthi-attacks-on-saudi-arabian-refinery-raise-supply-worries-1793179342361-46/opengraph-image"
+  },
+  {
+    "file": "blog\\oneplus-16-vs-iphone-17-vs-vivo-x300-fe-expected-price-in-india-battery-chip-camera-and-other-differences-1793265742580-5.html",
+    "title": "OnePlus 16 vs iPhone 17 vs Vivo X300 FE: Expected p | Aana",
+    "description": "OnePlus launched its OnePlus 16 smartphone in China earlier this month. While the brand remains silent on an India debut, the rumour mill continues to chu",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/mobile-phones/oneplus-16-vs-iphone-17-vs-vivo-x300-fe-expected-price-in-india-battery-performance-camera-and-other-differences.html",
+    "image": "https://aanaa.blog/blog/oneplus-16-vs-iphone-17-vs-vivo-x300-fe-expected-price-in-india-battery-chip-camera-and-other-differences-1793265742580-5/opengraph-image"
+  },
+  {
+    "file": "blog\\openai-announces-three-big-science-discoveries-and-a-new-way-to-work-with-academics-1793092942412-36.html",
+    "title": "OpenAI announces three big science discoveries and | Aana",
+    "description": "Read OpenAI announces three big science discoveries and a new way to work with academics and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics",
+    "image": "https://aanaa.blog/blog/openai-announces-three-big-science-discoveries-and-a-new-way-to-work-with-academics-1793092942412-36/opengraph-image"
+  },
+  {
+    "file": "blog\\openai-cli-install-it-and-call-the-openai-api-from-your-terminal-1793179341936-0.html",
+    "title": "OpenAI CLI: Install It and Call the OpenAI API From | Aana",
+    "description": "The OpenAI CLI is OpenAI's official command-line tool for the OpenAI REST API. You install one openai binary, set OPENAI_API_KEY , a",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/hassann/openai-cli-install-it-and-call-the-openai-api-from-your-terminal-4cj5",
+    "image": "https://aanaa.blog/blog/openai-cli-install-it-and-call-the-openai-api-from-your-terminal-1793179341936-0/opengraph-image"
+  },
+  {
+    "file": "blog\\openai-cli-kurulumu-ve-terminalden-openai-api-a-r-s-1793179341979-1.html",
+    "title": "OpenAI CLI: Kurulumu ve Terminalden OpenAI API Çağr | Aana",
+    "description": "OpenAI CLI, OpenAI'nin OpenAI REST API'si için resmi komut satırı aracıdır. Tek bir openai ikili dosyası kurar, OPENAI_API_KEY değe",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/tobiass_hoffmann/openai-cli-kurulumu-ve-terminalden-openai-api-cagrisi-42a1",
+    "image": "https://aanaa.blog/blog/openai-cli-kurulumu-ve-terminalden-openai-api-a-r-s-1793179341979-1/opengraph-image"
+  },
+  {
+    "file": "blog\\openai-launches-gpt-6-1-terra-with-50-lower-api-prices-resumes-frontier-ai-training-1793092942219-10.html",
+    "title": "OpenAI Launches GPT-6.1 Terra With 50% Lower API Pr | Aana",
+    "description": "OpenAI has launched GPT-6.1 Terra, a model that combines visual reasoning, computer use and coding, with API prices 50% lower than those of GPT-5.6 Terra",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/openai-launches-gpt-61-terra-with-50-lower-api-prices-resumes-frontier-ai-training",
+    "image": "https://aanaa.blog/blog/openai-launches-gpt-6-1-terra-with-50-lower-api-prices-resumes-frontier-ai-training-1793092942219-10/opengraph-image"
+  },
+  {
+    "file": "blog\\openai-plans-to-purchase-google-tpus-report-1793179342309-39.html",
+    "title": "OpenAI Plans to Purchase Google TPUs: Report | Aana",
+    "description": "OpenAI plans to buy AI chips from Google, potentially reducing its reliance on NVIDIA as it expands computing capacity to train and run its AI models.",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/openai-plans-to-purchase-google-tpus-report",
+    "image": "https://aanaa.blog/blog/openai-plans-to-purchase-google-tpus-report-1793179342309-39/opengraph-image"
+  },
+  {
+    "file": "blog\\opinion-uk-bond-investors-want-spending-cuts-john-healey-s-first-budget-may-disappoint-1793092942431-39.html",
+    "title": "Opinion: UK bond investors want spending cuts. John | Aana",
+    "description": "John Healey delivers his first U.K. Budget with less fiscal room, higher spending pressures and bond investors pushing for less borrowing and more growth.",
+    "robots": "index, follow",
+    "canonical": "https://www.cnbc.com/2026/10/27/uk-budget-2026-john-healey-bond-market.html",
+    "image": "https://aanaa.blog/blog/opinion-uk-bond-investors-want-spending-cuts-john-healey-s-first-budget-may-disappoint-1793092942431-39/opengraph-image"
+  },
+  {
+    "file": "blog\\oppo-find-x10-and-find-x10-pro-max-go-on-sale-in-india-1793265742832-35.html",
+    "title": "Oppo Find X10 and Find X10 Pro Max go on sale in In | Aana",
+    "description": "Read Oppo Find X10 and Find X10 Pro Max go on sale in India and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/oppo_find_x10_find_x10_pro_max_india_price_sale_date-news-75258.php",
+    "image": "https://aanaa.blog/blog/oppo-find-x10-and-find-x10-pro-max-go-on-sale-in-india-1793265742832-35/opengraph-image"
+  },
+  {
+    "file": "blog\\oracle-partners-with-openai-to-bring-chatgpt-and-codex-to-enterprise-workflows-1793179342383-49.html",
+    "title": "Oracle Partners With OpenAI to Bring ChatGPT and Co | Aana",
+    "description": "Oracle AI Workspace will bring Oracle Fusion Applications, NetSuite, Oracle AI Database and OCI into a unified experience accessible through ChatGPT.",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/oracle-partners-with-openai-to-bring-chatgpt-and-codex-to-enterprise-workflows",
+    "image": "https://aanaa.blog/blog/oracle-partners-with-openai-to-bring-chatgpt-and-codex-to-enterprise-workflows-1793179342383-49/opengraph-image"
+  },
+  {
+    "file": "blog\\oracle-s-larry-ellison-dismisses-saas-apocalypse-fears-says-ai-will-make-software-better-1793179342033-7.html",
+    "title": "Oracle's Larry Ellison dismisses 'SaaS apocalypse' | Aana",
+    "description": "Speaking at Oracle AI World here, Ellison, the company's executive chairman and chief technology officer, rejected talk of a \"SaaS apocalypse\", in which b",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/oracles-larry-ellison-dismisses-saas-apocalypse-fears-says-ai-will-make-software-better/articleshow/135251858.cms",
+    "image": "https://aanaa.blog/blog/oracle-s-larry-ellison-dismisses-saas-apocalypse-fears-says-ai-will-make-software-better-1793179342033-7/opengraph-image"
+  },
+  {
+    "file": "blog\\oscars-will-always-reward-human-excellence-in-ai-era-academy-chiefs-say-as-they-leave-door-open-to-international-feature-rule-tweaks-exclusive-1793179342073-12.html",
+    "title": "Oscars Will ‘Always’ Reward Human Excellence in AI | Aana",
+    "description": "The Oscars will keep honoring human-driven work as AI spreads through filmmaking, Academy president Lynette Howell Taylor tells Variety in Tokyo, while th",
+    "robots": "index, follow",
+    "canonical": "https://variety.com/2026/film/festivals/oscars-always-reward-human-excellence-ai-era-academy-1236932637/",
+    "image": "https://aanaa.blog/blog/oscars-will-always-reward-human-excellence-in-ai-era-academy-chiefs-say-as-they-leave-door-open-to-international-feature-rule-tweaks-exclusive-1793179342073-12/opengraph-image"
+  },
+  {
+    "file": "blog\\over-41-000-u-s-homeland-security-officials-details-apparently-exposed-after-massive-data-breach-1793265742739-26.html",
+    "title": "Over 41,000 U.S. Homeland Security officials' detai | Aana",
+    "description": "CNBC was able to access the database on the website, and saw it contained names alleged to be of officials, titles, agencies, and offices in cities and st",
+    "robots": "index, follow",
+    "canonical": "https://www.cnbc.com/2026/10/29/dhs-data-breach-ice-cdp-deportations.html",
+    "image": "https://aanaa.blog/blog/over-41-000-u-s-homeland-security-officials-details-apparently-exposed-after-massive-data-breach-1793265742739-26/opengraph-image"
+  },
+  {
+    "file": "blog\\packers-jacobs-says-td-celebration-was-ode-to-gospel-song-not-mocking-arrest-1793352142041-47.html",
+    "title": "Packers' Jacobs says TD celebration was ode to gosp | Aana",
+    "description": "The Packers' Josh Jacobs said he was surprised his first-half TD celebration was perceived by some as mocking his May arrest, saying it was an ode to a go",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/nfl/story/_/id/50325876/packers-josh-jacobs-says-td-celebration-mocking-arrest",
+    "image": "https://aanaa.blog/blog/packers-jacobs-says-td-celebration-was-ode-to-gospel-song-not-mocking-arrest-1793352142041-47/opengraph-image"
+  },
+  {
+    "file": "blog\\pine-labs-hits-new-high-ace-blend-bags-9-9-mn-more-1793352141897-34.html",
+    "title": "Pine Labs Hits New High, Ace Blend Bags $9.9 Mn & M | Aana",
+    "description": "Read Pine Labs Hits New High, Ace Blend Bags $9.9 Mn & More and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/buzz/pine-labs-hits-new-high-ace-blend-bags-9-9-mn-more/",
+    "image": "https://aanaa.blog/blog/pine-labs-hits-new-high-ace-blend-bags-9-9-mn-more-1793352141897-34/opengraph-image"
+  },
+  {
+    "file": "blog\\ping-latency-and-packet-loss-explained-why-calls-and-games-lag-1793352141677-10.html",
+    "title": "Ping, Latency and Packet Loss Explained: Why Calls | Aana",
+    "description": "Originally published on CodingCush . Your v",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/kushkrg/ping-latency-and-packet-loss-explained-why-calls-and-games-lag-bmi",
+    "image": "https://aanaa.blog/blog/ping-latency-and-packet-loss-explained-why-calls-and-games-lag-1793352141677-10/opengraph-image"
+  },
+  {
+    "file": "blog\\police-are-using-ai-to-track-where-you-drive-and-your-next-road-trip-could-raise-a-red-flag-1793179342158-22.html",
+    "title": "Police are using AI to track where you drive — and | Aana",
+    "description": "Police are using AI and license plate cameras to flag suspicious driving patterns. Here's how the technology works and what driver",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/ai/police-are-using-ai-to-track-where-you-drive-and-your-next-road-trip-could-raise-a-red-flag",
+    "image": "https://aanaa.blog/blog/police-are-using-ai-to-track-where-you-drive-and-your-next-road-trip-could-raise-a-red-flag-1793179342158-22/opengraph-image"
+  },
+  {
+    "file": "blog\\protectt-ai-takes-majority-stake-in-bosch-incubated-aishield-1793092942394-33.html",
+    "title": "Protectt.ai Takes Majority Stake in Bosch-incubated | Aana",
+    "description": "AIShield's platform covers AI security assessments, red teaming, runtime protection and safety guardrails. It is designed to identify and address risks in",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/protecttai-takes-majority-stake-in-bosch-incubated-aishield",
+    "image": "https://aanaa.blog/blog/protectt-ai-takes-majority-stake-in-bosch-incubated-aishield-1793092942394-33/opengraph-image"
+  },
+  {
+    "file": "blog\\pure-in-app-navigation-implemented-in-elm-url-become-a-thin-wrapper-instead-1793092942225-11.html",
+    "title": "Pure in-app navigation implemented in Elm (URL beco | Aana",
+    "description": "In the usual Elm app the URL is the source of truth. To go somewhere, update writes the URL, and the app only moves when the URL comes back as",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/rinn7e/elm-navigation-with-a-thin-url-wrapper-h2j",
+    "image": "https://aanaa.blog/blog/pure-in-app-navigation-implemented-in-elm-url-become-a-thin-wrapper-instead-1793092942225-11/opengraph-image"
+  },
+  {
+    "file": "blog\\rate-limiters-are-not-your-enemy-how-token-buckets-work-and-how-automation-should-behave-under-them-1793092942274-18.html",
+    "title": "Rate Limiters Are Not Your Enemy: How Token Buckets | Aana",
+    "description": "Rate limiters are having a quiet moment — the topic sits at #12 on daily.dev Popular this morning — and for good reason: it is how most serious autom",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/nguyen_tu_ca842184efc96f4/rate-limiters-are-not-your-enemy-how-token-buckets-work-and-how-automation-should-behave-under-them-59gm",
+    "image": "https://aanaa.blog/blog/rate-limiters-are-not-your-enemy-how-token-buckets-work-and-how-automation-should-behave-under-them-1793092942274-18/opengraph-image"
+  },
+  {
+    "file": "blog\\red-wings-suspend-larkin-as-team-explores-trade-options-players-keen-to-move-on-1793352142047-48.html",
+    "title": "Red Wings suspend Larkin as team explores trade opt | Aana",
+    "description": "The Red Wings announced Thursday that star forward Dylan Larkin has been suspended without pay after informing the team he no longer wanted to play for De",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/nhl/story/_/id/50322532/red-wings-suspend-dylan-larkin-explore-trade-options",
+    "image": "https://aanaa.blog/blog/red-wings-suspend-larkin-as-team-explores-trade-options-players-keen-to-move-on-1793352142047-48/opengraph-image"
+  },
+  {
+    "file": "blog\\researchers-are-getting-tired-of-openai-gatekeeping-its-breakthroughs-1793179342331-42.html",
+    "title": "Researchers are getting tired of OpenAI gatekeeping | Aana",
+    "description": "Read Researchers are getting tired of OpenAI gatekeeping its breakthroughs and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
+    "image": "https://aanaa.blog/blog/researchers-are-getting-tired-of-openai-gatekeeping-its-breakthroughs-1793179342331-42/opengraph-image"
+  },
+  {
+    "file": "blog\\rip-scrum-story-points-in-the-age-of-coding-agents-1793179342265-33.html",
+    "title": "RIP scrum? Story points in the age of coding agents | Aana",
+    "description": "RIP scrum. Scrummed in peace. The agents now ship a feature before the team agrees whether it's 3 or 5 story points. Half joke. Planning poke",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/bickov/rip-scrum-story-points-in-the-age-of-coding-agents-21i5",
+    "image": "https://aanaa.blog/blog/rip-scrum-story-points-in-the-age-of-coding-agents-1793179342265-33/opengraph-image"
+  },
+  {
+    "file": "blog\\risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai-1793092942351-26.html",
+    "title": "Risks spelled out for Anthropic investors include p | Aana",
+    "description": "The risks laid out by the San Francisco company in its filing Monday with the Securities and Exchange Commission included discussion of bad actors potenti",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai/articleshow/135226081.cms",
+    "image": "https://aanaa.blog/blog/risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai-1793092942351-26/opengraph-image"
+  },
+  {
+    "file": "blog\\s-ance-ghost-in-the-machine-1793265742761-29.html",
+    "title": "Séance — Ghost in the Machine | Aana",
+    "description": "Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Submission 🕯️ This is a submission for the Hacktoberfest Open-Source AI Challeng",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/mahil_1330/seance-ghost-in-the-machine-18hh",
+    "image": "https://aanaa.blog/blog/s-ance-ghost-in-the-machine-1793265742761-29/opengraph-image"
+  },
+  {
+    "file": "blog\\salesforce-to-buy-defense-tech-firm-rune-in-military-business-push-1793352141982-38.html",
+    "title": "Salesforce to buy defense tech firm Rune in militar | Aana",
+    "description": "Business software maker Salesforce said on Thursday it would buy defense technology company Rune Technologies to expand its Missionforce business, which s",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/salesforce-to-buy-defense-tech-firm-rune-in-military-business-push/articleshow/135341877.cms",
+    "image": "https://aanaa.blog/blog/salesforce-to-buy-defense-tech-firm-rune-in-military-business-push-1793352141982-38/opengraph-image"
+  },
+  {
+    "file": "blog\\samsung-electronics-to-buy-1-27-trillion-won-worth-of-shares-in-tcl-china-from-samsung-display-1793352141879-33.html",
+    "title": "Samsung Electronics to buy 1.27 trillion won worth | Aana",
+    "description": "Samsung Electronics said in a filing on Fridaty that the company will buy 1.27 trillion won ($948.39 million) worth of shares in TCL China Star Optoelectr",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/samsung-electronics-to-buy-1-27-trillion-won-worth-of-shares-in-tcl-china-from-samsung-display/articleshow/135350320.cms",
+    "image": "https://aanaa.blog/blog/samsung-electronics-to-buy-1-27-trillion-won-worth-of-shares-in-tcl-china-from-samsung-display-1793352141879-33/opengraph-image"
+  },
+  {
+    "file": "blog\\samsung-galaxy-a08-launched-in-india-with-a-6-000mah-battery-1793179342041-8.html",
+    "title": "Samsung Galaxy A08 launched in India with a 6,000mA | Aana",
+    "description": "Read Samsung Galaxy A08 launched in India with a 6,000mAh battery and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/samsung_galaxy_a08_launched_in_india_with_a_6000mah_battery-news-75238.php",
+    "image": "https://aanaa.blog/blog/samsung-galaxy-a08-launched-in-india-with-a-6-000mah-battery-1793179342041-8/opengraph-image"
+  },
+  {
+    "file": "blog\\samsung-keeps-shattering-profit-records-as-ai-boom-lifts-chip-demand-1793265742917-47.html",
+    "title": "Samsung keeps shattering profit records as AI boom | Aana",
+    "description": "Revenue for the July-September period rose to an all-time high at 195.3 trillion won (USD 146 billion), marking the company's fourth straight quarter of r",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/technology/samsung-keeps-shattering-profit-records-as-ai-boom-lifts-chip-demand/articleshow/135289645.cms",
+    "image": "https://aanaa.blog/blog/samsung-keeps-shattering-profit-records-as-ai-boom-lifts-chip-demand-1793265742917-47/opengraph-image"
+  },
+  {
+    "file": "blog\\sarvam-krutrim-account-for-68-of-indic-ai-funding-as-sector-raises-687-million-tracxn-1793265742819-33.html",
+    "title": "Sarvam, Krutrim Account for 68% of Indic AI Funding | Aana",
+    "description": "In 2026, Indic AI firms raised $399 million, with Sarvam leading at 87%. Explore insights from Tracxn's latest report on AI funding.",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/sarvam-krutrim-account-for-68-of-indic-ai-funding-as-sector-raises-687-million-tracxn",
+    "image": "https://aanaa.blog/blog/sarvam-krutrim-account-for-68-of-indic-ai-funding-as-sector-raises-687-million-tracxn-1793265742819-33/opengraph-image"
+  },
+  {
+    "file": "blog\\sarvam-signs-5-year-defence-ai-deal-covering-army-navy-and-air-force-1793092942456-43.html",
+    "title": "Sarvam Signs 5-Year Defence AI Deal Covering Army, | Aana",
+    "description": "The agreement covers decision support, target acquisition and data fusion, with Sarvam’s Chanakya division leading the work.",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/sarvam-signs-5-year-defence-ai-deal-covering-army-navy-and-air-force",
+    "image": "https://aanaa.blog/blog/sarvam-signs-5-year-defence-ai-deal-covering-army-navy-and-air-force-1793092942456-43/opengraph-image"
+  },
+  {
+    "file": "blog\\satellite-vs-fiber-internet-1793352142021-44.html",
+    "title": "Satellite vs Fiber Internet: ഇന്ത്യയുടെ ഇന്റർനെറ്റ് | Aana",
+    "description": "ഇന്ന് ഇന്റർനെറ്റ് ഒഴിച്ചുകൂടാനാവാത്ത ഭാഗമായി മാറിക്കഴിഞ്ഞു. ഇപ്പോൾ ഇന്ത്യയിൽ നിലവിൽ ഏറ്റവും ജനപ്രിയമായ ഇന്റർനെറ്റ് മാധ്യമം ഒപ്റ്റിക്കൽ ഫൈബർ (Fiber Interne",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/ml/features/general/satellite-vs-fiber-which-is-best-internet-india.html",
+    "image": "https://aanaa.blog/blog/satellite-vs-fiber-internet-1793352142021-44/opengraph-image"
+  },
+  {
+    "file": "blog\\serverless-ai-in-brief-week-43-2026-1793265742539-1.html",
+    "title": "Serverless & AI in brief: week 43/2026 | Aana",
+    "description": "Serverless & AI in brief is my new weekly review: every Monday I sort through the previous week’s news from AWS, serverless, AI tools and TypeScript/Node",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/sascha-ms/serverless-ai-in-brief-week-432026-5e6i",
+    "image": "https://aanaa.blog/blog/serverless-ai-in-brief-week-43-2026-1793265742539-1/opengraph-image"
+  },
+  {
+    "file": "blog\\shell-boosts-share-buyback-to-5-billion-as-refining-soars-1793265742910-46.html",
+    "title": "Shell Boosts Share Buyback to $5 Billion as Refinin | Aana",
+    "description": "Shell Plc announced a big increase in its share buyback as Iran war and the Russia-Ukraine conflict led to record margins for its oil-refining business an",
+    "robots": "index, follow",
+    "canonical": "https://www.bloomberg.com/news/articles/2026-10-29/shell-reports-second-highest-profit-ever-as-refining-hits-record",
+    "image": "https://aanaa.blog/blog/shell-boosts-share-buyback-to-5-billion-as-refining-soars-1793265742910-46/opengraph-image"
+  },
+  {
+    "file": "blog\\should-ai-decide-your-court-case-this-judge-says-yes-1793179342258-32.html",
+    "title": "Should AI Decide Your Court Case? This Judge Says Y | Aana",
+    "description": "One of England’s top judges, Geoffrey Vos, believes that AI could adjudicate plenty of civil cases. The question, he says, is where the line should be dra",
+    "robots": "index, follow",
+    "canonical": "https://www.wired.com/story/geoffrey-vos-uk-judge-ai-legal-profession-challenges/",
+    "image": "https://aanaa.blog/blog/should-ai-decide-your-court-case-this-judge-says-yes-1793179342258-32/opengraph-image"
+  },
+  {
+    "file": "blog\\smartworks-swings-to-26-cr-profit-in-q2-revenue-rises-39-yoy-1793352142002-41.html",
+    "title": "Smartworks Swings To ₹26 Cr Profit In Q2, Revenue R | Aana",
+    "description": "Read Smartworks Swings To ₹26 Cr Profit In Q2, Revenue Rises 39% YoY and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/buzz/smartworks-swings-to-%e2%82%b926-cr-profit-in-q2-revenue-rises-39-yoy/",
+    "image": "https://aanaa.blog/blog/smartworks-swings-to-26-cr-profit-in-q2-revenue-rises-39-yoy-1793352142002-41/opengraph-image"
+  },
+  {
+    "file": "blog\\source-bears-qb-williams-fined-again-for-cleats-1793352141788-26.html",
+    "title": "Source: Bears QB Williams fined again for cleats | Aana",
+    "description": "The NFL fined Caleb Williams $23,882 for sporting Caddix cleats in Week 7, a source confirmed to ESPN on Thursday.",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/nfl/story/_/id/50323203/bears-quarterback-caleb-williams-fined-again-cleats",
+    "image": "https://aanaa.blog/blog/source-bears-qb-williams-fined-again-for-cleats-1793352141788-26/opengraph-image"
+  },
+  {
+    "file": "blog\\sources-missouri-rb-hardy-shot-in-offseason-to-return-vs-arkansas-1793352142054-49.html",
+    "title": "Sources: Missouri RB Hardy, shot in offseason, to r | Aana",
+    "description": "Missouri All-America tailback Ahmad Hardy is set to make his season debut for the Tigers this weekend at Arkansas, sources told ESPN.",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/college-football/story/_/id/50321651/sources-missouri-rb-hardy-make-season-debut-vs-arkansas",
+    "image": "https://aanaa.blog/blog/sources-missouri-rb-hardy-shot-in-offseason-to-return-vs-arkansas-1793352142054-49/opengraph-image"
+  },
+  {
+    "file": "blog\\south-african-bank-absa-expands-to-dubai-1793265742693-20.html",
+    "title": "South African Bank Absa Expands to Dubai | Aana",
+    "description": "South Africa’s Absa Group has expanded to Dubai’s DIFC. The bank aims to use the location to better support trade and investment flows between Gulf and Af",
+    "robots": "index, follow",
+    "canonical": "https://www.bloomberg.com/news/videos/2026-10-29/south-african-bank-absa-expands-to-dubai-video",
+    "image": "https://aanaa.blog/blog/south-african-bank-absa-expands-to-dubai-1793265742693-20/opengraph-image"
+  },
+  {
+    "file": "blog\\store-memory-d2c-in-the-age-of-experiential-retail-1793092942368-29.html",
+    "title": "Store Memory: D2C In The Age Of Experiential Retail | Aana",
+    "description": "Read Store Memory: D2C In The Age Of Experiential Retail and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/features/store-memory-d2c-in-the-age-of-experiential-retail/",
+    "image": "https://aanaa.blog/blog/store-memory-d2c-in-the-age-of-experiential-retail-1793092942368-29/opengraph-image"
+  },
+  {
+    "file": "blog\\study-estimated-75-of-nfl-players-who-died-between-2008-to-2023-had-cte-1793265742867-40.html",
+    "title": "Study: Estimated 75% of NFL players who died betwee | Aana",
+    "description": "An estimated 75% of ex-NFL players who died between 2008 and 2023 had CTE, the neurodegenerative brain disease tied to high-impact sports, according to a",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/nfl/story/_/id/50311853/study-nearly-75-nfl-players-died-2008-23-had-cte",
+    "image": "https://aanaa.blog/blog/study-estimated-75-of-nfl-players-who-died-between-2008-to-2023-had-cte-1793265742867-40/opengraph-image"
+  },
+  {
+    "file": "blog\\taiwanese-feature-uncle-wins-top-prize-at-tokyo-gap-financing-market-awards-1793352141654-7.html",
+    "title": "Taiwanese Feature ‘Uncle’ Wins Top Prize at Tokyo G | Aana",
+    "description": "Taiwanese project “Uncle,” directed by Yen Hao-hsuan, won the Tokyo Project Award on Friday at the seventh Tokyo Gap-Financing Market (TGFM) in Tokyo. “Un",
+    "robots": "index, follow",
+    "canonical": "https://variety.com/2026/film/markets-festivals/taiwanese-feature-uncle-top-prize-tokyo-gap-financing-market-1236934855/",
+    "image": "https://aanaa.blog/blog/taiwanese-feature-uncle-wins-top-prize-at-tokyo-gap-financing-market-awards-1793352141654-7/opengraph-image"
+  },
+  {
+    "file": "blog\\tech-firms-take-fresh-hit-as-earnings-misses-fan-ai-fears-1793352141747-20.html",
+    "title": "Tech firms take fresh hit as earnings misses fan AI | Aana",
+    "description": "Tech firms were again on the back foot Friday after another round of disappointing earnings from Wall Street titans fanned already deep concerns about the",
+    "robots": "index, follow",
+    "canonical": "https://economictimes.indiatimes.com/tech/artificial-intelligence/tech-firms-take-fresh-hit-as-earnings-misses-fan-ai-fears/articleshow/135340519.cms",
+    "image": "https://aanaa.blog/blog/tech-firms-take-fresh-hit-as-earnings-misses-fan-ai-fears-1793352141747-20/opengraph-image"
+  },
+  {
+    "file": "blog\\temple-pre-order-starts-in-two-days-price-in-india-features-how-to-pre-book-and-all-other-details-1793352141647-6.html",
+    "title": "Temple pre-order starts in two days: Price in India | Aana",
+    "description": "Zomato co-founder Deepinder Goyal’s Temple wearable is all set for its consumer launch, with its pre-orders for Batch 01 opening on November 1, 2026. Inte",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/features/wearable-devices/temple-pre-order-starts-in-two-days-price-in-india-features-how-to-pre-book-and-all-other-details.html",
+    "image": "https://aanaa.blog/blog/temple-pre-order-starts-in-two-days-price-in-india-features-how-to-pre-book-and-all-other-details-1793352141647-6/opengraph-image"
+  },
+  {
+    "file": "blog\\tesco-strikes-deal-to-sell-czech-slovakia-unit-for-1-7-billion-1793352141996-40.html",
+    "title": "Tesco Strikes Deal to Sell Czech, Slovakia Unit for | Aana",
+    "description": "Tesco Plc agreed to sell its supermarket division in the Czech Republic and Slovakia to Ahold Delhaize for an enterprise value of €1.7 billion (£1. 5 bill",
+    "robots": "index, follow",
+    "canonical": "https://www.bloomberg.com/news/articles/2026-10-30/tesco-strikes-deal-to-sell-czech-slovakia-unit-for-1-7-billion",
+    "image": "https://aanaa.blog/blog/tesco-strikes-deal-to-sell-czech-slovakia-unit-for-1-7-billion-1793352141996-40/opengraph-image"
+  },
+  {
+    "file": "blog\\testing-algerian-darija-tts-a-checklist-for-scripts-numbers-and-code-switching-1793265742724-24.html",
+    "title": "Testing Algerian Darija TTS: A Checklist for Script | Aana",
+    "description": "Disclosure: I am sharing this guide from Natiq Studio . It is an English adaptation, with AI edi",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/natiq/testing-algerian-darija-tts-a-checklist-for-scripts-numbers-and-code-switching-89",
+    "image": "https://aanaa.blog/blog/testing-algerian-darija-tts-a-checklist-for-scripts-numbers-and-code-switching-1793265742724-24/opengraph-image"
+  },
+  {
+    "file": "blog\\thai-forest-spirit-horror-cher-first-thai-winner-at-fronti-res-joins-tokyo-gap-financing-market-1793179342287-36.html",
+    "title": "Thai Forest Spirit Horror ‘Cher,’ First Thai Winner | Aana",
+    "description": "A Thai horror film built on the folklore of the Nang Mai, the forest nymphs of Thai myth, is the only Thai entry in the 2026 Tokyo Gap-Financing Market li",
+    "robots": "index, follow",
+    "canonical": "https://variety.com/2026/film/markets-festivals/thai-forest-spirit-horror-cher-tokyo-gap-financing-market-1236932683/",
+    "image": "https://aanaa.blog/blog/thai-forest-spirit-horror-cher-first-thai-winner-at-fronti-res-joins-tokyo-gap-financing-market-1793179342287-36/opengraph-image"
+  },
+  {
+    "file": "blog\\the-autistic-brain-processes-faces-differently-than-scientists-thought-1793179342369-47.html",
+    "title": "The autistic brain processes faces differently than | Aana",
+    "description": "A major new study reveals that autistic children’s brains process faces differently, and those differences may begin earlier than scientists previously th",
+    "robots": "index, follow",
+    "canonical": "https://www.sciencedaily.com/releases/2026/10/261027063824.htm",
+    "image": "https://aanaa.blog/blog/the-autistic-brain-processes-faces-differently-than-scientists-thought-1793179342369-47/opengraph-image"
+  },
+  {
+    "file": "blog\\the-ghost-in-the-machine-a-haunted-ai-shell-wrapper-for-developers-1793352141639-5.html",
+    "title": "The Ghost in the Machine: A Haunted AI Shell Wrappe | Aana",
+    "description": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in t",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/shadow16ua/the-ghost-in-the-machine-a-haunted-ai-shell-wrapper-for-developers-4a7i",
+    "image": "https://aanaa.blog/blog/the-ghost-in-the-machine-a-haunted-ai-shell-wrapper-for-developers-1793352141639-5/opengraph-image"
+  },
+  {
+    "file": "blog\\the-joy-and-pain-that-define-baseball-were-in-full-force-in-rays-incredible-game-4-win-1793179342182-25.html",
+    "title": "The joy and pain that define baseball were in full | Aana",
+    "description": "Milwaukee didn't get its sweep Tuesday night. Instead, the rest of the baseball world got a treat -- and another day to savor the sport.",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/mlb/story/_/id/50304811/world-series-rays-game-4-incredible-rally",
+    "image": "https://aanaa.blog/blog/the-joy-and-pain-that-define-baseball-were-in-full-force-in-rays-incredible-game-4-win-1793179342182-25/opengraph-image"
+  },
+  {
+    "file": "blog\\the-new-oled-ipad-mini-runs-geekbench-here-are-the-results-1793352141760-22.html",
+    "title": "The new OLED iPad mini runs Geekbench, here are the | Aana",
+    "description": "Read The new OLED iPad mini runs Geekbench, here are the results and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/the_new_oled_ipad_mini_runs_geekbench_here_are_the_results-news-75276.php",
+    "image": "https://aanaa.blog/blog/the-new-oled-ipad-mini-runs-geekbench-here-are-the-results-1793352141760-22/opengraph-image"
+  },
+  {
+    "file": "blog\\the-new-redmi-clip-neo-buds-cost-half-as-much-as-the-xiaomi-clip-on-1793265742717-23.html",
+    "title": "The new Redmi Clip Neo buds cost half as much as th | Aana",
+    "description": "Read The new Redmi Clip Neo buds cost half as much as the Xiaomi Clip-on and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/the_new_redmi_clip_neo_buds_cost_half_as_much_as_the_xiaomi_clipon-news-75248.php",
+    "image": "https://aanaa.blog/blog/the-new-redmi-clip-neo-buds-cost-half-as-much-as-the-xiaomi-clip-on-1793265742717-23/opengraph-image"
+  },
+  {
+    "file": "blog\\the-nokia-2360-flip-is-a-dual-display-feature-phone-with-an-sos-button-1793352141692-12.html",
+    "title": "The Nokia 2360 Flip is a dual-display feature phone | Aana",
+    "description": "Read The Nokia 2360 Flip is a dual-display feature phone with an SOS button and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/the_nokia_2360_flip_is_a_dualdisplay_feature_phone_with_an_sos_button-news-75278.php",
+    "image": "https://aanaa.blog/blog/the-nokia-2360-flip-is-a-dual-display-feature-phone-with-an-sos-button-1793352141692-12/opengraph-image"
+  },
+  {
+    "file": "blog\\the-one-about-matthew-perry-review-netflix-s-intimate-and-sincere-but-overly-padded-docuseries-1793092942406-35.html",
+    "title": "‘The One About Matthew Perry’ Review: Netflix’s Int | Aana",
+    "description": "Perry's sister Mia and various friends, former girlfriends and colleagues talk about the actor's genius and his demons in Mary Robertson's three-parter.",
+    "robots": "index, follow",
+    "canonical": "https://www.hollywoodreporter.com/tv/tv-reviews/the-one-about-matthew-perry-review-netflix-documentary-1236740422/",
+    "image": "https://aanaa.blog/blog/the-one-about-matthew-perry-review-netflix-s-intimate-and-sincere-but-overly-padded-docuseries-1793092942406-35/opengraph-image"
+  },
+  {
+    "file": "blog\\the-power-of-git-rebase-onto-surgical-commit-slicing-in-git-1793179342089-14.html",
+    "title": "The Power of git rebase --onto: Surgical Commit Sli | Aana",
+    "description": "If you work in a team that stacks branches or uses Squash & Merge , you have almost certainly encountered this nightmare: Y",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/amitg01/the-power-of-git-rebase-onto-surgical-commit-slicing-in-git-4h7m",
+    "image": "https://aanaa.blog/blog/the-power-of-git-rebase-onto-surgical-commit-slicing-in-git-1793179342089-14/opengraph-image"
+  },
+  {
+    "file": "blog\\these-7-exercises-improve-joint-range-of-motion-movement-quality-and-overall-mobility-says-a-personal-trainer-1793265742769-30.html",
+    "title": "'These 7 exercises improve joint range of motion, m | Aana",
+    "description": "1Rebel master trainer LJ shares a mobility routine to improve your movement quality as you age.",
+    "robots": "index, follow",
+    "canonical": "https://www.tomsguide.com/wellness/workouts/these-7-exercises-improve-joint-range-of-motion-movement-quality-and-overall-mobility-says-a-personal-trainer",
+    "image": "https://aanaa.blog/blog/these-7-exercises-improve-joint-range-of-motion-movement-quality-and-overall-mobility-says-a-personal-trainer-1793265742769-30/opengraph-image"
+  },
+  {
+    "file": "blog\\three-doors-one-address-1793092942467-45.html",
+    "title": "Three Doors, One Address | Aana",
+    "description": "I spent a week getting refused by signup forms. Same email address, three sites, three different answers. Reddit: \"That email is invalid.\" Tw",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/mattheosoft/three-doors-one-address-2bop",
+    "image": "https://aanaa.blog/blog/three-doors-one-address-1793092942467-45/opengraph-image"
+  },
+  {
+    "file": "blog\\tokyo-all-of-a-sudden-star-tao-okamoto-honored-with-the-hollywood-reporter-s-trailblazer-award-1793179342280-35.html",
+    "title": "Tokyo: ‘All of A Sudden’ Star Tao Okamoto Honored W | Aana",
+    "description": "At a glitzy event at the Tokyo American Club, Hollywood and Japanese powerbrokers celebrated longtime industry and cultural links between the two countrie",
+    "robots": "index, follow",
+    "canonical": "https://www.hollywoodreporter.com/movies/movie-news/thr-japan-mpa-2026-american-film-night-gala-1236741542/",
+    "image": "https://aanaa.blog/blog/tokyo-all-of-a-sudden-star-tao-okamoto-honored-with-the-hollywood-reporter-s-trailblazer-award-1793179342280-35/opengraph-image"
+  },
+  {
+    "file": "blog\\top-wordpress-mcp-server-plugins-you-can-use-in-2026-1793179341989-2.html",
+    "title": "Top WordPress MCP Server Plugins You Can Use in 202 | Aana",
+    "description": "What if your AI could actually work on your WordPress site, not just talk about it? Ask it to write a new post and save it as a draft. Update product",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/wpvibes/top-wordpress-mcp-server-plugins-you-can-use-in-2026-45no",
+    "image": "https://aanaa.blog/blog/top-wordpress-mcp-server-plugins-you-can-use-in-2026-1793179341989-2/opengraph-image"
+  },
+  {
+    "file": "blog\\truce-begins-in-wartorn-ukraine-city-after-it-was-announced-by-melania-trump-1793092942344-25.html",
+    "title": "Truce begins in wartorn Ukraine city after it was a | Aana",
+    "description": "The ceasefire is meant to allow aid deliveries and the evacuation of civilians.",
+    "robots": "index, follow",
+    "canonical": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
+    "image": "https://aanaa.blog/blog/truce-begins-in-wartorn-ukraine-city-after-it-was-announced-by-melania-trump-1793092942344-25/opengraph-image"
+  },
+  {
+    "file": "blog\\ucf-fined-for-fans-chants-at-byu-big-12-sets-policy-with-in-game-penalties-1793265742861-39.html",
+    "title": "UCF fined for fans' chants at BYU; Big 12 sets poli | Aana",
+    "description": "The Big 12 fined UCF $100,000 for fans' derogatory chants aimed at BYU and also set a new policy on \"discriminatory conduct\" that includes in-game penalti",
+    "robots": "index, follow",
+    "canonical": "https://www.espn.com/college-football/story/_/id/50312595/big-12-fines-ucf-fans-chant-aimed-byu-mormon-church",
+    "image": "https://aanaa.blog/blog/ucf-fined-for-fans-chants-at-byu-big-12-sets-policy-with-in-game-penalties-1793265742861-39/opengraph-image"
+  },
+  {
+    "file": "blog\\update-bombay-hc-rejects-meta-s-plea-to-move-blink-digital-s-1-000-cr-suit-to-us-1793179342117-17.html",
+    "title": "[Update] Bombay HC Rejects Meta’s Plea To Move Blin | Aana",
+    "description": "Read [Update] Bombay HC Rejects Meta’s Plea To Move Blink Digital’s ₹1,000 Cr Suit To US and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://inc42.com/buzz/meta-sued-for-%e2%82%b91000-cr-by-blink-digital-over-disabled-ad-accounts/",
+    "image": "https://aanaa.blog/blog/update-bombay-hc-rejects-meta-s-plea-to-move-blink-digital-s-1-000-cr-suit-to-us-1793179342117-17/opengraph-image"
+  },
+  {
+    "file": "blog\\us-warns-of-two-serious-security-flaws-being-exploited-in-attacks-1793179342000-3.html",
+    "title": "US warns of two serious security flaws being exploi | Aana",
+    "description": "CISA added two severe vulnerabilities to its KEV catalog: CVE-2026-48356 in Adobe Commerce/Magento and CVE-2026-111497 in Google Brotli. Review the d",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/hacksgr/us-warns-of-two-serious-security-flaws-being-exploited-in-attacks-pok",
+    "image": "https://aanaa.blog/blog/us-warns-of-two-serious-security-flaws-being-exploited-in-attacks-1793179342000-3/opengraph-image"
+  },
+  {
+    "file": "blog\\we-sent-23-ai-agents-to-our-website-most-looked-human-1793092942163-2.html",
+    "title": "We sent 23 AI agents to our website. Most looked hu | Aana",
+    "description": "AI assistants now open websites for people. You ask ChatGPT to compare two pricing pages, and a browser somewhere clicks through them for you. We build an",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/quentin_wendegass/we-sent-23-ai-agents-to-our-website-most-looked-human-3a7e",
+    "image": "https://aanaa.blog/blog/we-sent-23-ai-agents-to-our-website-most-looked-human-1793092942163-2/opengraph-image"
+  },
+  {
+    "file": "blog\\what-wall-street-really-thanks-about-the-ai-trade-podcast-1793265742588-6.html",
+    "title": "What Wall Street Really Thanks About the AI Trade ( | Aana",
+    "description": "It has been a big week for the AI trade — we've seen wobbles in the market, many of them in response to headlines like the Anthropic S-1 and earnings from",
+    "robots": "index, follow",
+    "canonical": "https://www.bloomberg.com/news/audio/2026-10-29/what-wall-street-really-thanks-about-the-ai-trade-podcast",
+    "image": "https://aanaa.blog/blog/what-wall-street-really-thanks-about-the-ai-trade-podcast-1793265742588-6/opengraph-image"
+  },
+  {
+    "file": "blog\\whatsapp-groups-gets-4-new-features-status-forever-message-pinning-chat-filtering-and-more-1793352141607-1.html",
+    "title": "WhatsApp groups gets 4 new features: Status, foreve | Aana",
+    "description": "Instant messaging app WhatsApp introduces new enhancements for users regularly. In a recent update, the platform is now introducing four new enhancements",
+    "robots": "index, follow",
+    "canonical": "https://www.digit.in/news/general/whatsapp-gets-4-new-features-group-status-forever-message-pinning-mentions-and-replies-filter-and-more.html",
+    "image": "https://aanaa.blog/blog/whatsapp-groups-gets-4-new-features-status-forever-message-pinning-chat-filtering-and-more-1793352141607-1/opengraph-image"
+  },
+  {
+    "file": "blog\\why-better-data-could-be-the-key-to-ai-driven-food-r-d-1793179342098-15.html",
+    "title": "Why better data could be the key to AI-driven food | Aana",
+    "description": "As food companies navigate increasingly complex product development and safety requirements, connected data and generative AI could help scientists make b",
+    "robots": "index, follow",
+    "canonical": "https://yourstory.com/2026/10/how-genai-digital-ontologies-are-redefining-food-rd-food-safety",
+    "image": "https://aanaa.blog/blog/why-better-data-could-be-the-key-to-ai-driven-food-r-d-1793179342098-15/opengraph-image"
+  },
+  {
+    "file": "blog\\why-developer-first-publishing-spaces-are-essential-for-modern-tech-careers-1793092942187-5.html",
+    "title": "Why Developer-First Publishing Spaces Are Essential | Aana",
+    "description": "Read Why Developer-First Publishing Spaces Are Essential for Modern Tech Careers and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/sneha0420/why-developer-first-publishing-spaces-are-essential-for-modern-tech-careers-1k57",
+    "image": "https://aanaa.blog/blog/why-developer-first-publishing-spaces-are-essential-for-modern-tech-careers-1793092942187-5/opengraph-image"
+  },
+  {
+    "file": "blog\\why-i-built-api-market-after-pipfeed-1793265742625-11.html",
+    "title": "Why I Built API.market After PipFeed | Aana",
+    "description": "I am Shashank Agarwal, the creator of API.market and founder and CEO of Noveum AI. Before either company, I built a personalized reading app called PipFee",
+    "robots": "index, follow",
+    "canonical": "https://dev.to/imshashank/why-i-built-apimarket-after-pipfeed-2nep",
+    "image": "https://aanaa.blog/blog/why-i-built-api-market-after-pipfeed-1793265742625-11/opengraph-image"
+  },
+  {
+    "file": "blog\\xiaomi-18-pro-and-18-pro-max-get-listed-by-european-retailer-before-their-global-launch-1793092942356-27.html",
+    "title": "Xiaomi 18 Pro and 18 Pro Max get listed by European | Aana",
+    "description": "Read Xiaomi 18 Pro and 18 Pro Max get listed by European retailer before their global launch and explore its linked sources.",
+    "robots": "index, follow",
+    "canonical": "https://www.gsmarena.com/xiaomi_18_pro_and_18_pro_max_get_listed_by_european_retailer_before_their_global_launch-news-75215.php",
+    "image": "https://aanaa.blog/blog/xiaomi-18-pro-and-18-pro-max-get-listed-by-european-retailer-before-their-global-launch-1793092942356-27/opengraph-image"
+  },
+  {
+    "file": "blog\\you-re-not-doing-this-ai-stuff-databricks-ceo-tells-snowflake-1793265742847-37.html",
+    "title": "‘You’re Not Doing This AI Stuff,’ Databricks CEO Te | Aana",
+    "description": "Ali Ghodsi claims its AI platform has helped customers cut token spending by 30% even as usage increased, while Snowflake’s CEO seeks greater transparency",
+    "robots": "index, follow",
+    "canonical": "https://analyticsindiamag.com/ai-news/youre-not-doing-this-ai-stuff-databricks-ceo-tells-snowflake",
+    "image": "https://aanaa.blog/blog/you-re-not-doing-this-ai-stuff-databricks-ceo-tells-snowflake-1793265742847-37/opengraph-image"
+  },
+  {
+    "file": "category\\ai-tools.html",
+    "title": "Ai Tools articles | Aana",
+    "description": "Explore Ai Tools news, reviews and practical guides on Aana.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/category/ai-tools",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "category\\gadgets.html",
+    "title": "Gadgets articles | Aana",
+    "description": "Explore Gadgets news, reviews and practical guides on Aana.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/category/gadgets",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "category\\guides.html",
+    "title": "Guides articles | Aana",
+    "description": "Explore Guides news, reviews and practical guides on Aana.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/category/guides",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "category\\news.html",
+    "title": "News articles | Aana",
+    "description": "Explore News news, reviews and practical guides on Aana.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/category/news",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "category\\phones.html",
+    "title": "Phones articles | Aana",
+    "description": "Explore Phones news, reviews and practical guides on Aana.",
+    "robots": "index, follow",
+    "canonical": "https://aanaa.blog/category/phones",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "products\\smartphone-guide.html",
+    "title": "Smartphone Buying Guide | Aana",
+    "description": "Browse Aana's smartphone articles while a downloadable buying guide is being prepared.",
+    "robots": "noindex, follow",
+    "canonical": "https://aanaa.blog/products/smartphone-guide",
+    "image": "https://aanaa.blog/social-default.png"
+  },
+  {
+    "file": "admin\\posts\\new.html",
+    "title": "Administration | Aana",
+    "description": "Administration on Aana.",
+    "robots": "noindex, nofollow",
+    "canonical": "",
+    "image": "https://aanaa.blog/social-default.png"
+  }
+]

@@ -11,6 +11,8 @@ export async function GET(request: Request) {
         return new NextResponse('Unauthorized', { status: 401 });
     }
 
+    if (process.env.NEWSLETTER_CAMPAIGNS_ENABLED !== 'true') return NextResponse.json({ error: 'Newsletter campaigns are disabled until opt-in and unsubscribe verification is complete.' }, { status: 503 });
+
     try {
         console.log('Starting newsletter send...');
 

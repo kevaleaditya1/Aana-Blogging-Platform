@@ -1,9 +1,6 @@
-import { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-    title: "About Us - Aana",
-    description: "Learn more about Aana and our mission.",
-};
+export const metadata = pageMetadata('About the Publication', 'Meet Aana, a technology publication covering hardware, software and practical guides.', '/about');
 
 export default function AboutPage() {
     return (
@@ -21,7 +18,7 @@ export default function AboutPage() {
                     Welcome to <strong>Aana</strong>, an independent technology publication dedicated to deep hardware analysis, software innovation, and future-forward tech guides.
                 </p>
                 <p>
-                    Founded with a focus on editorial clarity, our mission is to cut through marketing hype. Whether you're an engineer exploring neural architectures or someone looking for honest, real-world smartphone battery tests, we craft stories grounded in technical rigor and design simplicity.
+                    Founded with a focus on editorial clarity, our mission is to cut through marketing hype. Whether you are an engineer exploring neural architectures or someone looking for honest, real-world smartphone battery tests, we craft stories grounded in technical rigor and design simplicity.
                 </p>
                 <h2>Our Principles</h2>
                 <p>
@@ -29,7 +26,7 @@ export default function AboutPage() {
                 </p>
                 <h2>The Editorial Standard</h2>
                 <p>
-                    Every hardware comparison, buying guide, and software breakdown is built on hands-on evaluation, meticulous testing, and independent editorial judgment.
+                    Articles may include summaries from linked external sources. Follow those links for original reporting, and check product details with the manufacturer. Hands-on testing should only be claimed where the article documents it.
                 </p>
             </div>
         </div>

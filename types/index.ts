@@ -1,4 +1,9 @@
 export interface Post {
+    updatedAt?: string;
+    metaTitle?: string | null;
+    metaDescription?: string | null;
+    canonicalUrl?: string | null;
+    robots?: string;
     slug: string;
     title: string;
     date: string;

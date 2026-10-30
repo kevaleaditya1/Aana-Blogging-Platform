@@ -1,0 +1,105 @@
+{
+  "errors": 11,
+  "warnings": 58,
+  "files": [
+    {
+      "file": "\\app\\api\\cron\\generate-blog-posts\\route.ts",
+      "errors": [
+        {
+          "line": 189,
+          "rule": "@typescript-eslint/no-explicit-any"
+        }
+      ]
+    },
+    {
+      "file": "\\app\\bookmarks\\page.tsx",
+      "errors": [
+        {
+          "line": 105,
+          "rule": "react/no-unescaped-entities"
+        }
+      ]
+    },
+    {
+      "file": "\\components\\admin\\markdown-editor.tsx",
+      "errors": [
+        {
+          "line": 71,
+          "rule": "@typescript-eslint/no-explicit-any"
+        }
+      ]
+    },
+    {
+      "file": "\\components\\admin\\seo-panel.tsx",
+      "errors": [
+        {
+          "line": 44,
+          "rule": "react-hooks/set-state-in-effect"
+        }
+      ]
+    },
+    {
+      "file": "\\components\\blog\\bookmark-button.tsx",
+      "errors": [
+        {
+          "line": 28,
+          "rule": "@typescript-eslint/no-explicit-any"
+        }
+      ]
+    },
+    {
+      "file": "\\components\\blog\\table-of-contents.tsx",
+      "errors": [
+        {
+          "line": 38,
+          "rule": "react-hooks/set-state-in-effect"
+        }
+      ]
+    },
+    {
+      "file": "\\components\\loading-bar.tsx",
+      "errors": [
+        {
+          "line": 12,
+          "rule": "react-hooks/set-state-in-effect"
+        }
+      ]
+    },
+    {
+      "file": "\\components\\ui\\input.tsx",
+      "errors": [
+        {
+          "line": 4,
+          "rule": "@typescript-eslint/no-empty-object-type"
+        }
+      ]
+    },
+    {
+      "file": "\\components\\ui\\textarea.tsx",
+      "errors": [
+        {
+          "line": 5,
+          "rule": "@typescript-eslint/no-empty-object-type"
+        }
+      ]
+    },
+    {
+      "file": "\\lib\\auth.ts",
+      "errors": [
+        {
+          "line": 16,
+          "rule": "@typescript-eslint/no-explicit-any"
+        }
+      ]
+    },
+    {
+      "file": "\\lib\\news\\rss-aggregator.ts",
+      "errors": [
+        {
+          "line": 118,
+          "rule": "@typescript-eslint/no-explicit-any"
+        }
+      ]
+    }
+  ]
+}

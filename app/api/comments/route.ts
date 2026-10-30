@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
                 user: {
                     select: {
                         name: true,
-                        email: true,
+                        email: false,
                         image: true,
                     },
                 },
@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
                         user: {
                             select: {
                                 name: true,
-                                email: true,
+                                email: false,
                                 image: true,
                             },
                         },
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
 
         const { content, postSlug, parentId } = await request.json();
 
-        if (!content || !postSlug) {
+        if (typeof content !== "string" || !content.trim() || content.length > 5000 || typeof postSlug !== "string" || !postSlug || postSlug.length > 300 || (parentId !== undefined && parentId !== null && typeof parentId !== "string")) {
             return NextResponse.json(
                 { error: "Content and post slug are required" },
                 { status: 400 }
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
 
         const comment = await prisma.comment.create({
             data: {
-                content,
+                content: content.trim(),
                 postSlug,
                 userId: user.id,
                 parentId: parentId || null,
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
                 user: {
                     select: {
                         name: true,
-                        email: true,
+                        email: false,
                         image: true,
                     },
                 },

@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/site";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -35,10 +37,7 @@ export async function generateMetadata({ params }: Props) {
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
 
-    return {
-        title: "Browse Categories - Aana",
-        description: `Latest articles in ${categoryName}`,
-    };
+    return pageMetadata(`${categoryName} articles`, `Explore ${categoryName} news, reviews and practical guides on Aana.`, `/category/${encodeURIComponent(slug)}`);
 }
 
 export default async function CategoryPage({ params }: Props) {
@@ -54,6 +53,8 @@ export default async function CategoryPage({ params }: Props) {
         const postCategorySlug = post.category.toLowerCase().replace(/\s+/g, "-");
         return postCategorySlug === slug;
     });
+
+    if (!categoryPosts.length) notFound();
 
     return (
         <div className="container px-4 md:px-6 py-12 md:py-20">
@@ -84,7 +85,7 @@ export default async function CategoryPage({ params }: Props) {
                                             {post.coverImage ? (
                                                 <Image
                                                     src={post.coverImage}
-                                                    alt={post.title}
+                                                    alt=""
                                                     fill
                                                     className="object-cover"
                                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

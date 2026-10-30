@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, TrendingUp } from "lucide-react";
@@ -12,28 +13,18 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { getSortedPostsData } from "@/lib/posts";
 import { NewsletterSection } from "@/components/newsletter/newsletter-section";
-import { Metadata } from "next";
 
 // Revalidate immediately to show latest posts
 export const revalidate = 0;
 
-export const metadata: Metadata = {
-  title: "Aana - Tech for the Future",
-  description: "Modern tech blogging: Smartphones, AI, Gadgets, and more. Stay updated with the latest tech news, reviews, and guides.",
-  alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://aanaa.blog",
-  },
-  openGraph: {
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://aanaa.blog",
-  },
-};
+export const metadata = pageMetadata('Tech for the Future', "Smartphone reviews, gadget guides and AI insights. Explore Aana's latest technology articles.", '/');
 
 export default async function Home() {
   const allPosts = await getSortedPostsData();
 
   // Get actual featured post or fallback to first post
   const featuredPost = allPosts.find(p => p.featuredPost) || allPosts[0];
-  const latestPosts = allPosts; // Show all posts
+  const latestPosts = allPosts.slice(0, 12);
 
   // Calculate trending topics from tags
   const tagCount = new Map<string, number>();
@@ -101,7 +92,7 @@ export default async function Home() {
                     {featuredPost.coverImage ? (
                       <Image
                         src={featuredPost.coverImage}
-                        alt={featuredPost.title}
+                        alt=""
                         fill
                         className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                         priority
@@ -200,12 +191,12 @@ export default async function Home() {
                       {post.coverImage ? (
                         <Image
                           src={post.coverImage}
-                          alt={post.title}
+                          alt=""
                           fill
                           className="object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          priority={index < 3}
-                          loading={index < 3 ? "eager" : "lazy"}
+                          priority={false}
+                          loading="lazy"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-muted-foreground p-4 text-center">

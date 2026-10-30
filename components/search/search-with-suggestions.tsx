@@ -16,15 +16,13 @@ export function SearchWithSuggestions() {
 
     // Fetch suggestions when query changes
     useEffect(() => {
-        if (query.trim().length < 2) {
-            setSuggestions([]);
-            setShowSuggestions(false);
-            return;
-        }
+        if (query.trim().length < 2) return;
+        const controller = new AbortController();
 
         const fetchSuggestions = async () => {
             try {
-                const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+                const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`, { signal: controller.signal });
+                if (!response.ok) throw new Error("Search unavailable");
                 const data = await response.json();
                 setSuggestions(data.results.slice(0, 5)); // Show top 5 results
                 setShowSuggestions(true);
@@ -34,7 +32,7 @@ export function SearchWithSuggestions() {
         };
 
         const debounce = setTimeout(fetchSuggestions, 300);
-        return () => clearTimeout(debounce);
+        return () => { clearTimeout(debounce); controller.abort(); };
     }, [query]);
 
     // Close suggestions when clicking outside
@@ -85,8 +83,9 @@ export function SearchWithSuggestions() {
                 <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground pointer-events-none z-10" />
                 <Input
                     type="search"
+                    aria-label="Search articles"
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={(e) => { setQuery(e.target.value); setSelectedIndex(-1); if(e.target.value.trim().length < 2) { setSuggestions([]); setShowSuggestions(false); } }}
                     onKeyDown={handleKeyDown}
                     onFocus={() => query.length >= 2 && setShowSuggestions(true)}
                     placeholder="Search..."
@@ -96,7 +95,7 @@ export function SearchWithSuggestions() {
 
             {/* Suggestions Dropdown - Apple Frosted Glass Popover */}
             {showSuggestions && suggestions.length > 0 && (
-                <div className="absolute top-full mt-2 w-80 right-0 glass-floating rounded-2xl z-50 overflow-hidden p-2 animate-in fade-in zoom-in-95 duration-150">
+                <div className="absolute top-full mt-2 w-80 max-w-[calc(100vw-2rem)] right-0 glass-floating rounded-2xl z-50 overflow-hidden p-2 animate-in fade-in zoom-in-95 duration-150">
                     <div className="px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground border-b border-border/40 mb-1">
                         Quick Suggestions
                     </div>
@@ -126,7 +125,7 @@ export function SearchWithSuggestions() {
                             onClick={handleSubmit}
                             className="w-full text-left px-3 py-2 mt-1 border-t border-border/40 text-xs text-primary hover:underline underline-offset-4 font-medium flex items-center justify-between"
                         >
-                            <span>Explore all results for "{query}"</span>
+                            <span>Explore all results for &quot;{query}&quot;</span>
                             <span>→</span>
                         </button>
                     )}

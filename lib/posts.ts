@@ -1,13 +1,16 @@
+import { plainText } from "@/lib/site";
 import prisma from "@/lib/prisma";
 import { Post } from "@/types";
 
-export async function getSortedPostsData(): Promise<Post[]> {
+export async function getSortedPostsData(includeContent = false): Promise<Post[]> {
     try {
         const posts = await prisma.post.findMany({
             where: {
-                status: "published", // Only show published posts
+                status: "published",
+                published: true,
                 showInCategory: { not: false }, // Hide posts with showInCategory = false
             },
+            select: { content: includeContent, slug: true, title: true, createdAt: true, excerpt: true, coverImage: true, category: true, tags: true, author: true, featuredPost: true, pinnedPost: true, trending: true, homepagePriority: true, showInCategory: true, hideFromSearch: true },
             orderBy: [
                 { pinnedPost: "desc" }, // Pinned posts first
                 { homepagePriority: "desc" }, // Then by priority
@@ -19,9 +22,9 @@ export async function getSortedPostsData(): Promise<Post[]> {
             slug: post.slug,
             title: post.title,
             date: post.createdAt.toISOString().split('T')[0],
-            excerpt: post.excerpt,
-            content: post.content,
-            coverImage: post.coverImage,
+            excerpt: plainText(post.excerpt) || `Read ${post.title} and explore its linked sources.`,
+            content: post.content || "",
+            coverImage: post.coverImage && !post.coverImage.includes("default-blog-cover") ? post.coverImage : "/social-default.png",
             category: post.category,
             tags: post.tags,
             author: {
@@ -29,7 +32,7 @@ export async function getSortedPostsData(): Promise<Post[]> {
                 picture: "/images/avatar.jpg",
             },
             ogImage: {
-                url: post.coverImage,
+                url: post.coverImage && !post.coverImage.includes("default-blog-cover") ? post.coverImage : "/social-default.png",
             },
             // Visibility fields
             featuredPost: post.featuredPost ?? false,
@@ -49,10 +52,7 @@ export async function getAllPostSlugs() {
     try {
         const posts = await prisma.post.findMany({
             where: {
-                OR: [
-                    { published: true },
-                    { status: "published" }
-                ]
+                published: true, status: "published"
             },
             select: {
                 slug: true,
@@ -76,6 +76,7 @@ export async function getPostData(slug: string): Promise<Post | null> {
             where: {
                 slug,
                 published: true,
+                status: "published",
             },
         });
 
@@ -84,12 +85,15 @@ export async function getPostData(slug: string): Promise<Post | null> {
         }
 
         return {
+            updatedAt: post.updatedAt.toISOString(),
+            metaTitle: post.metaTitle, metaDescription: post.metaDescription,
+            canonicalUrl: post.canonicalUrl, robots: post.robots, hideFromSearch: post.hideFromSearch,
             slug: post.slug,
             title: post.title,
             date: post.createdAt.toISOString().split('T')[0],
-            excerpt: post.excerpt,
+            excerpt: plainText(post.excerpt) || `Read ${post.title} and explore its linked sources.`,
             content: post.content,
-            coverImage: post.coverImage,
+            coverImage: post.coverImage && !post.coverImage.includes("default-blog-cover") ? post.coverImage : "/social-default.png",
             category: post.category,
             tags: post.tags,
             author: {
@@ -97,7 +101,7 @@ export async function getPostData(slug: string): Promise<Post | null> {
                 picture: "/images/avatar.jpg",
             },
             ogImage: {
-                url: post.coverImage,
+                url: post.coverImage && !post.coverImage.includes("default-blog-cover") ? post.coverImage : "/social-default.png",
             },
         };
     } catch (error) {

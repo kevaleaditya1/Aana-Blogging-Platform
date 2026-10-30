@@ -26,7 +26,7 @@ export function Header() {
     }, []);
 
     return (
-        <header
+        <header onKeyDown={(event) => { if (event.key === "Escape") { setIsMenuOpen(false); setIsUserMenuOpen(false); } }}
             className={`sticky top-0 z-50 w-full transition-all duration-300 border-b ${scrolled
                 ? "bg-white/75 dark:bg-black/75 backdrop-blur-2xl backdrop-saturate-200 border-black/[0.06] dark:border-white/[0.08] shadow-[0_4px_24px_-4px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_24px_-4px_rgba(0,0,0,0.5)]"
                 : "bg-white/45 dark:bg-black/40 backdrop-blur-xl border-transparent"
@@ -34,12 +34,12 @@ export function Header() {
         >
             <div className="container flex h-14 items-center px-4 md:px-8 max-w-7xl mx-auto">
                 {/* Logo */}
-                <Link href="/" aria-label="Aana home" className="flex items-center mr-4 lg:mr-8 group apple-press">
-                    <BrandLogo />
+                <Link href="/" aria-label="Aana home" className="flex items-center mr-2 lg:mr-8 group apple-press">
+                    <BrandLogo className="h-[21px] w-[98px] sm:h-6 sm:w-[112px]" />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-1 text-[13px] font-medium flex-1">
+                <nav className="hidden xl:flex items-center gap-1 text-[13px] font-medium flex-1">
                     {[
                         { href: "/category/phones", label: "Phones" },
                         { href: "/category/gadgets", label: "Gadgets" },
@@ -58,9 +58,9 @@ export function Header() {
                 </nav>
 
                 {/* Right Side */}
-                <div className="flex items-center gap-2.5 ml-auto">
+                <div className="flex items-center gap-1 sm:gap-2.5 ml-auto">
                     {/* Search Bar */}
-                    <div className="hidden md:block">
+                    <div className="hidden xl:block">
                         <SearchWithSuggestions />
                     </div>
 
@@ -68,7 +68,7 @@ export function Header() {
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="h-8 w-8 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08]"
+                        className="h-11 w-11 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08]"
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                     >
                         <div className="relative w-4 h-4">
@@ -80,20 +80,22 @@ export function Header() {
 
                     {/* Auth */}
                     {status === "loading" ? (
-                        <div className="h-8 w-8 rounded-full bg-black/10 dark:bg-white/10 animate-pulse" />
+                        <div className="h-11 w-11 rounded-full bg-black/10 dark:bg-white/10 animate-pulse" />
                     ) : session?.user ? (
                         <div className="relative">
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className="h-8 w-8 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08] relative overflow-hidden"
+                                className="h-11 w-11 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08] relative overflow-hidden"
+                                aria-label="Account menu"
+                                aria-expanded={isUserMenuOpen}
                                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
                             >
                                 {session.user.image ? (
                                     <img
                                         src={session.user.image}
                                         alt={session.user.name || "User"}
-                                        className="h-8 w-8 rounded-full object-cover ring-1 ring-border"
+                                        className="h-11 w-11 rounded-full object-cover ring-1 ring-border"
                                     />
                                 ) : (
                                     <User className="h-4 w-4 text-foreground" />
@@ -163,7 +165,7 @@ export function Header() {
                             <Button
                                 size="sm"
                                 asChild
-                                className="h-8 px-4 rounded-full text-xs font-medium bg-foreground text-background hover:opacity-90 apple-press"
+                                className="h-11 px-4 rounded-full text-xs font-medium bg-foreground text-background hover:opacity-90 apple-press"
                             >
                                 <Link href="/login">Sign In</Link>
                             </Button>
@@ -174,7 +176,10 @@ export function Header() {
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="md:hidden h-8 w-8 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08]"
+                        className="xl:hidden h-11 w-11 rounded-full hover:bg-black/[0.05] dark:hover:bg-white/[0.08]"
+                        aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+                        aria-expanded={isMenuOpen}
+                        aria-controls="mobile-navigation"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (
@@ -188,7 +193,7 @@ export function Header() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden glass-floating border-b border-border/60">
+                <div id="mobile-navigation" className="xl:hidden glass-floating border-b border-border/60">
                     <div className="container px-4 py-4 space-y-4">
                         {/* Mobile Search */}
                         <form
@@ -206,7 +211,7 @@ export function Header() {
                             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
                             <Input
                                 type="search"
-                                name="search"
+                                name="search" aria-label="Search articles"
                                 placeholder="Search articles..."
                                 className="w-full pl-10 bg-black/[0.03] dark:bg-white/[0.05] border-black/[0.08] dark:border-white/[0.1] rounded-full"
                             />

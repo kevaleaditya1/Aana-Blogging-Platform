@@ -33,7 +33,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
                                     {post.coverImage ? (
                                         <Image
                                             src={post.coverImage}
-                                            alt={post.title}
+                                            alt=""
                                             fill
                                             className="object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

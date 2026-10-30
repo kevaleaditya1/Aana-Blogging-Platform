@@ -1,0 +1,84 @@
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0           00:01              0
+  0      0   0      0   0      0      0      0           00:02              0
+  0      0   0      0   0      0      0      0           00:02              0
+  0      0   0      0   0      0      0      0           00:02              0
+HTTP/1.1 308 Permanent Redirect
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: text/plain
+Date: Fri, 30 Oct 2026 09:53:15 GMT
+Location: https://aanaa.blog/
+Refresh: 0;url=https://aanaa.blog/
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+X-Vercel-Id: bom1::z2dt9-1793353995722-8031afaf171f
+
+HTTP/1.1 200 OK
+Age: 0
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://www.google.com; frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com;
+Content-Type: text/html; charset=utf-8
+Cross-Origin-Opener-Policy: same-origin-allow-popups
+Date: Fri, 30 Oct 2026 09:53:17 GMT
+Link: </_next/static/media/83afe278b6a6bb3c.p.3a6ba036.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </_next/static/chunks/c43df5f8dbbbad52.css>; rel=preload; as="style", </_next/static/chunks/6771b260e68f5404.css>; rel=preload; as="style"
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+Referrer-Policy: origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+X-Content-Type-Options: nosniff
+X-Dns-Prefetch-Control: on
+X-Frame-Options: SAMEORIGIN
+X-Matched-Path: /
+X-Powered-By: Next.js
+X-Robots-Tag: index, follow
+X-Vercel-Cache: MISS
+X-Vercel-Id: bom1::iad1::nfmwt-1793353995856-fecf7e8e223b
+X-Xss-Protection: 1; mode=block
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+HTTP/1.0 308 Permanent Redirect
+Content-Type: text/plain
+Location: https://aanaa.blog/
+Refresh: 0;url=https://aanaa.blog/
+server: Vercel
+
+HTTP/1.0 200 OK
+Age: 0
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://www.google.com; frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com;
+Content-Type: text/html; charset=utf-8
+Cross-Origin-Opener-Policy: same-origin-allow-popups
+Date: Fri, 30 Oct 2026 09:53:18 GMT
+Link: </_next/static/media/83afe278b6a6bb3c.p.3a6ba036.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </_next/static/chunks/c43df5f8dbbbad52.css>; rel=preload; as="style", </_next/static/chunks/6771b260e68f5404.css>; rel=preload; as="style"
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+Referrer-Policy: origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+X-Content-Type-Options: nosniff
+X-Dns-Prefetch-Control: on
+X-Frame-Options: SAMEORIGIN
+X-Matched-Path: /
+X-Powered-By: Next.js
+X-Robots-Tag: index, follow
+X-Vercel-Cache: MISS
+X-Vercel-Id: bom1::iad1::qpqdf-1793353998063-09fde7187e43
+X-Xss-Protection: 1; mode=block
+

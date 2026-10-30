@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Provider accepts message",
+    "passed": true
+  },
+  {
+    "name": "Provider returns error object",
+    "passed": true
+  },
+  {
+    "name": "Provider returns no accepted ID",
+    "passed": true
+  },
+  {
+    "name": "Missing email configuration fails honestly",
+    "passed": true
+  },
+  {
+    "name": "Validation rejects non-string contact input",
+    "passed": true
+  },
+  {
+    "name": "Validation rejects non-string newsletter input",
+    "passed": true
+  },
+  {
+    "name": "Validation rejects non-string signup input",
+    "passed": true
+  }
+]
