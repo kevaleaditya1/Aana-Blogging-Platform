@@ -1,0 +1,794 @@
+{
+  "scores": {
+    "performance": 56.99999999999999,
+    "accessibility": 95,
+    "best-practices": 73,
+    "seo": 100,
+    "agentic-browsing": 50
+  },
+  "metrics": {
+    "first-contentful-paint": "3.9 s",
+    "largest-contentful-paint": "3.9 s",
+    "speed-index": "4.8 s",
+    "total-blocking-time": "870 ms",
+    "cumulative-layout-shift": "0.001",
+    "server-response-time": "Root document took 20 ms",
+    "total-byte-weight": "Total size was 906 KiB"
+  },
+  "failed": [
+    {
+      "id": "first-contentful-paint",
+      "score": 0.24,
+      "title": "First Contentful Paint",
+      "value": "3.9 s"
+    },
+    {
+      "id": "largest-contentful-paint",
+      "score": 0.51,
+      "title": "Largest Contentful Paint",
+      "value": "3.9 s"
+    },
+    {
+      "id": "speed-index",
+      "score": 0.66,
+      "title": "Speed Index",
+      "value": "4.8 s"
+    },
+    {
+      "id": "total-blocking-time",
+      "score": 0.33,
+      "title": "Total Blocking Time",
+      "value": "870 ms"
+    },
+    {
+      "id": "max-potential-fid",
+      "score": 0.35,
+      "title": "Max Potential First Input Delay",
+      "value": "300 ms"
+    },
+    {
+      "id": "errors-in-console",
+      "score": 0,
+      "title": "Browser errors were logged to the console",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "sourceLocation",
+            "valueType": "source-location",
+            "label": "Source"
+          },
+          {
+            "key": "description",
+            "valueType": "code",
+            "label": "Description"
+          }
+        ],
+        "items": [
+          {
+            "source": "security",
+            "description": "Connecting to 'https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261028&st=env&sjk=7907973340049542' violates the following Content Security Policy directive: \"connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://www.google.com\". The action has been blocked.",
+            "sourceLocation": {
+              "type": "source-location",
+              "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610280101/show_ads_impl_fy2021.js?bust=122881933",
+              "urlProvider": "network",
+              "line": 94,
+              "column": 385
+            }
+          },
+          {
+            "source": "network",
+            "description": "Failed to load resource: the server responded with a status of 400 ()",
+            "sourceLocation": {
+              "type": "source-location",
+              "url": "https://aanaa.blog/_next/image?url=%2Fimages%2Fdefault-blog-cover.jpg&w=750&q=75",
+              "urlProvider": "network",
+              "line": 0,
+              "column": 0
+            }
+          },
+          {
+            "source": "network",
+            "description": "Failed to load resource: the server responded with a status of 400 ()",
+            "sourceLocation": {
+              "type": "source-location",
+              "url": "https://aanaa.blog/_next/image?url=%2Fimages%2Fdefault-blog-cover.jpg&w=750&q=75",
+              "urlProvider": "network",
+              "line": 0,
+              "column": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "interactive",
+      "score": 0.6,
+      "title": "Time to Interactive",
+      "value": "6.4 s"
+    },
+    {
+      "id": "third-party-cookies",
+      "score": 0,
+      "title": "Uses third-party cookies",
+      "value": "1 cookie found",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "name",
+            "valueType": "text",
+            "label": "Name"
+          },
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          }
+        ],
+        "items": [
+          {
+            "name": "test_cookie",
+            "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8999010834139123&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1793350681&plat=3%3A65536%2C4%3A65536%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=https%3A%2F%2Faanaa.blog%2F&pra=5&aiof=14&asro=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJBbmRyb2lkIiwiMTEuMCIsIiIsIm1vdG8gZyBwb3dlciAoMjAyMikiLCIxNTYuMC4wLjAiLG51bGwsMSxudWxsLCI2NCIsW1siTm90OkEtQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1Ni4wLjgwNzguNzQiXSxbIkdvb2dsZSBDaHJvbWUiLCIxNTYuMC44MDc4Ljc0Il1dLDBd&dt=1793350681718&bpp=10&bdt=449&idt=124&shv=r20261028&mjsv=m202610280101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=1968508505894&frm=20&pv=2&u_tz=330&u_his=2&u_h=823&u_w=412&u_ah=823&u_aw=412&u_cd=24&u_sd=1.75&dmc=16&adx=-12245933&ady=-12245933&biw=412&bih=823&scr_x=0&scr_y=0&eid=95404665%2C95405491%2C95405931%2C95406274%2C95407882%2C95408376%2C95408708%2C122881731%2C122881933&oid=2&pvsid=7907973340049542&tmod=1766685409&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C412%2C0%2C412%2C823%2C412%2C823&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=174"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mainthread-work-breakdown",
+      "score": 0,
+      "title": "Minimize main-thread work",
+      "value": "7.2 s",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "groupLabel",
+            "valueType": "text",
+            "label": "Category"
+          },
+          {
+            "key": "duration",
+            "valueType": "ms",
+            "granularity": 1,
+            "label": "Time Spent"
+          }
+        ],
+        "items": [
+          {
+            "group": "scriptEvaluation",
+            "groupLabel": "Script Evaluation",
+            "duration": 2496.7559999999676
+          },
+          {
+            "group": "styleLayout",
+            "groupLabel": "Style & Layout",
+            "duration": 2410.1600000000003
+          },
+          {
+            "group": "other",
+            "groupLabel": "Other",
+            "duration": 1373.0079999999775
+          },
+          {
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation",
+            "duration": 420.1200000000011
+          },
+          {
+            "group": "parseHTML",
+            "groupLabel": "Parse HTML & CSS",
+            "duration": 225.388
+          },
+          {
+            "group": "paintCompositeRender",
+            "groupLabel": "Rendering",
+            "duration": 169.75200000000038
+          },
+          {
+            "group": "garbageCollection",
+            "groupLabel": "Garbage Collection",
+            "duration": 80.89999999999995
+          }
+        ],
+        "sortedBy": [
+          "duration"
+        ]
+      }
+    },
+    {
+      "id": "bootup-time",
+      "score": 0,
+      "title": "Reduce JavaScript execution time",
+      "value": "2.8 s",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          },
+          {
+            "key": "total",
+            "granularity": 1,
+            "valueType": "ms",
+            "label": "Total CPU Time"
+          },
+          {
+            "key": "scripting",
+            "granularity": 1,
+            "valueType": "ms",
+            "label": "Script Evaluation"
+          },
+          {
+            "key": "scriptParseCompile",
+            "granularity": 1,
+            "valueType": "ms",
+            "label": "Script Parse"
+          }
+        ],
+        "items": [
+          {
+            "url": "https://aanaa.blog/",
+            "total": 3404.196000000001,
+            "scripting": 136.07199999999995,
+            "scriptParseCompile": 173.724
+          },
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+            "total": 1157.2880000000002,
+            "scripting": 831.7640000000001,
+            "scriptParseCompile": 21.096
+          },
+          {
+            "url": "Unattributable",
+            "total": 726.3720000000001,
+            "scripting": 72.792,
+            "scriptParseCompile": 0
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-8GBB633NML",
+            "total": 599.7120000000012,
+            "scripting": 486.84000000000117,
+            "scriptParseCompile": 81.92
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610280101/show_ads_impl_fy2021.js?bust=122881933",
+            "total": 395.8239999999997,
+            "scripting": 298.4759999999997,
+            "scriptParseCompile": 44.512
+          },
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/a802d04f4c06cfc9.js",
+            "total": 349.2080000000002,
+            "scripting": 244.2720000000002,
+            "scriptParseCompile": 17.76
+          },
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/f7924ad2cfc09c25.js",
+            "total": 190.15600000000012,
+            "scripting": 186.8560000000001,
+            "scriptParseCompile": 2.568
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8999010834139123",
+            "total": 137.14800000000022,
+            "scripting": 123.86800000000022,
+            "scriptParseCompile": 12.436
+          },
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/8a38e5cb29c3c0b4.js",
+            "total": 82.744,
+            "scripting": 68.208,
+            "scriptParseCompile": 14.111999999999998
+          }
+        ],
+        "summary": {
+          "wastedMs": 2817.2760000000017
+        },
+        "sortedBy": [
+          "total"
+        ]
+      }
+    },
+    {
+      "id": "button-name",
+      "score": 0,
+      "title": "Buttons do not have an accessible name",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "lhId": "1-0-BUTTON",
+              "path": "1,HTML,1,BODY,4,HEADER,0,DIV,2,DIV,3,BUTTON",
+              "selector": "header.sticky > div.container > div.flex > button.inline-flex",
+              "boundingRect": {
+                "top": 12,
+                "bottom": 44,
+                "left": 364,
+                "right": 396,
+                "width": 32,
+                "height": 32
+              },
+              "snippet": "<button class=\"inline-flex items-center justify-center whitespace-nowrap text-sm font-med…\">",
+              "nodeLabel": "header.sticky > div.container > div.flex > button.inline-flex",
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "impact": "critical",
+          "tags": [
+            "cat.name-role-value",
+            "wcag2a",
+            "wcag412",
+            "section508",
+            "section508.22.a",
+            "TTv5",
+            "TT6.a",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "ACT",
+            "RGAAv4",
+            "RGAA-11.9.1"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unused-javascript",
+      "score": 0,
+      "title": "Reduce unused JavaScript",
+      "value": "Est savings of 274 KiB",
+      "details": {
+        "type": "opportunity",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "subItemsHeading": {
+              "key": "source",
+              "valueType": "code"
+            },
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "subItemsHeading": {
+              "key": "sourceBytes"
+            },
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedBytes",
+            "valueType": "bytes",
+            "subItemsHeading": {
+              "key": "sourceWastedBytes"
+            },
+            "label": "Est Savings"
+          }
+        ],
+        "items": [
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610280101/show_ads_impl_fy2021.js?bust=122881933",
+            "totalBytes": 171082,
+            "wastedBytes": 126051,
+            "wastedPercent": 73.67850630211142
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-8GBB633NML",
+            "totalBytes": 181485,
+            "wastedBytes": 76265,
+            "wastedPercent": 42.022908287626684
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8999010834139123",
+            "totalBytes": 57268,
+            "wastedBytes": 30453,
+            "wastedPercent": 53.17700045038283
+          },
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+            "totalBytes": 68365,
+            "wastedBytes": 24837,
+            "wastedPercent": 36.33026579129491
+          },
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/8a38e5cb29c3c0b4.js",
+            "totalBytes": 25122,
+            "wastedBytes": 22493,
+            "wastedPercent": 89.53516030897505
+          }
+        ],
+        "overallSavingsMs": 790,
+        "overallSavingsBytes": 280099,
+        "sortedBy": [
+          "wastedBytes"
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "metricSavings": {
+            "FCP": 790,
+            "LCP": 790
+          }
+        }
+      }
+    },
+    {
+      "id": "inspector-issues",
+      "score": 0,
+      "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "issueType",
+            "valueType": "text",
+            "subItemsHeading": {
+              "key": "url",
+              "valueType": "url"
+            },
+            "label": "Issue type"
+          }
+        ],
+        "items": [
+          {
+            "issueType": "Cookie",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8999010834139123&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1793350681&plat=3%3A65536%2C4%3A65536%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=https%3A%2F%2Faanaa.blog%2F&pra=5&aiof=14&asro=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJBbmRyb2lkIiwiMTEuMCIsIiIsIm1vdG8gZyBwb3dlciAoMjAyMikiLCIxNTYuMC4wLjAiLG51bGwsMSxudWxsLCI2NCIsW1siTm90OkEtQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1Ni4wLjgwNzguNzQiXSxbIkdvb2dsZSBDaHJvbWUiLCIxNTYuMC44MDc4Ljc0Il1dLDBd&dt=1793350681718&bpp=10&bdt=449&idt=124&shv=r20261028&mjsv=m202610280101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=1968508505894&frm=20&pv=2&u_tz=330&u_his=2&u_h=823&u_w=412&u_ah=823&u_aw=412&u_cd=24&u_sd=1.75&dmc=16&adx=-12245933&ady=-12245933&biw=412&bih=823&scr_x=0&scr_y=0&eid=95404665%2C95405491%2C95405931%2C95406274%2C95407882%2C95408376%2C95408708%2C122881731%2C122881933&oid=2&pvsid=7907973340049542&tmod=1766685409&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C412%2C0%2C412%2C823%2C412%2C823&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=174"
+                }
+              ]
+            }
+          },
+          {
+            "issueType": "Content security policy",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261028&st=env&sjk=7907973340049542"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "agent-accessibility-tree",
+      "score": 0,
+      "title": "Accessibility tree is not well-formed",
+      "details": {
+        "type": "list",
+        "items": [
+          {
+            "type": "list-section",
+            "title": "Failed Audits",
+            "value": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "description",
+                  "valueType": "text",
+                  "label": "Description"
+                },
+                {
+                  "key": "node",
+                  "valueType": "node",
+                  "label": "Failing Element"
+                }
+              ],
+              "items": [
+                {
+                  "description": "Buttons must have discernible text",
+                  "node": {
+                    "type": "node",
+                    "lhId": "1-0-BUTTON",
+                    "path": "1,HTML,1,BODY,4,HEADER,0,DIV,2,DIV,3,BUTTON",
+                    "selector": "header.sticky > div.container > div.flex > button.inline-flex",
+                    "boundingRect": {
+                      "top": 12,
+                      "bottom": 44,
+                      "left": 364,
+                      "right": 396,
+                      "width": 32,
+                      "height": 32
+                    },
+                    "snippet": "<button class=\"inline-flex items-center justify-center whitespace-nowrap text-sm font-med…\">",
+                    "nodeLabel": "header.sticky > div.container > div.flex > button.inline-flex"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bf-cache",
+      "score": 0,
+      "title": "Page prevented back/forward cache restoration",
+      "value": "3 failure reasons",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "reason",
+            "valueType": "text",
+            "subItemsHeading": {
+              "key": "frameUrl",
+              "valueType": "url"
+            },
+            "label": "Failure reason"
+          },
+          {
+            "key": "failureType",
+            "valueType": "text",
+            "label": "Failure type"
+          }
+        ],
+        "items": [
+          {
+            "reason": "Pages with cache-control:no-store header can’t enter back/forward cache",
+            "failureType": "Actionable",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "frameUrl": "https://aanaa.blog/"
+                }
+              ]
+            },
+            "protocolReason": "CacheControlNoStoreHTTPOnlyCookieModified"
+          },
+          {
+            "reason": "Pages whose main resource has cache-control:no-store can’t enter back/forward cache",
+            "failureType": "Not actionable",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "frameUrl": "https://aanaa.blog/"
+                }
+              ]
+            },
+            "protocolReason": "MainResourceHasCacheControlNoStore"
+          },
+          {
+            "reason": "Back/forward cache is disabled because some JavaScript network request received resource with Cache-Control: no-store header",
+            "failureType": "Not actionable",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "frameUrl": "https://aanaa.blog/"
+                }
+              ]
+            },
+            "protocolReason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cache-insight",
+      "score": 0,
+      "title": "Use efficient cache lifetimes",
+      "value": "Est savings of 16 KiB",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "Request"
+          },
+          {
+            "key": "cacheLifetimeMs",
+            "valueType": "ms",
+            "label": "Cache TTL",
+            "displayUnit": "duration"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size",
+            "displayUnit": "kb",
+            "granularity": 1
+          }
+        ],
+        "items": [
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610280101/show_ads_impl_fy2021.js?bust=122881933",
+            "cacheLifetimeMs": 1209600000,
+            "totalBytes": 171110,
+            "wastedBytes": 16776.427374301664
+          }
+        ],
+        "sortedBy": [
+          "wastedBytes"
+        ],
+        "skipSumming": [
+          "cacheLifetimeMs"
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "wastedBytes": 16776.427374301664
+        }
+      }
+    },
+    {
+      "id": "legacy-javascript-insight",
+      "score": 0.5,
+      "title": "Legacy JavaScript",
+      "value": "Est savings of 14 KiB",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "subItemsHeading": {
+              "key": "location",
+              "valueType": "source-location"
+            },
+            "label": "URL"
+          },
+          {
+            "key": null,
+            "valueType": "code",
+            "subItemsHeading": {
+              "key": "signal"
+            },
+            "label": ""
+          },
+          {
+            "key": "wastedBytes",
+            "valueType": "bytes",
+            "label": "Wasted bytes"
+          }
+        ],
+        "items": [
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+            "wastedBytes": 14159,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5107
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4495
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4608
+                  }
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4984
+                  }
+                },
+                {
+                  "signal": "Object.hasOwn",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5242
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimEnd",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4237
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://aanaa.blog/_next/static/chunks/c08b9c4fd6d39f0a.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4152
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "wastedBytes": 14159
+        }
+      }
+    },
+    {
+      "id": "render-blocking-insight",
+      "score": 0.5,
+      "title": "Render-blocking requests",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedMs",
+            "valueType": "timespanMs",
+            "label": "Duration"
+          }
+        ],
+        "items": [
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/6771b260e68f5404.css",
+            "totalBytes": 532
+          },
+          {
+            "url": "https://aanaa.blog/_next/static/chunks/c43df5f8dbbbad52.css",
+            "totalBytes": 18243
+          }
+        ]
+      }
+    }
+  ],
+  "warnings": []
+}

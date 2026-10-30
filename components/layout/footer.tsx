@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Twitter, Linkedin, Github } from "lucide-react";
@@ -41,10 +42,8 @@ export function Footer() {
             <div className="container px-4 md:px-8 max-w-7xl mx-auto py-12 md:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 pb-12 border-b border-border/40">
                     <div className="space-y-3">
-                        <Link href="/" className="flex items-center gap-2">
-                            <span className="text-xl font-semibold tracking-tight text-foreground">
-                                Aana
-                            </span>
+                        <Link href="/" aria-label="Aana home" className="inline-flex items-center">
+                            <BrandLogo />
                         </Link>
                         <p className="text-[13px] leading-relaxed text-muted-foreground">
                             Independent technology journalism, deep hardware insights, and future-forward software reviews.

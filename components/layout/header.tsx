@@ -4,7 +4,8 @@ import * as React from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useSession, signOut } from "next-auth/react";
-import { Search, Sun, Moon, Menu, X, User, LogOut, BookmarkIcon, Sparkles } from "lucide-react";
+import { Search, Sun, Moon, Menu, X, User, LogOut, BookmarkIcon } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SearchWithSuggestions } from "@/components/search/search-with-suggestions";
@@ -33,13 +34,8 @@ export function Header() {
         >
             <div className="container flex h-14 items-center px-4 md:px-8 max-w-7xl mx-auto">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 mr-8 group apple-press">
-                    <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-transform group-hover:scale-105">
-                        <Sparkles className="h-4 w-4" />
-                    </div>
-                    <span className="text-[17px] font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80">
-                        Aana
-                    </span>
+                <Link href="/" aria-label="Aana home" className="flex items-center mr-4 lg:mr-8 group apple-press">
+                    <BrandLogo />
                 </Link>
 
                 {/* Desktop Navigation */}

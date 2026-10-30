@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="86" viewBox="0 0 280 60" role="img" aria-label="Aana" style="overflow: visible">
+      <g fill="none" stroke="#1d1d1f" stroke-width="10" stroke-linecap="butt">
+        <circle cx="30" cy="30" r="25"></circle>
+        <line x1="55" y1="0" x2="55" y2="60"></line>
+        <circle cx="102" cy="30" r="25"></circle>
+        <line x1="127" y1="0" x2="127" y2="60"></line>
+        <line x1="153" y1="0" x2="153" y2="60"></line>
+        <path d="M153 30 A25 25 0 0 1 203 30"></path>
+        <line x1="203" y1="30" x2="203" y2="60"></line>
+        <circle cx="250" cy="30" r="25"></circle>
+        <line x1="275" y1="0" x2="275" y2="60"></line>
+      </g>
+    </svg>
