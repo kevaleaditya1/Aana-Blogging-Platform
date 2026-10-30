@@ -47,7 +47,7 @@ export function PublicForm({ kind, compact = false }: { kind: FormKind; compact?
                 focusErrors(failures); return;
             }
             // Conversion is emitted once, from the confirmed operation, never from a page visit.
-            trackEvent(kind === "contact" ? "contact_success" : kind === "newsletter" ? "newsletter_success" : "signup_success");
+            if (kind !== "newsletter") trackEvent(kind === "contact" ? "contact_success" : "signup_success");
             try { sessionStorage.setItem(`aana-success-${kind}`, "confirmed"); } catch { /* Success still navigates if storage is blocked. */ }
             setCompleted(true);
             router.push(`/success/${kind}`);

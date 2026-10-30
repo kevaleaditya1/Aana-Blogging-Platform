@@ -49,6 +49,8 @@ model User {
   comments         Comment[]
   bookmarks        Bookmark[]
   createdAt        DateTime   @default(now())
+  welcomeEmailQueuedAt DateTime?
+  welcomeEmailId       String?
 }
 
 enum Role {
@@ -191,6 +193,10 @@ model NewsletterSubscriber {
   verifiedAt     DateTime?
   subscribedAt   DateTime  @default(now())
   unsubscribedAt DateTime?
+  confirmationVersion       String?
+  confirmationExpiresAt     DateTime?
+  confirmationEmailQueuedAt DateTime?
+  confirmationEmailId       String?
   
   @@index([email])
   @@index([isActive])

@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Welcome request exposes pending state",
+    "passed": true
+  },
+  {
+    "name": "Request goes to dedicated success URL without email",
+    "passed": true
+  },
+  {
+    "name": "Feedback asks for email confirmation",
+    "passed": false
+  },
+  {
+    "name": "Pending request does not claim active subscription",
+    "passed": true
+  },
+  {
+    "name": "Success refresh does not resend welcome",
+    "passed": true
+  },
+  {
+    "name": "Opening link does not confirm subscription",
+    "passed": true
+  },
+  {
+    "name": "Confirmation page is noindex",
+    "passed": true
+  },
+  {
+    "name": "Confirmation layout 320px",
+    "passed": true
+  },
+  {
+    "name": "Confirmation layout 390px",
+    "passed": true
+  },
+  {
+    "name": "Confirmation layout 768px",
+    "passed": true
+  },
+  {
+    "name": "Confirmation layout 1440px",
+    "passed": true
+  },
+  {
+    "name": "Real handler rejects invalid token before writes",
+    "passed": true
+  },
+  {
+    "name": "GET cannot activate a subscription",
+    "passed": true
+  },
+  {
+    "name": "Expired-link error is accessible and retryable",
+    "passed": true
+  },
+  {
+    "name": "Confirmation pending disables duplicate clicks",
+    "passed": true
+  },
+  {
+    "name": "Only confirmed operation opens clean success URL",
+    "passed": true
+  },
+  {
+    "name": "Confirmed feedback is explicit",
+    "passed": true
+  }
+]

@@ -1,0 +1,122 @@
+
+> Aana-web@0.1.0 build
+> next build
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   ▲ Next.js 16.0.8 (Turbopack)
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     · cpus: 2
+
+ ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Compiled successfully in 15.5s
+   Running TypeScript ...
+
+   We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+   The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+   	- include was updated to add '.next-quality-welcome-final/types/**/*.ts'
+   	- include was updated to add '.next-quality-welcome-final/dev/types/**/*.ts'
+
+   Collecting page data using 2 workers ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Cloudinary Config: { cloud_name: 'dd6iomjs4', api_key: 'SET', api_secret: 'SET' }
+   Generating static pages using 2 workers (0/258) ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Cloudinary Config: { cloud_name: 'dd6iomjs4', api_key: 'SET', api_secret: 'SET' }
+   Generating static pages using 2 workers (64/258) 
+   Generating static pages using 2 workers (128/258) 
+   Generating static pages using 2 workers (193/258) 
+ ✓ Generating static pages using 2 workers (258/258) in 33.8s
+   Finalizing page optimization ...
+
+Route (app)                                                                                                                                                                                                                                 Revalidate  Expire
+┌ ƒ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /admin
+├ ○ /admin/analytics
+├ ○ /admin/comments
+├ ○ /admin/forgot-password
+├ ○ /admin/login
+├ ○ /admin/media
+├ ƒ /admin/news
+├ ○ /admin/posts
+├ ƒ /admin/posts/[slug]/edit
+├ ○ /admin/posts/new
+├ ○ /admin/settings
+├ ○ /admin/users
+├ ƒ /api/admin/analytics
+├ ƒ /api/admin/auth
+├ ƒ /api/admin/comments
+├ ƒ /api/admin/comments/[id]
+├ ƒ /api/admin/media
+├ ƒ /api/admin/posts
+├ ƒ /api/admin/posts/[slug]
+├ ƒ /api/admin/trigger-blog-posts
+├ ƒ /api/admin/trigger-news
+├ ƒ /api/admin/trigger-newsletter
+├ ƒ /api/admin/update-old-posts
+├ ƒ /api/admin/users
+├ ƒ /api/admin/users/[id]
+├ ƒ /api/auth/[...nextauth]
+├ ƒ /api/auth/forgot-password
+├ ƒ /api/auth/reset-password
+├ ƒ /api/auth/signup
+├ ƒ /api/bookmarks
+├ ƒ /api/comments
+├ ƒ /api/comments/[id]
+├ ƒ /api/contact
+├ ƒ /api/cron/aggregate-news
+├ ƒ /api/cron/generate-blog-posts
+├ ƒ /api/cron/send-newsletter
+├ ƒ /api/indexnow
+├ ƒ /api/newsletter
+├ ƒ /api/newsletter/confirm
+├ ƒ /api/newsletter/subscribe
+├ ƒ /api/newsletter/unsubscribe
+├ ƒ /api/posts
+├ ƒ /api/search
+├ ƒ /api/upload
+├ ○ /apple-icon.png
+├ ○ /blog                                                                                                                                                                                                                                           1m      1y
+├ ● /blog/[slug]                                                                                                                                                                                                                                    1m      1y
+│ ├ /blog/apple-releases-ios-and-macos-27-2-with-new-siri-ai-features-new-music-logo-1793092942234-12                                                                                                                                               1m      1y
+│ ├ /blog/choosing-the-right-ai-design-to-code-tool-depends-on-your-workflow-explore-11-tools-compared-by-design-accuracy-code-integration-functionality-and-developer-control-to-find-the-best-fit-for-your-next-project-1793092942240-13          1m      1y
+│ ├ /blog/everything-new-on-apple-tv-in-november-2026-a-heist-thriller-new-chris-pratt-movie-and-more-1793092942248-14                                                                                                                              1m      1y
+│ └ [+201 more paths]
+├ ○ /bookmarks
+├ ○ /category
+├ ● /category/[slug]
+│ └ /category/news
+├ ○ /contact
+├ ƒ /feed.xml
+├ ○ /forgot-password
+├ ○ /login
+├ ○ /manifest.webmanifest
+├ ƒ /news
+├ ƒ /newsletter/confirm/[token]
+├ ○ /privacy
+├ ○ /products/smartphone-guide
+├ ƒ /profile/[id]
+├ ƒ /reset-password/[token]
+├ ○ /robots.txt
+├ ƒ /saved
+├ ○ /search
+├ ○ /signup
+├ ƒ /sitemap.xml
+├ ƒ /success/[kind]
+├ ○ /terms
+└ ƒ /unsubscribe/[token]
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

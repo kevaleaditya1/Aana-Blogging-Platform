@@ -21,7 +21,7 @@ export function PrivacyControls({ children }: { children: React.ReactNode }) {
     const gaId = process.env.NEXT_PUBLIC_GA_ID;
     const validGaId = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === "true" && gaId && /^G-[A-Z0-9]+$/.test(gaId) ? gaId : null;
     // Sensitive account/reset/profile routes must never reach analytics.
-    const publicRoute = !/^\/(admin|api|login|signup|forgot-password|reset-password|profile|saved|bookmarks|search|unsubscribe)(\/|$)/.test(pathname);
+    const publicRoute = !/^\/(admin|api|login|signup|forgot-password|reset-password|profile|saved|bookmarks|search|unsubscribe|newsletter\/confirm)(\/|$)/.test(pathname);
 
     useEffect(() => {
         const hydrate = window.setTimeout(() => {

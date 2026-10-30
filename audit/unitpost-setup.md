@@ -1,3 +1,5 @@
+> Update, 30 October 2026: automatic newsletter welcome/confirmation and first-successful-sign-in welcome are now implemented. See [welcome-flow.md](welcome-flow.md) for verification and deployment steps. Production confirmation/unsubscribe checks remain required before enabling broadcasts.
+
 # Unitpost newsletter setup — 30 October 2026
 
 ## Connection and configuration
@@ -16,7 +18,7 @@ Every newsletter includes a signed, recipient-specific unsubscribe page and RFC 
 
 The newsletter sender and cron both require active subscribers with a non-null `verifiedAt`. No existing addresses were marked verified, enrolled, imported into Unitpost contacts or emailed by the implementation/tests.
 
-**Broadcasts remain disabled** through `NEWSLETTER_CAMPAIGNS_ENABLED=false`. The current signup flow saves requests but does not yet complete address verification. Do not mark those requests verified or enable campaigns merely because the provider is connected. Complete an appropriate subscriber verification flow and test the production unsubscribe endpoint first.
+**Broadcasts remain disabled** through `NEWSLETTER_CAMPAIGNS_ENABLED=false`. The signup and account welcome flows are now implemented as described in `welcome-flow.md`: newsletter requests receive a welcome/confirmation email, and delivery activates only after confirmation. Do not mark those requests verified or enable campaigns merely because the provider is connected. Deploy the new welcome flow and test the production confirmation and unsubscribe endpoints first.
 
 ## Production setup
 

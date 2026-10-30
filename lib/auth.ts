@@ -1,9 +1,12 @@
 import NextAuth from "next-auth";
+import type { Adapter } from "next-auth/adapters";
 import Google from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import { after } from "next/server";
+import { sendAccountWelcome } from "@/lib/email/welcome";
 
 const prisma = new PrismaClient();
 
@@ -13,7 +16,8 @@ const ADMIN_EMAILS = [
 ];
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-    adapter: PrismaAdapter(prisma) as any,
+    // Prisma returns the project's role field; the adapter package uses a separate @auth/core type copy.
+    adapter: PrismaAdapter(prisma) as Adapter,
     session: { strategy: "jwt" },
     trustHost: true,
     providers: [
@@ -104,5 +108,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
     pages: {
         signIn: "/login", // Regular users go to /login, not /admin/login
+    },
+    events: {
+        async signIn({ user }) {
+            if (!user.email) return;
+            const email = user.email;
+            // Run only after successful authentication and do not delay/fail login for mail.
+            try {
+                after(async () => {
+                    try { await sendAccountWelcome(email); }
+                    catch { console.error("Account welcome email could not be queued; a future sign-in may retry it."); }
+                });
+            } catch { console.error("Account welcome email could not be scheduled."); }
+        },
     },
 });

@@ -12,7 +12,7 @@ export async function POST(request: Request) {
         const subscriber = await prisma.newsletterSubscriber.findUnique({ where: { id }, select: { id: true, email: true } });
         if (!subscriber) return NextResponse.json({ error: "This subscription could not be found. Contact Aana for help." }, { status: 404 });
         await prisma.$transaction([
-            prisma.newsletterSubscriber.update({ where: { id }, data: { isActive: false, unsubscribedAt: new Date() } }),
+            prisma.newsletterSubscriber.update({ where: { id }, data: { isActive: false, unsubscribedAt: new Date(), confirmationVersion: null, confirmationExpiresAt: null, confirmationEmailQueuedAt: null, confirmationEmailId: null } }),
             prisma.subscriber.updateMany({ where: { email: subscriber.email }, data: { active: false } }),
         ]);
         return NextResponse.json({ success: true }, { headers: { "Cache-Control": "no-store" } });

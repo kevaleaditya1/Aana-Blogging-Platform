@@ -1,0 +1,26 @@
+[
+  {
+    "table_name": "NewsletterSubscriber",
+    "column_name": "confirmationEmailId"
+  },
+  {
+    "table_name": "NewsletterSubscriber",
+    "column_name": "confirmationEmailQueuedAt"
+  },
+  {
+    "table_name": "NewsletterSubscriber",
+    "column_name": "confirmationExpiresAt"
+  },
+  {
+    "table_name": "NewsletterSubscriber",
+    "column_name": "confirmationVersion"
+  },
+  {
+    "table_name": "User",
+    "column_name": "welcomeEmailId"
+  },
+  {
+    "table_name": "User",
+    "column_name": "welcomeEmailQueuedAt"
+  }
+]

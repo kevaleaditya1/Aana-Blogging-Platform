@@ -31,5 +31,6 @@ export default auth((req) => {
 });
 
 export const config = {
+    runtime: "nodejs",
     matcher: ["/admin/:path*", "/api/admin/:path*", "/api/upload", "/profile/:path*"],
 };

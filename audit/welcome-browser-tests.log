@@ -1,0 +1,17 @@
+PASS Welcome request exposes pending state
+PASS Request goes to dedicated success URL without email
+FAIL Feedback asks for email confirmation
+PASS Pending request does not claim active subscription
+PASS Success refresh does not resend welcome
+PASS Opening link does not confirm subscription
+PASS Confirmation page is noindex
+PASS Confirmation layout 320px
+PASS Confirmation layout 390px
+PASS Confirmation layout 768px
+PASS Confirmation layout 1440px
+PASS Real handler rejects invalid token before writes
+PASS GET cannot activate a subscription
+PASS Expired-link error is accessible and retryable
+PASS Confirmation pending disables duplicate clicks
+PASS Only confirmed operation opens clean success URL
+PASS Confirmed feedback is explicit

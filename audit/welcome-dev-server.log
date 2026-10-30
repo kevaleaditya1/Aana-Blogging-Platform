@@ -1,0 +1,57 @@
+
+> Aana-web@0.1.0 dev
+> next dev --port 3000
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   ▲ Next.js 16.0.8 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://192.168.112.1:3000
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     · cpus: 2
+
+ ✓ Starting...
+ ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+ ✓ Ready in 3.6s
+ ○ Compiling / ...
+ GET /manifest.webmanifest 200 in 1250ms (compile: 1194ms, render: 56ms)
+ GET /api/auth/session 200 in 3.6s (compile: 3.4s, render: 208ms)
+ GET /api/auth/session 200 in 104ms (compile: 28ms, render: 76ms)
+ GET /api/auth/session 200 in 66ms (compile: 9ms, render: 57ms)
+ GET /api/auth/session 200 in 49ms (compile: 9ms, render: 40ms)
+ GET / 200 in 16.0s (compile: 9.6s, render: 6.4s)
+ ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 821ms (compile: 339ms, render: 482ms)
+ GET /manifest.webmanifest 200 in 23ms (compile: 9ms, render: 14ms)
+ GET /api/auth/session 200 in 547ms (compile: 334ms, render: 214ms)
+ GET /api/auth/session 200 in 83ms (compile: 28ms, render: 55ms)
+ GET /api/auth/session 200 in 44ms (compile: 8ms, render: 36ms)
+ GET /api/auth/session 200 in 34ms (compile: 13ms, render: 22ms)
+ GET / 200 in 4.4s (compile: 40ms, render: 4.3s)
+ ✓ Compiled in 335ms
+ GET /api/auth/session 200 in 326ms (compile: 273ms, render: 53ms)
+ GET /api/auth/session 200 in 23ms (compile: 6ms, render: 17ms)
+ ✓ Compiled in 525ms
+ ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 883ms (compile: 405ms, render: 478ms)
+ GET /manifest.webmanifest 200 in 25ms (compile: 7ms, render: 19ms)
+ GET /api/auth/session 200 in 371ms (compile: 262ms, render: 109ms)
+ GET /api/auth/session 200 in 36ms (compile: 10ms, render: 26ms)
+ GET /api/auth/session 200 in 28ms (compile: 7ms, render: 21ms)
+ GET /api/auth/session 200 in 34ms (compile: 8ms, render: 26ms)
+ GET / 200 in 5.7s (compile: 13ms, render: 5.7s)
+ GET /api/auth/session 200 in 240ms (compile: 72ms, render: 169ms)
+ GET /api/auth/session 200 in 63ms (compile: 16ms, render: 47ms)
+ GET /api/auth/session 200 in 200ms (compile: 57ms, render: 143ms)
+ GET /api/auth/session 200 in 17ms (compile: 5ms, render: 13ms)
+ GET /api/search?q=did%5C 200 in 2.5s (compile: 251ms, render: 2.3s)
+ GET /api/search?q=did 200 in 5.1s (compile: 638ms, render: 4.5s)
+ ✓ Compiled in 424ms
+ ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 671ms (compile: 241ms, render: 430ms)
+ GET /manifest.webmanifest 200 in 28ms (compile: 9ms, render: 18ms)
+ GET /api/auth/session 200 in 108ms (compile: 25ms, render: 83ms)
+ GET /api/auth/session 200 in 36ms (compile: 13ms, render: 24ms)
+ GET /api/auth/session 200 in 33ms (compile: 6ms, render: 27ms)
+ GET /api/auth/session 200 in 29ms (compile: 8ms, render: 21ms)
+ GET / 200 in 4.3s (compile: 35ms, render: 4.3s)
