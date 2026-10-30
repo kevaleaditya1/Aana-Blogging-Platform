@@ -1,6 +1,8 @@
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { createHash } from "node:crypto";
+import prisma from "@/lib/prisma";
+import { SITE_URL, plainText } from "@/lib/site";
+import { sendUnitpostEmail, unitpostConfiguration } from "@/lib/email/unitpost";
+import { unsubscribeLinks } from "@/lib/email/unsubscribe";
 
 interface NewsItem {
     id: string;
@@ -12,29 +14,40 @@ interface NewsItem {
     category: string;
 }
 
-export async function sendNewsletter(
-    to: string[],
-    subject: string,
-    featuredNews: NewsItem[]
-) {
-    const html = generateNewsletterHTML(featuredNews);
-
-    try {
-        const result = await resend.emails.send({
-            from: 'Aana Newsletter <newsletter@aanaa.blog>',
-            to,
-            subject,
-            html,
-        });
-
-        return result;
-    } catch (error) {
-        console.error('Email send error:', error);
-        throw error;
+export async function sendNewsletter(to: string[], subject: string, featuredNews: NewsItem[], campaignKey: string) {
+    unitpostConfiguration();
+    if (!campaignKey || campaignKey.length > 100) throw new Error("A stable newsletter issue key is required.");
+    const emails = [...new Set(to.map(email => email.trim().toLowerCase()))];
+    const subscribers = await prisma.newsletterSubscriber.findMany({
+        where: { email: { in: emails }, isActive: true, verifiedAt: { not: null } },
+        select: { id: true, email: true },
+    });
+    const accepted: Array<{ email: string; id: string }> = [];
+    let failed = 0;
+    for (const subscriber of subscribers) {
+        const links = unsubscribeLinks(subscriber.id);
+        const html = generateNewsletterHTML(featuredNews, links.page);
+        const recipientHash = createHash("sha256").update(subscriber.email).digest("hex");
+        try {
+            const result = await sendUnitpostEmail({
+                to: subscriber.email, subject, html,
+                idempotencyKey: `aana-newsletter/${campaignKey}/${recipientHash}`,
+                headers: { "List-Unsubscribe": `<${links.oneClick}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
+            });
+            accepted.push({ email: subscriber.email, id: result.id });
+        } catch {
+            failed++;
+            console.error("Unitpost did not confirm a newsletter message; consult the provider dashboard.");
+        }
     }
+    return { accepted, failed, skipped: emails.length - subscribers.length };
 }
 
-function generateNewsletterHTML(news: NewsItem[]): string {
+const escapeHTML = (value: string) => value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+const safeURL = (value: string) => { try { const url = new URL(value); return url.protocol === "https:" ? escapeHTML(url.href) : ""; } catch { return ""; } };
+
+export function generateNewsletterHTML(news: NewsItem[], unsubscribeURL: string): string {
+    news = news.map(item => ({ ...item, title: escapeHTML(plainText(item.title)), summary: escapeHTML(plainText(item.summary).slice(0, 1200)), source: escapeHTML(plainText(item.source)), category: escapeHTML(plainText(item.category)), image: item.image ? safeURL(item.image) : undefined, link: safeURL(item.link) || SITE_URL }));
     return `
 <!DOCTYPE html>
 <html>
@@ -145,7 +158,7 @@ function generateNewsletterHTML(news: NewsItem[]): string {
       <p>You're receiving this because you subscribed to Aana Newsletter</p>
       <p>
         <a href="https://aanaa.blog">Visit Website</a> • 
-        <a href="https://aanaa.blog/api/newsletter/subscribe?email={{email}}">Unsubscribe</a>
+        <a href="${escapeHTML(unsubscribeURL)}">Unsubscribe</a>
       </p>
       <p style="margin-top: 20px;">© ${new Date().getFullYear()} Aana. All rights reserved.</p>
     </div>

@@ -1,0 +1,28 @@
+{
+  "passed": 23,
+  "checks": [
+    "Signed token round trip",
+    "Tampered signature rejected",
+    "Malformed token rejected",
+    "Links contain no email",
+    "Provider acceptance checked",
+    "Official HTTPS endpoint",
+    "Confirmed sender and reply address",
+    "Tracking disabled",
+    "No recipient list exposure",
+    "Stable idempotency header",
+    "Provider HTTP 401 not reported as success",
+    "Provider HTTP 403 not reported as success",
+    "Provider HTTP 429 not reported as success",
+    "Provider HTTP 500 not reported as success",
+    "Malformed acceptance rejected",
+    "Missing configuration never sends",
+    "Only active verified subscribers selected",
+    "Duplicate addresses not double-sent",
+    "One-click and visible unsubscribe supplied",
+    "HTML and link injection excluded",
+    "Accepted counted as queued",
+    "Invalid unsubscribe cannot mutate subscriptions",
+    "Valid one-click updates both subscriber stores"
+  ]
+}

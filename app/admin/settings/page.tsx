@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { CONTACT_EMAIL } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import {
     Card,
@@ -19,7 +20,7 @@ export default function SettingsPage() {
     const [settings, setSettings] = useState({
         siteName: "Aana",
         siteDescription: "Your daily dose of technology, gadgets, and future tech",
-        contactEmail: "kevaleaditya1@gmail.com",
+        contactEmail: CONTACT_EMAIL,
         twitterUrl: "",
         instagramUrl: "",
         linkedinUrl: "",

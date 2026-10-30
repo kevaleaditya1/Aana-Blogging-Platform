@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 // Metadata must never fall back to localhost or a preview deployment.
 export const SITE_URL = "https://aanaa.blog";
-export const CONTACT_EMAIL = "contact.aanaa.blog@gmail.com";
+export const CONTACT_EMAIL = "contact@aanaa.tech";
 export const categorySlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 export function plainText(value: string): string {
     const entities: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", mdash: "—", ndash: "–", rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“", hellip: "…" };

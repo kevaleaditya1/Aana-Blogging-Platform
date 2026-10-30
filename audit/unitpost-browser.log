@@ -1,0 +1,12 @@
+PASS GET confirmation does not unsubscribe
+PASS Unsubscribe page is noindex
+PASS Preference token path not tracked
+PASS Preference layout 320px
+PASS Preference layout 390px
+PASS Preference layout 768px
+PASS Preference layout 1440px
+PASS Invalid signed POST rejected by real handler
+PASS GET API cannot mutate preferences
+PASS Failure feedback and retry control
+PASS Pending action is busy and disabled
+PASS Mocked success is inline

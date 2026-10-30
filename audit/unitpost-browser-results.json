@@ -1,0 +1,50 @@
+[
+  {
+    "name": "GET confirmation does not unsubscribe",
+    "passed": true
+  },
+  {
+    "name": "Unsubscribe page is noindex",
+    "passed": true
+  },
+  {
+    "name": "Preference token path not tracked",
+    "passed": true
+  },
+  {
+    "name": "Preference layout 320px",
+    "passed": true
+  },
+  {
+    "name": "Preference layout 390px",
+    "passed": true
+  },
+  {
+    "name": "Preference layout 768px",
+    "passed": true
+  },
+  {
+    "name": "Preference layout 1440px",
+    "passed": true
+  },
+  {
+    "name": "Invalid signed POST rejected by real handler",
+    "passed": true
+  },
+  {
+    "name": "GET API cannot mutate preferences",
+    "passed": true
+  },
+  {
+    "name": "Failure feedback and retry control",
+    "passed": true
+  },
+  {
+    "name": "Pending action is busy and disabled",
+    "passed": true
+  },
+  {
+    "name": "Mocked success is inline",
+    "passed": true
+  }
+]

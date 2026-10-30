@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 export async function GET(request: Request) {
     // Verify cron secret
     const authHeader = request.headers.get('authorization');
-    if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+    if (!process.env.CRON_SECRET || authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
         return new NextResponse('Unauthorized', { status: 401 });
     }
 
@@ -72,53 +72,20 @@ export async function GET(request: Request) {
             image: item.image ?? undefined,
         }));
 
-        // Send emails in batches of 50
-        const batchSize = 50;
-        let sent = 0;
-
-        for (let i = 0; i < subscribers.length; i += batchSize) {
-            const batch = subscribers.slice(i, i + batchSize);
-            const emails = batch.map(s => s.email);
-
-            try {
-                await sendNewsletter(
-                    emails,
-                    '🚀 Your Weekly Tech Digest - Aana',
-                    formattedNews
-                );
-
-                sent += batch.length;
-                console.log(`Sent batch ${Math.floor(i / batchSize) + 1}: ${batch.length} emails`);
-
-                // Rate limiting - wait 1 second between batches
-                if (i + batchSize < subscribers.length) {
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                }
-            } catch (error) {
-                console.error(`Error sending batch:`, error);
-            }
-        }
-
-        // Save to queue for tracking
+        const issueDate = new Date();
+        issueDate.setUTCDate(issueDate.getUTCDate() - issueDate.getUTCDay());
+        const campaignKey = issueDate.toISOString().slice(0, 10);
+        const result = await sendNewsletter(subscribers.map(subscriber => subscriber.email), 'Your Weekly Tech Digest - Aana', formattedNews, campaignKey);
+        const queued = result.accepted.length;
         await prisma.newsletterQueue.create({
             data: {
-                subject: '🚀 Your Weekly Tech Digest - Aana',
-                content: JSON.stringify(featuredNews),
-                recipients: subscribers.map(s => s.email),
-                scheduledFor: new Date(),
-                sentAt: new Date(),
-                status: 'sent',
-            }
+                subject: 'Your Weekly Tech Digest - Aana', content: JSON.stringify(featuredNews),
+                recipients: result.accepted.map(email => ({ email: email.email, providerId: email.id })),
+                scheduledFor: new Date(), status: result.failed ? (queued ? 'partial' : 'failed') : 'queued',
+            },
         });
-
-        console.log(`Newsletter sent to ${sent} subscribers`);
-
-        return NextResponse.json({
-            success: true,
-            sent,
-            total: subscribers.length,
-            newsCount: featuredNews.length
-        });
+        // An API acceptance is queued delivery, not proof of inbox delivery.
+        return NextResponse.json({ success: result.failed === 0, queued, failed: result.failed, skipped: result.skipped, total: subscribers.length, newsCount: featuredNews.length }, { status: result.failed && !queued ? 502 : 200 });
 
     } catch (error) {
         console.error('Newsletter send error:', error);

@@ -1,6 +1,8 @@
 # Website quality rules
 
-Preserve Aana's existing design, approved brand assets and working features. Production canonical origin is `https://aanaa.blog`; public contact is `contact.aanaa.blog@gmail.com`. Do not invent operator details, addresses, testimonials, prices, refund promises, retention periods or compliance claims.
+Never track `.env`, `.env.local`, other `.env.*` files or `VERCEL_ENV.txt`; only `.env.example` may contain placeholder configuration. Do not print keys when inspecting these files. If push protection reports a secret, remove it from unpublished commits rather than bypassing protection, preserve local configuration, and report any credentials already present in published history for rotation.
+
+Preserve Aana's existing design, approved brand assets and working features. Production canonical origin is `https://aanaa.blog`; public contact is `contact@aanaa.tech`. Do not invent operator details, addresses, testimonials, prices, refund promises, retention periods or compliance claims.
 
 For future changes, maintain these checks:
 
@@ -20,3 +22,5 @@ For future changes, maintain these checks:
 Before completion, record an initial and final 20-item checklist (see `audit/quality-baseline.md`), run appropriate type/build/lint checks and browser/functional checks, and distinguish source inspection, automated tests, mocked integrations, local browser results and live production evidence. Reports must identify failed checks, missing owner details, unavailable credentials, external setup and unverified behavior. Do not claim completion or live deployment while required items remain unresolved. Do not submit real forms/send emails/create accounts merely to test without authorization.
 
 Advertising and newsletter campaigns are disabled until consent/opt-in/unsubscribe configuration is verified. Analytics additionally requires `NEXT_PUBLIC_ANALYTICS_ENABLED=true` after the GA account settings review described in the quality audit; consent remains mandatory. Do not bypass these gates to improve a score.
+
+Newsletter delivery uses Unitpost with server-only `UNITPOST_API_KEY`, `NEWSLETTER_FROM` and `NEWSLETTER_UNSUBSCRIBE_SECRET`. The confirmed sender is `news@aanaa.tech`; Reply-To remains the public contact email. Preserve per-recipient delivery, idempotency, disabled engagement tracking, active/verified-recipient checks and signed POST-only unsubscribe changes. Report queued acceptance separately from delivered mail. Never expose keys or re-enable broadcasts before subscriber verification and production unsubscribe checks pass.

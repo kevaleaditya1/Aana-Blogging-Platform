@@ -1,5 +1,7 @@
 # Website quality implementation and verification
 
+Latest contact update: the owner changed the public contact and newsletter Reply-To to contact@aanaa.tech. Update CONTACT_EMAIL on the production host accordingly; earlier email addresses in this audit describe its historical verification.
+
 Subsequent owner-requested image repair: see `image-repair-summary.md`. Original post covers were recovered, branding fallbacks were removed from post covers, and original covers now supply article sharing metadata. The generated branded article-preview route described in this earlier audit was superseded by that repair. Other outstanding quality-audit limitations remain unchanged.
 
 30 October 2026. Production origin: https://aanaa.blog. Public contact supplied by the owner: contact.aanaa.blog@gmail.com.

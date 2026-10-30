@@ -1,0 +1,11 @@
+{
+  "id": "email_1bfe00b7-1777-4c93-8186-3939c4492f56",
+  "to": "news@aanaa.tech",
+  "httpStatus": 200,
+  "status": "delivered",
+  "lastEvent": "email.delivered",
+  "sentAt": "2026-10-30T11:15:52.992Z",
+  "deliveredAt": "2026-10-30T11:15:53.392Z",
+  "bouncedAt": null,
+  "lastError": null
+}
