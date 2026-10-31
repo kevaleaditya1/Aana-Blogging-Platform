@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { articleImage, extractArticleImage, originalArticleImage } from "@/lib/article-images";
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
@@ -84,7 +85,7 @@ export async function GET(request: Request) {
         }
 
         try {
-            await submitToIndexNow(syndicated.map(post => `${(process.env.NEXT_PUBLIC_SITE_URL || 'https://aanaa.blog').replace(/\/$/, '')}/blog/${post.slug}`));
+            await submitToIndexNow(syndicated.map(post => `${SITE_URL}/blog/${post.slug}`));
         } catch (error) {
             console.error('IndexNow submission failed:', error);
         }
@@ -212,7 +213,7 @@ export async function GET(request: Request) {
                         metaTitle: post.title.length > 60 ? post.title.substring(0, 57) + '...' : post.title,
                         metaDescription: post.excerpt.length > 160 ? post.excerpt.substring(0, 157) + '...' : post.excerpt,
                         focusKeyword: post.tags[0] || post.category,
-                        canonicalUrl: `https://aanaa.blog/blog/${slug}`,
+                        canonicalUrl: `https://aanaa.tech/blog/${slug}`,
                         robots: 'index, follow',
                         ogTitle: post.title,
                         ogDescription: post.excerpt.substring(0, 200),

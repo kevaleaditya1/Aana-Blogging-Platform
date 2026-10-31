@@ -157,7 +157,7 @@ export function generateNewsletterHTML(news: NewsItem[], unsubscribeURL: string)
     <div class="footer">
       <p>You're receiving this because you subscribed to Aana Newsletter</p>
       <p>
-        <a href="https://aanaa.blog">Visit Website</a> • 
+        <a href="https://aanaa.tech">Visit Website</a> •
         <a href="${escapeHTML(unsubscribeURL)}">Unsubscribe</a>
       </p>
       <p style="margin-top: 20px;">© ${new Date().getFullYear()} Aana. All rights reserved.</p>

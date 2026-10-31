@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
 
 // Metadata must never fall back to localhost or a preview deployment.
-export const SITE_URL = "https://aanaa.blog";
+export const SITE_URL = "https://aanaa.tech";
+// Preserve external source canonicals while moving our own historical URLs.
+export function canonicalURL(value: string | null | undefined, fallback: string): string {
+    if (!value) return new URL(fallback, SITE_URL).href;
+    try {
+        const url = new URL(value);
+        if (["aanaa.blog", "www.aanaa.blog"].includes(url.hostname) && ["https:", "http:"].includes(url.protocol)) return new URL(`${url.pathname}${url.search}${url.hash}`, SITE_URL).href;
+    } catch { return new URL(fallback, SITE_URL).href; }
+    return value;
+}
 export const CONTACT_EMAIL = "contact@aanaa.tech";
 export const categorySlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 export function plainText(value: string): string {

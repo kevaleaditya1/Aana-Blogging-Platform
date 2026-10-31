@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import prisma from "@/lib/prisma";
-import { SITE_URL, categorySlug } from "@/lib/site";
+import { SITE_URL, canonicalURL, categorySlug } from "@/lib/site";
 export const dynamic = "force-dynamic";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
  // Never silently publish an incomplete sitemap when the database is unavailable.
@@ -13,6 +13,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
  return [
   ...staticPages.map(path => ({ url: `${SITE_URL}${path}` })),
   ...categories.map(slug => ({ url: `${SITE_URL}/category/${encodeURIComponent(slug)}` })),
-  ...posts.filter(p => !p.canonicalUrl || p.canonicalUrl === `${SITE_URL}/blog/${p.slug}`).map(p => ({ url: `${SITE_URL}/blog/${p.slug}`, lastModified: p.updatedAt })),
+  ...posts.filter(p => canonicalURL(p.canonicalUrl, `/blog/${p.slug}`) === `${SITE_URL}/blog/${p.slug}`).map(p => ({ url: `${SITE_URL}/blog/${p.slug}`, lastModified: p.updatedAt })),
  ];
 }

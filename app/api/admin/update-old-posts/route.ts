@@ -38,7 +38,7 @@ export async function POST(request: Request) {
                         metaTitle: post.metaTitle || (post.title.length > 60 ? post.title.substring(0, 57) + '...' : post.title),
                         metaDescription: post.metaDescription || (post.excerpt.length > 160 ? post.excerpt.substring(0, 157) + '...' : post.excerpt),
                         focusKeyword: post.focusKeyword || post.tags[0] || post.category,
-                        canonicalUrl: post.canonicalUrl || `https://aanaa.blog/blog/${post.slug}`,
+                        canonicalUrl: post.canonicalUrl || `https://aanaa.tech/blog/${post.slug}`,
                         robots: post.robots || 'index, follow',
                         ogTitle: post.ogTitle || post.title,
                         ogDescription: post.ogDescription || post.excerpt.substring(0, 200),

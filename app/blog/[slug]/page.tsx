@@ -1,4 +1,4 @@
-import { SITE_URL, pageMetadata, plainText } from "@/lib/site";
+import { SITE_URL, canonicalURL, pageMetadata, plainText } from "@/lib/site";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const metadata = pageMetadata(post.metaTitle || post.title, description, `/blog/${slug}`, post.ogImage.url || "/social-default.png");
     return {
         ...metadata,
-        alternates: { canonical: post.canonicalUrl || `${SITE_URL}/blog/${slug}` },
+        alternates: { canonical: canonicalURL(post.canonicalUrl, `/blog/${slug}`) },
         robots: { index: !post.hideFromSearch && !post.robots?.includes("noindex"), follow: !post.robots?.includes("nofollow") },
         openGraph: { ...metadata.openGraph, type: "article", publishedTime: post.date, modifiedTime: post.updatedAt, authors: [post.author.name], tags: post.tags },
     };

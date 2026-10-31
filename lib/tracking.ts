@@ -8,6 +8,6 @@ export function trackEvent(name: "explore_articles" | "contact_success" | "newsl
     if (!hasConsent() || process.env.NEXT_PUBLIC_ANALYTICS_ENABLED !== "true") return;
     // Only fixed event names: never send form fields, email, names, tokens or search queries.
     const target = window as Window & { gtag?: Gtag; aanaPendingEvents?: string[] };
-    if (target.gtag) target.gtag("event", name, { page_location: "https://aanaa.blog", page_referrer: "" });
+    if (target.gtag) target.gtag("event", name, { page_location: "https://aanaa.tech", page_referrer: "" });
     else (target.aanaPendingEvents ||= []).push(name);
 }

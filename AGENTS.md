@@ -2,7 +2,7 @@
 
 Never track `.env`, `.env.local`, other `.env.*` files or `VERCEL_ENV.txt`; only `.env.example` may contain placeholder configuration. Do not print keys when inspecting these files. If push protection reports a secret, remove it from unpublished commits rather than bypassing protection, preserve local configuration, and report any credentials already present in published history for rotation.
 
-Preserve Aana's existing design, approved brand assets and working features. Production canonical origin is `https://aanaa.blog`; public contact is `contact@aanaa.tech`. Do not invent operator details, addresses, testimonials, prices, refund promises, retention periods or compliance claims.
+Preserve Aana's existing design, approved brand assets and working features. Production canonical origin is `https://aanaa.tech`; public contact is `contact@aanaa.tech`. Do not invent operator details, addresses, testimonials, prices, refund promises, retention periods or compliance claims.
 
 For future changes, maintain these checks:
 
