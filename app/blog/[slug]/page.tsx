@@ -1,7 +1,7 @@
-import { SITE_URL, canonicalURL, pageMetadata, plainText } from "@/lib/site";
+import { SITE_URL, canonicalURL, pageMetadata } from "@/lib/site";
+import { articleAuthor, jsonLD, postSEO } from "@/lib/post-seo";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { getPostData, getAllPostSlugs, getRelatedPosts } from "@/lib/posts";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -46,8 +46,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
-    const description = plainText(post.metaDescription || "") || plainText(post.excerpt) || `Read ${post.title} and explore its linked sources on Aana.`;
-    const metadata = pageMetadata(post.metaTitle || post.title, description, `/blog/${slug}`, post.ogImage.url || "/social-default.png");
+    const { title, description } = postSEO(post);
+    const metadata = pageMetadata(title, description, `/blog/${slug}`, post.ogImage.url || "/social-default.png");
     return {
         ...metadata,
         alternates: { canonical: canonicalURL(post.canonicalUrl, `/blog/${slug}`) },
@@ -74,15 +74,11 @@ export default async function Post({ params }: Props) {
         "@context": "https://schema.org",
         "@type": "Article",
         headline: post.title,
-        description: post.excerpt,
+        description: postSEO(post).description,
         image: new URL(post.ogImage.url || "/social-default.png", SITE_URL).href,
         datePublished: new Date(post.date).toISOString(),
         dateModified: new Date(post.updatedAt || post.date).toISOString(),
-        author: {
-            "@type": "Person",
-            name: post.author.name,
-            url: baseUrl,
-        },
+        author: articleAuthor(post.author.name),
         publisher: {
             "@type": "Organization",
             name: "Aana",
@@ -128,11 +124,11 @@ export default async function Post({ params }: Props) {
             {/* JSON-LD Schema Markup */}
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+                dangerouslySetInnerHTML={{ __html: jsonLD(articleSchema) }}
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+                dangerouslySetInnerHTML={{ __html: jsonLD(breadcrumbSchema) }}
             />
 
             <ReadingProgress />
@@ -179,6 +175,7 @@ export default async function Post({ params }: Props) {
                                 remarkPlugins={[remarkGfm]}
                                 rehypePlugins={[rehypeHighlight]}
                                 components={{
+                                    h1: ({ children, ...props }) => <h2 {...props}>{children}</h2>,
                                     img: ({ alt, ...props }) => <img {...props} alt={alt || ""} loading="lazy" className="max-w-full h-auto rounded-xl" />,
                                     code: ({ className, children, ...props }) => {
                                         if (!className && !String(children).includes("\n")) {

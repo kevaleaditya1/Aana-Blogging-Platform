@@ -1,0 +1,20 @@
+{
+  "checked": 30,
+  "uniqueTitles": true,
+  "duplicateDescriptions": [],
+  "titleLengths": [
+    48,
+    58
+  ],
+  "descriptionLengths": [
+    7,
+    154
+  ],
+  "multipleH1": 4,
+  "externalCanonicals": 26,
+  "noindex": 0,
+  "fallbackImages": 1,
+  "authorTypes": [
+    "Person: Aana"
+  ]
+}

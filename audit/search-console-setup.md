@@ -36,3 +36,11 @@ Verification: five local domain/canonical assertions and TypeScript pass. Target
 |20|Success states|Google ownership and Bing `.tech` property visibly confirmed; sitemap submission pending.|
 
 Next: deploy corrected source; check live `.tech` sitemap/canonicals/robots; submit `https://aanaa.tech/sitemap.xml` in Google and Bing; inspect homepage/indexing. Google import permissions were approved explicitly and completed by the owner. Verification and sitemap submission do not guarantee indexing or traffic.
+
+## Deployment and submission verified — 31 October 2026
+
+The owner deployed the domain correction. Live browser XML and read-only public HTTP checks confirmed that `/sitemap.xml` returns HTTP 200, application/xml, 13 URLs and no old `.blog` origin. `/robots.txt` returns HTTP 200, allows public crawling and declares `https://aanaa.tech/sitemap.xml`. The HTTP diagnostic used a Googlebot user-agent string; this alone is not evidence of actual Google crawler access.
+
+Submitted the sitemap once in Google Search Console and Bing Webmaster Tools. Google initially showed Could not fetch, then updated after processing to **Success**, type Sitemap, 13 discovered pages, last read 31 October 2026. Bing confirmed successful submission and currently shows **Processing**. Evidence: `google-sitemap-success.png`, `google-sitemap-submitted.png`, `bing-sitemap-submitted.png`. Both dashboard tabs were preserved for the owner.
+
+Final checklist delta: canonical/sitemap domain correction is now observed live; Google ownership, Bing connection and both sitemap submissions are complete. Google has read the sitemap; Bing processing and actual page indexing/performance remain pending. This does not claim 13 pages are indexed. No additional code changes or real user-form submissions were made during the deployment check. Earlier pending-submission notes above describe the initial state and are superseded by this update.

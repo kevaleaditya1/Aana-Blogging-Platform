@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://aanaa.tech/logo.png",
+    "status": 200,
+    "contentType": "image/png"
+  },
+  {
+    "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzkudhlc4i8hva9xgwsef.jpg",
+    "error": "TypeError"
+  },
+  {
+    "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu0hyqjqh86229q7e7jk5.jpeg",
+    "error": "TypeError"
+  },
+  {
+    "url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/IRDAIs-ftr.jpg",
+    "error": "TypeError"
+  },
+  {
+    "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1de6vgazrfh712hieo3r.png",
+    "error": "TypeError"
+  }
+]

@@ -1,0 +1,2886 @@
+{
+  "checkedAt": "2026-11-01T05:28:41.492Z",
+  "sampling": "sitemap plus first blog listing, up to 30 posts",
+  "rows": [
+    {
+      "url": "https://aanaa.tech/blog/from-displacement-films-to-ai-moonshots-what-this-week-s-tech-culture-news-means-for-you-1792833753995",
+      "status": 200,
+      "title": "From Displacement Films to AI Moonshots: What This | Aana",
+      "titleLength": 57,
+      "description": [
+        "A week of bold moves—from Cate Blanchett’s film fund teaming up with The New Yorker, to Brick’s bedtime app blocker, iOS 27’s new features, BPA cost insig"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://aanaa.tech/blog/from-displacement-films-to-ai-moonshots-what-this-week-s-tech-culture-news-means-for-you-1792833753995"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "From Displacement Films to AI Moonshots: What This | Aana"
+      ],
+      "ogDescription": [
+        "A week of bold moves—from Cate Blanchett’s film fund teaming up with The New Yorker, to Brick’s bedtime app blocker, iOS 27’s new features, BPA cost insig"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/from-displacement-films-to-ai-moonshots-what-this-week-s-tech-culture-news-means-for-you-1792833753995"
+      ],
+      "ogImage": [
+        "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzkudhlc4i8hva9xgwsef.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzkudhlc4i8hva9xgwsef.jpg"
+      ],
+      "published": [
+        "2026-10-24"
+      ],
+      "modified": [
+        "2026-10-24T09:22:34.221Z"
+      ],
+      "h1Count": 2,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "From Displacement Films to AI Moonshots: What This Week’s Tech & Culture News Means for You",
+          "description": "A week of bold moves—from Cate Blanchett’s film fund teaming up with The New Yorker, to Brick’s bedtime app blocker, iOS 27’s new features, BPA cost insights, and Moonshot AI’s massive Kimi K3.1 Pro—reveals how creativity, wellness, and open AI are reshaping tech. Discover expert analysis and actionable takeaways to stay ahead.",
+          "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzkudhlc4i8hva9xgwsef.jpg",
+          "datePublished": "2026-10-24T00:00:00.000Z",
+          "dateModified": "2026-10-24T09:22:34.221Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/from-displacement-films-to-ai-moonshots-what-this-week-s-tech-culture-news-means-for-you-1792833753995"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "From Displacement Films to AI Moonshots: What This Week’s Tech & Culture News Means for You",
+              "item": "https://aanaa.tech/blog/from-displacement-films-to-ai-moonshots-what-this-week-s-tech-culture-news-means-for-you-1792833753995"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/mastering-mobile-tech-trends-2026-free-up-android-space-boost-wordpress-scores-1tb-phones-huawei-pura-90-plus-stats-help-for-grad-students-1792920154446",
+      "status": 200,
+      "title": "Mastering Mobile & Tech Trends 2026: Free Up Androi | Aana",
+      "titleLength": 58,
+      "description": [
+        "Explore practical Android storage hacks, unconventional WordPress performance tricks, the best 1TB smartphones in India, a sneak peek at Huawei's AI‑drive"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://aanaa.tech/blog/mastering-mobile-tech-trends-2026-free-up-android-space-boost-wordpress-scores-1tb-phones-huawei-pura-90-plus-stats-help-for-grad-students-1792920154446"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Mastering Mobile & Tech Trends 2026: Free Up Androi | Aana"
+      ],
+      "ogDescription": [
+        "Explore practical Android storage hacks, unconventional WordPress performance tricks, the best 1TB smartphones in India, a sneak peek at Huawei's AI‑drive"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/mastering-mobile-tech-trends-2026-free-up-android-space-boost-wordpress-scores-1tb-phones-huawei-pura-90-plus-stats-help-for-grad-students-1792920154446"
+      ],
+      "ogImage": [
+        "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu0hyqjqh86229q7e7jk5.jpeg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu0hyqjqh86229q7e7jk5.jpeg"
+      ],
+      "published": [
+        "2026-10-25"
+      ],
+      "modified": [
+        "2026-10-25T09:22:34.762Z"
+      ],
+      "h1Count": 2,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Mastering Mobile & Tech Trends 2026: Free Up Android Space, Boost WordPress Scores, 1TB Phones, Huawei Pura 90 Plus & Stats Help for Grad Students",
+          "description": "Explore practical Android storage hacks, unconventional WordPress performance tricks, the best 1TB smartphones in India, a sneak peek at Huawei's AI‑driven Pura 90 Plus, and why grad students are paying for statistical advice—all in one comprehensive 2026 tech roundup.",
+          "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu0hyqjqh86229q7e7jk5.jpeg",
+          "datePublished": "2026-10-25T00:00:00.000Z",
+          "dateModified": "2026-10-25T09:22:34.762Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/mastering-mobile-tech-trends-2026-free-up-android-space-boost-wordpress-scores-1tb-phones-huawei-pura-90-plus-stats-help-for-grad-students-1792920154446"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Mastering Mobile & Tech Trends 2026: Free Up Android Space, Boost WordPress Scores, 1TB Phones, Huawei Pura 90 Plus & Stats Help for Grad Students",
+              "item": "https://aanaa.tech/blog/mastering-mobile-tech-trends-2026-free-up-android-space-boost-wordpress-scores-1tb-phones-huawei-pura-90-plus-stats-help-for-grad-students-1792920154446"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/from-iphone-air-2-to-garmin-enduro-4-what-this-week-s-tech-trends-mean-for-you-1793006552905",
+      "status": 200,
+      "title": "From iPhone Air 2 to Garmin Enduro 4: What This Wee | Aana",
+      "titleLength": 58,
+      "description": [
+        "Apple’s rumored iPhone Air 2, IRDAI’s extended insurance reforms, a solo dev’s multilingual launch, a savvy Garmin Enduro 3 deal, and a quick Android stor"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://aanaa.tech/blog/from-iphone-air-2-to-garmin-enduro-4-what-this-week-s-tech-trends-mean-for-you-1793006552905"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "From iPhone Air 2 to Garmin Enduro 4: What This Wee | Aana"
+      ],
+      "ogDescription": [
+        "Apple’s rumored iPhone Air 2, IRDAI’s extended insurance reforms, a solo dev’s multilingual launch, a savvy Garmin Enduro 3 deal, and a quick Android stor"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/from-iphone-air-2-to-garmin-enduro-4-what-this-week-s-tech-trends-mean-for-you-1793006552905"
+      ],
+      "ogImage": [
+        "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/IRDAIs-ftr.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/IRDAIs-ftr.jpg"
+      ],
+      "published": [
+        "2026-10-26"
+      ],
+      "modified": [
+        "2026-10-26T09:22:33.083Z"
+      ],
+      "h1Count": 2,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "From iPhone Air 2 to Garmin Enduro 4: What This Week’s Tech Trends Mean for You",
+          "description": "Apple’s rumored iPhone Air 2, IRDAI’s extended insurance reforms, a solo dev’s multilingual launch, a savvy Garmin Enduro 3 deal, and a quick Android storage checklist – all the headlines you need, plus expert analysis and actionable takeaways.",
+          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/IRDAIs-ftr.jpg",
+          "datePublished": "2026-10-26T00:00:00.000Z",
+          "dateModified": "2026-10-26T09:22:33.083Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/from-iphone-air-2-to-garmin-enduro-4-what-this-week-s-tech-trends-mean-for-you-1793006552905"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "From iPhone Air 2 to Garmin Enduro 4: What This Week’s Tech Trends Mean for You",
+              "item": "https://aanaa.tech/blog/from-iphone-air-2-to-garmin-enduro-4-what-this-week-s-tech-trends-mean-for-you-1793006552905"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/from-code-generators-to-ai-powered-job-hunting-five-tech-trends-shaping-2026-1793006553143",
+      "status": 200,
+      "title": "From Code Generators to AI‑Powered Job Hunting: Fiv | Aana",
+      "titleLength": 58,
+      "description": [
+        "Explore five 2026 tech trends—from a candid Jostraca code‑generator review and Flutter performance hacks to Zomato’s Temple wearable, Unacademy’s massive"
+      ],
+      "descriptionLength": 153,
+      "canonical": [
+        "https://aanaa.tech/blog/from-code-generators-to-ai-powered-job-hunting-five-tech-trends-shaping-2026-1793006553143"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "From Code Generators to AI‑Powered Job Hunting: Fiv | Aana"
+      ],
+      "ogDescription": [
+        "Explore five 2026 tech trends—from a candid Jostraca code‑generator review and Flutter performance hacks to Zomato’s Temple wearable, Unacademy’s massive"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/from-code-generators-to-ai-powered-job-hunting-five-tech-trends-shaping-2026-1793006553143"
+      ],
+      "ogImage": [
+        "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1de6vgazrfh712hieo3r.png"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1de6vgazrfh712hieo3r.png"
+      ],
+      "published": [
+        "2026-10-26"
+      ],
+      "modified": [
+        "2026-10-26T09:22:33.678Z"
+      ],
+      "h1Count": 2,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "From Code Generators to AI‑Powered Job Hunting: Five Tech Trends Shaping 2026",
+          "description": "Explore five 2026 tech trends—from a candid Jostraca code‑generator review and Flutter performance hacks to Zomato’s Temple wearable, Unacademy’s massive AI fund, and smart AI use in job hunting—plus expert insights and actionable takeaways.",
+          "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1de6vgazrfh712hieo3r.png",
+          "datePublished": "2026-10-26T00:00:00.000Z",
+          "dateModified": "2026-10-26T09:22:33.678Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/from-code-generators-to-ai-powered-job-hunting-five-tech-trends-shaping-2026-1793006553143"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "From Code Generators to AI‑Powered Job Hunting: Five Tech Trends Shaping 2026",
+              "item": "https://aanaa.tech/blog/from-code-generators-to-ai-powered-job-hunting-five-tech-trends-shaping-2026-1793006553143"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/forget-muddy-shoes-61-of-americans-agree-this-is-the-single-rudest-holiday-houseguest-habit-1793438543531-49",
+      "status": 200,
+      "title": "Forget muddy shoes: 61% of Americans agree this is | Aana",
+      "titleLength": 57,
+      "description": [
+        "Even though I’m trying hard to ignore the calendar, the h"
+      ],
+      "descriptionLength": 57,
+      "canonical": [
+        "https://www.tomsguide.com/home/the-unwritten-etiquette-rules-of-holiday-visits-and-the-small-habits-that-can-make-or-break-your-stay"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Forget muddy shoes: 61% of Americans agree this is | Aana"
+      ],
+      "ogDescription": [
+        "Even though I’m trying hard to ignore the calendar, the h"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/forget-muddy-shoes-61-of-americans-agree-this-is-the-single-rudest-holiday-houseguest-habit-1793438543531-49"
+      ],
+      "ogImage": [
+        "https://cdn.mos.cms.futurecdn.net/FSEn5x5AgLxfxYm6UHGMQo-1920-80.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://cdn.mos.cms.futurecdn.net/FSEn5x5AgLxfxYm6UHGMQo-1920-80.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.532Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": " Forget muddy shoes: 61% of Americans agree this is the single rudest holiday houseguest habit ",
+          "description": "Even though I’m trying hard to ignore the calendar, the holiday season is nearly here. Between st",
+          "image": "https://cdn.mos.cms.futurecdn.net/FSEn5x5AgLxfxYm6UHGMQo-1920-80.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.532Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/forget-muddy-shoes-61-of-americans-agree-this-is-the-single-rudest-holiday-houseguest-habit-1793438543531-49"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": " Forget muddy shoes: 61% of Americans agree this is the single rudest holiday houseguest habit ",
+              "item": "https://aanaa.tech/blog/forget-muddy-shoes-61-of-americans-agree-this-is-the-single-rudest-holiday-houseguest-habit-1793438543531-49"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/the-biggest-names-in-ai-are-backing-a-new-way-to-opt-out-of-scraping-1793438543524-48",
+      "status": 200,
+      "title": "The biggest names in AI are backing a new way to op | Aana",
+      "titleLength": 58,
+      "description": [
+        "Read The biggest names in AI are backing a new way to opt out of scraping and explore its linked sources."
+      ],
+      "descriptionLength": 105,
+      "canonical": [
+        "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "The biggest names in AI are backing a new way to op | Aana"
+      ],
+      "ogDescription": [
+        "Read The biggest names in AI are backing a new way to opt out of scraping and explore its linked sources."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/the-biggest-names-in-ai-are-backing-a-new-way-to-opt-out-of-scraping-1793438543524-48"
+      ],
+      "ogImage": [
+        "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25330660/STK414_AI_CHATBOT_H.jpg?quality=90&strip=all&crop=0,0,100,100"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25330660/STK414_AI_CHATBOT_H.jpg?quality=90&strip=all&crop=0,0,100,100"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.525Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "The biggest names in AI are backing a new way to opt out of scraping",
+          "description": "Read The biggest names in AI are backing a new way to opt out of scraping and explore its linked sources.",
+          "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25330660/STK414_AI_CHATBOT_H.jpg?quality=90&strip=all&crop=0,0,100,100",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.525Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/the-biggest-names-in-ai-are-backing-a-new-way-to-opt-out-of-scraping-1793438543524-48"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "The biggest names in AI are backing a new way to opt out of scraping",
+              "item": "https://aanaa.tech/blog/the-biggest-names-in-ai-are-backing-a-new-way-to-opt-out-of-scraping-1793438543524-48"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/this-art-festival-reveals-why-the-creative-economy-is-as-much-about-audiences-as-creators-1793438543513-47",
+      "status": 200,
+      "title": "This art festival reveals why the creative economy | Aana",
+      "titleLength": 57,
+      "description": [
+        "Read This art festival reveals why the creative economy is as much about audiences as creators and explore its linked sources."
+      ],
+      "descriptionLength": 126,
+      "canonical": [
+        "https://yourstory.com/2026/10/contemporary-now-art-festival-creative-economy-photography"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "This art festival reveals why the creative economy | Aana"
+      ],
+      "ogDescription": [
+        "Read This art festival reveals why the creative economy is as much about audiences as creators and explore its linked sources."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/this-art-festival-reveals-why-the-creative-economy-is-as-much-about-audiences-as-creators-1793438543513-47"
+      ],
+      "ogImage": [
+        "https://images.yourstory.com/cs/2/28b451402d6a11e9aa979329348d4c3e/Feature-1793378711316.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://images.yourstory.com/cs/2/28b451402d6a11e9aa979329348d4c3e/Feature-1793378711316.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.516Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "This art festival reveals why the creative economy is as much about audiences as creators",
+          "description": "Read This art festival reveals why the creative economy is as much about audiences as creators and explore its linked sources.",
+          "image": "https://images.yourstory.com/cs/2/28b451402d6a11e9aa979329348d4c3e/Feature-1793378711316.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.516Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/this-art-festival-reveals-why-the-creative-economy-is-as-much-about-audiences-as-creators-1793438543513-47"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "This art festival reveals why the creative economy is as much about audiences as creators",
+              "item": "https://aanaa.tech/blog/this-art-festival-reveals-why-the-creative-economy-is-as-much-about-audiences-as-creators-1793438543513-47"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/ranbir-kapoor-yash-light-up-gold-house-s-diwali-event-as-group-launches-south-asian-shorts-fund-1793438543507-46",
+      "status": 200,
+      "title": "Ranbir Kapoor, Yash Light Up Gold House’s Diwali Ev | Aana",
+      "titleLength": 58,
+      "description": [
+        "Ranbir Kapoor and Yash, stars of the epic adaptation “Ramayana: Rise of a Legend,” opened Gold House’s largest Gold Diwali to date at The Majestic Downtow"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://variety.com/2026/film/news/ranbir-kapoor-yash-gold-house-diwali-event-1236935927/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Ranbir Kapoor, Yash Light Up Gold House’s Diwali Ev | Aana"
+      ],
+      "ogDescription": [
+        "Ranbir Kapoor and Yash, stars of the epic adaptation “Ramayana: Rise of a Legend,” opened Gold House’s largest Gold Diwali to date at The Majestic Downtow"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/ranbir-kapoor-yash-light-up-gold-house-s-diwali-event-as-group-launches-south-asian-shorts-fund-1793438543507-46"
+      ],
+      "ogImage": [
+        "https://variety.com/wp-content/uploads/2026/10/Ramayana-team.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://variety.com/wp-content/uploads/2026/10/Ramayana-team.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.508Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Ranbir Kapoor, Yash Light Up Gold House’s Diwali Event as Group Launches South Asian Shorts Fund",
+          "description": "Ranbir Kapoor and Yash, stars of the epic adaptation “Ramayana: Rise of a Legend,” opened Gold House’s largest Gold Diwali to date at The Majestic Downtown in Los Angeles, alongside filmmakers Nitesh",
+          "image": "https://variety.com/wp-content/uploads/2026/10/Ramayana-team.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.508Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/ranbir-kapoor-yash-light-up-gold-house-s-diwali-event-as-group-launches-south-asian-shorts-fund-1793438543507-46"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Ranbir Kapoor, Yash Light Up Gold House’s Diwali Event as Group Launches South Asian Shorts Fund",
+              "item": "https://aanaa.tech/blog/ranbir-kapoor-yash-light-up-gold-house-s-diwali-event-as-group-launches-south-asian-shorts-fund-1793438543507-46"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/i-tested-reddit-s-favorite-value-hi-fi-headphones-and-now-i-get-the-hype-1793438543499-45",
+      "status": 200,
+      "title": "I tested Reddit's favorite value hi-fi headphones — | Aana",
+      "titleLength": 58,
+      "description": [
+        "HIFIMAN"
+      ],
+      "descriptionLength": 7,
+      "canonical": [
+        "https://www.tomsguide.com/audio/over-ear-headphones/i-tested-reddits-favorite-value-hi-fi-headphones-and-now-i-get-the-hype"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "I tested Reddit's favorite value hi-fi headphones — | Aana"
+      ],
+      "ogDescription": [
+        "HIFIMAN"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/i-tested-reddit-s-favorite-value-hi-fi-headphones-and-now-i-get-the-hype-1793438543499-45"
+      ],
+      "ogImage": [
+        "https://cdn.mos.cms.futurecdn.net/dASuxSt8NubHWUZ9UXm43L-1920-80.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://cdn.mos.cms.futurecdn.net/dASuxSt8NubHWUZ9UXm43L-1920-80.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.501Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": " I tested Reddit's favorite value hi-fi headphones — and now I get the hype ",
+          "description": "HIFIMAN Sundara review: Cheat sheet",
+          "image": "https://cdn.mos.cms.futurecdn.net/dASuxSt8NubHWUZ9UXm43L-1920-80.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.501Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/i-tested-reddit-s-favorite-value-hi-fi-headphones-and-now-i-get-the-hype-1793438543499-45"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": " I tested Reddit's favorite value hi-fi headphones — and now I get the hype ",
+              "item": "https://aanaa.tech/blog/i-tested-reddit-s-favorite-value-hi-fi-headphones-and-now-i-get-the-hype-1793438543499-45"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/sources-kucherov-requests-trade-lightning-have-no-intention-of-dealing-him-1793438543483-44",
+      "status": 200,
+      "title": "Sources: Kucherov requests trade; Lightning have 'n | Aana",
+      "titleLength": 58,
+      "description": [
+        "Tampa Bay Lightning forward Nikita Kucherov, in the final year of his contract, has requested a trade, sources told ESPN Friday, but general manager Julie"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://www.espn.com/nhl/story/_/id/50331644/nikita-kucherov-33-requests-trade-lightning"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Sources: Kucherov requests trade; Lightning have 'n | Aana"
+      ],
+      "ogDescription": [
+        "Tampa Bay Lightning forward Nikita Kucherov, in the final year of his contract, has requested a trade, sources told ESPN Friday, but general manager Julie"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/sources-kucherov-requests-trade-lightning-have-no-intention-of-dealing-him-1793438543483-44"
+      ],
+      "ogImage": [
+        "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1030%2Fr1738768_1296x729_16%2D9.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1030%2Fr1738768_1296x729_16%2D9.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.494Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Sources: Kucherov requests trade; Lightning have 'no intention' of dealing him",
+          "description": "Tampa Bay Lightning forward Nikita Kucherov, in the final year of his contract, has requested a trade, sources told ESPN Friday, but general manager Julien BriseBois said in a statement that the team",
+          "image": "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1030%2Fr1738768_1296x729_16%2D9.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.494Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/sources-kucherov-requests-trade-lightning-have-no-intention-of-dealing-him-1793438543483-44"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Sources: Kucherov requests trade; Lightning have 'no intention' of dealing him",
+              "item": "https://aanaa.tech/blog/sources-kucherov-requests-trade-lightning-have-no-intention-of-dealing-him-1793438543483-44"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/records-reveal-3-other-women-accused-packers-jacobs-of-abuse-after-arrest-1793438543455-43",
+      "status": 200,
+      "title": "Records reveal 3 other women accused Packers' Jacob | Aana",
+      "titleLength": 58,
+      "description": [
+        "Three other women contacted police to detail allegations of abuse against the Packers' Josh Jacobs following his May arrest for an altercation with his th"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://www.espn.com/nfl/story/_/id/50333636/records-show-3-other-women-accused-packers-josh-jacobs-abuse"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Records reveal 3 other women accused Packers' Jacob | Aana"
+      ],
+      "ogDescription": [
+        "Three other women contacted police to detail allegations of abuse against the Packers' Josh Jacobs following his May arrest for an altercation with his th"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/records-reveal-3-other-women-accused-packers-jacobs-of-abuse-after-arrest-1793438543455-43"
+      ],
+      "ogImage": [
+        "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1019%2Fr1733122_1296x729_16%2D9.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1019%2Fr1733122_1296x729_16%2D9.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.477Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Records reveal 3 other women accused Packers' Jacobs of abuse after arrest",
+          "description": "Three other women contacted police to detail allegations of abuse against the Packers' Josh Jacobs following his May arrest for an altercation with his then-girlfriend.",
+          "image": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F1019%2Fr1733122_1296x729_16%2D9.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.477Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/records-reveal-3-other-women-accused-packers-jacobs-of-abuse-after-arrest-1793438543455-43"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Records reveal 3 other women accused Packers' Jacobs of abuse after arrest",
+              "item": "https://aanaa.tech/blog/records-reveal-3-other-women-accused-packers-jacobs-of-abuse-after-arrest-1793438543455-43"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/spain-train-disaster-clouds-s-nchez-chances-of-re-election-1793438543449-42",
+      "status": 200,
+      "title": "Spain train disaster clouds Sánchez chances of re-e | Aana",
+      "titleLength": 58,
+      "description": [
+        "The Spanish PM is hit by a succession of crises just weeks before a snap general election."
+      ],
+      "descriptionLength": 90,
+      "canonical": [
+        "https://www.bbc.co.uk/news/articles/cmeweppr990qo?at_medium=RSS&at_campaign=rss"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Spain train disaster clouds Sánchez chances of re-e | Aana"
+      ],
+      "ogDescription": [
+        "The Spanish PM is hit by a succession of crises just weeks before a snap general election."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/spain-train-disaster-clouds-s-nchez-chances-of-re-election-1793438543449-42"
+      ],
+      "ogImage": [
+        "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a970/live/20e78ee0-d4ed-11f1-93e1-3b657b665bcf.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a970/live/20e78ee0-d4ed-11f1-93e1-3b657b665bcf.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.450Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Spain train disaster clouds Sánchez chances of re-election",
+          "description": "The Spanish PM is hit by a succession of crises just weeks before a snap general election.",
+          "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a970/live/20e78ee0-d4ed-11f1-93e1-3b657b665bcf.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.450Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/spain-train-disaster-clouds-s-nchez-chances-of-re-election-1793438543449-42"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Spain train disaster clouds Sánchez chances of re-election",
+              "item": "https://aanaa.tech/blog/spain-train-disaster-clouds-s-nchez-chances-of-re-election-1793438543449-42"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/fluidity-of-intelligence-from-hofstadter-to-llms-1793438543433-41",
+      "status": 200,
+      "title": "Fluidity of Intelligence: From Hofstadter to LLMs | Aana",
+      "titleLength": 56,
+      "description": [
+        "The text analyzes the nature of intelligence not as the efficient manipulation of fixed symbols, but as the ability to continuously reconfigure the repres"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://dev.to/fundacjadobrepanstwo/fluidity-of-intelligence-from-hofstadter-to-llms-2bhl"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Fluidity of Intelligence: From Hofstadter to LLMs | Aana"
+      ],
+      "ogDescription": [
+        "The text analyzes the nature of intelligence not as the efficient manipulation of fixed symbols, but as the ability to continuously reconfigure the repres"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/fluidity-of-intelligence-from-hofstadter-to-llms-1793438543433-41"
+      ],
+      "ogImage": [
+        "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fa4pg2hpdtj2u4lhpb1l9.png"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fa4pg2hpdtj2u4lhpb1l9.png"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.444Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Fluidity of Intelligence: From Hofstadter to LLMs",
+          "description": "The text analyzes the nature of intelligence not as the efficient manipulation of fixed symbols, but as the ability to continuously reconfigure the representation of a problem. Drawing on Douglas H",
+          "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fa4pg2hpdtj2u4lhpb1l9.png",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.444Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/fluidity-of-intelligence-from-hofstadter-to-llms-1793438543433-41"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Fluidity of Intelligence: From Hofstadter to LLMs",
+              "item": "https://aanaa.tech/blog/fluidity-of-intelligence-from-hofstadter-to-llms-1793438543433-41"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/wayfair-coupons-up-to-80-off-november-2026-1793438543428-40",
+      "status": 200,
+      "title": "Wayfair Coupons: Up to 80% Off November 2026 | Aana",
+      "titleLength": 51,
+      "description": [
+        "Get 10% off with Wayfair promo code, up to 80% off furniture, and more top coupons."
+      ],
+      "descriptionLength": 83,
+      "canonical": [
+        "https://www.wired.com/story/wayfair-promo-code/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Wayfair Coupons: Up to 80% Off November 2026 | Aana"
+      ],
+      "ogDescription": [
+        "Get 10% off with Wayfair promo code, up to 80% off furniture, and more top coupons."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/wayfair-coupons-up-to-80-off-november-2026-1793438543428-40"
+      ],
+      "ogImage": [
+        "https://media.wired.com/photos/67b63b969468ebbf8f0cbc7d/master/pass/WIRED-Coupons-R2_5.png"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://media.wired.com/photos/67b63b969468ebbf8f0cbc7d/master/pass/WIRED-Coupons-R2_5.png"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.428Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Wayfair Coupons: Up to 80% Off November 2026",
+          "description": "Get 10% off with Wayfair promo code, up to 80% off furniture, and more top coupons.",
+          "image": "https://media.wired.com/photos/67b63b969468ebbf8f0cbc7d/master/pass/WIRED-Coupons-R2_5.png",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.428Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/wayfair-coupons-up-to-80-off-november-2026-1793438543428-40"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Wayfair Coupons: Up to 80% Off November 2026",
+              "item": "https://aanaa.tech/blog/wayfair-coupons-up-to-80-off-november-2026-1793438543428-40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/jessica-alba-s-trainer-says-these-3-simple-tests-can-reveal-how-well-you-re-aging-at-44-i-tried-them-all-1793438543421-39",
+      "status": 200,
+      "title": "Jessica Alba’s trainer says these 3 simple tests ca | Aana",
+      "titleLength": 58,
+      "description": [
+        "At 64, celebrity trainer"
+      ],
+      "descriptionLength": 24,
+      "canonical": [
+        "https://www.tomsguide.com/wellness/workouts/jessica-albas-trainer-says-these-3-simple-tests-can-reveal-how-well-youre-aging-at-44-i-tried-them-all"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Jessica Alba’s trainer says these 3 simple tests ca | Aana"
+      ],
+      "ogDescription": [
+        "At 64, celebrity trainer"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/jessica-alba-s-trainer-says-these-3-simple-tests-can-reveal-how-well-you-re-aging-at-44-i-tried-them-all-1793438543421-39"
+      ],
+      "ogImage": [
+        "https://cdn.mos.cms.futurecdn.net/ZKi7pvJjxioEGMqdqiggrj-1920-80.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://cdn.mos.cms.futurecdn.net/ZKi7pvJjxioEGMqdqiggrj-1920-80.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.422Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": " Jessica Alba’s trainer says these 3 simple tests can reveal how well you’re aging – at 44, I tried them all ",
+          "description": "At 64, celebrity trainer",
+          "image": "https://cdn.mos.cms.futurecdn.net/ZKi7pvJjxioEGMqdqiggrj-1920-80.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.422Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/jessica-alba-s-trainer-says-these-3-simple-tests-can-reveal-how-well-you-re-aging-at-44-i-tried-them-all-1793438543421-39"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": " Jessica Alba’s trainer says these 3 simple tests can reveal how well you’re aging – at 44, I tried them all ",
+              "item": "https://aanaa.tech/blog/jessica-alba-s-trainer-says-these-3-simple-tests-can-reveal-how-well-you-re-aging-at-44-i-tried-them-all-1793438543421-39"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/apple-iphone-18-pro-vs-iphone-18-pro-max-1793438543415-38",
+      "status": 200,
+      "title": "Apple iPhone 18 Pro vs. iPhone 18 Pro Max | Aana",
+      "titleLength": 48,
+      "description": [
+        "Read Apple iPhone 18 Pro vs. iPhone 18 Pro Max and explore its linked sources."
+      ],
+      "descriptionLength": 78,
+      "canonical": [
+        "https://www.gsmarena.com/apple_iphone_18_pro_vs_iphone_18_pro_max_battery_camera_price_compared-news-75173.php"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Apple iPhone 18 Pro vs. iPhone 18 Pro Max | Aana"
+      ],
+      "ogDescription": [
+        "Read Apple iPhone 18 Pro vs. iPhone 18 Pro Max and explore its linked sources."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/apple-iphone-18-pro-vs-iphone-18-pro-max-1793438543415-38"
+      ],
+      "ogImage": [
+        "https://fdn.gsmarena.com/imgroot/news/26/10/apple-iphone-18-pro-vs-iphone-18-pro-max/-184x111/gsmarena_000.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://fdn.gsmarena.com/imgroot/news/26/10/apple-iphone-18-pro-vs-iphone-18-pro-max/-184x111/gsmarena_000.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.415Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Apple iPhone 18 Pro vs. iPhone 18 Pro Max",
+          "description": "Read Apple iPhone 18 Pro vs. iPhone 18 Pro Max and explore its linked sources.",
+          "image": "https://fdn.gsmarena.com/imgroot/news/26/10/apple-iphone-18-pro-vs-iphone-18-pro-max/-184x111/gsmarena_000.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.415Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/apple-iphone-18-pro-vs-iphone-18-pro-max-1793438543415-38"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Apple iPhone 18 Pro vs. iPhone 18 Pro Max",
+              "item": "https://aanaa.tech/blog/apple-iphone-18-pro-vs-iphone-18-pro-max-1793438543415-38"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/au-sfb-probes-potential-data-leak-vijay-sales-admin-access-allegedly-listed-for-25k-1793438543408-37",
+      "status": 200,
+      "title": "AU SFB Probes Potential Data Leak, Vijay Sales’ Adm | Aana",
+      "titleLength": 58,
+      "description": [
+        "Read AU SFB Probes Potential Data Leak, Vijay Sales’ Admin Access Allegedly Listed For $25K and explore its linked sources."
+      ],
+      "descriptionLength": 123,
+      "canonical": [
+        "https://inc42.com/buzz/au-sfb-probes-potential-data-leak-vijay-sales-admin-access-allegedly-listed-for-25k/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "AU SFB Probes Potential Data Leak, Vijay Sales’ Adm | Aana"
+      ],
+      "ogDescription": [
+        "Read AU SFB Probes Potential Data Leak, Vijay Sales’ Admin Access Allegedly Listed For $25K and explore its linked sources."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/au-sfb-probes-potential-data-leak-vijay-sales-admin-access-allegedly-listed-for-25k-1793438543408-37"
+      ],
+      "ogImage": [
+        "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/cybersecurity_ftr.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/cybersecurity_ftr.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.409Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "AU SFB Probes Potential Data Leak, Vijay Sales’ Admin Access Allegedly Listed For $25K",
+          "description": "Read AU SFB Probes Potential Data Leak, Vijay Sales’ Admin Access Allegedly Listed For $25K and explore its linked sources.",
+          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/cybersecurity_ftr.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.409Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/au-sfb-probes-potential-data-leak-vijay-sales-admin-access-allegedly-listed-for-25k-1793438543408-37"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "AU SFB Probes Potential Data Leak, Vijay Sales’ Admin Access Allegedly Listed For $25K",
+              "item": "https://aanaa.tech/blog/au-sfb-probes-potential-data-leak-vijay-sales-admin-access-allegedly-listed-for-25k-1793438543408-37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/samsung-galaxy-fit-4-features-allegedly-revealed-through-companion-app-teardown-1793438543358-36",
+      "status": 200,
+      "title": "Samsung Galaxy Fit 4 Features Allegedly Revealed Th | Aana",
+      "titleLength": 58,
+      "description": [
+        "Teardown of the Galaxy Fit 4 Manager app reportedly shows that the Samsung Galaxy Fit 4 could offer many features similar to those available on the Galaxy"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://www.gadgets360.com/wearables/news/samsung-galaxy-fit-4-features-companion-app-teardown-report-12259515#rss-gadgets-all"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Samsung Galaxy Fit 4 Features Allegedly Revealed Th | Aana"
+      ],
+      "ogDescription": [
+        "Teardown of the Galaxy Fit 4 Manager app reportedly shows that the Samsung Galaxy Fit 4 could offer many features similar to those available on the Galaxy"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/samsung-galaxy-fit-4-features-allegedly-revealed-through-companion-app-teardown-1793438543358-36"
+      ],
+      "ogImage": [
+        "https://aanaa.tech/social-default.png"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://aanaa.tech/social-default.png"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.401Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Samsung Galaxy Fit 4 Features Allegedly Revealed Through Companion App Teardown",
+          "description": "Teardown of the Galaxy Fit 4 Manager app reportedly shows that the Samsung Galaxy Fit 4 could offer many features similar to those available on the Galaxy Fit 3. The app reportedly includes a new bann",
+          "image": "https://aanaa.tech/social-default.png",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.401Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/samsung-galaxy-fit-4-features-allegedly-revealed-through-companion-app-teardown-1793438543358-36"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Samsung Galaxy Fit 4 Features Allegedly Revealed Through Companion App Teardown",
+              "item": "https://aanaa.tech/blog/samsung-galaxy-fit-4-features-allegedly-revealed-through-companion-app-teardown-1793438543358-36"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/redmi-15a-1793438543349-35",
+      "status": 200,
+      "title": "ಅಗ್ಗದ ಬೆಲೆಯಲ್ಲಿ ಗಮನ ಸೆಳೆದ Redmi 15A ಮೊಬೈಲ್‌ ದರದಲ್ಲಿ | Aana",
+      "titleLength": 58,
+      "description": [
+        "Flipkart Big Bang Diwali Sale: ಫ್ಲಿಪ್‌ಕಾರ್ಟ್‌ ಆಯೋಜಿಸಿರುವ ಹಬ್ಬದ ಮಾರಾಟದಲ್ಲಿ ಆಯ್ದ ಮೊಬೈಲ್‌ಗಳಿಗೆ ಆಕರ್ಷಕ ರಿಯಾಯಿತಿ ಲಭ್ಯವಿದೆ. ಆ ಪೈಕಿ ರೆಡ್ಮಿ ಕಂಪನಿಯ Redmi 15A ಸ್ಮಾರ"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://www.digit.in/kn/news/mobile-phones/redmi-15a-gets-a-price-cut-on-flipkart-during-diwali-sale-2026.html"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "ಅಗ್ಗದ ಬೆಲೆಯಲ್ಲಿ ಗಮನ ಸೆಳೆದ Redmi 15A ಮೊಬೈಲ್‌ ದರದಲ್ಲಿ | Aana"
+      ],
+      "ogDescription": [
+        "Flipkart Big Bang Diwali Sale: ಫ್ಲಿಪ್‌ಕಾರ್ಟ್‌ ಆಯೋಜಿಸಿರುವ ಹಬ್ಬದ ಮಾರಾಟದಲ್ಲಿ ಆಯ್ದ ಮೊಬೈಲ್‌ಗಳಿಗೆ ಆಕರ್ಷಕ ರಿಯಾಯಿತಿ ಲಭ್ಯವಿದೆ. ಆ ಪೈಕಿ ರೆಡ್ಮಿ ಕಂಪನಿಯ Redmi 15A ಸ್ಮಾರ"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/redmi-15a-1793438543349-35"
+      ],
+      "ogImage": [
+        "https://static.digit.in/digit_logo-2.png"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://static.digit.in/digit_logo-2.png"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.352Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "ಅಗ್ಗದ ಬೆಲೆಯಲ್ಲಿ ಗಮನ ಸೆಳೆದ Redmi 15A ಮೊಬೈಲ್‌ ದರದಲ್ಲಿ ಇದೀಗ ಭರ್ಜರಿ ಇಳಿಕೆ!",
+          "description": "Flipkart Big Bang Diwali Sale: ಫ್ಲಿಪ್‌ಕಾರ್ಟ್‌ ಆಯೋಜಿಸಿರುವ ಹಬ್ಬದ ಮಾರಾಟದಲ್ಲಿ ಆಯ್ದ ಮೊಬೈಲ್‌ಗಳಿಗೆ ಆಕರ್ಷಕ ರಿಯಾಯಿತಿ ಲಭ್ಯವಿದೆ. ಆ ಪೈಕಿ ರೆಡ್ಮಿ ಕಂಪನಿಯ Redmi 15A ಸ್ಮಾರ್ಟ್‌ಫೋನ್‌ ಸಹ ಸ್ಪೆಷಲ್ ಡಿಸ್ಕೌಂಟ್‌ ದರದಲ್ಲಿ ಕಾಣ",
+          "image": "https://static.digit.in/digit_logo-2.png",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.352Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/redmi-15a-1793438543349-35"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "ಅಗ್ಗದ ಬೆಲೆಯಲ್ಲಿ ಗಮನ ಸೆಳೆದ Redmi 15A ಮೊಬೈಲ್‌ ದರದಲ್ಲಿ ಇದೀಗ ಭರ್ಜರಿ ಇಳಿಕೆ!",
+              "item": "https://aanaa.tech/blog/redmi-15a-1793438543349-35"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/new-tvos-27-2-features-to-try-for-an-upgraded-apple-tv-experience-1793438543343-34",
+      "status": 200,
+      "title": "New tvOS 27.2 features to try for an upgraded Apple | Aana",
+      "titleLength": 58,
+      "description": [
+        "Apple's tvOS 27.2 update isn't a particularly transformative one, but it still introduces a handful of new features that are worth checking out."
+      ],
+      "descriptionLength": 144,
+      "canonical": [
+        "https://www.engadget.com/2302449/tvos-27-2-features-try-upgraded-apple-tv-experience/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "New tvOS 27.2 features to try for an upgraded Apple | Aana"
+      ],
+      "ogDescription": [
+        "Apple's tvOS 27.2 update isn't a particularly transformative one, but it still introduces a handful of new features that are worth checking out."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/new-tvos-27-2-features-to-try-for-an-upgraded-apple-tv-experience-1793438543343-34"
+      ],
+      "ogImage": [
+        "https://www.engadget.com/img/gallery/new-tvos-27-2-features-to-try-for-an-upgraded-apple-tv-experience/l-intro-1793349181.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://www.engadget.com/img/gallery/new-tvos-27-2-features-to-try-for-an-upgraded-apple-tv-experience/l-intro-1793349181.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.344Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "New tvOS 27.2 features to try for an upgraded Apple TV experience",
+          "description": "Apple's tvOS 27.2 update isn't a particularly transformative one, but it still introduces a handful of new features that are worth checking out.",
+          "image": "https://www.engadget.com/img/gallery/new-tvos-27-2-features-to-try-for-an-upgraded-apple-tv-experience/l-intro-1793349181.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.344Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/new-tvos-27-2-features-to-try-for-an-upgraded-apple-tv-experience-1793438543343-34"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "New tvOS 27.2 features to try for an upgraded Apple TV experience",
+              "item": "https://aanaa.tech/blog/new-tvos-27-2-features-to-try-for-an-upgraded-apple-tv-experience-1793438543343-34"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/big-tech-returns-smallest-share-of-cash-to-shareholders-in-15-years-given-ai-spending-1793438543337-33",
+      "status": 200,
+      "title": "Big Tech returns smallest share of cash to sharehol | Aana",
+      "titleLength": 58,
+      "description": [
+        "The retreat threatens a long-standing source of support for technology share prices. With companies buying back fewer shares, investors are increasingly d"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://economictimes.indiatimes.com/tech/technology/big-tech-returns-smallest-share-of-cash-to-shareholders-in-15-years-given-ai-spending/articleshow/135385233.cms"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Big Tech returns smallest share of cash to sharehol | Aana"
+      ],
+      "ogDescription": [
+        "The retreat threatens a long-standing source of support for technology share prices. With companies buying back fewer shares, investors are increasingly d"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/big-tech-returns-smallest-share-of-cash-to-shareholders-in-15-years-given-ai-spending-1793438543337-33"
+      ],
+      "ogImage": [
+        "https://img.etimg.com/photo/msid-135385233,imgsize-105728.cms"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://img.etimg.com/photo/msid-135385233,imgsize-105728.cms"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.338Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Big Tech returns smallest share of cash to shareholders in 15 years, given AI spending ",
+          "description": "The retreat threatens a long-standing source of support for technology share prices. With companies buying back fewer shares, investors are increasingly dependent on heavy AI investments delivering en",
+          "image": "https://img.etimg.com/photo/msid-135385233,imgsize-105728.cms",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.338Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/big-tech-returns-smallest-share-of-cash-to-shareholders-in-15-years-given-ai-spending-1793438543337-33"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Big Tech returns smallest share of cash to shareholders in 15 years, given AI spending ",
+              "item": "https://aanaa.tech/blog/big-tech-returns-smallest-share-of-cash-to-shareholders-in-15-years-given-ai-spending-1793438543337-33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/apple-intelligence-is-finally-coming-to-china-with-ios-27-3-1793438543331-32",
+      "status": 200,
+      "title": "Apple Intelligence is finally coming to China with | Aana",
+      "titleLength": 57,
+      "description": [
+        "Read Apple Intelligence is finally coming to China with iOS 27.3 and explore its linked sources."
+      ],
+      "descriptionLength": 96,
+      "canonical": [
+        "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Apple Intelligence is finally coming to China with | Aana"
+      ],
+      "ogDescription": [
+        "Read Apple Intelligence is finally coming to China with iOS 27.3 and explore its linked sources."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/apple-intelligence-is-finally-coming-to-china-with-ios-27-3-1793438543331-32"
+      ],
+      "ogImage": [
+        "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25699392/DSC08596_processed.jpg?quality=90&strip=all&crop=0,0,100,100"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25699392/DSC08596_processed.jpg?quality=90&strip=all&crop=0,0,100,100"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.332Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Apple Intelligence is finally coming to China with iOS 27.3",
+          "description": "Read Apple Intelligence is finally coming to China with iOS 27.3 and explore its linked sources.",
+          "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25699392/DSC08596_processed.jpg?quality=90&strip=all&crop=0,0,100,100",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.332Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/apple-intelligence-is-finally-coming-to-china-with-ios-27-3-1793438543331-32"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Apple Intelligence is finally coming to China with iOS 27.3",
+              "item": "https://aanaa.tech/blog/apple-intelligence-is-finally-coming-to-china-with-ios-27-3-1793438543331-32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/how-keanu-reeves-landed-in-stop-motion-samurai-epic-hidari-and-why-s-s-rajamouli-wanted-to-know-how-it-was-made-1793438543325-31",
+      "status": 200,
+      "title": "How Keanu Reeves Landed in Stop-Motion Samurai Epic | Aana",
+      "titleLength": 58,
+      "description": [
+        "Keanu Reeves joined Japanese stop-motion feature “Hidari” after watching the project’s pilot film, with his team getting back to the filmmakers about a we"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://variety.com/2026/film/festivals/keanu-reeves-hidari-ss-rajamouli-1236935934/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "How Keanu Reeves Landed in Stop-Motion Samurai Epic | Aana"
+      ],
+      "ogDescription": [
+        "Keanu Reeves joined Japanese stop-motion feature “Hidari” after watching the project’s pilot film, with his team getting back to the filmmakers about a we"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/how-keanu-reeves-landed-in-stop-motion-samurai-epic-hidari-and-why-s-s-rajamouli-wanted-to-know-how-it-was-made-1793438543325-31"
+      ],
+      "ogImage": [
+        "https://variety.com/wp-content/uploads/2026/06/MixCollage-25-Jun-2026-07-18-PM-2123.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://variety.com/wp-content/uploads/2026/06/MixCollage-25-Jun-2026-07-18-PM-2123.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.326Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "How Keanu Reeves Landed in Stop-Motion Samurai Epic ‘Hidari’ – and Why S.S. Rajamouli Wanted to Know How It Was Made",
+          "description": "Keanu Reeves joined Japanese stop-motion feature “Hidari” after watching the project’s pilot film, with his team getting back to the filmmakers about a week after the screening was arranged to set up",
+          "image": "https://variety.com/wp-content/uploads/2026/06/MixCollage-25-Jun-2026-07-18-PM-2123.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.326Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/how-keanu-reeves-landed-in-stop-motion-samurai-epic-hidari-and-why-s-s-rajamouli-wanted-to-know-how-it-was-made-1793438543325-31"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "How Keanu Reeves Landed in Stop-Motion Samurai Epic ‘Hidari’ – and Why S.S. Rajamouli Wanted to Know How It Was Made",
+              "item": "https://aanaa.tech/blog/how-keanu-reeves-landed-in-stop-motion-samurai-epic-hidari-and-why-s-s-rajamouli-wanted-to-know-how-it-was-made-1793438543325-31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/i-m-15-and-i-built-an-interactive-vision-simulator-using-claude-code-vanilla-js-and-css-filters-1793438543311-30",
+      "status": 200,
+      "title": "I'm 15, and I built an interactive vision simulator | Aana",
+      "titleLength": 58,
+      "description": [
+        "Hey everyone, I'm 15 and like many of you, I spend 8 to 10+ hours a day staring at screens. A while back, I realised I was constantly dealing with dry eye"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://dev.to/navya_agarwal_e12758166f2/im-15-and-i-built-an-interactive-vision-simulator-using-claude-code-vanilla-js-and-css-filters-4m11"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "I'm 15, and I built an interactive vision simulator | Aana"
+      ],
+      "ogDescription": [
+        "Hey everyone, I'm 15 and like many of you, I spend 8 to 10+ hours a day staring at screens. A while back, I realised I was constantly dealing with dry eye"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/i-m-15-and-i-built-an-interactive-vision-simulator-using-claude-code-vanilla-js-and-css-filters-1793438543311-30"
+      ],
+      "ogImage": [
+        "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhvcdcbyw851mgl3jkbkj.png"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhvcdcbyw851mgl3jkbkj.png"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.318Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "I'm 15, and I built an interactive vision simulator using Claude code, vanilla JS and CSS filters",
+          "description": "Hey everyone, I'm 15 and like many of you, I spend 8 to 10+ hours a day staring at screens. A while back, I realised I was constantly dealing with dry eyes, headaches, and physical fatigue by the a",
+          "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhvcdcbyw851mgl3jkbkj.png",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.318Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/i-m-15-and-i-built-an-interactive-vision-simulator-using-claude-code-vanilla-js-and-css-filters-1793438543311-30"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "I'm 15, and I built an interactive vision simulator using Claude code, vanilla JS and CSS filters",
+              "item": "https://aanaa.tech/blog/i-m-15-and-i-built-an-interactive-vision-simulator-using-claude-code-vanilla-js-and-css-filters-1793438543311-30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/ai-is-coming-to-construction-sites-but-does-it-make-workers-safer-1793438542962-29",
+      "status": 200,
+      "title": "AI is coming to construction sites. But does it mak | Aana",
+      "titleLength": 58,
+      "description": [
+        "AI is flagging hazards on construction sites, but researchers say evidence that the technology prevents injuries remains limited."
+      ],
+      "descriptionLength": 129,
+      "canonical": [
+        "https://www.cnbc.com/2026/10/31/ai-construction-worker-safety.html"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "AI is coming to construction sites. But does it mak | Aana"
+      ],
+      "ogDescription": [
+        "AI is flagging hazards on construction sites, but researchers say evidence that the technology prevents injuries remains limited."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/ai-is-coming-to-construction-sites-but-does-it-make-workers-safer-1793438542962-29"
+      ],
+      "ogImage": [
+        "https://image.cnbcfm.com/api/v1/image/108469976-1793123070639-gettyimages-2149414808-engcon_1121.jpeg?v=1793397004&w=1920&h=1080"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://image.cnbcfm.com/api/v1/image/108469976-1793123070639-gettyimages-2149414808-engcon_1121.jpeg?v=1793397004&w=1920&h=1080"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:23.305Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "AI is coming to construction sites. But does it make workers safer?",
+          "description": "AI is flagging hazards on construction sites, but researchers say evidence that the technology prevents injuries remains limited.",
+          "image": "https://image.cnbcfm.com/api/v1/image/108469976-1793123070639-gettyimages-2149414808-engcon_1121.jpeg?v=1793397004&w=1920&h=1080",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:23.305Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/ai-is-coming-to-construction-sites-but-does-it-make-workers-safer-1793438542962-29"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "AI is coming to construction sites. But does it make workers safer?",
+              "item": "https://aanaa.tech/blog/ai-is-coming-to-construction-sites-but-does-it-make-workers-safer-1793438542962-29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/the-first-chapter-of-denzel-washington-s-500-million-action-trilogy-is-streaming-on-netflix-now-1793438542954-28",
+      "status": 200,
+      "title": "The first chapter of Denzel Washington's $500 milli | Aana",
+      "titleLength": 58,
+      "description": [
+        "The Tom"
+      ],
+      "descriptionLength": 7,
+      "canonical": [
+        "https://www.tomsguide.com/entertainment/movies/the-first-chapter-of-denzel-washingtons-usd500-million-action-trilogy-is-streaming-on-netflix-now"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "The first chapter of Denzel Washington's $500 milli | Aana"
+      ],
+      "ogDescription": [
+        "The Tom"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/the-first-chapter-of-denzel-washington-s-500-million-action-trilogy-is-streaming-on-netflix-now-1793438542954-28"
+      ],
+      "ogImage": [
+        "https://cdn.mos.cms.futurecdn.net/pDGPHiTwLdgm2z4hGDZQn8-1920-80.png"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://cdn.mos.cms.futurecdn.net/pDGPHiTwLdgm2z4hGDZQn8-1920-80.png"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:22.955Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": " The first chapter of Denzel Washington's $500 million action trilogy is streaming on Netflix now ",
+          "description": "The Tom's Guide verdict: 'The Equalizer' (2014)",
+          "image": "https://cdn.mos.cms.futurecdn.net/pDGPHiTwLdgm2z4hGDZQn8-1920-80.png",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:22.955Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/the-first-chapter-of-denzel-washington-s-500-million-action-trilogy-is-streaming-on-netflix-now-1793438542954-28"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": " The first chapter of Denzel Washington's $500 million action trilogy is streaming on Netflix now ",
+              "item": "https://aanaa.tech/blog/the-first-chapter-of-denzel-washington-s-500-million-action-trilogy-is-streaming-on-netflix-now-1793438542954-28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/run-an-mcp-server-on-lambda-a-typescript-guide-1793438542940-27",
+      "status": 200,
+      "title": "Run an MCP Server on Lambda: A TypeScript Guide | Aana",
+      "titleLength": 54,
+      "description": [
+        "Running an MCP server on Lambda used to feel like a hack to me: the protocol leaned on sessions, Lambda forgets everything after each invocation, and work"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://dev.to/sascha-ms/run-an-mcp-server-on-lambda-a-typescript-guide-2597"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Run an MCP Server on Lambda: A TypeScript Guide | Aana"
+      ],
+      "ogDescription": [
+        "Running an MCP server on Lambda used to feel like a hack to me: the protocol leaned on sessions, Lambda forgets everything after each invocation, and work"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/run-an-mcp-server-on-lambda-a-typescript-guide-1793438542940-27"
+      ],
+      "ogImage": [
+        "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjmnc52uql7cs2nwhno3u.png"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjmnc52uql7cs2nwhno3u.png"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:22.944Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Run an MCP Server on Lambda: A TypeScript Guide",
+          "description": "Running an MCP server on Lambda used to feel like a hack to me: the protocol leaned on sessions, Lambda forgets everything after each invocation, and workarounds held the two together. The MCP revi",
+          "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjmnc52uql7cs2nwhno3u.png",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:22.944Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/run-an-mcp-server-on-lambda-a-typescript-guide-1793438542940-27"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Run an MCP Server on Lambda: A TypeScript Guide",
+              "item": "https://aanaa.tech/blog/run-an-mcp-server-on-lambda-a-typescript-guide-1793438542940-27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/meity-floats-new-privacy-led-framework-to-unlock-data-for-training-ai-models-1793438542933-26",
+      "status": 200,
+      "title": "MeitY Floats New Privacy-Led Framework To Unlock Da | Aana",
+      "titleLength": 58,
+      "description": [
+        "Read MeitY Floats New Privacy-Led Framework To Unlock Data For Training AI Models and explore its linked sources."
+      ],
+      "descriptionLength": 113,
+      "canonical": [
+        "https://inc42.com/buzz/meity-floats-new-privacy-led-framework-to-unlock-data-for-training-ai-models/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "MeitY Floats New Privacy-Led Framework To Unlock Da | Aana"
+      ],
+      "ogDescription": [
+        "Read MeitY Floats New Privacy-Led Framework To Unlock Data For Training AI Models and explore its linked sources."
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/meity-floats-new-privacy-led-framework-to-unlock-data-for-training-ai-models-1793438542933-26"
+      ],
+      "ogImage": [
+        "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/ftr-14.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/ftr-14.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:22.934Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "MeitY Floats New Privacy-Led Framework To Unlock Data For Training AI Models",
+          "description": "Read MeitY Floats New Privacy-Led Framework To Unlock Data For Training AI Models and explore its linked sources.",
+          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/ftr-14.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:22.934Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/meity-floats-new-privacy-led-framework-to-unlock-data-for-training-ai-models-1793438542933-26"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "MeitY Floats New Privacy-Led Framework To Unlock Data For Training AI Models",
+              "item": "https://aanaa.tech/blog/meity-floats-new-privacy-led-framework-to-unlock-data-for-training-ai-models-1793438542933-26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/japan-s-new-2027-anime-award-should-put-creators-in-the-spotlight-industry-leaders-say-at-tokyo-market-1793438542926-25",
+      "status": 200,
+      "title": "Japan’s New 2027 Anime Award Should Put Creators in | Aana",
+      "titleLength": 58,
+      "description": [
+        "A new Japanese anime award planned for 2027 should put the people who make anime in the spotlight, industry leaders said at TIFFCOM, the market of the Tok"
+      ],
+      "descriptionLength": 154,
+      "canonical": [
+        "https://variety.com/2026/film/markets-festivals/japan-new-2027-anime-award-spotlight-creators-industry-leaders-1236935947/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "Japan’s New 2027 Anime Award Should Put Creators in | Aana"
+      ],
+      "ogDescription": [
+        "A new Japanese anime award planned for 2027 should put the people who make anime in the spotlight, industry leaders said at TIFFCOM, the market of the Tok"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/japan-s-new-2027-anime-award-should-put-creators-in-the-spotlight-industry-leaders-say-at-tokyo-market-1793438542926-25"
+      ],
+      "ogImage": [
+        "https://variety.com/wp-content/uploads/2026/08/TIFFCOM-2026.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://variety.com/wp-content/uploads/2026/08/TIFFCOM-2026.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:22.927Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Japan’s New 2027 Anime Award Should Put Creators in the Spotlight, Industry Leaders Say at Tokyo Market",
+          "description": "A new Japanese anime award planned for 2027 should put the people who make anime in the spotlight, industry leaders said at TIFFCOM, the market of the Tokyo International Film Festival. The session wa",
+          "image": "https://variety.com/wp-content/uploads/2026/08/TIFFCOM-2026.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:22.927Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/japan-s-new-2027-anime-award-should-put-creators-in-the-spotlight-industry-leaders-say-at-tokyo-market-1793438542926-25"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Japan’s New 2027 Anime Award Should Put Creators in the Spotlight, Industry Leaders Say at Tokyo Market",
+              "item": "https://aanaa.tech/blog/japan-s-new-2027-anime-award-should-put-creators-in-the-spotlight-industry-leaders-say-at-tokyo-market-1793438542926-25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://aanaa.tech/blog/7-ways-to-use-chatgpt-to-shop-smarter-and-the-prompts-to-help-you-save-1793438542918-24",
+      "status": 200,
+      "title": "7 ways to use ChatGPT to shop smarter — and the pro | Aana",
+      "titleLength": 58,
+      "description": [
+        "2026 has felt like it’s been in fast-forward mode all yea"
+      ],
+      "descriptionLength": 57,
+      "canonical": [
+        "https://www.tomsguide.com/ai/7-ways-to-use-chatgpt-to-shop-smarter-and-the-prompts-to-help-you-save"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "ogType": [
+        "article"
+      ],
+      "ogTitle": [
+        "7 ways to use ChatGPT to shop smarter — and the pro | Aana"
+      ],
+      "ogDescription": [
+        "2026 has felt like it’s been in fast-forward mode all yea"
+      ],
+      "ogURL": [
+        "https://aanaa.tech/blog/7-ways-to-use-chatgpt-to-shop-smarter-and-the-prompts-to-help-you-save-1793438542918-24"
+      ],
+      "ogImage": [
+        "https://cdn.mos.cms.futurecdn.net/zRGgUbBnoWHP5inq4tuGUi-1920-80.jpg"
+      ],
+      "twitterCard": [
+        "summary_large_image"
+      ],
+      "twitterImage": [
+        "https://cdn.mos.cms.futurecdn.net/zRGgUbBnoWHP5inq4tuGUi-1920-80.jpg"
+      ],
+      "published": [
+        "2026-10-31"
+      ],
+      "modified": [
+        "2026-10-31T09:22:22.920Z"
+      ],
+      "h1Count": 1,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": " 7 ways to use ChatGPT to shop smarter — and the prompts to help you save ",
+          "description": "2026 has felt like it’s been in fast-forward mode all year long. Once everyone dumps their Hallow",
+          "image": "https://cdn.mos.cms.futurecdn.net/zRGgUbBnoWHP5inq4tuGUi-1920-80.jpg",
+          "datePublished": "2026-10-31T00:00:00.000Z",
+          "dateModified": "2026-10-31T09:22:22.920Z",
+          "author": {
+            "@type": "Person",
+            "name": "Aana",
+            "url": "https://aanaa.tech"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Aana",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aanaa.tech/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://aanaa.tech/blog/7-ways-to-use-chatgpt-to-shop-smarter-and-the-prompts-to-help-you-save-1793438542918-24"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://aanaa.tech"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://aanaa.tech/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": " 7 ways to use ChatGPT to shop smarter — and the prompts to help you save ",
+              "item": "https://aanaa.tech/blog/7-ways-to-use-chatgpt-to-shop-smarter-and-the-prompts-to-help-you-save-1793438542918-24"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
