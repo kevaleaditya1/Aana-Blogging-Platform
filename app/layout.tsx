@@ -36,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
+        data-clarity-mask="true"
         className={clsx(
           inter.variable,
           "antialiased min-h-screen bg-background text-foreground flex flex-col relative selection:bg-primary/20 selection:text-primary"

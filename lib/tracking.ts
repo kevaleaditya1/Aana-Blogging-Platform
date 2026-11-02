@@ -1,5 +1,6 @@
 export type ConsentChoice = "accepted" | "rejected";
-export const CONSENT_KEY = "aana-consent-v1";
+// New recording purpose: ask previously accepting visitors for a fresh choice.
+export const CONSENT_KEY = "aana-consent-v2";
 export function hasConsent() {
     try { return localStorage.getItem(CONSENT_KEY) === "accepted"; } catch { return false; }
 }

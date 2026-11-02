@@ -1,0 +1,66 @@
+
+> Aana-web@0.1.0 build
+> next build
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   ▲ Next.js 16.0.8 (Turbopack)
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     · cpus: 2
+
+ ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Compiled successfully in 20.7s
+   Running TypeScript ...
+   Collecting page data using 2 workers ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Cloudinary Config: { cloud_name: 'dd6iomjs4', api_key: 'SET', api_secret: 'SET' }
+   Generating static pages using 2 workers (0/408) ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Cloudinary Config: { cloud_name: 'dd6iomjs4', api_key: 'SET', api_secret: 'SET' }
+Error fetching post: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.post.findUnique()` invocation:
+
+
+Can't reach database server at `ep-steep-wave-a4iydkm1-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-steep-wave-a4iydkm1-pooler.us-east-1.aws.neon.tech:5432`.
+    at async g (C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\.next-quality-clarity-final\server\chunks\ssr\[root-of-the-server]__d08a2402._.js:1:5614)
+    at async fq (C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\.next-quality-clarity-final\server\chunks\ssr\_c97cf4dd._.js:1:347693) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error fetching post: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.post.findUnique()` invocation:
+
+
+Can't reach database server at `ep-steep-wave-a4iydkm1-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-steep-wave-a4iydkm1-pooler.us-east-1.aws.neon.tech:5432`.
+    at async g (C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\.next-quality-clarity-final\server\chunks\ssr\[root-of-the-server]__d08a2402._.js:1:5614)
+    at async Module.fp (C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\.next-quality-clarity-final\server\chunks\ssr\_c97cf4dd._.js:1:347151) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error occurred prerendering page "/blog/why-developer-first-publishing-spaces-are-essential-for-modern-tech-careers-1793092942187-5". Read more: https://nextjs.org/docs/messages/prerender-error
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.post.findUnique()` invocation:
+
+
+Can't reach database server at `ep-steep-wave-a4iydkm1-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-steep-wave-a4iydkm1-pooler.us-east-1.aws.neon.tech:5432`.
+    at async g (C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\.next-quality-clarity-final\server\chunks\ssr\[root-of-the-server]__d08a2402._.js:1:5614)
+    at async Module.fp (C:\Users\keval\OneDrive\Documents\GitHub\Aana-Blogging-Platform\.next-quality-clarity-final\server\chunks\ssr\_c97cf4dd._.js:1:347151) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: [Object],
+  digest: '684579072'
+}
+Export encountered an error on /blog/[slug]/page: /blog/why-developer-first-publishing-spaces-are-essential-for-modern-tech-careers-1793092942187-5, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { CONSENT_KEY, type ConsentChoice, trackEvent } from "@/lib/tracking";
+import { installClarity, stopClarity } from "@/lib/clarity";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -28,6 +29,10 @@ export function PrivacyControls({ children }: { children: React.ReactNode }) {
         try {
             const value = localStorage.getItem(CONSENT_KEY);
             if (value === "accepted" || value === "rejected") setChoice(value);
+            else if (localStorage.getItem("aana-consent-v1") === "rejected") {
+                localStorage.setItem(CONSENT_KEY, "rejected");
+                setChoice("rejected");
+            }
             else setOpen(true);
         } catch { setOpen(true); }
         setReady(true);
@@ -41,6 +46,9 @@ export function PrivacyControls({ children }: { children: React.ReactNode }) {
 
     useEffect(() => { if (open && choice) heading.current?.focus(); }, [open, choice]);
     useEffect(() => {
+        if (process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === "true" && ready && choice === "accepted") return installClarity();
+    }, [ready, choice]);
+    useEffect(() => {
         const click = (event: MouseEvent) => {
             if ((event.target as Element).closest('a[href="/blog"]')) trackEvent("explore_articles");
         };
@@ -53,6 +61,7 @@ export function PrivacyControls({ children }: { children: React.ReactNode }) {
         try { localStorage.setItem(CONSENT_KEY, next); setStorageError(false); persisted = true; }
         catch { setStorageError(true); }
         if (next === "rejected") {
+            stopClarity();
             (window as Window & { aanaPendingEvents?: string[] }).aanaPendingEvents = [];
             // Stop future collection immediately, then reload to unload third-party scripts/iframes.
             const analyticsWindow = window as unknown as Window & { gtag?: (...args: unknown[]) => void; [key: `ga-disable-${string}`]: boolean };
@@ -60,8 +69,8 @@ export function PrivacyControls({ children }: { children: React.ReactNode }) {
             analyticsWindow.gtag?.("consent", "update", { analytics_storage: "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
             for (const cookie of document.cookie.split(";")) {
                 const name = cookie.split("=")[0].trim();
-                if (/^(_ga|_gid|_gat|_gcl|__gads|__gpi)/.test(name)) {
-                    for (const domain of ["", location.hostname, ".aanaa.blog"]) document.cookie = `${name}=; Max-Age=0; path=/;${domain ? ` domain=${domain};` : ""} SameSite=Lax`;
+                if (/^(_ga|_gid|_gat|_gcl|__gads|__gpi|_clck|_clsk)/.test(name)) {
+                    for (const domain of ["", location.hostname, ".aanaa.tech"]) document.cookie = `${name}=; Max-Age=0; path=/;${domain ? ` domain=${domain};` : ""} SameSite=Lax`;
                 }
             }
         }
@@ -81,7 +90,7 @@ export function PrivacyControls({ children }: { children: React.ReactNode }) {
             <div className="mx-auto flex max-w-5xl flex-col gap-4 sm:flex-row sm:items-center">
                 <div className="min-w-0 flex-1">
                     <h2 id="privacy-heading" ref={heading} tabIndex={-1} className="font-semibold">Your privacy choices</h2>
-                    <p className="mt-1 text-sm">Essential storage keeps sign-in, theme and privacy preferences working. Optional analytics helps us understand page visits and completed actions. Advertising stays disabled until its separate consent setup is complete. <Link href="/privacy" className="underline">Read the draft privacy policy</Link>.</p>
+                    <p className="mt-1 text-sm">Essential storage keeps sign-in, theme and privacy preferences working. Optional analytics includes Microsoft Clarity heatmaps and masked session recordings to understand how visitors use public pages. Advertising stays disabled. <Link href="/privacy" className="underline">Read the draft privacy policy</Link>.</p>
                 </div>
                 <div className="flex shrink-0 flex-wrap gap-2">
                     <Button variant="outline" onClick={() => save("rejected")}>Reject optional</Button>
